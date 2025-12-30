@@ -7,6 +7,11 @@ import { batch3 } from './blog_posts_3'
 import { batch4 } from './blog_posts_4'
 import { batch5 } from './blog_posts_5'
 import { batch6 } from './blog_posts_6'
+// New Series Imports
+import { series_a_1 } from './blog_posts_series_a_1'
+import { series_a_2 } from './blog_posts_series_a_2'
+import { series_b_1 } from './blog_posts_series_b_1'
+import { series_b_2 } from './blog_posts_series_b_2'
 
 // Load environment variables from .env.local
 dotenv.config({ path: path.resolve(process.cwd(), '.env.local') })
@@ -19,7 +24,7 @@ const client = createClient({
     token: process.env.SANITY_WRITE_TOKEN,
 })
 
-// Sample data
+// Categories
 const categories = [
     {
         _type: 'category',
@@ -86,6 +91,7 @@ const categories = [
     },
 ]
 
+// Authors
 const authors = [
     {
         _type: 'author',
@@ -152,22 +158,26 @@ const authors = [
     }
 ]
 
-const posts = [...batch1, ...batch2, ...batch3, ...batch4, ...batch5, ...batch6];
+// Merge all posts
+const posts = [
+    ...batch1, ...batch2, ...batch3, ...batch4, ...batch5, ...batch6,
+    ...series_a_1, ...series_a_2,
+    ...series_b_1, ...series_b_2
+];
 
 async function importData() {
     try {
-        console.log('🚀 Starting import...')
+        console.log('🚀 Starting import of ' + posts.length + ' posts...')
 
-        // 1. Delete all existing data (Optional: ONLY enabled if you want to wipe clean)
+        // 1. Delete all existing data
         console.log('🗑️ Clearing existing blog posts...')
-        await client.delete({ query: '*[_type == "post"]' }) // BE CAREFUL: This deletes ALL posts
+        await client.delete({ query: '*[_type == "post"]' })
 
         // 2. Import Categories
         console.log('📚 Importing categories...')
         for (const category of categories) {
             const categoryId = `category-${category.slug.current}`
             await client.createOrReplace({ ...category, _id: categoryId })
-            console.log(`✅ Processed category: ${category.title}`)
         }
 
         // 3. Import Authors
@@ -175,13 +185,13 @@ async function importData() {
         for (const author of authors) {
             const authorId = `author-${author.slug.current}`
             await client.createOrReplace({ ...author, _id: authorId })
-            console.log(`✅ Processed author: ${author.name}`)
         }
 
         // 4. Import Posts
         console.log('📝 Importing blog posts...')
-
+        let count = 0;
         for (const post of posts) {
+            count++;
             // Randomly select an author
             const randomAuthor = authors[Math.floor(Math.random() * authors.length)]
             const authorId = `author-${randomAuthor.slug.current}`
@@ -202,7 +212,7 @@ async function importData() {
             }
 
             await client.createOrReplace(postWithRefs)
-            console.log(`✅ Created post: ${post.title} (Author: ${randomAuthor.name})`)
+            console.log(`✅ [${count}/${posts.length}] Created: ${post.title}`)
         }
 
         console.log('🎉 Import completed successfully!')
