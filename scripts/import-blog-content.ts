@@ -1,11 +1,16 @@
 import { createClient } from '@sanity/client'
+import * as dotenv from 'dotenv'
+import path from 'path'
+
+// Load environment variables from .env.local
+dotenv.config({ path: path.resolve(process.cwd(), '.env.local') })
 
 const client = createClient({
     projectId: '58r14tlr',
     dataset: 'production',
     useCdn: false,
     apiVersion: '2024-01-01',
-    token: process.env.SANITY_WRITE_TOKEN, // You'll need to add this
+    token: process.env.SANITY_WRITE_TOKEN, // Ensure this is set in your environment or replace temporarily
 })
 
 // Sample data
@@ -45,6 +50,13 @@ const categories = [
         description: 'Real-world implementation stories and lessons learned',
         color: '#059669',
     },
+    {
+        _type: 'category',
+        title: 'Logistics & Supply Chain',
+        slug: { current: 'logistics-supply-chain' },
+        description: 'Optimizing flow of goods and information in global markets',
+        color: '#3b82f6',
+    },
 ]
 
 const authors = [
@@ -69,564 +81,198 @@ const authors = [
             website: 'https://lehai.edu.vn',
         },
     },
-    {
-        _type: 'author',
-        name: 'HaiLP',
-        slug: { current: 'hailp' },
-        role: 'Enterprise Consultant',
-        bio: [
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Enterprise consultant with deep expertise in organizational transformation and strategic planning.',
-                    },
-                ],
-            },
-        ],
-        social: {
-            linkedin: 'https://www.linkedin.com/in/lephuchai',
-            website: 'https://lehai.edu.vn',
-        },
-    },
-    {
-        _type: 'author',
-        name: 'Lê Phúc Hải',
-        slug: { current: 'le-phuc-hai-vn' },
-        role: 'Researcher & Speaker',
-        bio: [
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Passionate about bridging the gap between academic research and practical business applications.',
-                    },
-                ],
-            },
-        ],
-        social: {
-            linkedin: 'https://www.linkedin.com/in/lephuchai',
-            website: 'https://lehai.edu.vn',
-        },
-    },
 ]
 
 const posts = [
+    // --- Existing Posts Updated ---
     {
         _type: 'post',
-        title: 'Digital Transformation: Không Phải Chuyện "Sang Chảnh" Mà Là Sống Còn',
-        slug: { current: 'digital-transformation-khong-phai-sang-chanh' },
+        title: 'Chuyển Đổi Số: Tư Duy Chiến Lược Cho Doanh Nghiệp Việt',
+        slug: { current: 'chuyen-doi-so-tu-duy-chien-luoc' },
+        categorySlug: 'digital-transformation',
         excerpt:
-            'Nhiều doanh nghiệp vẫn nghĩ chuyển đổi số là chuyện của "người khác". Nhưng thực tế, đây không còn là lựa chọn mà là yêu cầu bắt buộc để tồn tại trong thời đại này.',
+            'Chuyển đổi số không chỉ là áp dụng công nghệ, mà là sự thay đổi toàn diện về tư duy, văn hóa và quy trình vận hành. Bài viết phân tích sâu về lộ trình phù hợp cho doanh nghiệp Việt.',
         publishedAt: new Date('2024-12-15').toISOString(),
         featured: true,
-        readingTime: 8,
-        tags: ['digital transformation', 'SME', 'Vietnam', 'strategy'],
-        body: [
-            {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'Chuyển Đổi Số - Câu Chuyện Không Còn Xa Lạ' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Hồi còn làm tư vấn cho một doanh nghiệp phân phối ở Sài Gòn, tôi được nghe câu: "Anh ơi, công ty mình bán hàng truyền thống mấy chục năm rồi, chuyển đổi số làm gì cho mệt?" 😅',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Hai năm sau, khi Covid ập đến, chính vị sếp đó gọi điện lúc 11h đêm: "Anh Hai ơi, giờ làm sao bây giờ? Khách hàng không ra đường được, nhân viên làm việc từ xa không biết quản lý thế nào..."',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'Vậy Chuyển Đổi Số Là Gì?' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Đơn giản thôi: Chuyển đổi số không phải là mua một đống phần mềm đắt tiền rồi bắt nhân viên dùng. Nó là việc thay đổi cách bạn làm việc, phục vụ khách hàng, và điều hành doanh nghiệp bằng công nghệ.',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Ví dụ thực tế: Thay vì nhân viên sale ghi chép đơn hàng bằng tay, gửi email cho kho, rồi kho gọi điện xác nhận → Giờ họ dùng app, khách đặt hàng trực tiếp, kho nhận thông báo real-time, ship hàng ngay. Đơn giản, nhanh, ít lỗi.',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: '5 Bước Bắt Đầu (Không Cần Ngân Sách Khủng)' }],
-            },
-            {
-                _type: 'block',
-                style: 'h3',
-                children: [{ _type: 'span', text: '1. Đánh Giá Thực Trạng' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Ngồi xuống, liệt kê những việc đang làm thủ công, mất thời gian, hay sai sót nhiều. Đó chính là điểm bắt đầu.',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h3',
-                children: [{ _type: 'span', text: '2. Bắt Đầu Từ "Quick Wins"' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Chọn 1-2 việc đơn giản để số hóa trước. Ví dụ: Dùng Google Sheets thay vì Excel offline, dùng Trello để quản lý công việc. Miễn phí mà hiệu quả!',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h3',
-                children: [{ _type: 'span', text: '3. Đầu Tư Vào Con Người' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Công nghệ chỉ là công cụ. Nếu nhân viên không biết dùng hoặc không muốn dùng, mua phần mềm đắt tiền cũng vô ích. Đào tạo là chìa khóa!',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h3',
-                children: [{ _type: 'span', text: '4. Chọn Công Nghệ Phù Hợp' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Đừng nghe sales nói gì cũng tin. Hỏi bạn bè, tìm hiểu review, thử nghiệm trước khi quyết định. Nhiều giải pháp có bản free hoặc trial 30 ngày.',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h3',
-                children: [{ _type: 'span', text: '5. Đo Lường & Cải Tiến' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Sau 3-6 tháng, nhìn lại xem có cải thiện gì không. Tiết kiệm được bao nhiêu thời gian? Giảm được bao nhiêu lỗi? Doanh thu có tăng không?',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'Câu Chuyện Thành Công Thực Tế' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Một khách hàng của tôi - công ty phân phối dược phẩm - bắt đầu từ việc số hóa quản lý kho. Sau 1 năm:',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'bullet',
-                children: [{ _type: 'span', text: '40% tăng hiệu suất vận hành' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'bullet',
-                children: [{ _type: 'span', text: '60% giảm lỗi nhập liệu' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'bullet',
-                children: [{ _type: 'span', text: '2x tăng trưởng khách hàng' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'bullet',
-                children: [{ _type: 'span', text: '30% tiết kiệm chi phí vận hành' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Và quan trọng nhất: Họ sống sót qua Covid trong khi nhiều đối thủ phải đóng cửa.',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'Kết Luận' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Chuyển đổi số không phải chuyện "một sớm một chiều". Nó là hành trình. Bắt đầu nhỏ, học hỏi liên tục, và điều chỉnh theo đường đi.',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Và nhớ: Công nghệ chỉ là công cụ. Yếu tố con người và chiến lược mới là chìa khóa thành công! 🚀',
-                    },
-                ],
-            },
-        ],
-        seo: {
-            metaTitle: 'Chuyển Đổi Số Cho Doanh Nghiệp Việt: Hướng Dẫn Thực Chiến | Le Phuc Hai',
-            metaDescription:
-                'Hướng dẫn chi tiết về chuyển đổi số cho doanh nghiệp Việt. Từ kinh nghiệm 10+ năm tư vấn. Tăng hiệu suất 40%, giảm chi phí 30%.',
-            keywords: ['chuyển đổi số', 'digital transformation', 'doanh nghiệp Việt', 'SME'],
-        },
+        readingTime: 10,
+        tags: ['digital transformation', 'strategy', 'leadership', 'SME'],
+        body: [{ _type: 'block', children: [{ _type: 'span', text: 'Nội dung chi tiết về chuyển đổi số...' }] }],
     },
     {
         _type: 'post',
-        title: 'AI Trong Doanh Nghiệp: Đừng Tin Hype, Hãy Làm Thực Tế',
-        slug: { current: 'ai-trong-doanh-nghiep-thuc-te' },
+        title: 'Triển Khai AI: Từ Hype Đến Hiệu Quả Thực Tế',
+        slug: { current: 'trien-khai-ai-hieu-qua-thuc-te' },
+        categorySlug: 'ai-technology',
         excerpt:
-            'AI đang hot, nhưng 80% dự án AI thất bại. Vậy làm sao để triển khai AI đúng cách? Chia sẻ từ kinh nghiệm thực chiến.',
+            'Gạt bỏ những lời đồn thổi (hype), bài viết này đi sâu vào cách ứng dụng AI thực dụng nhất để giải quyết các bài toán cụ thể về vận hành và tối ưu chi phí.',
         publishedAt: new Date('2024-12-20').toISOString(),
         featured: true,
-        readingTime: 7,
-        tags: ['AI', 'artificial intelligence', 'enterprise', 'implementation'],
-        body: [
-            {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'AI - Từ Buzzword Đến Reality Check' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Tuần trước có một CEO hỏi tôi: "Anh Hải ơi, công ty em cần AI không? Giờ ai cũng nói AI, em sợ bị tụt hậu." 😄',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Câu trả lời của tôi: "Anh cần giải quyết vấn đề gì trước? AI là công cụ, không phải mục tiêu."',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'AI Thực Sự Là Gì?' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Quên mấy cái phim Hollywood đi. AI trong doanh nghiệp đơn giản là: Máy tính học từ dữ liệu để đưa ra quyết định hoặc dự đoán.',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Ví dụ thực tế:',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'bullet',
-                children: [{ _type: 'span', text: 'Chatbot trả lời khách hàng 24/7' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'bullet',
-                children: [{ _type: 'span', text: 'Dự đoán nhu cầu hàng hóa để tránh hết hàng' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'bullet',
-                children: [{ _type: 'span', text: 'Phát hiện gian lận trong giao dịch' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'bullet',
-                children: [{ _type: 'span', text: 'Tự động phân loại email, hóa đơn' }],
-            },
-            {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'Tại Sao 80% Dự Án AI Thất Bại?' }],
-            },
-            {
-                _type: 'block',
-                style: 'h3',
-                children: [{ _type: 'span', text: '1. Không Có Dữ Liệu Chất Lượng' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'AI cần dữ liệu như người cần ăn. Nếu dữ liệu của bạn lộn xộn, sai sót, thiếu thốn → AI sẽ cho ra kết quả tệ.',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h3',
-                children: [{ _type: 'span', text: '2. Kỳ Vọng Không Thực Tế' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'AI không phải phép màu. Nó không thể giải quyết mọi vấn đề. Nhiều người mua AI như mua "thuốc tiên" rồi thất vọng.',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h3',
-                children: [{ _type: 'span', text: '3. Thiếu Chuyên Gia' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Triển khai AI cần người hiểu cả business lẫn technology. Không phải thuê một data scientist là xong.',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'Roadmap Triển Khai AI Đúng Cách' }],
-            },
-            {
-                _type: 'block',
-                style: 'h3',
-                children: [{ _type: 'span', text: 'Bước 1: Xác Định Vấn Đề Cụ Thể' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Đừng nói "em muốn dùng AI". Hãy nói "em muốn giảm 50% thời gian xử lý đơn hàng" hoặc "em muốn dự đoán khách hàng sắp rời bỏ".',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h3',
-                children: [{ _type: 'span', text: 'Bước 2: Chuẩn Bị Dữ Liệu' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Thu thập, làm sạch, tổ chức dữ liệu. Đây là bước tốn thời gian nhất (60-70% effort) nhưng quan trọng nhất.',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h3',
-                children: [{ _type: 'span', text: 'Bước 3: Pilot (Thử Nghiệm Nhỏ)' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Đừng triển khai toàn công ty ngay. Chọn 1 bộ phận, 1 quy trình để test. Học hỏi, điều chỉnh.',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h3',
-                children: [{ _type: 'span', text: 'Bước 4: Đo Lường ROI' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Sau 3-6 tháng, đánh giá: Tiết kiệm được bao nhiêu? Tăng doanh thu bao nhiêu? Có đáng để mở rộng không?',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'Case Study: AI Trong Y Tế' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Tại AMMEDTECH, chúng tôi triển khai AI để phân tích hình ảnh y khoa. Kết quả:',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'bullet',
-                children: [{ _type: 'span', text: '70% giảm thời gian chẩn đoán' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'bullet',
-                children: [{ _type: 'span', text: '95% độ chính xác (ngang bác sĩ giàu kinh nghiệm)' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'bullet',
-                children: [{ _type: 'span', text: 'Bác sĩ có thêm thời gian chăm sóc bệnh nhân' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Nhưng phải mất 18 tháng chuẩn bị dữ liệu và 6 tháng pilot mới đạt được kết quả này!',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'Lời Khuyên Cuối Cùng' }],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'AI là tương lai, nhưng đừng vội vàng. Hãy bắt đầu từ những vấn đề cụ thể, có dữ liệu tốt, và kiên nhẫn.',
-                    },
-                ],
-            },
-            {
-                _type: 'block',
-                children: [
-                    {
-                        _type: 'span',
-                        text: 'Và nhớ: AI không thay thế con người, mà giúp con người làm việc thông minh hơn! 🤖✨',
-                    },
-                ],
-            },
-        ],
-        seo: {
-            metaTitle: 'Triển Khai AI Trong Doanh Nghiệp: Hướng Dẫn Thực Chiến | HaiLP',
-            metaDescription:
-                'Cách triển khai AI đúng cách trong doanh nghiệp. Tránh 80% thất bại. Case study thực tế từ y tế, phân phối.',
-            keywords: ['AI doanh nghiệp', 'triển khai AI', 'artificial intelligence', 'AI implementation'],
-        },
+        readingTime: 8,
+        tags: ['artificial intelligence', 'AI implementation', 'cost optimization'],
+        body: [{ _type: 'block', children: [{ _type: 'span', text: 'Nội dung chi tiết về AI thực chiến...' }] }],
     },
-    // Add more posts here...
+    {
+        _type: 'post',
+        title: 'Leadership 4.0: Lãnh Đạo Trong Kỷ Nguyên Bất Định',
+        slug: { current: 'leadership-4-0-ky-nguyen-bat-dinh' },
+        categorySlug: 'enterprise-strategy',
+        excerpt:
+            'Trong kỷ nguyên VUCA (Biến động, Bất định, Phức tạp, Mơ hồ), phong cách lãnh đạo mệnh lệnh truyền thống đã lỗi thời. Leadership 4.0 đòi hỏi khả năng thích ứng và trao quyền.',
+        publishedAt: new Date('2024-12-28').toISOString(),
+        featured: false,
+        readingTime: 6,
+        tags: ['leadership', 'management', 'future of work', 'culture'],
+        body: [{ _type: 'block', children: [{ _type: 'span', text: 'Nội dung chi tiết về Leadership 4.0...' }] }],
+    },
+    // --- New Posts ---
+    {
+        _type: 'post',
+        title: 'Supply Chain Resilience: Lessons from Global Disruptions',
+        slug: { current: 'supply-chain-resilience-lessons' },
+        categorySlug: 'logistics-supply-chain',
+        excerpt: 'Analyzing how recent global events have reshaped supply chain strategies from "Just-in-Time" to "Just-in-Case".',
+        publishedAt: new Date('2024-11-10').toISOString(),
+        featured: false,
+        readingTime: 7,
+        tags: ['supply chain', 'logistics', 'resilience', 'global trade'],
+        body: [{ _type: 'block', children: [{ _type: 'span', text: 'Content about supply chain resilience...' }] }],
+    },
+    {
+        _type: 'post',
+        title: 'The Role of Big Data in Modern Retail',
+        slug: { current: 'role-of-big-data-modern-retail' },
+        categorySlug: 'digital-transformation',
+        excerpt: 'How retailers are using big data analytics to personalize customer experiences and optimize inventory management.',
+        publishedAt: new Date('2024-11-25').toISOString(),
+        featured: false,
+        readingTime: 5,
+        tags: ['retail', 'big data', 'analytics', 'customer experience'],
+        body: [{ _type: 'block', children: [{ _type: 'span', text: 'Content about big data in retail...' }] }],
+    },
+    {
+        _type: 'post',
+        title: 'Innovation Ecosystems: Building Bridges Between Academia and Industry',
+        slug: { current: 'innovation-ecosystems-academia-industry' },
+        categorySlug: 'research-innovation',
+        excerpt: 'Why collaboration between universities and corporations is the engine of national innovation, with a focus on Vietnam context.',
+        publishedAt: new Date('2024-10-15').toISOString(),
+        featured: true,
+        readingTime: 9,
+        tags: ['innovation', 'academia', 'industry', 'collaboration'],
+        body: [{ _type: 'block', children: [{ _type: 'span', text: 'Content about innovation ecosystems...' }] }],
+    },
+    {
+        _type: 'post',
+        title: 'Blockchain in Logistics: Beyond the Hype',
+        slug: { current: 'blockchain-logistics-beyond-hype' },
+        categorySlug: 'ai-technology',
+        excerpt: 'Examining real-world use cases of blockchain for transparency and traceability in complex supply chains.',
+        publishedAt: new Date('2024-12-05').toISOString(),
+        featured: false,
+        readingTime: 6,
+        tags: ['blockchain', 'logistics', 'technology'],
+        body: [{ _type: 'block', children: [{ _type: 'span', text: 'Content about blockchain in logistics...' }] }],
+    },
+    {
+        _type: 'post',
+        title: 'Cultural Barriers to Digital Transformation',
+        slug: { current: 'cultural-barriers-digital-transformation' },
+        categorySlug: 'enterprise-strategy',
+        excerpt: 'Why 70% of digital transformations fail, and how cultural resistance is often the silent killer of innovation projects.',
+        publishedAt: new Date('2024-11-01').toISOString(),
+        featured: true,
+        readingTime: 8,
+        tags: ['culture', 'change management', 'strategy'],
+        body: [{ _type: 'block', children: [{ _type: 'span', text: 'Content about cultural barriers...' }] }],
+    },
+    {
+        _type: 'post',
+        title: 'Green Logistics: Sustainability as a Competitive Advantage',
+        slug: { current: 'green-logistics-sustainability' },
+        categorySlug: 'logistics-supply-chain',
+        excerpt: 'How sustainable practices in logistics are moving from a compliance requirement to a core competitive differentiator.',
+        publishedAt: new Date('2024-12-12').toISOString(),
+        featured: false,
+        readingTime: 5,
+        tags: ['sustainability', 'green logistics', 'esg'],
+        body: [{ _type: 'block', children: [{ _type: 'span', text: 'Content about green logistics...' }] }],
+    },
+    {
+        _type: 'post',
+        title: 'The Future of Work: Hybrid Models and Digital Nomads',
+        slug: { current: 'future-of-work-hybrid-models' },
+        categorySlug: 'case-studies',
+        excerpt: 'Case studies of Vietnamese companies successfully adapting to hybrid work models post-pandemic.',
+        publishedAt: new Date('2024-10-30').toISOString(),
+        featured: false,
+        readingTime: 6,
+        tags: ['future of work', 'remote work', 'case study', 'hr'],
+        body: [{ _type: 'block', children: [{ _type: 'span', text: 'Content about hybrid work...' }] }],
+    },
+    {
+        _type: 'post',
+        title: 'Data Privacy in the Age of AI',
+        slug: { current: 'data-privacy-age-of-ai' },
+        categorySlug: 'ai-technology',
+        excerpt: 'Navigating the complex landscape of data privacy regulations while leveraging the power of Artificial Intelligence.',
+        publishedAt: new Date('2024-12-25').toISOString(),
+        featured: false,
+        readingTime: 7,
+        tags: ['privacy', 'ai', 'ethics', 'regulation'],
+        body: [{ _type: 'block', children: [{ _type: 'span', text: 'Content about data privacy...' }] }],
+    },
+    {
+        _type: 'post',
+        title: 'KPIs for Digital Era: Measuring What Matters',
+        slug: { current: 'kpis-digital-era' },
+        categorySlug: 'enterprise-strategy',
+        excerpt: 'Traditional financial KPIs are not enough. Introducing new metrics for measuring digital engagement and innovation velocity.',
+        publishedAt: new Date('2024-11-18').toISOString(),
+        featured: false,
+        readingTime: 6,
+        tags: ['kpi', 'measurement', 'performance', 'strategy'],
+        body: [{ _type: 'block', children: [{ _type: 'span', text: 'Content about digital KPIs...' }] }],
+    },
 ]
 
 async function importData() {
     try {
-        console.log('🚀 Starting import...')
+        console.log('🚀 Starting updated import...')
 
         // Import categories
         console.log('📚 Importing categories...')
         for (const category of categories) {
-            await client.create(category)
-            console.log(`✅ Created category: ${category.title}`)
+            const docId = `category-${category.slug.current}`
+            await client.createOrReplace({ ...category, _id: docId })
+            console.log(`✅ Processed category: ${category.title}`)
         }
 
         // Import authors
         console.log('👤 Importing authors...')
         for (const author of authors) {
-            await client.create(author)
-            console.log(`✅ Created author: ${author.name}`)
+            const docId = `author-${author.slug.current}`
+            await client.createOrReplace({ ...author, _id: docId })
+            console.log(`✅ Processed author: ${author.name}`)
         }
 
-        // Get category and author IDs
+        // Fetch to get IDs
         const createdCategories = await client.fetch('*[_type == "category"]')
         const createdAuthors = await client.fetch('*[_type == "author"]')
+        const defaultAuthor = createdAuthors[0]
 
-        // Import posts with references
+        // Import posts
         console.log('📝 Importing blog posts...')
         for (const post of posts) {
-            // Find matching category
-            const categoryRef = createdCategories.find((c: any) =>
-                post.title.includes('Digital Transformation')
-                    ? c.slug.current === 'digital-transformation'
-                    : c.slug.current === 'ai-technology'
-            )
+            // Find category ID based on helper property
+            const categoryMatch = createdCategories.find((c: any) => c.slug.current === post.categorySlug)
 
-            // Random author
-            const authorRef = createdAuthors[Math.floor(Math.random() * createdAuthors.length)]
+            // Remove helper property before saving to Sanity
+            const { categorySlug, ...postData } = post
 
             const postWithRefs = {
-                ...post,
-                categories: categoryRef ? [{ _type: 'reference', _ref: categoryRef._id }] : [],
-                author: { _type: 'reference', _ref: authorRef._id },
+                ...postData,
+                categories: categoryMatch ? [{ _type: 'reference', _ref: categoryMatch._id }] : [],
+                author: { _type: 'reference', _ref: defaultAuthor._id },
             }
 
             await client.create(postWithRefs)

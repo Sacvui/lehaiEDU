@@ -7,7 +7,7 @@ import { motion } from 'framer-motion';
 
 export function Hero() {
     return (
-        <section className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden bg-gradient-to-br from-amber-50 via-white to-orange-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-slate-900 dark:text-white selection:bg-amber-200 dark:selection:bg-amber-500/30 selection:text-amber-900 dark:selection:text-amber-200">
+        <section className="relative min-h-[90vh] flex items-center pt-24 md:pt-32 overflow-hidden bg-gradient-to-br from-amber-50 via-white to-orange-50 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-slate-900 dark:text-white selection:bg-amber-200 dark:selection:bg-amber-500/30 selection:text-amber-900 dark:selection:text-amber-200">
 
             {/* Subtle Texture Overlay */}
             <div className="absolute inset-0 bg-[linear-gradient(to_right,#d4a57420_1px,transparent_1px),linear-gradient(to_bottom,#d4a57420_1px,transparent_1px)] dark:bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)]"></div>
@@ -37,7 +37,7 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
+                            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
                         >
                             <span className="block text-slate-800 dark:text-slate-200">
                                 Le Phuc Hai
@@ -120,7 +120,7 @@ export function Hero() {
                             {/* Portrait Image */}
                             <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800">
                                 <img
-                                    src="/uploads/profile.jpg"
+                                    src="/uploads/profile-street.jpg"
                                     alt="Le Phuc Hai - PhD Researcher and Speaker"
                                     className="w-full h-full object-cover"
                                 />

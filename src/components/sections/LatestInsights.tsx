@@ -109,33 +109,10 @@ export function LatestInsights() {
                                         className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-90 group-hover:opacity-100"
                                     />
                                 ) : (
-                                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                                        {articles.map((article, index) => (
-                                            <motion.div
-                                                key={article._id || index}
-                                                initial={{ opacity: 0, y: 20 }}
-                                                whileInView={{ opacity: 1, y: 0 }}
-                                                transition={{ delay: index * 0.1 }}
-                                                className="group cursor-pointer flex flex-col h-full"
-                                            >
-                                                <div className="relative aspect-video overflow-hidden rounded-2xl mb-4 border border-slate-800 bg-slate-900">
-                                                    {/* Placeholder Image Logic since we might not have real images yet */}
-                                                    <div className="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 flex items-center justify-center text-slate-700">
-                                                        <span className="text-4xl">Insight</span>
-                                                    </div>
-                                                </div>
-
-                                                <div className="flex items-center gap-4 text-xs text-slate-500 mb-3 font-mono">
-                                                    <span className="text-cyan-400">{article.categories?.[0] || 'Uncategorized'}</span>
-                                                    <span>•</span>
-                                                    <span>{new Date(article.publishedAt).toLocaleDateString()}</span>
-                                                </div>
-
-                                                <h3 className="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors line-clamp-2">
-                                                    {article.title}
-                                                </h3>
-                                            </motion.div>
-                                        ))}
+                                    <div className="w-full h-full bg-slate-800 flex items-center justify-center">
+                                        <div className="text-slate-700 flex flex-col items-center">
+                                            <span className="text-4xl font-bold opacity-20">Insight</span>
+                                        </div>
                                     </div>
                                 )}
                                 <div className="absolute inset-0 bg-slate-950/20 group-hover:bg-transparent transition-colors"></div>
