@@ -57,62 +57,38 @@ export function Mentorship() {
 
                     {/* Right Column: Gallery */}
                     <div className="lg:w-2/3">
-                        <div className="grid grid-cols-2 gap-4 md:gap-6">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 items-center">
                             <motion.div
-                                className="space-y-4 md:space-y-6"
+                                className="rounded-2xl overflow-hidden shadow-xl aspect-[3/4] relative group"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.2 }}
                             >
-                                <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/5] relative group">
-                                    <img
-                                        src="/uploads/teaching-workshop.jpg"
-                                        alt="University Workshop"
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                        <span className="text-white font-medium">Career Orientation Workshop</span>
-                                    </div>
-                                </div>
-                                <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] relative group">
-                                    <img
-                                        src="/uploads/teaching-class.png"
-                                        alt="Classroom Discussion"
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                        <span className="text-white font-medium">Classroom Interactions</span>
-                                    </div>
+                                <img
+                                    src="/uploads/teaching-workshop.jpg"
+                                    alt="University Workshop"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                    <span className="text-white font-medium">Career Orientation Workshop</span>
                                 </div>
                             </motion.div>
 
                             <motion.div
-                                className="space-y-4 md:space-y-6 pt-8 md:pt-12"
+                                className="rounded-2xl overflow-hidden shadow-xl aspect-[3/4] relative group md:mt-12"
                                 initial={{ opacity: 0, y: 20 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ delay: 0.4 }}
                             >
-                                <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/3] relative group">
-                                    <img
-                                        src="/uploads/teaching-certificates.jpg"
-                                        alt="Student Awards"
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                        <span className="text-white font-medium">Student Achievement</span>
-                                    </div>
-                                </div>
-                                <div className="rounded-2xl overflow-hidden shadow-xl aspect-[4/5] relative group">
-                                    <img
-                                        src="/uploads/teaching-presentation.png"
-                                        alt="Project Mentoring"
-                                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-                                    />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                        <span className="text-white font-medium">Project Mentoring</span>
-                                    </div>
+                                <img
+                                    src="/uploads/teaching-class.png"
+                                    alt="Classroom Discussion"
+                                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                                    <span className="text-white font-medium">Classroom Interactions</span>
                                 </div>
                             </motion.div>
                         </div>
