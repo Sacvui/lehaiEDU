@@ -71,11 +71,13 @@ export function Hero() {
                             transition={{ delay: 0.4 }}
                             className="flex flex-col sm:flex-row items-center lg:items-start gap-5 pt-4"
                         >
-                            <Button size="lg" className="h-14 px-8 text-lg rounded-full bg-gradient-to-r from-amber-700 to-orange-600 hover:from-amber-600 hover:to-orange-500 text-white shadow-lg border-0">
-                                <Building2 className="mr-2 h-5 w-5" />
-                                Consulting Strategy
-                                <ArrowRight className="ml-2 w-4 h-4 opacity-50" />
-                            </Button>
+                            <a href="#solutions">
+                                <Button size="lg" className="h-14 px-8 text-lg rounded-full bg-gradient-to-r from-amber-700 to-orange-600 hover:from-amber-600 hover:to-orange-500 text-white shadow-lg border-0">
+                                    <Building2 className="mr-2 h-5 w-5" />
+                                    Consulting Strategy
+                                    <ArrowRight className="ml-2 w-4 h-4 opacity-50" />
+                                </Button>
+                            </a>
 
                             <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white backdrop-blur-sm bg-white/50 dark:bg-slate-900/50">
                                 <Microscope className="mr-2 h-5 w-5" />

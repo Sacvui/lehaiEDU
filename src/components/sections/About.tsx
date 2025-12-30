@@ -106,9 +106,11 @@ export function About() {
                         </div>
 
                         <div className="flex gap-4 pt-4">
-                            <Button className="bg-white text-slate-950 hover:bg-slate-200">
-                                See Full Curriculum Vitae
-                            </Button>
+                            <a href="https://www.linkedin.com/in/lephuchai" target="_blank" rel="noopener noreferrer">
+                                <Button className="bg-white text-slate-950 hover:bg-slate-200">
+                                    See Full Curriculum Vitae
+                                </Button>
+                            </a>
                             <Button variant="outline" className="border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 hover:bg-slate-800">
                                 Visit LinkedIn Profile <ArrowUpRight className="ml-2 w-4 h-4" />
                             </Button>

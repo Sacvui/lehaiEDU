@@ -13,10 +13,7 @@ export default function Home() {
       <About />
       <LatestInsights />
 
-      {/* Simple Footer Placeholder */}
-      <footer className="py-12 bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 text-center">
-        <p className="text-slate-500 text-sm">© 2025 Le Phuc Hai. All rights reserved.</p>
-      </footer>
+
     </main>
   );
 }
