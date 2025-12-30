@@ -4,6 +4,9 @@ import path from 'path'
 import { batch1 } from './blog_posts_1'
 import { batch2 } from './blog_posts_2'
 import { batch3 } from './blog_posts_3'
+import { batch4 } from './blog_posts_4'
+import { batch5 } from './blog_posts_5'
+import { batch6 } from './blog_posts_6'
 
 // Load environment variables from .env.local
 dotenv.config({ path: path.resolve(process.cwd(), '.env.local') })
@@ -149,7 +152,7 @@ const authors = [
     }
 ]
 
-const posts = [...batch1, ...batch2, ...batch3];
+const posts = [...batch1, ...batch2, ...batch3, ...batch4, ...batch5, ...batch6];
 
 async function importData() {
     try {
