@@ -34,9 +34,11 @@ export default function ConsultingPage() {
                         </p>
 
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button size="lg" className="h-14 px-8 rounded-full bg-amber-600 hover:bg-amber-700 text-white text-lg">
-                                Schedule a Discovery Call <ArrowRight className="ml-2 w-5 h-5" />
-                            </Button>
+                            <a href="mailto:contact@lehai.edu.vn">
+                                <Button size="lg" className="h-14 px-8 rounded-full bg-amber-600 hover:bg-amber-700 text-white text-lg">
+                                    Schedule a Discovery Call <ArrowRight className="ml-2 w-5 h-5" />
+                                </Button>
+                            </a>
                         </div>
                     </motion.div>
                 </div>
