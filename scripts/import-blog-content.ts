@@ -17,6 +17,7 @@ import { series_c_2 } from './blog_posts_series_c_2'
 import { book_intro } from './blog_posts_book'
 import { bi_ai_post } from './blog_posts_bi_ai'
 import { ncs_series_post } from './blog_posts_ncs_series'
+import { dms_post } from './blog_posts_dms'
 
 dotenv.config({ path: path.resolve(process.cwd(), '.env.local') })
 
@@ -184,7 +185,8 @@ const posts = [
     ...series_c_1, ...series_c_2,
     ...book_intro,
     ...bi_ai_post,
-    ...ncs_series_post
+    ...ncs_series_post,
+    ...dms_post
 ];
 
 async function importData() {
