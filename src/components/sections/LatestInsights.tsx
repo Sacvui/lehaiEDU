@@ -88,6 +88,7 @@ const MOCK_ARTICLES = [
         localImage: "/blog/rtm-7.png"
     }
 ];
+// Force rebuild for image assets
 
 export function LatestInsights() {
     const [articles, setArticles] = useState<any[]>(MOCK_ARTICLES);
