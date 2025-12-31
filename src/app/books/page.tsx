@@ -49,31 +49,86 @@ export default async function BooksPage({
                 </p>
             </div>
 
-            {/* Featured Book / Intro */}
-            <div className="mb-20">
-                <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-xl overflow-hidden border border-slate-200 dark:border-slate-800 flex flex-col md:flex-row">
-                    <div className="md:w-1/3 relative h-[400px] md:h-auto bg-slate-100 dark:bg-slate-800">
-                        {/* Hardcoded featured cover for now, or fetch from first post */}
-                        <Image
-                            src="/blog/book_mockup_stack_ncskit_final.png"
-                            alt="300 Nursery Rhymes"
-                            fill
-                            className="object-cover md:object-contain p-4"
-                        />
-                    </div>
-                    <div className="md:w-2/3 p-8 md:p-12 flex flex-col justify-center">
-                        <div className="uppercase tracking-wide text-sm text-teal-500 font-bold mb-2">Build Your Legacy</div>
-                        <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-4">300 Nursery Rhymes: Executive Edition</h2>
-                        <h3 className="text-xl text-slate-500 dark:text-slate-400 mb-4 font-light">From Intern to CEO: A Strategic Blueprint</h3>
-                        <p className="text-slate-600 dark:text-slate-300 mb-6 text-lg leading-relaxed">
-                            A synthesis of practical wisdom and strategic frameworks. Bridging the gap between academic theory and the raw reality of business execution in Vietnam.
-                        </p>
-                        <div className="flex gap-4">
-                            <Link href="/blog/book-project-intro" className="px-6 py-3 bg-amber-600 hover:bg-amber-700 text-white font-medium rounded-lg transition-colors">
-                                Read Introduction
+            {/* The Trilogy Series */}
+            <div className="mb-24">
+                <h2 className="text-3xl font-bold text-center mb-12 text-slate-900 dark:text-white">
+                    The <span className="text-amber-500">Executive Trilogy</span>
+                </h2>
+                <div className="grid md:grid-cols-3 gap-8">
+                    {/* Book 1: Intern to CEO */}
+                    <div className="flex flex-col group">
+                        <div className="relative aspect-[2/3] bg-slate-100 dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-300">
+                            <Image
+                                src="/blog/book_mockup_stack_ncskit_final.png"
+                                alt="300 Nursery Rhymes: From Intern to CEO"
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute top-4 right-4 bg-amber-500 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                                BESTSELLER
+                            </div>
+                        </div>
+                        <div className="mt-6 text-center">
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">From Intern to CEO</h3>
+                            <div className="text-sm font-medium text-slate-500 mb-2">
+                                <p>Le Phuc Hai</p>
+                                <p className="text-xs text-slate-400 font-normal">Scientific Assistant: Carmen Chau</p>
+                            </div>
+                            <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">Strategic Blueprint for Leaders</p>
+                            <Link href="/blog/book-project-intro" className="text-amber-600 hover:text-amber-700 font-semibold text-sm uppercase tracking-wide">
+                                Read Introduction &rarr;
                             </Link>
-                            <button className="px-6 py-3 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 font-medium rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors">
-                                Join Waitlist
+                        </div>
+                    </div>
+
+                    {/* Book 2: Intern to Researcher */}
+                    <div className="flex flex-col group">
+                        <div className="relative aspect-[2/3] bg-slate-100 dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-300">
+                            <Image
+                                src="/blog/book_cover_intern_to_researcher.png"
+                                alt="300 Nursery Rhymes: From Intern to Researcher"
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute top-4 right-4 bg-cyan-600 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md">
+                                ACADEMIC
+                            </div>
+                        </div>
+                        <div className="mt-6 text-center">
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">From Intern to Researcher</h3>
+                            <div className="text-sm font-medium text-slate-500 mb-2">
+                                <p>Le Phuc Hai</p>
+                                <p className="text-xs text-slate-400 font-normal">Scientific Assistant: Carmen Chau</p>
+                            </div>
+                            <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">Mastering the Art of Inquiry</p>
+                            <button className="text-slate-400 font-semibold text-sm uppercase tracking-wide cursor-not-allowed">
+                                Coming Soon
+                            </button>
+                        </div>
+                    </div>
+
+                    {/* Book 3: Intern to C-Level */}
+                    <div className="flex flex-col group">
+                        <div className="relative aspect-[2/3] bg-slate-100 dark:bg-slate-800 rounded-xl overflow-hidden shadow-lg group-hover:shadow-2xl transition-all duration-300">
+                            <Image
+                                src="/blog/book_cover_intern_to_c_level.png"
+                                alt="300 Nursery Rhymes: From Intern to C-Level"
+                                fill
+                                className="object-cover"
+                            />
+                            <div className="absolute top-4 right-4 bg-slate-900 text-white text-xs font-bold px-3 py-1 rounded-full shadow-md border border-slate-700">
+                                EXECUTIVE
+                            </div>
+                        </div>
+                        <div className="mt-6 text-center">
+                            <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-1">From Intern to C-Level</h3>
+                            <div className="text-sm font-medium text-slate-500 mb-2">
+                                <p>Le Phuc Hai</p>
+                                <p className="text-xs text-slate-400 font-normal">Scientific Assistant: Carmen Chau</p>
+                            </div>
+                            <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">The Golden Path to Governance</p>
+                            <button className="text-slate-400 font-semibold text-sm uppercase tracking-wide cursor-not-allowed">
+                                Coming Soon
                             </button>
                         </div>
                     </div>
