@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Rocket, GraduationCap, BookOpen, User, ChevronDown, TrendingUp, Zap, FlaskConical } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter, User, GraduationCap, Rocket, BookOpen, TrendingUp, Zap, FlaskConical, Menu, X, ChevronDown, Phone } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
@@ -21,13 +21,23 @@ export function Header() {
   }, []);
 
   const navItems = [
-    { label: 'About', href: '#about', icon: User },
-    { label: 'Research (NCSKIT)', href: 'https://ncskit.org', icon: GraduationCap, external: true },
+    {
+      label: 'About',
+      href: '/#about',
+      icon: User,
+      submenu: [
+        { label: 'My Profile', href: '/#about', icon: User, desc: 'Professional Bio & Journey' },
+        { label: 'Research (NCSKIT)', href: 'https://ncskit.org', icon: GraduationCap, desc: 'Academic Research Platform', external: true },
+        { label: 'AM Medtech', href: 'https://ammedtech.com', icon: Rocket, desc: 'Digital Transformation Agnecy', external: true },
+        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/hailp/', icon: Linkedin, desc: 'Professional Network', external: true },
+      ]
+    },
     { label: 'Solutions', href: '#solutions', icon: Rocket },
+    { label: 'Books', href: '/books', icon: BookOpen },
     {
       label: 'Blog',
       href: '/blog',
-      icon: BookOpen,
+      icon: TrendingUp,
       submenu: [
         {
           label: 'Biz Tactics',
@@ -38,7 +48,6 @@ export function Header() {
             { label: 'RTM Masterclass', href: '/blog?category=rtm-distribution' },
             { label: 'Logistics & Supply Chain', href: '/blog?category=logistics-supply-chain' },
             { label: 'Digital Transformation', href: '/blog?category=digital-transformation' },
-            { label: 'Data & Tech (BI)', href: '/blog?category=ai-technology' },
             { label: 'Enterprise Strategy', href: '/blog?category=enterprise-strategy' },
           ]
         },
@@ -50,6 +59,7 @@ export function Header() {
           items: [
             { label: 'Mentorship', href: '/blog?category=mentorship-career' },
             { label: 'Leadership', href: '/blog?category=strategic-leadership' },
+            { label: 'Data & Tech (BI)', href: '/blog?category=ai-technology' },
           ]
         },
         {
@@ -64,7 +74,6 @@ export function Header() {
         },
       ]
     },
-    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/hailp/', icon: User, external: true },
     { label: 'Contact', href: '#contact' },
   ];
 

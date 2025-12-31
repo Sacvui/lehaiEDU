@@ -13,6 +13,8 @@ import { series_a_2 } from './blog_posts_series_a_2'
 import { series_b_1 } from './blog_posts_series_b_1'
 import { series_b_2 } from './blog_posts_series_b_2'
 import { series_c_1 } from './blog_posts_series_c_1'
+import { series_c_2 } from './blog_posts_series_c_2'
+import { book_intro } from './blog_posts_book'
 
 dotenv.config({ path: path.resolve(process.cwd(), '.env.local') })
 
@@ -97,6 +99,13 @@ const categories = [
         description: 'Insights for managers and business leaders.',
         color: '#be123c',
     },
+    {
+        _type: 'category',
+        title: 'Book: Intern to CEO',
+        slug: { current: 'book-intern-to-ceo' },
+        description: 'Dự án sách 300 Bài Hát Thiếu Nhi: From Intern to CEO',
+        color: '#f59e0b',
+    },
 ]
 
 // Authors
@@ -170,7 +179,8 @@ const posts = [
     ...batch1, ...batch2, ...batch3, ...batch4, ...batch5, ...batch6,
     ...series_a_1, ...series_a_2,
     ...series_b_1, ...series_b_2,
-    ...series_c_1
+    ...series_c_1, ...series_c_2,
+    ...book_intro
 ];
 
 async function importData() {
@@ -205,13 +215,12 @@ async function importData() {
             const categoryId = `category-${post.categorySlug}`
             const docId = `post-${post.slug.current}`
 
-            // Handle Image Upload
+            // Handle Image Upload (Cover)
             let mainImage = undefined;
-            // Check for 'coverImage' property in post object (will be added to ts files)
             if ((post as any).coverImage) {
                 const imagePath = path.join(process.cwd(), 'public', (post as any).coverImage);
                 if (fs.existsSync(imagePath)) {
-                    console.log(`   Uploading image for ${post.title}...`);
+                    console.log(`   Uploading cover image for ${post.title}...`);
                     try {
                         const imageAsset = await client.assets.upload('image', fs.createReadStream(imagePath), {
                             filename: path.basename(imagePath)
@@ -224,7 +233,34 @@ async function importData() {
                             }
                         };
                     } catch (err) {
-                        console.error(`   Failed to upload image: ${err}`);
+                        console.error(`   Failed to upload cover image: ${err}`);
+                    }
+                }
+            }
+
+            // Handle Body Images (Inline)
+            if (post.body) {
+                for (const block of post.body) {
+                    if (block._type === 'image' && (block as any).localPath) {
+                        const bodyImagePath = path.join(process.cwd(), 'public', (block as any).localPath);
+                        if (fs.existsSync(bodyImagePath)) {
+                            console.log(`   Uploading inline image: ${(block as any).localPath}...`);
+                            try {
+                                const imageAsset = await client.assets.upload('image', fs.createReadStream(bodyImagePath), {
+                                    filename: path.basename(bodyImagePath)
+                                });
+                                // Update the block to be a valid Sanity image object
+                                (block as any).asset = {
+                                    _type: "reference",
+                                    _ref: imageAsset._id
+                                };
+                                delete (block as any).localPath; // Remove the temp path
+                            } catch (err) {
+                                console.error(`   Failed to upload inline image: ${err}`);
+                            }
+                        } else {
+                            console.warn(`   ⚠️ Inline image not found: ${bodyImagePath}`);
+                        }
                     }
                 }
             }

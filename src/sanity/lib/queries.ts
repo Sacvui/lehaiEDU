@@ -1,7 +1,7 @@
 import { groq } from 'next-sanity'
 
 // Query for recent posts (homepage)
-export const RECENT_POSTS_QUERY = groq`*[_type == "post" && defined(slug.current)] | order(publishedAt desc)[0...7] {
+export const RECENT_POSTS_QUERY = groq`*[_type == "post" && defined(slug.current) && !("book-intern-to-ceo" in categories[]->slug.current)] | order(publishedAt desc)[0...7] {
   _id,
   title,
   slug,

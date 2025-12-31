@@ -1,3 +1,4 @@
+import { BookLandingPage } from '@/components/book/BookLandingPage'
 import { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Image from 'next/image'
@@ -58,6 +59,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             )
         )
         .slice(0, 3) || []
+
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-amber-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">

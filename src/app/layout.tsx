@@ -7,16 +7,17 @@ import { Footer } from '@/components/layout/Footer'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Le Phuc Hai | Business & Academic Profile",
-  description: "Sharing insights on Business Development, Strategy, and Academic Research. A personal portfolio connecting practical business solutions with academic knowledge.",
+  title: 'Lê Phúc Hải | Strategic Leadership & Digital Transformation',
+  description: 'Official website of Le Phuc Hai - National Business Development Director & PhD Researcher. Insights on RTM, Logistics, Leadership and Academic Research.',
+  keywords: ['Le Phuc Hai', 'RTM', 'Logistics', 'Business Strategy', 'Academic Research', 'PhD Journey', 'Mentorship'],
   openGraph: {
-    title: "Le Phuc Hai | Business & Academic Profile",
-    description: "Connect with me for Business Strategy and Academic Collaboration.",
+    title: 'Lê Phúc Hải | Strategic Leadership & Digital Transformation',
+    description: 'Insights on RTM, Logistics, Leadership and Academic Research.',
     url: 'https://lehai.edu.vn',
-    siteName: 'Le Hai Education',
+    siteName: 'Le Phuc Hai Official',
     images: [
       {
-        url: 'https://lehai.edu.vn/uploads/profile-founder.jpg', // Ensure this image path is valid/public
+        url: 'https://lehai.edu.vn/uploads/profile-founder.jpg',
         width: 1200,
         height: 630,
         alt: 'Le Phuc Hai Profile',
@@ -27,9 +28,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: "Le Phuc Hai | Business & Academic Profile",
-    description: "Sharing insights on Business Development and Research.",
+    title: 'Lê Phúc Hải | Strategic Leadership & Digital Transformation',
+    description: 'Insights from a Scholar-Practitioner.',
     images: ['https://lehai.edu.vn/uploads/profile-founder.jpg'],
+    creator: '@hailp',
   },
 };
 
