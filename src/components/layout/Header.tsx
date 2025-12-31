@@ -6,6 +6,73 @@ import { Github, Linkedin, Mail, Twitter, User, GraduationCap, Rocket, BookOpen,
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
+interface NavItem {
+  label: string;
+  href: string;
+  icon?: any;
+  desc?: string;
+  external?: boolean;
+  submenu?: NavItem[];
+  items?: NavItem[];
+}
+
+const navItems: NavItem[] = [
+  {
+    label: 'About',
+    href: '/#about',
+    icon: User,
+    submenu: [
+      { label: 'My Profile', href: '/#about', icon: User, desc: 'Professional Bio & Journey' },
+      { label: 'Research (NCSKIT)', href: 'https://ncskit.org', icon: GraduationCap, desc: 'Academic Research Platform', external: true },
+      { label: 'AM Medtech', href: 'https://ammedtech.com', icon: Rocket, desc: 'Digital Transformation Agnecy', external: true },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/hailp/', icon: Linkedin, desc: 'Professional Network', external: true },
+    ]
+  },
+  { label: 'Solutions', href: '#solutions', icon: Rocket },
+  { label: 'Books', href: '/books', icon: BookOpen },
+  {
+    label: 'Blog',
+    href: '/blog',
+    icon: TrendingUp,
+    submenu: [
+      {
+        label: 'Biz Tactics',
+        href: '/blog?category=business',
+        icon: TrendingUp,
+        desc: 'Chiến thuật kinh doanh thực chiến',
+        items: [
+          { label: 'RTM Masterclass', href: '/blog?category=rtm-distribution' },
+          { label: 'Logistics & Supply Chain', href: '/blog?category=logistics-supply-chain' },
+          { label: 'Digital Transformation', href: '/blog?category=digital-transformation' },
+          { label: 'Enterprise Strategy', href: '/blog?category=enterprise-strategy' },
+        ]
+      },
+      {
+        label: 'Career Hacks',
+        href: '/blog?category=career',
+        icon: Zap,
+        desc: 'Tư vấn nghề nghiệp & thăng tiến',
+        items: [
+          { label: 'Mentorship', href: '/blog?category=mentorship-career' },
+          { label: 'Leadership', href: '/blog?category=strategic-leadership' },
+          { label: 'Data & Tech (BI)', href: '/blog?category=ai-technology' },
+        ]
+      },
+      {
+        label: 'Nerd Lab',
+        href: '/blog?category=research',
+        icon: FlaskConical,
+        desc: 'Nghiên cứu & Đam mê',
+        items: [
+          { label: 'Research Zero-to-Pro', href: '/blog?category=academic-corner' },
+          { label: 'Academic Writing', href: '/blog?category=academic-corner' },
+        ]
+      },
+    ]
+  },
+  { label: 'Contact', href: '#contact' },
+];
+
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -19,73 +86,6 @@ export function Header() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
-
-  interface NavItem {
-    label: string;
-    href: string;
-    icon?: any;
-    desc?: string;
-    external?: boolean;
-    submenu?: NavItem[];
-    items?: NavItem[];
-  }
-
-  const navItems: NavItem[] = [
-    {
-      label: 'About',
-      href: '/#about',
-      icon: User,
-      submenu: [
-        { label: 'My Profile', href: '/#about', icon: User, desc: 'Professional Bio & Journey' },
-        { label: 'Research (NCSKIT)', href: 'https://ncskit.org', icon: GraduationCap, desc: 'Academic Research Platform', external: true },
-        { label: 'AM Medtech', href: 'https://ammedtech.com', icon: Rocket, desc: 'Digital Transformation Agnecy', external: true },
-        { label: 'LinkedIn', href: 'https://www.linkedin.com/in/hailp/', icon: Linkedin, desc: 'Professional Network', external: true },
-      ]
-    },
-    { label: 'Solutions', href: '#solutions', icon: Rocket },
-    { label: 'Books', href: '/books', icon: BookOpen },
-    {
-      label: 'Blog',
-      href: '/blog',
-      icon: TrendingUp,
-      submenu: [
-        {
-          label: 'Biz Tactics',
-          href: '/blog?category=business',
-          icon: TrendingUp,
-          desc: 'Chiến thuật kinh doanh thực chiến',
-          items: [
-            { label: 'RTM Masterclass', href: '/blog?category=rtm-distribution' },
-            { label: 'Logistics & Supply Chain', href: '/blog?category=logistics-supply-chain' },
-            { label: 'Digital Transformation', href: '/blog?category=digital-transformation' },
-            { label: 'Enterprise Strategy', href: '/blog?category=enterprise-strategy' },
-          ]
-        },
-        {
-          label: 'Career Hacks',
-          href: '/blog?category=career',
-          icon: Zap,
-          desc: 'Tư vấn nghề nghiệp & thăng tiến',
-          items: [
-            { label: 'Mentorship', href: '/blog?category=mentorship-career' },
-            { label: 'Leadership', href: '/blog?category=strategic-leadership' },
-            { label: 'Data & Tech (BI)', href: '/blog?category=ai-technology' },
-          ]
-        },
-        {
-          label: 'Nerd Lab',
-          href: '/blog?category=research',
-          icon: FlaskConical,
-          desc: 'Nghiên cứu & Đam mê',
-          items: [
-            { label: 'Research Zero-to-Pro', href: '/blog?category=academic-corner' },
-            { label: 'Academic Writing', href: '/blog?category=academic-corner' },
-          ]
-        },
-      ]
-    },
-    { label: 'Contact', href: '#contact' },
-  ];
 
   return (
     <header
