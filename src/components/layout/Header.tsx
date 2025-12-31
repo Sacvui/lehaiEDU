@@ -58,7 +58,7 @@ export function Header() {
           icon: FlaskConical,
           desc: 'Nghiên cứu & Đam mê',
           items: [
-            { label: 'Research Zero-to-Pro', href: '/blog?category=research-innovation' },
+            { label: 'Research Zero-to-Pro', href: '/blog?category=academic-corner' },
             { label: 'Academic Writing', href: '/blog?category=academic-corner' },
           ]
         },

@@ -12,6 +12,7 @@ import { series_a_1 } from './blog_posts_series_a_1'
 import { series_a_2 } from './blog_posts_series_a_2'
 import { series_b_1 } from './blog_posts_series_b_1'
 import { series_b_2 } from './blog_posts_series_b_2'
+import { series_c_1 } from './blog_posts_series_c_1'
 
 dotenv.config({ path: path.resolve(process.cwd(), '.env.local') })
 
@@ -168,7 +169,8 @@ const authors = [
 const posts = [
     ...batch1, ...batch2, ...batch3, ...batch4, ...batch5, ...batch6,
     ...series_a_1, ...series_a_2,
-    ...series_b_1, ...series_b_2
+    ...series_b_1, ...series_b_2,
+    ...series_c_1
 ];
 
 async function importData() {

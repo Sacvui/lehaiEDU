@@ -5,6 +5,7 @@ export const series_b_1 = [
         publishedAt: new Date(Date.now() - 1100000000).toISOString(),
         excerpt: 'Bạn nghĩ Nghiên cứu khoa học (NCKH) là thứ gì đó khô khan? Sai lầm. Với góc nhìn của một Scholar-Practitioner vừa làm Giám đốc phát triển kinh doanh toàn quốc, vừa làm Nghiên cứu sinh Tiến sĩ, Hải khẳng định: NCKH là Kỹ năng giải quyết vấn đề cấp cao.',
         categorySlug: 'academic-corner',
+        coverImage: '/blog/research_series_1_mindset.png',
         featured: true,
         readingTime: 12,
         tags: ['Research', 'Mindset', 'Career Growth', 'Critical Thinking', 'Series B'],

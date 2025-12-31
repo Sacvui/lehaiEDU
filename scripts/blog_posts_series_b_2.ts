@@ -5,6 +5,7 @@ export const series_b_2 = [
         publishedAt: new Date(Date.now() - 1600000000).toISOString(),
         excerpt: 'Bạn mở phần mềm SPSS/SmartPLS lên và mồ hôi hột đổ ra? Hàng ngàn con số nhảy múa? Bình tĩnh. Là một người làm Business đi làm nghiên cứu, Hải sẽ chỉ bạn cách đọc kết quả "nhanh-gọn-lẹ".',
         categorySlug: 'academic-corner',
+        coverImage: '/blog/research_series_4_methodology.png',
         featured: false,
         readingTime: 20,
         tags: ['Data Analysis', 'SPSS', 'SmartPLS', 'Statistics', 'Series B'],
