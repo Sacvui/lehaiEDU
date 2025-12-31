@@ -6,7 +6,7 @@ export const dms_post = [
         publishedAt: new Date().toISOString(),
         excerpt: 'Sếp tưởng lắp DMS xong là rung đùi quản lý được Sales? Nhầm to! Sales nhà mình thông minh hơn máy nhiều. Cùng bóc trần 5 chiêu "ảo ma canada" mà anh em hay dùng để lách luật.',
         categorySlug: 'rtm-distribution', // Or 'commercial-optimization' if available, defaulting to RTM
-        coverImage: '/blog/rtm_masterclass_9_data_tech.png', // Reusing tech image
+        coverImage: '/blog/dms_tricks_cover.png', // Custom generated image
         featured: true,
         readingTime: 10,
         tags: ['DMS', 'Sales Tricks', 'Góc nhìn Hải Morning', 'Quản trị hệ thống'],
