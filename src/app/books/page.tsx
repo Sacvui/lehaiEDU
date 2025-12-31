@@ -100,8 +100,11 @@ export default async function BooksPage({
                                 <p>Le Phuc Hai</p>
                                 <p className="text-xs text-slate-400 font-normal">Scientific Assistant: Carmen Chau</p>
                             </div>
-                            <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">Mastering the Art of Inquiry</p>
-                            <button className="text-slate-400 font-semibold text-sm uppercase tracking-wide cursor-not-allowed">
+                            <p className="text-sm font-semibold text-amber-600 dark:text-amber-500 mb-3 uppercase tracking-wider">Mastering the Art of Inquiry</p>
+                            <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed px-2">
+                                Transform raw data into strategic gold. A rigorous guide to applying academic thinking to chaotic business problems—because gut feeling is not a strategy.
+                            </p>
+                            <button className="text-slate-400 font-semibold text-sm uppercase tracking-wide cursor-not-allowed border rounded-full px-4 py-1 border-slate-200 dark:border-slate-800">
                                 Coming Soon
                             </button>
                         </div>
@@ -126,8 +129,11 @@ export default async function BooksPage({
                                 <p>Le Phuc Hai</p>
                                 <p className="text-xs text-slate-400 font-normal">Scientific Assistant: Carmen Chau</p>
                             </div>
-                            <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">The Golden Path to Governance</p>
-                            <button className="text-slate-400 font-semibold text-sm uppercase tracking-wide cursor-not-allowed">
+                            <p className="text-sm font-semibold text-amber-600 dark:text-amber-500 mb-3 uppercase tracking-wider">The Golden Path to Governance</p>
+                            <p className="text-sm text-slate-600 dark:text-slate-400 mb-6 leading-relaxed px-2">
+                                Beyond management lies governance. Decode the unspoken rules of the boardroom, master executive presence, and build a legacy that outlasts your tenure.
+                            </p>
+                            <button className="text-slate-400 font-semibold text-sm uppercase tracking-wide cursor-not-allowed border rounded-full px-4 py-1 border-slate-200 dark:border-slate-800">
                                 Coming Soon
                             </button>
                         </div>
