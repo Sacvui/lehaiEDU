@@ -4,7 +4,8 @@ export const series_a_1 = [
         slug: { current: 'rtm-masterclass-1-overview' },
         publishedAt: new Date(Date.now() - 100000000).toISOString(),
         excerpt: 'Bạn có sản phẩm ngon, bao bì đẹp, marketing rầm rộ nhưng vẫn ế? Có thể "mạch máu" phân phối của bạn đang bị nghẽn. Chào mừng đến với Series RTM Masterclass - Nơi Hải đúc kết 15 năm kinh nghiệm để giúp bạn khơi thông dòng chảy hàng hóa.',
-        categorySlug: 'digital-transformation',
+        categorySlug: 'rtm-distribution',
+        coverImage: '/blog/rtm_masterclass_1_overview.png',
         featured: true,
         readingTime: 12,
         tags: ['RTM', 'Distribution', 'Strategy', 'FMCG', 'Series A'],
@@ -287,14 +288,15 @@ export const series_a_1 = [
         ]
     },
     {
-        title: '[RTM Masterclass #5] Route Planning: Nghệ thuật Vẽ Tuyến để sales không... đi dạo 🗺️',
+        title: '[RTM Masterclass #5] Route Planning: Nghệ thuật vẽ tuyến MCP - Vẽ bậy là chết Sale 🗺️',
         slug: { current: 'rtm-masterclass-5-route-planning' },
-        publishedAt: new Date(Date.now() - 500000000).toISOString(),
-        excerpt: 'Sales chạy lông nhông ngoài đường cả ngày, tốn cả bình xăng nhưng doanh số bằng không. Tại sao? Vì tuyến bán hàng (MCP) bị vẽ sai. Tối ưu MCP là cách tăng năng suất rẻ tiền nhất.',
-        categorySlug: 'digital-transformation',
+        publishedAt: new Date(Date.now() - 60000000).toISOString(),
+        excerpt: 'Tuyến bán hàng (MCP) là "nhịp thở" của Sales. Vẽ tuyến sai là bắt Sale chạy rông ngoài đường tốn xăng vô ích. Tối ưu MCP để tăng 30% năng suất.',
+        categorySlug: 'rtm-distribution',
+        coverImage: '/blog/rtm_masterclass_5_route_planning.png',
         featured: false,
-        readingTime: 20,
-        tags: ['RTM', 'Route Planning', 'MCP', 'Sales Productivity', 'Series A'],
+        readingTime: 9,
+        tags: ['MCP', 'Route Planning', 'Sales Efficiency'],
         body: [
             {
                 _type: 'block',

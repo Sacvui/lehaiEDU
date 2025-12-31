@@ -35,7 +35,8 @@ export function Header() {
           icon: TrendingUp,
           desc: 'Chiến thuật kinh doanh thực chiến',
           items: [
-            { label: 'RTM & Logistics', href: '/blog?category=logistics-supply-chain' },
+            { label: 'RTM Masterclass', href: '/blog?category=rtm-distribution' },
+            { label: 'Logistics & Supply Chain', href: '/blog?category=logistics-supply-chain' },
             { label: 'Digital Transformation', href: '/blog?category=digital-transformation' },
             { label: 'Data & Tech (BI)', href: '/blog?category=ai-technology' },
             { label: 'Enterprise Strategy', href: '/blog?category=enterprise-strategy' },

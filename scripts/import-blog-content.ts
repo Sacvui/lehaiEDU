@@ -1,19 +1,18 @@
 import { createClient } from '@sanity/client'
 import * as dotenv from 'dotenv'
 import path from 'path'
+import fs from 'fs'
 import { batch1 } from './blog_posts_1'
 import { batch2 } from './blog_posts_2'
 import { batch3 } from './blog_posts_3'
 import { batch4 } from './blog_posts_4'
 import { batch5 } from './blog_posts_5'
 import { batch6 } from './blog_posts_6'
-// New Series Imports
 import { series_a_1 } from './blog_posts_series_a_1'
 import { series_a_2 } from './blog_posts_series_a_2'
 import { series_b_1 } from './blog_posts_series_b_1'
 import { series_b_2 } from './blog_posts_series_b_2'
 
-// Load environment variables from .env.local
 dotenv.config({ path: path.resolve(process.cwd(), '.env.local') })
 
 const client = createClient({
@@ -24,6 +23,7 @@ const client = createClient({
     token: process.env.SANITY_WRITE_TOKEN,
 })
 
+// ... (Categories and Authors definitions remain unchanged) ...
 // Categories
 const categories = [
     {
@@ -81,6 +81,13 @@ const categories = [
         slug: { current: 'mentorship-career' },
         description: 'Career advice and soft skills for students and young professionals.',
         color: '#db2777',
+    },
+    {
+        _type: 'category',
+        title: 'RTM Distribution',
+        slug: { current: 'rtm-distribution' },
+        description: 'Route-to-Market strategies and channel management mastery.',
+        color: '#dc2626',
     },
     {
         _type: 'category',
@@ -158,7 +165,6 @@ const authors = [
     }
 ]
 
-// Merge all posts
 const posts = [
     ...batch1, ...batch2, ...batch3, ...batch4, ...batch5, ...batch6,
     ...series_a_1, ...series_a_2,
@@ -192,23 +198,44 @@ async function importData() {
         let count = 0;
         for (const post of posts) {
             count++;
-            // Randomly select an author
             const randomAuthor = authors[Math.floor(Math.random() * authors.length)]
             const authorId = `author-${randomAuthor.slug.current}`
-
-            // Use deterministic ID for category reference
             const categoryId = `category-${post.categorySlug}`
             const docId = `post-${post.slug.current}`
 
-            // Remove helper property
-            const { categorySlug, ...postData } = post
+            // Handle Image Upload
+            let mainImage = undefined;
+            // Check for 'coverImage' property in post object (will be added to ts files)
+            if ((post as any).coverImage) {
+                const imagePath = path.join(process.cwd(), 'public', (post as any).coverImage);
+                if (fs.existsSync(imagePath)) {
+                    console.log(`   Uploading image for ${post.title}...`);
+                    try {
+                        const imageAsset = await client.assets.upload('image', fs.createReadStream(imagePath), {
+                            filename: path.basename(imagePath)
+                        });
+                        mainImage = {
+                            _type: 'image',
+                            asset: {
+                                _type: "reference",
+                                _ref: imageAsset._id
+                            }
+                        };
+                    } catch (err) {
+                        console.error(`   Failed to upload image: ${err}`);
+                    }
+                }
+            }
+
+            const { categorySlug, coverImage, ...postData } = post as any;
 
             const postWithRefs = {
                 ...postData,
                 _type: 'post',
                 categories: [{ _type: 'reference', _ref: categoryId }],
                 author: { _type: 'reference', _ref: authorId },
-                _id: docId
+                _id: docId,
+                mainImage: mainImage // Assign the uploaded image
             }
 
             await client.createOrReplace(postWithRefs)

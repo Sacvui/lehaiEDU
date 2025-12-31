@@ -168,12 +168,13 @@ export const series_a_2 = [
     {
         title: '[RTM Masterclass #9] Data & Tech: Chuyện chàng "SFA Specialist" đi mở cõi 📊',
         slug: { current: 'rtm-masterclass-9-data-tech' },
-        publishedAt: new Date(Date.now() - 900000000).toISOString(),
+        publishedAt: new Date(Date.now() - 20000000).toISOString(),
         excerpt: 'DMS không chỉ là công cụ chấm công. Với kinh nghiệm làm SFA Specialist từ ngày đầu, Hải sẽ chỉ cách dùng dữ liệu để "bắt mạch" thị trường.',
-        categorySlug: 'digital-transformation',
+        categorySlug: 'rtm-distribution',
+        // Reuse an image or leave blank? Let's leave blank for now as we only generated 7 specific ones.
         featured: false,
         readingTime: 22,
-        tags: ['DMS', 'Data Analysis', 'Salesforce Automation', 'Digital Transformation', 'Series A'],
+        tags: ['DMS', 'SFA', 'Data Driven'],
         body: [
             {
                 _type: 'block',
