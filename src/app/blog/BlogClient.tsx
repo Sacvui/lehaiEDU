@@ -1,8 +1,9 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from 'next/navigation';
 import { urlForImage } from "@/sanity/lib/image";
 import { Calendar, Clock, ArrowRight, Search, Filter, X } from "lucide-react";
 
@@ -11,20 +12,49 @@ interface BlogClientProps {
     categories: any[];
 }
 
+const CATEGORY_GROUPS: Record<string, string[]> = {
+    'business': ['enterprise-strategy', 'digital-transformation', 'logistics-supply-chain', 'strategic-leadership', 'case-studies', 'ai-technology'],
+    'career': ['mentorship-career'],
+    'research': ['research-innovation', 'academic-corner']
+};
+
+const GROUP_NAMES: Record<string, string> = {
+    'business': 'Biz Tactics',
+    'career': 'Career Hacks',
+    'research': 'Nerd Lab'
+};
+
 export default function BlogClient({ posts, categories }: BlogClientProps) {
+    const searchParams = useSearchParams();
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
-    const [showFilters, setShowFilters] = useState(false);
+
+    // Initialize from URL
+    useEffect(() => {
+        const categoryParam = searchParams.get('category');
+        if (categoryParam) {
+            setSelectedCategory(categoryParam);
+        }
+    }, [searchParams]);
 
     // Filter posts based on search and category
     const filteredPosts = useMemo(() => {
         let filtered = posts;
 
-        // Filter by category
+        // Filter by category or group
         if (selectedCategory) {
-            filtered = filtered.filter(post =>
-                post.categories?.some((cat: any) => cat.slug.current === selectedCategory)
-            );
+            if (CATEGORY_GROUPS[selectedCategory]) {
+                // It's a group (e.g., 'business')
+                const allowedSlugs = CATEGORY_GROUPS[selectedCategory];
+                filtered = filtered.filter(post =>
+                    post.categories?.some((cat: any) => allowedSlugs.includes(cat.slug.current))
+                );
+            } else {
+                // It's a specific category
+                filtered = filtered.filter(post =>
+                    post.categories?.some((cat: any) => cat.slug.current === selectedCategory)
+                );
+            }
         }
 
         // Filter by search query
@@ -84,12 +114,31 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                             <button
                                 onClick={() => setSelectedCategory(null)}
                                 className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all ${selectedCategory === null
-                                        ? 'bg-amber-600 text-white shadow-lg'
-                                        : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-amber-500'
+                                    ? 'bg-amber-600 text-white shadow-lg'
+                                    : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-amber-500'
                                     }`}
                             >
                                 Tất cả ({posts.length})
                             </button>
+
+                            {/* Group Filters */}
+                            {Object.keys(CATEGORY_GROUPS).map((groupKey) => (
+                                <button
+                                    key={groupKey}
+                                    onClick={() => setSelectedCategory(groupKey)}
+                                    className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all ${selectedCategory === groupKey
+                                        ? 'bg-blue-600 text-white shadow-lg'
+                                        : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-blue-500'
+                                        }`}
+                                >
+                                    {GROUP_NAMES[groupKey]}
+                                </button>
+                            ))}
+
+                            {/* Divider */}
+                            <div className="w-px h-6 bg-slate-300 dark:bg-slate-700 mx-2"></div>
+
+                            {/* Individual Categories */}
                             {categories.map((category) => {
                                 const count = posts.filter(post =>
                                     post.categories?.some((cat: any) => cat.slug.current === category.slug.current)
@@ -100,8 +149,8 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                                         key={category._id}
                                         onClick={() => setSelectedCategory(category.slug.current)}
                                         className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all ${selectedCategory === category.slug.current
-                                                ? 'text-white shadow-lg'
-                                                : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-amber-500'
+                                            ? 'text-white shadow-lg'
+                                            : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-amber-500'
                                             }`}
                                         style={{
                                             backgroundColor: selectedCategory === category.slug.current ? category.color : undefined,
@@ -116,7 +165,10 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                         {/* Results Count */}
                         <div className="text-center text-sm text-slate-600 dark:text-slate-400">
                             {searchQuery || selectedCategory ? (
-                                <span>Tìm thấy <strong className="text-amber-600 dark:text-amber-400">{filteredPosts.length}</strong> bài viết</span>
+                                <span>
+                                    {selectedCategory && (CATEGORY_GROUPS[selectedCategory] ? `Đang xem danh mục: ${GROUP_NAMES[selectedCategory]} - ` : '')}
+                                    Tìm thấy <strong className="text-amber-600 dark:text-amber-400">{filteredPosts.length}</strong> bài viết
+                                </span>
                             ) : (
                                 <span>Tổng cộng <strong className="text-amber-600 dark:text-amber-400">{posts.length}</strong> bài viết</span>
                             )}

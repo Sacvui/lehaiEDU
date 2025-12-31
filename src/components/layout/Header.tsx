@@ -2,13 +2,14 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Menu, X, Rocket, GraduationCap, BookOpen, User } from 'lucide-react';
+import { Menu, X, Rocket, GraduationCap, BookOpen, User, ChevronDown, TrendingUp, Zap, FlaskConical } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,7 +23,16 @@ export function Header() {
     { label: 'About', href: '#about', icon: User },
     { label: 'Research (NCSKIT)', href: 'https://ncskit.org', icon: GraduationCap, external: true },
     { label: 'Solutions', href: '#solutions', icon: Rocket },
-    { label: 'Blog', href: '/blog', icon: BookOpen },
+    {
+      label: 'Blog',
+      href: '/blog',
+      icon: BookOpen,
+      submenu: [
+        { label: 'Biz Tactics', href: '/blog?category=business', icon: TrendingUp, desc: 'Chiến thuật kinh doanh thực chiến' },
+        { label: 'Career Hacks', href: '/blog?category=career', icon: Zap, desc: 'Tư vấn nghề nghiệp & thăng tiến' },
+        { label: 'Nerd Lab', href: '/blog?category=research', icon: FlaskConical, desc: 'Nghiên cứu & Đam mê' },
+      ]
+    },
     { label: 'LinkedIn', href: 'https://www.linkedin.com/in/hailp/', icon: User, external: true },
     { label: 'Contact', href: '#contact' },
   ];
@@ -55,15 +65,44 @@ export function Header() {
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
           {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              target={item.external ? '_blank' : undefined}
-              className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1.5"
-            >
-              {item.icon && <item.icon className="w-4 h-4" />}
-              {item.label}
-            </Link>
+            <div key={item.label} className="relative group">
+              <Link
+                href={item.href}
+                target={item.external ? '_blank' : undefined}
+                className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1.5 py-2"
+              >
+                {item.icon && <item.icon className="w-4 h-4" />}
+                {item.label}
+                {item.submenu && <ChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180" />}
+              </Link>
+
+              {/* Dropdown Menu */}
+              {item.submenu && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top w-64">
+                  <div className="bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 p-2 overflow-hidden">
+                    {item.submenu.map((subItem) => (
+                      <Link
+                        key={subItem.label}
+                        href={subItem.href}
+                        className="flex items-start gap-3 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group/item"
+                      >
+                        <div className="mt-1 p-1.5 rounded-md bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 group-hover/item:bg-blue-100 dark:group-hover/item:bg-slate-700 transition-colors">
+                          <subItem.icon className="w-4 h-4" />
+                        </div>
+                        <div>
+                          <div className="text-sm font-semibold text-slate-900 dark:text-white group-hover/item:text-blue-600 dark:group-hover/item:text-blue-400">
+                            {subItem.label}
+                          </div>
+                          <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5">
+                            {subItem.desc}
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
           ))}
           <Button className="rounded-full px-6 bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors">
             Book Consultation
@@ -81,18 +120,51 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-slate-950 border-b border-slate-200 dark:border-slate-800 shadow-xl p-4 flex flex-col gap-4 animate-in slide-in-from-top-2">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl p-4 flex flex-col gap-2 animate-in slide-in-from-top-2 h-[calc(100vh-80px)] overflow-y-auto">
           {navItems.map((item) => (
-            <Link
-              key={item.label}
-              href={item.href}
-              className="text-base font-medium text-slate-700 dark:text-slate-200 py-2 hover:text-blue-600 dark:hover:text-blue-400 border-b border-slate-100 dark:border-slate-900 last:border-0"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              {item.label}
-            </Link>
+            <div key={item.label}>
+              {item.submenu ? (
+                <div className="border-b border-slate-100 dark:border-slate-800 pb-2">
+                  <button
+                    onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
+                    className="w-full flex items-center justify-between text-base font-medium text-slate-700 dark:text-slate-200 py-2 hover:text-blue-600 dark:hover:text-blue-400"
+                  >
+                    <span className="flex items-center gap-2">
+                      {item.icon && <item.icon className="w-4 h-4" />}
+                      {item.label}
+                    </span>
+                    <ChevronDown className={cn("w-4 h-4 transition-transform", activeDropdown === item.label ? "rotate-180" : "")} />
+                  </button>
+
+                  {activeDropdown === item.label && (
+                    <div className="pl-4 flex flex-col gap-2 mt-2">
+                      {item.submenu.map((subItem) => (
+                        <Link
+                          key={subItem.label}
+                          href={subItem.href}
+                          className="flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 py-2 hover:text-blue-600 dark:hover:text-blue-400"
+                          onClick={() => setIsMobileMenuOpen(false)}
+                        >
+                          <subItem.icon className="w-3 h-3" />
+                          <span>{subItem.label}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              ) : (
+                <Link
+                  href={item.href}
+                  className="flex items-center gap-2 text-base font-medium text-slate-700 dark:text-slate-200 py-2 hover:text-blue-600 dark:hover:text-blue-400 border-b border-slate-100 dark:border-slate-900 last:border-0"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  {item.icon && <item.icon className="w-4 h-4" />}
+                  {item.label}
+                </Link>
+              )}
+            </div>
           ))}
-          <Button className="w-full rounded-lg">Book Consultation</Button>
+          <Button className="w-full rounded-lg mt-4">Book Consultation</Button>
         </div>
       )}
     </header>
