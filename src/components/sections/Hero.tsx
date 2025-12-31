@@ -37,7 +37,7 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
+                            className="text-3xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
                         >
                             <span className="block text-slate-800 dark:text-slate-200">
                                 Le Phuc Hai
@@ -51,7 +51,7 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.2 }}
-                            className="text-lg md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
+                            className="text-base md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
                         >
                             With over 10 years of experience in business management, digital transformation, and distribution system development. I specialize in helping enterprises restructure efficiently, enhance operational effectiveness, and optimize commercial performance.
                         </motion.p>
@@ -60,7 +60,7 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.3 }}
-                            className="text-base md:text-lg italic text-slate-500 dark:text-slate-500 leading-relaxed border-l-4 border-amber-600 pl-4"
+                            className="text-sm md:text-lg italic text-slate-500 dark:text-slate-500 leading-relaxed border-l-4 border-amber-600 pl-4"
                         >
                             "Technology should not be a gatekeeper, but a pathfinder – helping our thinking soar freely and reach new heights."
                         </motion.blockquote>
@@ -69,17 +69,17 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.4 }}
-                            className="flex flex-col sm:flex-row items-center lg:items-start gap-5 pt-4"
+                            className="flex flex-col sm:flex-row items-stretch sm:items-center lg:items-start gap-4 pt-4 w-full sm:w-auto"
                         >
-                            <a href="/consulting">
-                                <Button size="lg" className="h-14 px-8 text-lg rounded-full bg-gradient-to-r from-amber-700 to-orange-600 hover:from-amber-600 hover:to-orange-500 text-white shadow-lg border-0">
+                            <a href="/consulting" className="w-full sm:w-auto">
+                                <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-lg rounded-full bg-gradient-to-r from-amber-700 to-orange-600 hover:from-amber-600 hover:to-orange-500 text-white shadow-lg border-0">
                                     <Building2 className="mr-2 h-5 w-5" />
                                     Consulting Strategy
                                     <ArrowRight className="ml-2 w-4 h-4 opacity-50" />
                                 </Button>
                             </a>
 
-                            <Button size="lg" variant="outline" className="h-14 px-8 text-lg rounded-full border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white backdrop-blur-sm bg-white/50 dark:bg-slate-900/50">
+                            <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-lg rounded-full border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white backdrop-blur-sm bg-white/50 dark:bg-slate-900/50">
                                 <Microscope className="mr-2 h-5 w-5" />
                                 NCSKIT Ecosystem
                             </Button>

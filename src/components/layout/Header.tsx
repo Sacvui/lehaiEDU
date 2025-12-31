@@ -183,20 +183,20 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl p-4 flex flex-col gap-2 animate-in slide-in-from-top-2 h-[calc(100vh-80px)] overflow-y-auto">
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl p-4 flex flex-col gap-2 animate-in slide-in-from-top-2 h-[calc(100dvh-80px)] overflow-y-auto pb-20">
           {navItems.map((item) => (
             <div key={item.label}>
               {item.submenu ? (
                 <div className="border-b border-slate-100 dark:border-slate-800 pb-2">
                   <button
                     onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
-                    className="w-full flex items-center justify-between text-base font-medium text-slate-700 dark:text-slate-200 py-2 hover:text-blue-600 dark:hover:text-blue-400"
+                    className="w-full flex items-center justify-between text-base font-medium text-slate-700 dark:text-slate-200 py-4 hover:text-blue-600 dark:hover:text-blue-400"
                   >
-                    <span className="flex items-center gap-2">
-                      {item.icon && <item.icon className="w-4 h-4" />}
+                    <span className="flex items-center gap-3">
+                      {item.icon && <item.icon className="w-5 h-5" />}
                       {item.label}
                     </span>
-                    <ChevronDown className={cn("w-4 h-4 transition-transform", activeDropdown === item.label ? "rotate-180" : "")} />
+                    <ChevronDown className={cn("w-5 h-5 transition-transform", activeDropdown === item.label ? "rotate-180" : "")} />
                   </button>
 
                   {/* Level 1 Expansion */}
@@ -204,13 +204,13 @@ export function Header() {
                     <div className="pl-4 flex flex-col gap-4 mt-2">
                       {item.submenu.map((subItem) => (
                         <div key={subItem.label} className="flex flex-col gap-1">
-                          <div className="flex items-center justify-between py-1">
+                          <div className="flex items-center justify-between py-2">
                             <Link
                               href={subItem.href}
                               onClick={() => setIsMobileMenuOpen(false)}
-                              className="flex items-center gap-2 text-sm font-semibold text-slate-800 dark:text-slate-200"
+                              className="flex items-center gap-3 text-base font-semibold text-slate-800 dark:text-slate-200"
                             >
-                              {subItem.icon && <subItem.icon className="w-3 h-3" />}
+                              {subItem.icon && <subItem.icon className="w-4 h-4" />}
                               <span>{subItem.label}</span>
                             </Link>
 
@@ -221,21 +221,21 @@ export function Header() {
                                   e.stopPropagation();
                                   setActiveSubDropdown(activeSubDropdown === subItem.label ? null : subItem.label);
                                 }}
-                                className="p-1 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
+                                className="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
                               >
-                                <ChevronDown className={cn("w-3 h-3 transition-transform", activeSubDropdown === subItem.label ? "rotate-180" : "")} />
+                                <ChevronDown className={cn("w-4 h-4 transition-transform", activeSubDropdown === subItem.label ? "rotate-180" : "")} />
                               </button>
                             )}
                           </div>
 
                           {/* Level 2 Expansion - Mobile with Animation logic */}
                           {subItem.items && activeSubDropdown === subItem.label && (
-                            <div className="pl-6 flex flex-col border-l border-slate-100 dark:border-slate-800 ml-1.5 animate-in slide-in-from-top-1 fade-in duration-200">
+                            <div className="pl-8 flex flex-col border-l-2 border-slate-100 dark:border-slate-800 ml-2 animate-in slide-in-from-top-1 fade-in duration-200">
                               {subItem.items.map(nest => (
                                 <Link
                                   key={nest.label}
                                   href={nest.href}
-                                  className="text-xs text-slate-500 dark:text-slate-400 py-2 pl-3 hover:text-blue-600 dark:hover:text-blue-400 block"
+                                  className="text-sm text-slate-600 dark:text-slate-400 py-3 pl-3 hover:text-blue-600 dark:hover:text-blue-400 block"
                                   onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                   {nest.label}
@@ -251,16 +251,16 @@ export function Header() {
               ) : (
                 <Link
                   href={item.href}
-                  className="flex items-center gap-2 text-base font-medium text-slate-700 dark:text-slate-200 py-2 hover:text-blue-600 dark:hover:text-blue-400 border-b border-slate-100 dark:border-slate-900 last:border-0"
+                  className="flex items-center gap-3 text-base font-medium text-slate-700 dark:text-slate-200 py-4 hover:text-blue-600 dark:hover:text-blue-400 border-b border-slate-100 dark:border-slate-900 last:border-0"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  {item.icon && <item.icon className="w-4 h-4" />}
+                  {item.icon && <item.icon className="w-5 h-5" />}
                   {item.label}
                 </Link>
               )}
             </div>
           ))}
-          <Button className="w-full rounded-lg mt-4">Book Consultation</Button>
+          <Button className="w-full rounded-lg mt-6 py-6 text-lg">Book Consultation</Button>
         </div>
       )}
     </header>
