@@ -166,10 +166,10 @@ export const series_a_2 = [
         ]
     },
     {
-        title: '[RTM Masterclass #9] Data & Tech: Chuyện chàng "Salesforce Automation Specialist" đi mở cõi 📊',
+        title: '[RTM Masterclass #9] Data & Tech: Chuyện chàng "SFA Specialist" đi mở cõi 📊',
         slug: { current: 'rtm-masterclass-9-data-tech' },
         publishedAt: new Date(Date.now() - 900000000).toISOString(),
-        excerpt: 'DMS không chỉ là công cụ chấm công. Với kinh nghiệm làm Salesforce Automation Specialist từ ngày đầu, Hải sẽ chỉ cách dùng dữ liệu để "bắt mạch" thị trường.',
+        excerpt: 'DMS không chỉ là công cụ chấm công. Với kinh nghiệm làm SFA Specialist từ ngày đầu, Hải sẽ chỉ cách dùng dữ liệu để "bắt mạch" thị trường.',
         categorySlug: 'digital-transformation',
         featured: false,
         readingTime: 22,
@@ -178,17 +178,17 @@ export const series_a_2 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Hồi Hải mới chân ướt chân ráo đi làm cho một tập đoàn đa quốc gia, Hải giữ vị trí là **"Salesforce Automation Specialist"** (Chuyên viên tự động hóa đội ngũ bán hàng). Nghe tên thì oách xà lách, nhưng thực tế là đi cài app DMS cho sales và ngồi soi dữ liệu.' }],
+                children: [{ _type: 'span', text: 'Hồi Hải mới chân ướt chân ráo đi làm cho một tập đoàn đa quốc gia, Hải giữ vị trí là **"SFA Specialist"** (Chuyên viên tự động hóa đội ngũ bán hàng). Nghe tên thì oách, nhưng thực tế là đi cài app DMS cho sales và ngồi soi dữ liệu.' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Có lần ông Sếp Tây gọi vào phòng, giao cho một cái job nghe rất ghê gớm: **"National Coverage Expansion"** (Mở rộng độ phủ toàn quốc). Ổng bảo: "Hey Hai, mày làm sao thì làm, phủ hàng cho tao hết cái đất Sài Gòn này. Con hẻm nào có người ở là phải có hàng của tao".' }],
+                children: [{ _type: 'span', text: 'Lúc đó công ty đang chạy dự án **"National Coverage Expansion"**. Ông Sếp Tây gọi Hải vào, không phải để bắt đi bán hàng, mà giao bài toán: **"Hey Hai, tao muốn mày dùng cái đầu Data của mày để chỉ cho tụi Sales biết chỗ nào nên đi, chỗ nào không. Đừng để tụi nó chạy rông ngoài đường tốn xăng vô ích"**.' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Lúc đó Hải hoang mang lắm. Mình có biết làm sale đâu, mình là dân Tech/Data mà? Nhưng rồi Hải nhận ra: Ông Sếp không bảo mình đi bán hàng, ổng bảo mình DÙNG DATA để chỉ cho sales chỗ nào cần bán.' }],
+                children: [{ _type: 'span', text: 'Hải nhận ra: À, vai trò của mình không phải là người trực tiếp đi mở "Cõi", mà là người vẽ bản đồ cho quân đi mở Cõi.' }],
             },
             {
                 _type: 'block',

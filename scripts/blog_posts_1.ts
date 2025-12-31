@@ -150,12 +150,12 @@ export const batch1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Hồi Hải mới chân ướt chân ráo đi làm cho một tập đoàn đa quốc gia, Hải làm **Salesforce Automation Specialist** (Chuyên gia tự động hóa đội ngũ bán hàng). Ngày ấy sếp Tây giao cho một cái job nghe rất oách: "National Coverage Expansion" (Mở rộng độ phủ toàn quốc).' }],
+                children: [{ _type: 'span', text: 'Hồi Hải mới chân ướt chân ráo đi làm cho một tập đoàn đa quốc gia, Hải giữ vị trí là **"SFA Specialist"** (Chuyên viên SFA). Ngày ấy công ty đang có chiến dịch rất oách: "National Coverage Expansion" (Mở rộng độ phủ toàn quốc).' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Sếp bảo: **"Hey Hai, mày làm sao thì làm, phủ hàng cho tao hết cái đất Sài Gòn này. Con hẻm nào có người ở là phải có hàng của tao"**. Nghe thì khí thế đấy, nhưng làm sao để phủ hết mà không... sập tiệm vì chi phí?' }],
+                children: [{ _type: 'span', text: 'Sếp Sales Director thì hô hào quân đi mở đất. Còn ông Sếp Tây của Hải thì giao cho Hải một nhiệm vụ thầm lặng hơn: **"Hey Hai, mày dùng Data soi xem tụi Sales mở thị trường có hiệu quả không, hay là đang đốt tiền?"**.' }],
             },
             {
                 _type: 'block',
@@ -165,7 +165,7 @@ export const batch1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Cuối năm tổng kết. Doanh số tăng gấp đôi (Yeah!). Hải hí hửng chờ Sếp khen. Nhưng không, Sếp Finance đưa ra tờ báo cáo đỏ lòm: "Lợi nhuận âm! Cost-to-Serve (Chi phí phục vụ) cao quá!". Hóa ra tiền lời bán thùng mì không đủ bù tiền xăng xe và tiền lương sales chạy đi giao.' }],
+                children: [{ _type: 'span', text: 'Cuối năm tổng kết. Doanh số tăng gấp đôi (Yeah!). Ông Sales Director hí hửng chờ Sếp khen. Nhưng không, Sếp Finance đưa ra tờ báo cáo đỏ lòm: "Lợi nhuận âm! Cost-to-Serve (Chi phí phục vụ) cao quá!". Hóa ra tiền lời bán thùng mì không đủ bù tiền xăng xe và tiền lương sales chạy đi giao.' }],
             },
             {
                 _type: 'block',
