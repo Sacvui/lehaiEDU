@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { sanityFetch } from "@/sanity/lib/fetch";
 import { ALL_POSTS_QUERY, CATEGORIES_QUERY } from "@/sanity/lib/queries";
 import BlogClient from "./BlogClient";
@@ -15,5 +16,9 @@ export default async function BlogIndexPage() {
         sanityFetch<any[]>({ query: CATEGORIES_QUERY })
     ]);
 
-    return <BlogClient posts={posts || []} categories={categories || []} />;
+    return (
+        <Suspense fallback={<div className="min-h-screen pt-32 text-center">Loading...</div>}>
+            <BlogClient posts={posts || []} categories={categories || []} />
+        </Suspense>
+    );
 }
