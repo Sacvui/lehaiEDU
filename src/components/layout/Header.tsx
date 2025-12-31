@@ -20,7 +20,17 @@ export function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = [
+  interface NavItem {
+    label: string;
+    href: string;
+    icon?: any;
+    desc?: string;
+    external?: boolean;
+    submenu?: NavItem[];
+    items?: NavItem[];
+  }
+
+  const navItems: NavItem[] = [
     {
       label: 'About',
       href: '/#about',
