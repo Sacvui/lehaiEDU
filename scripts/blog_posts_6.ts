@@ -19,7 +19,6 @@ export const batch6 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Hải gọi đó là "Làm màu" (Faking). Thương hiệu cá nhân kiểu đó giống như lâu đài trên cát, sóng đánh cái là sập. Thương hiệu thật sự nó đến từ GIÁ TRỊ THỰC (Real Value) mà bạn mang lại cho cộng đồng.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -55,7 +54,6 @@ export const batch6 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Đừng làm "Hoa hậu thân thiện". Ai cũng muốn làm hài lòng tất cả mọi người, cuối cùng trở nên nhạt nhòa. Hãy dám nói lên quan điểm riêng (Point of View), dù nó có thể gây tranh cãi. Hải thích viết kiểu "xéo xắt", hài hước, thậm chí dùng từ ngữ đường phố một chút. Có người ghét, nhưng người thích thì sẽ thích điên cuồng. Đó mới là thương hiệu.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -86,14 +84,13 @@ export const batch6 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Năm 2015, Hải khởi nghiệp mở một chuỗi cafe. Hồi đó tự tin lắm, nghĩ mình dân Sale & Marketing thì dăm ba cái quán cafe là chuyện nhỏ. Vay mượn ngân hàng, set up quán lung linh, menu xịn sò.' }],
+                children: [{ _type: 'span', text: 'Hải có một anh bạn thân, năm 2015 máu lửa khởi nghiệp mở chuỗi cafe. Hồi đó ổng tự tin lắm, nghĩ mình dân Sale & Marketing thì dăm ba cái quán cafe là chuyện nhỏ. Vay mượn ngân hàng, set up quán lung linh, menu xịn sò.' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '6 tháng sau, đóng cửa. Lỗ 2 tỷ. Hải sụp đổ hoàn toàn. Cảm giác mình là thằng vô dụng, là gánh nặng cho vợ con. Suốt 1 tháng trời Hải nhốt mình trong phòng, không dám gặp ai.' }],
+                children: [{ _type: 'span', text: '6 tháng sau, đóng cửa. Lỗ 2 tỷ. Ổng sụp đổ hoàn toàn. Cảm giác mình là thằng vô dụng, là gánh nặng cho vợ con. Suốt 1 tháng trời ổng nhốt mình trong phòng, không dám gặp ai.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -102,7 +99,7 @@ export const batch6 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Sau khi bình tâm lại, Hải ngồi phân tích "Tại sao mình chết?".' }],
+                children: [{ _type: 'span', text: 'Sau khi bình tâm lại, Hải ngồi với ổng phân tích "Tại sao ông chết?".' }],
             },
             {
                 _type: 'block',
@@ -119,7 +116,6 @@ export const batch6 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: '3. Ôm đồm: Tự mình làm mọi thứ từ pha chế, phục vụ, bảo vệ... để tiết kiệm chi phí. Cuối cùng kiệt sức, mà phục vụ thì lôm côm.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -162,7 +158,6 @@ export const batch6 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Hải tin rằng, kỹ năng vua của thế kỷ 21 là EMPATHY (Sự thấu cảm). Là khả năng đặt mình vào vị trí của người khác để hiểu cảm xúc, nỗi đau của họ.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -178,7 +173,6 @@ export const batch6 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Trong kinh doanh cũng vậy. AI có thể phân tích dữ liệu mua hàng. Nhưng chỉ có con người mới hiểu được tại sao bà mẹ bỉm sữa lại khóc khi xem một quảng cáo tã giấy (vì nó chạm đúng nỗi vất vả của bả). Người làm Marketing, làm Sale mà có Empathy cao thì luôn thắng.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -231,7 +225,6 @@ export const batch6 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Mày đang cày game thâu đêm, ăn mì tôm, uống nước ngọt. Mày nghĩ mình khỏe như trâu. Ừ, giờ thì khỏe đấy. Nhưng 30 tuổi mày sẽ thấy cảnh. Đau lưng, mỡ máu, gan nhiễm mỡ. Lúc đó có tiền núi cũng chỉ để đóng viện phí thôi em ạ. Đi ngủ sớm đi. Tập thể dục đi. Ăn rau vào.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -242,7 +235,6 @@ export const batch6 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Anh thấy mày đang tính xin vào làm ở một cơ quan nhà nước cho "ổn định". Bỏ ngay ý định đó đi! Tuổi trẻ là để xông pha. Hãy chọn việc khó, việc khổ, việc mà người ta chê ấy. Vào công ty tư nhân, công ty nước ngoài, startup mà làm. Bị bóc lột cũng được (thực ra là được học). Sự ổn định là liều thuốc độc giết chết ý chí đấy.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',

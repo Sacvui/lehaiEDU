@@ -29,7 +29,6 @@ export const batch1 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Để Hải kể cho nghe cái "thế giới ngầm" của dân sale thị trường, những mánh lới mà nếu không lăn lộn 10 năm trong nghề thì không bao giờ các bạn biết được. Và rồi, Hải sẽ chỉ cho các bạn cái "bảo bối" tên là DMS (Distribution Management System) - thứ mà nếu dùng đúng, nó sẽ là "camera chạy bằng cơm" tốt nhất cho doanh nghiệp.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -58,7 +57,6 @@ export const batch1 = [
                 listItem: 'bullet',
                 children: [{ _type: 'span', text: 'Chiêu 3 - "Gửi hàng" (Dumping): Để đạt thưởng quý, sale năn nỉ đại lý: "Anh chị nhập giùm em 100 thùng đi, tháng sau em bán bù cho". Đại lý nể tình nhập vào. Tháng sau sale... nghỉ việc. Để lại đống hàng đó cho người mới lãnh đủ. Người mới vào thấy thị trường "ngập lụt", bán không được, lại nghỉ. Một cái vòng luẩn quẩn chết người.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -92,7 +90,6 @@ export const batch1 = [
                 listItem: 'number',
                 children: [{ _type: 'span', text: 'Automation Order: Đặt hàng trên app, số nhảy về ERP/Kế toán ngay lập tức. Tính khuyến mãi tự động, không lo sale tính nhầm hay cố tình "ăn gian" khuyến mãi của đại lý.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -123,7 +120,6 @@ export const batch1 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Nói lọt tai, thấy quyền lợi sát sườn, thì họ mới dùng. Mà họ chịu dùng thì mình mới có số liệu.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -154,24 +150,23 @@ export const batch1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Hồi Hải mới chân ướt chân ráo đi làm cho một tập đoàn đa quốc gia, sếp Tây giao cho một cái job nghe rất oách: "National Coverage Expansion" (Mở rộng độ phủ toàn quốc). Sếp bảo: "Hey Hai, mày làm sao thì làm, phủ hàng cho tao hết cái đất Sài Gòn này. Con hẻm nào có người ở là phải có hàng của tao".' }],
+                children: [{ _type: 'span', text: 'Hồi Hải mới chân ướt chân ráo đi làm cho một tập đoàn đa quốc gia, Hải làm **Salesforce Automation Specialist** (Chuyên gia tự động hóa đội ngũ bán hàng). Ngày ấy sếp Tây giao cho một cái job nghe rất oách: "National Coverage Expansion" (Mở rộng độ phủ toàn quốc).' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Hải hừng hực khí thế tuổi trẻ. Tuyển ngay 100 quân Sale, vẽ tuyến (Routing) chi chít bản đồ. Phương châm là: "Thà giết nhầm con hơn bỏ sót". Ai mua cũng bán, 1 thùng mì cũng giao, nửa thùng cũng giao.' }],
+                children: [{ _type: 'span', text: 'Sếp bảo: **"Hey Hai, mày làm sao thì làm, phủ hàng cho tao hết cái đất Sài Gòn này. Con hẻm nào có người ở là phải có hàng của tao"**. Nghe thì khí thế đấy, nhưng làm sao để phủ hết mà không... sập tiệm vì chi phí?' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Cuối năm tổng kết. Doanh số tăng gấp đôi (Yeah!). Hải chờ đợi một cái Bonus to đùng. Nhưng không, Sếp Finance (Giám đốc Tài chính) gọi Hải vào phòng, mặt hầm hầm quăng cho xấp báo cáo: "Lợi nhuận âm (Negative Profit). Mày làm ăn kiểu gì vậy?".' }],
+                children: [{ _type: 'span', text: 'Lúc đầu, anh em Sales hừng hực khí thế lắm. Tuyển thêm người, chạy loạn xạ. Phương châm là: "Thà giết nhầm hơn bỏ sót". Ai mua cũng bán, 1 thùng mì cũng giao tít tận Củ Chi.' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Hải ngớ người: "Ủa em bán gấp đôi mà?". Sếp Finance chỉ vào dòng: Cost-to-Serve (Chi phí phục vụ).' }],
+                children: [{ _type: 'span', text: 'Cuối năm tổng kết. Doanh số tăng gấp đôi (Yeah!). Hải hí hửng chờ Sếp khen. Nhưng không, Sếp Finance đưa ra tờ báo cáo đỏ lòm: "Lợi nhuận âm! Cost-to-Serve (Chi phí phục vụ) cao quá!". Hóa ra tiền lời bán thùng mì không đủ bù tiền xăng xe và tiền lương sales chạy đi giao.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -215,36 +210,34 @@ export const batch1 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Đấy, bán hàng kiểu đó thì thà ở nhà ngủ cho khỏe, càng bán càng lỗ. Đó là bài học đầu đời của Hải về RTM.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Tư duy lại về RTM: Phân loại hay là chết?' }],
+                children: [{ _type: 'span', text: 'Giải pháp từ Data: Phân loại hay là chết?' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Sau cú vấp đó, Hải khôn ra. Hải ngồi lại với team, lôi dữ liệu ra phân tích (Segmentation). Hải chia khách hàng ra làm 3 loại:' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'number',
-                children: [{ _type: 'span', text: 'Khách VIP (Gold): Mua sỉ, tiền tươi, nhập mỗi lần 50-100 thùng. Đây là "nguồn sống". -> Chiến lược: Cho Sale xịn nhất chăm sóc, tuần ghé 2-3 lần, xe tải ưu tiên giao hàng trước 9h sáng, tặng quà sinh nhật, lễ tết đủ cả.' }],
+                children: [{ _type: 'span', text: 'Với vai trò là SFA Specialist, Hải không chấp nhận cách làm "chạy bằng cơm" đó. Hải đã dùng dữ liệu để phân loại khách hàng (Segmentation):' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
                 listItem: 'number',
-                children: [{ _type: 'span', text: 'Khách Tiềm năng (Silver): Mua đều nhưng số lượng vừa phải. -> Chiến lược: Tuần ghé 1 lần, duy trì quan hệ, có khuyến mãi thì báo.' }],
+                children: [{ _type: 'span', text: 'Khách VIP (Gold): Mua sỉ, tiền tươi -> Chăm sóc tận răng, xe tải giao hàng ưu tiên.' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
                 listItem: 'number',
-                children: [{ _type: 'span', text: 'Khách Rêu (Bronze - Hay gọi vui là "Khách hành"): Mua lắt nhắt vài gói, nợ dai, hay phàn nàn, đường thì xa, hẻm thì nhỏ xe tải không vào được. -> Chiến lược: CẮT! Hoặc chuyển sang mô hình Telesales (bán qua điện thoại). Không cho xe tải đi giao nữa, bắt họ tự lên đại lý lấy (Cash & Carry). Nếu họ không chịu? Thì thôi chia tay, để đối thủ phục vụ họ.' }],
+                children: [{ _type: 'span', text: 'Khách Tiềm năng (Silver): Mua đều -> Ghé thăm tuần/lần.' }],
             },
-
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'number',
+                children: [{ _type: 'span', text: 'Khách Rêu (Bronze - Hay gọi vui là "Khách hành"): Mua lắt nhắt, xa xôi -> CẮT phục vụ trực tiếp! Chuyển sang Telesales hoặc yêu cầu tự đến lấy hàng (Cash & Carry). Nếu họ không chịu? Thì thôi chia tay.' }],
+            },
             {
                 _type: 'block',
                 style: 'h2',
@@ -253,7 +246,7 @@ export const batch1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Khi Hải quyết định cắt bỏ phục vụ trực tiếp cho 40% lượng khách hàng nhóm Bronze, anh em sale phản đối ghê lắm, sợ mất số. Nhưng Hải cương quyết làm.' }],
+                children: [{ _type: 'span', text: 'Khi Hải tư vấn cho sếp cắt bỏ phục vụ trực tiếp cho 40% lượng khách hàng nhóm Bronze, anh em sale phản đối ghê lắm, sợ mất số. Nhưng sếp Tây nghe theo Data.' }],
             },
             {
                 _type: 'block',
