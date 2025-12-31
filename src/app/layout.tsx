@@ -48,6 +48,29 @@ export default function RootLayout({
           {children}
         </main>
         <Footer />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Person',
+              name: 'Le Phuc Hai',
+              url: 'https://lehai.edu.vn',
+              image: 'https://lehai.edu.vn/uploads/profile-founder.jpg',
+              sameAs: [
+                'https://www.linkedin.com/in/lephuchai',
+                'https://www.facebook.com/hailp',
+                'https://ammedtech.com'
+              ],
+              jobTitle: 'National Business Development Director',
+              worksFor: {
+                '@type': 'Organization',
+                name: 'AM Medtech'
+              },
+              description: 'Expert in Strategic Leadership, Digital Transformation, and Research.'
+            })
+          }}
+        />
       </body>
     </html>
   );
