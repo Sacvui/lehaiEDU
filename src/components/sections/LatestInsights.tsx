@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { ArrowRight, Calendar, Clock } from 'lucide-react';
+import { ArrowRight, Calendar, Clock, Tag } from 'lucide-react';
 import { sanityFetch } from '@/sanity/lib/fetch';
 import { RECENT_POSTS_QUERY } from '@/sanity/lib/queries';
 import { urlForImage } from '@/sanity/lib/image';
@@ -119,195 +119,138 @@ export function LatestInsights() {
     const gridPosts = articles.slice(1, 7);
 
     return (
-        <section id="blog" className="py-24 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950 relative overflow-hidden border-t border-slate-800">
-            {/* Background effects */}
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-cyan-900/20 via-transparent to-transparent"></div>
-            <div className="absolute inset-0 bg-[url('/grid.svg')] opacity-10"></div>
+        <section id="blog" className="py-24 bg-slate-950 relative overflow-hidden border-t border-slate-900">
+            {/* Background Decoration */}
+            <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                <div className="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-cyan-500/10 blur-[120px] rounded-full mix-blend-screen" />
+                <div className="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-blue-600/10 blur-[120px] rounded-full mix-blend-screen" />
+            </div>
 
-            <div className="container mx-auto px-4 md:px-6 relative z-10">
-                {/* Header */}
-                <div className="flex items-end justify-between mb-12">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                {/* Section Header */}
+                <div className="flex flex-col md:flex-row items-end justify-between mb-12 gap-6">
                     <div>
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-4">
-                            Intelligence <span className="text-slate-500">&</span>{' '}
+                        <div className="flex items-center gap-2 mb-4">
+                            <span className="h-px w-10 bg-cyan-500"></span>
+                            <span className="text-cyan-500 font-mono text-sm uppercase tracking-widest">Knowledge Hub</span>
+                        </div>
+                        <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+                            Intelligence <span className="text-slate-600">&</span>{' '}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                                 Insights
                             </span>
                         </h2>
-                        <p className="text-lg text-slate-400 max-w-2xl">
-                            Khám phá những góc nhìn sâu sắc về doanh nghiệp và nghiên cứu khoa học.
-                        </p>
                     </div>
                     <Link
                         href="/blog"
-                        className="hidden md:flex items-center text-cyan-400 font-semibold hover:text-cyan-300 transition-colors group"
+                        className="hidden md:flex items-center px-6 py-3 rounded-full border border-slate-700 hover:border-cyan-500 text-slate-300 hover:text-white transition-all group bg-slate-900/50 backdrop-blur"
                     >
-                        Xem tất cả <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                        Khám phá tất cả <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
 
-                {/* Featured + Grid Layout */}
-                <div className="grid lg:grid-cols-2 gap-8">
-                    {/* Featured Post - Left Side */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -20 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.5 }}
-                    >
-                        <Link
-                            href={`/blog/${featuredPost.slug.current}`}
-                            className="block h-full group"
-                        >
-                            <article className="relative h-full min-h-[600px] bg-slate-900 rounded-3xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-500">
-                                {/* Background Image */}
-                                <div className="absolute inset-0">
+                <div className="grid lg:grid-cols-2 gap-8 xl:gap-12">
+                    {/* Featured Post - Main Column */}
+                    <div className="lg:col-span-1">
+                        <Link href={`/blog/${featuredPost.slug.current}`} className="group block h-full">
+                            <article className="relative h-full flex flex-col bg-slate-900/50 rounded-3xl border border-slate-800 hover:border-cyan-500/50 overflow-hidden transition-all duration-300 shadow-2xl">
+                                {/* Image Container - Aspect Ratio Responsive */}
+                                <div className="relative w-full aspect-video lg:aspect-[4/3] overflow-hidden">
                                     {featuredPost.mainImage || (featuredPost as any).localImage ? (
                                         <Image
-                                            src={featuredPost.mainImage ? urlForImage(featuredPost.mainImage).width(800).height(1000).url() : (featuredPost as any).localImage}
+                                            src={featuredPost.mainImage ? urlForImage(featuredPost.mainImage).width(1200).height(900).url() : (featuredPost as any).localImage}
                                             alt={featuredPost.title}
                                             fill
-                                            className="object-cover opacity-40 group-hover:opacity-50 group-hover:scale-105 transition-all duration-700"
+                                            priority
+                                            className="object-cover transition-transform duration-700 group-hover:scale-105"
                                         />
                                     ) : (
-                                        <div className="w-full h-full bg-gradient-to-br from-slate-800 to-slate-900"></div>
+                                        <div className="w-full h-full bg-slate-800" />
                                     )}
-                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/80 to-transparent"></div>
+                                    {/* Overlay Gradient */}
+                                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60" />
                                 </div>
 
                                 {/* Content */}
-                                <div className="relative h-full flex flex-col justify-end p-8">
-                                    {/* Featured Badge */}
-                                    <div className="absolute top-8 left-8">
-                                        <span className="inline-block px-4 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-blue-500 text-white text-xs font-bold uppercase tracking-wider shadow-lg">
-                                            ⭐ Nổi bật
+                                <div className="flex-1 p-6 md:p-8 flex flex-col relative">
+                                    <div className="mb-4 flex flex-wrap gap-3">
+                                        {featuredPost.categories?.[0] && (
+                                            <span className="px-3 py-1 rounded-full text-xs font-bold text-cyan-400 bg-cyan-950/50 border border-cyan-900">
+                                                {featuredPost.categories[0]}
+                                            </span>
+                                        )}
+                                        <span className="flex items-center text-xs text-slate-400">
+                                            <Calendar className="w-3 h-3 mr-1" />
+                                            {new Date(featuredPost.publishedAt).toLocaleDateString('vi-VN')}
                                         </span>
                                     </div>
 
-                                    {/* Category */}
-                                    {featuredPost.categories && featuredPost.categories.length > 0 && (
-                                        <div className="mb-4">
-                                            <span className="inline-block px-3 py-1 rounded-full bg-slate-900/80 backdrop-blur border border-cyan-500/50 text-sm font-bold text-cyan-400 uppercase tracking-wider">
-                                                {featuredPost.categories[0]}
-                                            </span>
-                                        </div>
-                                    )}
-
-                                    {/* Title */}
-                                    <h3 className="text-3xl md:text-4xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors leading-tight">
+                                    <h3 className="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 group-hover:text-cyan-400 transition-colors leading-tight">
                                         {featuredPost.title}
                                     </h3>
 
-                                    {/* Excerpt */}
-                                    {featuredPost.excerpt && (
-                                        <p className="text-slate-300 text-lg leading-relaxed mb-6 line-clamp-3">
-                                            {featuredPost.excerpt}
-                                        </p>
-                                    )}
+                                    <p className="text-slate-400 text-base md:text-lg line-clamp-3 mb-6 flex-grow">
+                                        {featuredPost.excerpt}
+                                    </p>
 
-                                    {/* Meta */}
-                                    <div className="flex items-center gap-6 text-sm text-slate-400 mb-6">
-                                        <span className="flex items-center gap-2">
-                                            <Calendar className="w-4 h-4" />
-                                            {new Date(featuredPost.publishedAt).toLocaleDateString('vi-VN')}
-                                        </span>
-                                        {featuredPost.readingTime && (
-                                            <span className="flex items-center gap-2">
-                                                <Clock className="w-4 h-4" />
-                                                {featuredPost.readingTime} phút
-                                            </span>
-                                        )}
-                                    </div>
-
-                                    {/* CTA */}
-                                    <div className="inline-flex items-center text-cyan-400 font-bold text-lg group-hover:translate-x-2 transition-transform">
-                                        Đọc ngay <ArrowRight className="w-5 h-5 ml-2" />
+                                    <div className="flex items-center text-cyan-500 font-semibold group-hover:translate-x-2 transition-transform mt-auto">
+                                        Đọc tiếp <ArrowRight className="w-4 h-4 ml-2" />
                                     </div>
                                 </div>
                             </article>
                         </Link>
-                    </motion.div>
+                    </div>
 
-                    {/* Grid Posts - Right Side */}
-                    <div className="grid md:grid-cols-2 gap-6">
-                        {gridPosts.map((post, index) => (
-                            <motion.div
-                                key={post._id}
-                                initial={{ opacity: 0, x: 20 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ duration: 0.5, delay: index * 0.1 }}
-                            >
-                                <Link
-                                    href={`/blog/${post.slug.current}`}
-                                    className="block group"
-                                >
-                                    <article className="bg-slate-900 rounded-2xl overflow-hidden border border-slate-800 hover:border-cyan-500/50 hover:shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 h-full">
-                                        <div className="flex gap-4 p-6">
-                                            {/* Thumbnail */}
-                                            <div className="relative w-32 h-32 flex-shrink-0 rounded-xl overflow-hidden bg-slate-800">
-                                                {post.mainImage || (post as any).localImage ? (
-                                                    <Image
-                                                        src={post.mainImage ? urlForImage(post.mainImage).width(200).height(200).url() : (post as any).localImage}
-                                                        alt={post.title}
-                                                        fill
-                                                        className="object-cover group-hover:scale-110 transition-transform duration-500"
-                                                    />
-                                                ) : (
-                                                    <div className="w-full h-full bg-gradient-to-br from-slate-700 to-slate-800 flex items-center justify-center">
-                                                        <span className="text-slate-600 text-2xl font-bold opacity-30">📝</span>
-                                                    </div>
-                                                )}
-                                            </div>
+                    {/* Sub Posts - Grid */}
+                    <div className="grid sm:grid-cols-2 gap-6 lg:gap-8 content-start">
+                        {gridPosts.map((post) => (
+                            <Link key={post._id} href={`/blog/${post.slug.current}`} className="group block h-full">
+                                <article className="h-full flex flex-col bg-slate-900/50 rounded-2xl border border-slate-800 hover:border-cyan-500/30 overflow-hidden transition-all duration-300 hover:bg-slate-800/50">
+                                    {/* Image */}
+                                    <div className="relative w-full aspect-[16/9] overflow-hidden">
+                                        {post.mainImage || (post as any).localImage ? (
+                                            <Image
+                                                src={post.mainImage ? urlForImage(post.mainImage).width(600).height(400).url() : (post as any).localImage}
+                                                alt={post.title}
+                                                fill
+                                                className="object-cover transition-transform duration-500 group-hover:scale-110"
+                                            />
+                                        ) : (
+                                            <div className="w-full h-full bg-slate-800" />
+                                        )}
+                                    </div>
 
-                                            {/* Content */}
-                                            <div className="flex-1 flex flex-col">
-                                                {/* Category */}
-                                                {post.categories && post.categories.length > 0 && (
-                                                    <span className="inline-block w-fit px-2 py-1 rounded-md bg-cyan-500/10 border border-cyan-500/30 text-xs font-semibold text-cyan-400 uppercase tracking-wider mb-2">
-                                                        {post.categories[0]}
-                                                    </span>
-                                                )}
-
-                                                {/* Title */}
-                                                <h4 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors line-clamp-2 leading-tight">
-                                                    {post.title}
-                                                </h4>
-
-                                                {/* Excerpt */}
-                                                {post.excerpt && (
-                                                    <p className="text-sm text-slate-400 mb-3 line-clamp-2 flex-1">
-                                                        {post.excerpt}
-                                                    </p>
-                                                )}
-
-                                                {/* Meta */}
-                                                <div className="flex items-center gap-4 text-xs text-slate-500">
-                                                    <span className="flex items-center gap-1">
-                                                        <Calendar className="w-3 h-3" />
-                                                        {new Date(post.publishedAt).toLocaleDateString('vi-VN', { day: 'numeric', month: 'short' })}
-                                                    </span>
-                                                    {post.readingTime && (
-                                                        <span className="flex items-center gap-1">
-                                                            <Clock className="w-3 h-3" />
-                                                            {post.readingTime}p
-                                                        </span>
-                                                    )}
-                                                </div>
-                                            </div>
+                                    {/* Content */}
+                                    <div className="p-5 flex flex-col flex-1">
+                                        <div className="flex items-center gap-2 mb-3 text-xs text-slate-500">
+                                            {post.categories?.[0] && (
+                                                <span className="text-cyan-400 font-semibold">
+                                                    {post.categories[0]}
+                                                </span>
+                                            )}
+                                            <span>•</span>
+                                            <span>{new Date(post.publishedAt).toLocaleDateString('vi-VN')}</span>
                                         </div>
-                                    </article>
-                                </Link>
-                            </motion.div>
+
+                                        <h4 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors line-clamp-2">
+                                            {post.title}
+                                        </h4>
+
+                                        <div className="mt-auto pt-4 flex items-center text-xs text-slate-400 group-hover:text-cyan-400 transition-colors">
+                                            Xem chi tiết <ArrowRight className="w-3 h-3 ml-1" />
+                                        </div>
+                                    </div>
+                                </article>
+                            </Link>
                         ))}
                     </div>
                 </div>
 
-                {/* Mobile CTA */}
-                <div className="md:hidden mt-8 text-center">
+                {/* Mobile Button */}
+                <div className="mt-12 text-center md:hidden">
                     <Link
                         href="/blog"
-                        className="inline-flex items-center text-cyan-400 font-semibold hover:text-cyan-300 transition-colors"
+                        className="inline-flex items-center px-6 py-3 rounded-full bg-cyan-600 text-white font-semibold hover:bg-cyan-500 transition-colors"
                     >
                         Xem tất cả bài viết <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
