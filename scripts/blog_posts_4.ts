@@ -1,6 +1,6 @@
 export const batch4 = [
     {
-        title: 'Nghệ thuật "Đi tuần" (Gemba Walk): Tại sao sếp văn phòng không bao giờ hiểu được thị trường? 🏃',
+        title: 'Nghệ thuật "Đi tuần" (Gemba Walk): Tại sao sếp văn phòng không bao giờ hiểu được thị trường? ',
         slug: { current: 'gemba-walk-sales-management' },
         publishedAt: new Date(Date.now() - 518400000).toISOString(),
         excerpt: 'Bạn có bao giờ tự hỏi tại sao chỉ đạo từ trụ sở chính xuống tới thực địa (field) lại bị tam sao thất bản? Đó là vì bạn thiếu "Gemba Walk". Hãy xỏ giày vào và đi ra đường, bạn sẽ thấy sự thật trần trụi khác xa báo cáo Excel.',
@@ -115,7 +115,7 @@ export const batch4 = [
         ],
     },
     {
-        title: 'Hội chứng "Kẻ mạo danh" (Imposter Syndrome): Tại sao bạn giỏi mà vẫn thấy mình kém cỏi? 🎭',
+        title: 'Hội chứng "Kẻ mạo danh" (Imposter Syndrome): Tại sao bạn giỏi mà vẫn thấy mình kém cỏi? ',
         slug: { current: 'imposter-syndrome-career' },
         publishedAt: new Date(Date.now() - 604800000).toISOString(),
         excerpt: 'Bạn vừa được thăng chức, nhưng trong lòng nơm nớp lo sợ: "Chắc mình may mắn thôi. Lỡ người ta phát hiện ra mình không giỏi như họ nghĩ thì sao?". Chúc mừng, bạn đang mắc hội chứng Imposter Syndrome. Để Hải chỉ cho cách trị.',
@@ -220,7 +220,7 @@ export const batch4 = [
         ],
     },
     {
-        title: 'Thuyết "Cây gậy và Củ cà rốt": Dùng sao cho không bị... phản tác dụng? 🥕',
+        title: 'Thuyết "Cây gậy và Củ cà rốt": Dùng sao cho không bị... phản tác dụng? ',
         slug: { current: 'carrot-and-stick-strategy' },
         publishedAt: new Date(Date.now() - 691200000).toISOString(),
         excerpt: 'Thưởng (Cà rốt) và Phạt (Gậy) là hai công cụ kinh điển. Nhưng coi chừng: Thưởng sai cách thì nhân viên ỷ lại, Phạt sai cách thì nhân viên oán giận. Nghệ thuật nằm ở sự cân bằng.',
@@ -328,7 +328,7 @@ export const batch4 = [
         ],
     },
     {
-        title: 'Viết luận văn bằng AI: "Trợ lý" hay "Kẻ hủy diệt" tư duy? 🤖',
+        title: 'Viết luận văn bằng AI: "Trợ lý" hay "Kẻ hủy diệt" tư duy? ',
         slug: { current: 'ai-writing-thesis-ethics' },
         publishedAt: new Date(Date.now() - 777600000).toISOString(),
         excerpt: 'ChatGPT, Claude, Gemini... giờ viết văn hay hơn cả người. Sinh viên hí hửng copy-paste nộp bài. Nhưng coi chừng, "gậy ông đập lưng ông". AI giúp bạn đi nhanh, nhưng cũng làm cho não bạn "teo" đi nếu lạm dụng.',
@@ -428,7 +428,7 @@ export const batch4 = [
         ],
     },
     {
-        title: 'Câu chuyện "Cái Bình Nước" và bài học về sự chuyên nghiệp 💧',
+        title: 'Câu chuyện "Cái Bình Nước" và bài học về sự chuyên nghiệp ',
         slug: { current: 'water-bottle-professionalism' },
         publishedAt: new Date(Date.now() - 864000000).toISOString(),
         excerpt: 'Chuyện nhỏ như con kiến nhưng giết chết sự nghiệp như chơi. Tại sao Hải luôn soi nhân viên từ cái bình nước, cái ghế ngồi? "Thánh soi" hay là tiêu chuẩn cao?',

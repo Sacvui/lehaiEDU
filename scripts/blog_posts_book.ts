@@ -1,7 +1,7 @@
 
 export const book_intro = [
     {
-        title: 'Project Next: 300 Nursery Rhymes - A Strategic Blueprint for Aspiring Leaders 🚀',
+        title: 'Project Next: 300 Nursery Rhymes - A Strategic Blueprint for Aspiring Leaders ',
         slug: { current: 'book-project-intro' },
         publishedAt: new Date().toISOString(),
         excerpt: 'A synthesis of practical wisdom and strategic frameworks. Bridging the gap between academic theory and the raw reality of business execution in Vietnam.',
@@ -29,7 +29,7 @@ export const book_intro = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'This project is structured as a comprehensive curriculum for the modern professional:\n\n**Phase 1: Competence (The Foundation)**\nFocusing on the mastery of self and task. How to absorb knowledge efficiently (`The Sponge`) and execute with precision. This is about building immediate value.\n\n**Phase 2: Management (The Engine)**\nTransitioning from doing to directing. The focus shifts to Resource Allocation, P&L Responsibility, and Team Dynamics (`The Hunter`). This is about driving results through others.\n\n**Phase 3: Strategy (The Architecture)**\nThe domain of the Director and CEO. Here, we discuss System Design, Cultural Engineering, and Long-term Vision (`The Architect`). This is about building the future.' }],
+                children: [{ _type: 'span', text: 'This project is structured as a comprehensive curriculum for the modern professional:\n\nPhase 1: Competence (The Foundation)\nFocusing on the mastery of self and task. How to absorb knowledge efficiently (`The Sponge`) and execute with precision. This is about building immediate value.\n\nPhase 2: Management (The Engine)\nTransitioning from doing to directing. The focus shifts to Resource Allocation, P&L Responsibility, and Team Dynamics (`The Hunter`). This is about driving results through others.\n\nPhase 3: Strategy (The Architecture)\nThe domain of the Director and CEO. Here, we discuss System Design, Cultural Engineering, and Long-term Vision (`The Architect`). This is about building the future.' }],
             },
             {
                 _type: 'image',
@@ -40,7 +40,7 @@ export const book_intro = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '---\n\n**Editorial Team:**\n*   **Author:** Le Phuc Hai (National Business Development Director)\n*   **Academic Advisor:** Carmen Chau, PhD\n\nThis is a living document. Chapters will be released sequentially, inviting you to engage, critique, and grow with us.' }],
+                children: [{ _type: 'span', text: '---\n\nEditorial Team:\n Author: Le Phuc Hai (National Business Development Director)\n Academic Advisor: Carmen Chau, PhD\n\nThis is a living document. Chapters will be released sequentially, inviting you to engage, critique, and grow with us.' }],
             }
         ]
     }

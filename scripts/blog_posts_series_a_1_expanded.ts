@@ -1,6 +1,6 @@
 export const series_a_1_expanded = [
     {
-        title: '[RTM Masterclass #1] Tại sao RTM quan trọng hơn bao bì? 📦',
+        title: '[RTM Masterclass #1] Tại sao RTM quan trọng hơn bao bì? ',
         slug: { current: 'rtm-masterclass-1-overview' },
         publishedAt: new Date(Date.now() - 100000000).toISOString(),
         excerpt: 'Bạn có sản phẩm ngon, bao bì đẹp, marketing rầm rộ nhưng vẫn ế? Có thể "mạch máu" phân phối của bạn đang bị nghẽn. Chào mừng đến với Series RTM Masterclass.',

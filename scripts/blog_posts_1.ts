@@ -1,6 +1,6 @@
 export const batch1 = [
     {
-        title: 'Chuyện cái DMS và nỗi đau "quản quân" của sếp Việt ☕',
+        title: 'Chuyện cái DMS và nỗi đau "quản quân" của sếp Việt ',
         slug: { current: 'dms-noi-dau-quan-quan' },
         publishedAt: new Date().toISOString(),
         excerpt: 'Sáng nay Hải ngồi cafe với mấy ông bạn chủ doanh nghiệp. Ông nào cũng than trời: "Quân anh nó đi thị trường kiểu gì mà doanh số cứ lẹt đẹt, trong khi báo cáo thì đẹp như mơ!". Thế là Hải phải ra tay "giải ngố" vụ DMS.',
@@ -138,7 +138,7 @@ export const batch1 = [
         ],
     },
     {
-        title: 'Chuyện bà bán tạp hóa và bài toán RTM "nhức não" 🤯',
+        title: 'Chuyện bà bán tạp hóa và bài toán RTM "nhức não" ',
         slug: { current: 'ba-ban-tap-hoa-va-rtm' },
         publishedAt: new Date(Date.now() - 86400000).toISOString(),
         excerpt: 'RTM (Route-to-Market) nghe sang chảnh vậy thôi, chứ thực ra là chuyện "làm sao đem gói mì tôm từ kho ra tới tay bà Bảy đầu ngõ" mà tốn ít tiền xăng nhất. Bài toán lợi nhuận nằm ở đây chứ đâu.',
@@ -150,12 +150,12 @@ export const batch1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Hồi Hải mới chân ướt chân ráo đi làm cho một tập đoàn đa quốc gia, Hải giữ vị trí là **"SFA Specialist"** (Chuyên viên SFA). Ngày ấy công ty đang có chiến dịch rất oách: "National Coverage Expansion" (Mở rộng độ phủ toàn quốc).' }],
+                children: [{ _type: 'span', text: 'Hồi Hải mới chân ướt chân ráo đi làm cho một tập đoàn đa quốc gia, Hải giữ vị trí là "SFA Specialist" (Chuyên viên SFA). Ngày ấy công ty đang có chiến dịch rất oách: "National Coverage Expansion" (Mở rộng độ phủ toàn quốc).' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Sếp Sales Director thì hô hào quân đi mở đất. Còn ông Sếp Tây của Hải thì giao cho Hải một nhiệm vụ thầm lặng hơn: **"Hey Hai, mày dùng Data soi xem tụi Sales mở thị trường có hiệu quả không, hay là đang đốt tiền?"**.' }],
+                children: [{ _type: 'span', text: 'Sếp Sales Director thì hô hào quân đi mở đất. Còn ông Sếp Tây của Hải thì giao cho Hải một nhiệm vụ thầm lặng hơn: "Hey Hai, mày dùng Data soi xem tụi Sales mở thị trường có hiệu quả không, hay là đang đốt tiền?".' }],
             },
             {
                 _type: 'block',

@@ -1,6 +1,6 @@
 export const series_a_1 = [
     {
-        title: '[RTM Masterclass #1] Tại sao RTM quan trọng hơn bao bì? 📦',
+        title: '[RTM Masterclass #1] Tại sao RTM quan trọng hơn bao bì? ',
         slug: { current: 'rtm-masterclass-1-overview' },
         publishedAt: new Date(Date.now() - 100000000).toISOString(),
         excerpt: 'Bạn có sản phẩm ngon, bao bì đẹp, marketing rầm rộ nhưng vẫn ế? Có thể "mạch máu" phân phối của bạn đang bị nghẽn. Chào mừng đến với Series RTM Masterclass - Nơi Hải đúc kết 15 năm kinh nghiệm để giúp bạn khơi thông dòng chảy hàng hóa.',
@@ -18,7 +18,7 @@ export const series_a_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Thế là vứt tiền qua cửa sổ rồi! Đây là sai lầm kinh điển của dân làm Brand: Chỉ chăm chút cái "Vỏ" (Marketing) mà quên cái "Chân" (Distribution). Marketing nhiệm vụ là **Kéo (Pull)** - làm khách muốn mua. Nhưng Sales & Distribution nhiệm vụ là **Đẩy (Push)** - đưa hàng đến tận tay khách đúng lúc họ cần.\n\nRTM (Route-to-Market) chính là con đường đưa hàng từ kho nhà máy đến tay người tiêu dùng. Đường mà tắc, xe không chạy được, thì hàng ngon mấy cũng thành rác.' }],
+                children: [{ _type: 'span', text: 'Thế là vứt tiền qua cửa sổ rồi! Đây là sai lầm kinh điển của dân làm Brand: Chỉ chăm chút cái "Vỏ" (Marketing) mà quên cái "Chân" (Distribution). Marketing nhiệm vụ là Kéo (Pull) - làm khách muốn mua. Nhưng Sales & Distribution nhiệm vụ là Đẩy (Push) - đưa hàng đến tận tay khách đúng lúc họ cần.\n\nRTM (Route-to-Market) chính là con đường đưa hàng từ kho nhà máy đến tay người tiêu dùng. Đường mà tắc, xe không chạy được, thì hàng ngon mấy cũng thành rác.' }],
             },
             {
                 _type: 'block',
@@ -28,31 +28,31 @@ export const series_a_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Nhiều bạn nhầm RTM với Logistics. Logistics là chuyện cái xe tải chạy có đúng giờ không, kho có bị dột không. Còn RTM là **Chiến lược tiếp cận thị trường**.\n\nVới trải nghiệm 15 năm làm nghề, từ thời lăn lộn ở Coca-Cola, Mondelez đến vị trí National BD Director tại Anminh Group, Hải đúc kết RTM gồm 4 trụ cột:' }],
+                children: [{ _type: 'span', text: 'Nhiều bạn nhầm RTM với Logistics. Logistics là chuyện cái xe tải chạy có đúng giờ không, kho có bị dột không. Còn RTM là Chiến lược tiếp cận thị trường.\n\nVới trải nghiệm 15 năm làm nghề, từ thời lăn lộn ở Coca-Cola, Mondelez đến vị trí National BD Director tại Anminh Group, Hải đúc kết RTM gồm 4 trụ cột:' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: '**1. Channel Strategy (Chiến lược kênh):** Bán ở đâu? Tạp hóa (GT), Siêu thị (MT), hay Shopee (eCom)? Mỗi kênh là một chiến trường khác hẳn nhau.' }],
+                children: [{ _type: 'span', text: '1. Channel Strategy (Chiến lược kênh): Bán ở đâu? Tạp hóa (GT), Siêu thị (MT), hay Shopee (eCom)? Mỗi kênh là một chiến trường khác hẳn nhau.' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: '**2. Coverage Model (Mô hình bao phủ):** Ai đi bán? Nhân viên hãng (Pre-sales), nhân viên nhà phân phối, hay bán buôn (Wholesale)?' }],
+                children: [{ _type: 'span', text: '2. Coverage Model (Mô hình bao phủ): Ai đi bán? Nhân viên hãng (Pre-sales), nhân viên nhà phân phối, hay bán buôn (Wholesale)?' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: '**3. Trading Terms (Thỏa thuận thương mại):** Chiết khấu bao nhiêu là đủ để họ đẩy hàng cho mình mà không phá giá?' }],
+                children: [{ _type: 'span', text: '3. Trading Terms (Thỏa thuận thương mại): Chiết khấu bao nhiêu là đủ để họ đẩy hàng cho mình mà không phá giá?' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: '**4. Activity Planning (Kế hoạch hành động):** Khuyến mãi, trưng bày, sales kit...' }],
+                children: [{ _type: 'span', text: '4. Activity Planning (Kế hoạch hành động): Khuyến mãi, trưng bày, sales kit...' }],
             },
             {
                 _type: 'block',
@@ -62,7 +62,7 @@ export const series_a_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Hãy nhìn Unilever, Masan, Vinamilk. Tại sao họ bá đạo? Không phải chỉ vì họ nhiều tiền quảng cáo đâu. Đối thủ có thể copy công thức nước mắm trong 1 tuần, copy bao bì trong 1 ngày, thậm chí thuê KOL xịn hơn.\n\nNhưng đối thủ **KHÔNG THỂ** copy được hệ thống 300,000 điểm bán lẻ (GT) mà họ đã dày công xây dựng 20 năm nay. Đó là cái **Hào sâu bảo vệ (Moat)** cực kỳ kiên cố.' }],
+                children: [{ _type: 'span', text: 'Hãy nhìn Unilever, Masan, Vinamilk. Tại sao họ bá đạo? Không phải chỉ vì họ nhiều tiền quảng cáo đâu. Đối thủ có thể copy công thức nước mắm trong 1 tuần, copy bao bì trong 1 ngày, thậm chí thuê KOL xịn hơn.\n\nNhưng đối thủ KHÔNG THỂ copy được hệ thống 300,000 điểm bán lẻ (GT) mà họ đã dày công xây dựng 20 năm nay. Đó là cái Hào sâu bảo vệ (Moat) cực kỳ kiên cố.' }],
             },
             {
                 _type: 'block',
@@ -77,12 +77,12 @@ export const series_a_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Trong series này, Hải sẽ không nói chuyện sách vở Harvard. Hải sẽ chia sẻ những "vết sẹo" chiến trường và những bài học thực tế:\n\n1.  **Audit:** Khám bệnh hệ thống phân phối (đừng tin báo cáo, hãy tin thùng rác).\n2.  **Segmentation:** Phân khúc kênh - Tại sao bán tạp hóa khác bán siêu thị?\n3.  **Distributor:** Chọn "Vợ" (Nhà phân phối) thế nào cho chuẩn?\n4.  **Route Planning:** Tuyến bán hàng MCP - Vẽ làm sao để sale không tốn xăng vô ích.\n5.  **Sales Force:** Quản trị đội ngũ Hunter & Farmer.\n\nLưu ý: Hải chưa bao giờ làm chuyên về "Expansion" (Mở rộng thị trường kiểu cắm cờ vùng đất mới tinh), nên series này Hải sẽ tập trung sâu vào **OPTIMIZATION (Tối ưu hóa)** - làm sao trên cái nền tảng cũ, mình vắt ra được nhiều nước hơn, hiệu quả hơn. Đó mới là bài toán khó của các sếp.' }],
+                children: [{ _type: 'span', text: 'Trong series này, Hải sẽ không nói chuyện sách vở Harvard. Hải sẽ chia sẻ những "vết sẹo" chiến trường và những bài học thực tế:\n\n1. Audit: Khám bệnh hệ thống phân phối (đừng tin báo cáo, hãy tin thùng rác).\n2. Segmentation: Phân khúc kênh - Tại sao bán tạp hóa khác bán siêu thị?\n3. Distributor: Chọn "Vợ" (Nhà phân phối) thế nào cho chuẩn?\n4. Route Planning: Tuyến bán hàng MCP - Vẽ làm sao để sale không tốn xăng vô ích.\n5. Sales Force: Quản trị đội ngũ Hunter & Farmer.\n\nLưu ý: Hải chưa bao giờ làm chuyên về "Expansion" (Mở rộng thị trường kiểu cắm cờ vùng đất mới tinh), nên series này Hải sẽ tập trung sâu vào OPTIMIZATION (Tối ưu hóa) - làm sao trên cái nền tảng cũ, mình vắt ra được nhiều nước hơn, hiệu quả hơn. Đó mới là bài toán khó của các sếp.' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Sẵn sàng chưa? Đi thực địa (Market Visit) cùng Hải nhé! 🚛' }],
+                children: [{ _type: 'span', text: 'Sẵn sàng chưa? Đi thực địa (Market Visit) cùng Hải nhé! ' }],
             }
         ]
     },
@@ -109,7 +109,7 @@ export const series_a_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Anh Giám đốc vùng báo cáo: "Sếp ơi, mình phủ được 1,000 cửa hàng trên tổng số 2,000 cửa hàng tại quận 1. Độ phủ (Numeric Distribution - ND) đạt 50%. Quá ngon!"\n\nHải hỏi: "Thế 1,000 cửa hàng em phủ là quán trà đá vỉa hè hay siêu thị mini? Doanh số của 1,000 điểm đó chiếm bao nhiêu % sức mua toàn quận?".\n\nNếu bạn phủ 1,000 quán cóc (bán 1 gói/ngày) mà bỏ sót 5 cái siêu thị (bán 1,000 gói/ngày), thì ND bạn cao nhưng **Weighted Distribution (WD)** của bạn cực thấp. Bạn đang phủ rác.\n\n**Bài học:** Ít nhưng chất. Thà phủ 20% điểm bán (nhưng là điểm Key) mà nắm trọn 80% doanh số (nguyên lý 80/20), còn hơn phủ tràn lan mà tốn chi phí giao hàng (Cost-to-serve).' }],
+                children: [{ _type: 'span', text: 'Anh Giám đốc vùng báo cáo: "Sếp ơi, mình phủ được 1,000 cửa hàng trên tổng số 2,000 cửa hàng tại quận 1. Độ phủ (Numeric Distribution - ND) đạt 50%. Quá ngon!"\n\nHải hỏi: "Thế 1,000 cửa hàng em phủ là quán trà đá vỉa hè hay siêu thị mini? Doanh số của 1,000 điểm đó chiếm bao nhiêu % sức mua toàn quận?".\n\nNếu bạn phủ 1,000 quán cóc (bán 1 gói/ngày) mà bỏ sót 5 cái siêu thị (bán 1,000 gói/ngày), thì ND bạn cao nhưng Weighted Distribution (WD) của bạn cực thấp. Bạn đang phủ rác.\n\nBài học: Ít nhưng chất. Thà phủ 20% điểm bán (nhưng là điểm Key) mà nắm trọn 80% doanh số (nguyên lý 80/20), còn hơn phủ tràn lan mà tốn chi phí giao hàng (Cost-to-serve).' }],
             },
             {
                 _type: 'block',
@@ -124,7 +124,7 @@ export const series_a_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '*   **Tồn kho (Inventory):** Vào kho đếm thử. Có mã nào nằm > 60 ngày không? Có mã nào "đứt hàng" (Out of Stock) dù trên hệ thống báo còn không? (Cái này là bệnh "xào số").\n*   **Tài chính (Cashflow):** NPP có đang nợ chồng chất không? Dòng tiền họ xoay có kịp trả mình không? Chết tiền là chết hết.\n*   **Tâm thế (Mindset):** Chủ NPP có máu lửa không, hay giao khoán cho nhân viên? Sale của NPP có thuộc bảng giá không?' }],
+                children: [{ _type: 'span', text: ' Tồn kho (Inventory): Vào kho đếm thử. Có mã nào nằm > 60 ngày không? Có mã nào "đứt hàng" (Out of Stock) dù trên hệ thống báo còn không? (Cái này là bệnh "xào số").\n Tài chính (Cashflow): NPP có đang nợ chồng chất không? Dòng tiền họ xoay có kịp trả mình không? Chết tiền là chết hết.\n Tâm thế (Mindset): Chủ NPP có máu lửa không, hay giao khoán cho nhân viên? Sale của NPP có thuộc bảng giá không?' }],
             },
             {
                 _type: 'block',
@@ -134,7 +134,7 @@ export const series_a_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Bước vào tiệm tạp hóa, hãy dùng công thức **FACINGS**:\n*   **F** - Forward: Hàng có được kéo ra mặt tiền kệ không?\n*   **A** - Amount: Số lượng mặt (face) trưng bày có áp đảo đối thủ không? (Share of Shelf = Share of Market).\n*   **C** - Clean: Hàng có sạch không? (Bụi = Ế).\n*   **P** - Price: Có bảng giá không? Giá có đúng quy định không?' }],
+                children: [{ _type: 'span', text: 'Bước vào tiệm tạp hóa, hãy dùng công thức FACINGS:\n F - Forward: Hàng có được kéo ra mặt tiền kệ không?\n A - Amount: Số lượng mặt (face) trưng bày có áp đảo đối thủ không? (Share of Shelf = Share of Market).\n C - Clean: Hàng có sạch không? (Bụi = Ế).\n P - Price: Có bảng giá không? Giá có đúng quy định không?' }],
             },
             {
                 _type: 'block',
@@ -144,7 +144,7 @@ export const series_a_1 = [
         ]
     },
     {
-        title: '[RTM Masterclass #3] Segmentation: Chiến lược kênh Tạp Hóa (GT) - Đừng coi thường "bà bán nước" 👟',
+        title: '[RTM Masterclass #3] Segmentation: Chiến lược kênh Tạp Hóa (GT) - Đừng coi thường "bà bán nước" ',
         slug: { current: 'rtm-masterclass-3-segmentation' },
         publishedAt: new Date(Date.now() - 300000000).toISOString(),
         excerpt: 'Bạn không thể áp dụng cách bán hàng siêu thị cho kênh Tạp hóa. Kênh GT có luật chơi riêng: Tốc độ, Tình cảm và Tiền mặt. Phân tích sâu về đặc thù kênh GT tại Việt Nam.',
@@ -176,7 +176,7 @@ export const series_a_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Cái tiệm bé tí 15m2, chứa hầm bà lằng đủ thứ từ kim chỉ đến thùng bia. Bạn vác cái thùng carton to đùng đến, chủ quán lắc đầu ngay: "Chỗ đâu mà để?".\n\n**Chiến lược:** Phải thiết kế bao bì thông minh. Dây treo (Hanger) là đặc sản GT - treo lủng lẳng tiết kiệm diện tích. Thùng hàng phải nhỏ (Open case), dễ xé, dễ chồng lên nhau.' }],
+                children: [{ _type: 'span', text: 'Cái tiệm bé tí 15m2, chứa hầm bà lằng đủ thứ từ kim chỉ đến thùng bia. Bạn vác cái thùng carton to đùng đến, chủ quán lắc đầu ngay: "Chỗ đâu mà để?".\n\nChiến lược: Phải thiết kế bao bì thông minh. Dây treo (Hanger) là đặc sản GT - treo lủng lẳng tiết kiệm diện tích. Thùng hàng phải nhỏ (Open case), dễ xé, dễ chồng lên nhau.' }],
             },
             {
                 _type: 'block',
@@ -186,7 +186,7 @@ export const series_a_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Tạp hóa vốn mỏng, họ không nhập 1 lần 10 thùng đâu. Họ nhập "mì ăn liền": Hết là gọi, sáng gọi chiều phải có. Họ lấy mỗi thứ một ít (2 chai mắm, 3 gói mì).\n\n**Chiến lược:** Hệ thống giao hàng phải cực nhanh. Sales phải đi thăm viếng (Visit) dày đặc (1-2 lần/tuần). Nếu sales lười, 1 tháng mới ghé 1 lần thì xác định mất chỗ vào tay đối thủ.' }],
+                children: [{ _type: 'span', text: 'Tạp hóa vốn mỏng, họ không nhập 1 lần 10 thùng đâu. Họ nhập "mì ăn liền": Hết là gọi, sáng gọi chiều phải có. Họ lấy mỗi thứ một ít (2 chai mắm, 3 gói mì).\n\nChiến lược: Hệ thống giao hàng phải cực nhanh. Sales phải đi thăm viếng (Visit) dày đặc (1-2 lần/tuần). Nếu sales lười, 1 tháng mới ghé 1 lần thì xác định mất chỗ vào tay đối thủ.' }],
             },
             {
                 _type: 'block',
@@ -206,12 +206,12 @@ export const series_a_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Nhiều công ty mang nguyên chính sách siêu thị ra ốp cho tạp hóa: Bắt ký hợp đồng trưng bày dài 5 trang, trả thưởng sau 45 ngày. Chủ quán GT họ xé hợp đồng vứt sọt rác ngay.\n\nNhớ nhé: **GT cần Nhanh - Gọn - Tình cảm.**\n**MT cần Chuyên nghiệp - Quy trình - Số liệu.**\n\nHải không làm Expansion (mở mới vùng trắng), nhưng Hải chuyên trị việc tối ưu lại cách phục vụ kênh GT này. Chỉ cần thay đổi tần suất viếng thăm (Call Frequency) và chỉnh lại cái Sales Kit thôi, doanh số đã tăng 20% rồi.' }],
+                children: [{ _type: 'span', text: 'Nhiều công ty mang nguyên chính sách siêu thị ra ốp cho tạp hóa: Bắt ký hợp đồng trưng bày dài 5 trang, trả thưởng sau 45 ngày. Chủ quán GT họ xé hợp đồng vứt sọt rác ngay.\n\nNhớ nhé: GT cần Nhanh - Gọn - Tình cảm.\nMT cần Chuyên nghiệp - Quy trình - Số liệu.\n\nHải không làm Expansion (mở mới vùng trắng), nhưng Hải chuyên trị việc tối ưu lại cách phục vụ kênh GT này. Chỉ cần thay đổi tần suất viếng thăm (Call Frequency) và chỉnh lại cái Sales Kit thôi, doanh số đã tăng 20% rồi.' }],
             }
         ]
     },
     {
-        title: '[RTM Masterclass #4] Distributor Strategy: Chọn "Vợ" (Nhà phân phối) đừng chỉ nhìn mặt xinh 🤝',
+        title: '[RTM Masterclass #4] Distributor Strategy: Chọn "Vợ" (Nhà phân phối) đừng chỉ nhìn mặt xinh ',
         slug: { current: 'rtm-masterclass-4-distributor' },
         publishedAt: new Date(Date.now() - 400000000).toISOString(),
         excerpt: '70% thất bại của RTM đến từ việc chọn sai Nhà phân phối (NPP). NPP không chỉ là cái kho chứa hàng, họ là đối tác chiến lược. Chọn sai là ly dị mệt nghỉ.',
@@ -253,7 +253,7 @@ export const series_a_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '- **Kho:** Có đủ rộng không? Có pallet, PCCC, chống mối mọt không?\n- **Xe:** Xe nhà hay xe thuê? Xe nhà thì chủ động, xe thuê thì mưa gió nó nghỉ chạy.\n- **Sales:** Có đội sales riêng (Dedicated) hay dùng chung với hãng khác (Shared)? Sales dùng chung thì hôm nào hãng kia thưởng cao nó bán hàng kia, bỏ bê hàng mình.' }],
+                children: [{ _type: 'span', text: '- Kho: Có đủ rộng không? Có pallet, PCCC, chống mối mọt không?\n- Xe: Xe nhà hay xe thuê? Xe nhà thì chủ động, xe thuê thì mưa gió nó nghỉ chạy.\n- Sales: Có đội sales riêng (Dedicated) hay dùng chung với hãng khác (Shared)? Sales dùng chung thì hôm nào hãng kia thưởng cao nó bán hàng kia, bỏ bê hàng mình.' }],
             },
             {
                 _type: 'block',
@@ -288,7 +288,7 @@ export const series_a_1 = [
         ]
     },
     {
-        title: '[RTM Masterclass #5] Route Planning: Nghệ thuật vẽ tuyến MCP - Vẽ bậy là chết Sale 🗺️',
+        title: '[RTM Masterclass #5] Route Planning: Nghệ thuật vẽ tuyến MCP - Vẽ bậy là chết Sale ',
         slug: { current: 'rtm-masterclass-5-route-planning' },
         publishedAt: new Date(Date.now() - 60000000).toISOString(),
         excerpt: 'Tuyến bán hàng (MCP) là "nhịp thở" của Sales. Vẽ tuyến sai là bắt Sale chạy rông ngoài đường tốn xăng vô ích. Tối ưu MCP để tăng 30% năng suất.',
@@ -321,7 +321,7 @@ export const series_a_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Không phải khách nào cũng chăm như nhau. Phải phân loại:\n*   **Khách A (VIP):** Ghé **1 lần/tuần** (F4). Đây là mỏ vàng, phải giữ chặt.\n*   **Khách B (Khá):** Ghé **2 tuần/lần** (F2). Nuôi dưỡng để lên A.\n*   **Khách C (Nhỏ):** Ghé **1 tháng/lần** (F1) hoặc sale qua điện thoại (Tele-sales). Đi nhiều tốn xăng mà đơn bé tí thì lỗ.' }],
+                children: [{ _type: 'span', text: 'Không phải khách nào cũng chăm như nhau. Phải phân loại:\n Khách A (VIP): Ghé 1 lần/tuần (F4). Đây là mỏ vàng, phải giữ chặt.\n Khách B (Khá): Ghé 2 tuần/lần (F2). Nuôi dưỡng để lên A.\n Khách C (Nhỏ): Ghé 1 tháng/lần (F1) hoặc sale qua điện thoại (Tele-sales). Đi nhiều tốn xăng mà đơn bé tí thì lỗ.' }],
             },
             {
                 _type: 'block',
@@ -331,7 +331,7 @@ export const series_a_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Tuyến đi phải theo hình **Zig-zag** hoặc **Vòng tròn khép kín (Loop)**. Tuyệt đối tránh đi kiểu "bàn cờ nhảy ngựa": Đang ở đầu phố chạy xuống cuối phố rồi quay lại giữa phố. Sales mệt, tốn xăng, thời gian di chuyển (Travel time) nhiều hơn thời gian bán hàng (Selling time).' }],
+                children: [{ _type: 'span', text: 'Tuyến đi phải theo hình Zig-zag hoặc Vòng tròn khép kín (Loop). Tuyệt đối tránh đi kiểu "bàn cờ nhảy ngựa": Đang ở đầu phố chạy xuống cuối phố rồi quay lại giữa phố. Sales mệt, tốn xăng, thời gian di chuyển (Travel time) nhiều hơn thời gian bán hàng (Selling time).' }],
             },
             {
                 _type: 'block',
@@ -341,7 +341,7 @@ export const series_a_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Tại Anminh, Hải áp dụng DMS có tính năng gợi ý tuyến đường thông minh (như Grab). Nó tính toán sao cho quãng đường ngắn nhất. Và quan trọng là **Living Route (Tuyến sống)**. Cứ 6 tháng, phải ngồi review lại tuyến 1 lần. Vì có quán đóng cửa, quán mở mới. MCP mà để 2 năm không sửa là MCP chết.\n\nTối ưu tuyến là việc "nhặt tiền lẻ" nhưng cộng lại thành tiền tấn. Tăng 1 cuộc viếng thăm mỗi ngày thôi, nhân với 100 sales, 1 năm bạn có thêm bao nhiêu đơn hàng?' }],
+                children: [{ _type: 'span', text: 'Tại Anminh, Hải áp dụng DMS có tính năng gợi ý tuyến đường thông minh (như Grab). Nó tính toán sao cho quãng đường ngắn nhất. Và quan trọng là Living Route (Tuyến sống). Cứ 6 tháng, phải ngồi review lại tuyến 1 lần. Vì có quán đóng cửa, quán mở mới. MCP mà để 2 năm không sửa là MCP chết.\n\nTối ưu tuyến là việc "nhặt tiền lẻ" nhưng cộng lại thành tiền tấn. Tăng 1 cuộc viếng thăm mỗi ngày thôi, nhân với 100 sales, 1 năm bạn có thêm bao nhiêu đơn hàng?' }],
             }
         ]
     }

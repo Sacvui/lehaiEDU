@@ -1,6 +1,6 @@
 export const series_c_1 = [
     {
-        title: '[Logistics Masterclass #1] Inventory: Kho bãi không phải cái kho chứa đồ 🏭',
+        title: '[Logistics Masterclass #1] Inventory: Kho bãi không phải cái kho chứa đồ ',
         slug: { current: 'logistics-masterclass-1-inventory' },
         publishedAt: new Date(Date.now() - 5000000).toISOString(),
         excerpt: 'Nhiều sếp cứ nghĩ kho bãi chỉ là chỗ vứt hàng vào. Sai lầm! Tồn kho là tiền "chết" nằm im. Bài toán JIT (Just-in-Time) vs JIC (Just-in-Case) và câu chuyện đau đầu của dân Supply Chain.',
@@ -27,17 +27,17 @@ export const series_c_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '**JIT (Vừa đủ):** Triết lý kiểu Toyota. Hàng về cái là sản xuất/bán ngay. Kho gần như trống rỗng. Lợi là tiền không bị chôn vốn, kho gọn gàng. Hại là nếu nhà cung cấp hắt hơi sổ mũi một cái, hay tàu kẹt ở kênh Suez một phát, là đứt chuỗi ngay. Nhớ vụ chip bán dẫn thời Covid không? Chết vì JIT đấy.' }],
+                children: [{ _type: 'span', text: 'JIT (Vừa đủ): Triết lý kiểu Toyota. Hàng về cái là sản xuất/bán ngay. Kho gần như trống rỗng. Lợi là tiền không bị chôn vốn, kho gọn gàng. Hại là nếu nhà cung cấp hắt hơi sổ mũi một cái, hay tàu kẹt ở kênh Suez một phát, là đứt chuỗi ngay. Nhớ vụ chip bán dẫn thời Covid không? Chết vì JIT đấy.' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '**JIC (Phòng hờ):** Kiểu mua lúa tích trữ mùa đông. Lúc nào kho cũng đầy ắp (Safety Stock cao). Lợi là khách gọi cái có hàng ngay, Sales rất sướng. Hại là tiền nằm chết một chỗ, chi phí lưu kho, bảo hiểm, hư hỏng tăng vọt.' }],
+                children: [{ _type: 'span', text: 'JIC (Phòng hờ): Kiểu mua lúa tích trữ mùa đông. Lúc nào kho cũng đầy ắp (Safety Stock cao). Lợi là khách gọi cái có hàng ngay, Sales rất sướng. Hại là tiền nằm chết một chỗ, chi phí lưu kho, bảo hiểm, hư hỏng tăng vọt.' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Vậy chọn cái nào? Kinh nghiệm của Hải với tư cách **National BD Director** là: **Đừng cực đoan.**' }],
+                children: [{ _type: 'span', text: 'Vậy chọn cái nào? Kinh nghiệm của Hải với tư cách National BD Director là: Đừng cực đoan.' }],
             },
             {
                 _type: 'block',
@@ -47,7 +47,7 @@ export const series_c_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đừng đối xử với tất cả các mã hàng (SKU) như nhau.\n\n*   **Nhóm A (Best Seller):** 20% mã hàng mang lại 80% doanh thu. Nhóm này phải áp dụng JIC, **tuyệt đối không được đứt hàng**. Đứt hàng nhóm này là mất khách, mất thị phần. Tồn kho an toàn phải cao.\n*   **Nhóm C (Hàng chậm/Slow moving):** Mấy món cả năm bán được vài cái. Áp dụng JIT hoặc Dropshipping. Khi nào có đơn thì đặt, hoặc giữ tồn kho cực thấp. Đừng tiếc rẻ mà ôm đống này, nó là cục nợ đấy.' }],
+                children: [{ _type: 'span', text: 'Đừng đối xử với tất cả các mã hàng (SKU) như nhau.\n\n Nhóm A (Best Seller): 20% mã hàng mang lại 80% doanh thu. Nhóm này phải áp dụng JIC, tuyệt đối không được đứt hàng. Đứt hàng nhóm này là mất khách, mất thị phần. Tồn kho an toàn phải cao.\n Nhóm C (Hàng chậm/Slow moving): Mấy món cả năm bán được vài cái. Áp dụng JIT hoặc Dropshipping. Khi nào có đơn thì đặt, hoặc giữ tồn kho cực thấp. Đừng tiếc rẻ mà ôm đống này, nó là cục nợ đấy.' }],
             },
             {
                 _type: 'block',
@@ -57,7 +57,7 @@ export const series_c_1 = [
         ]
     },
     {
-        title: '[Logistics Masterclass #2] Transportation: Đừng chở gió - Bài toán tối ưu vận tải 🚚',
+        title: '[Logistics Masterclass #2] Transportation: Đừng chở gió - Bài toán tối ưu vận tải ',
         slug: { current: 'logistics-masterclass-2-transportation' },
         publishedAt: new Date(Date.now() - 15000000).toISOString(),
         excerpt: 'Xe tải chạy rỗng chiều về (Empty backhaul) là nỗi đau của mọi công ty Logistics. Làm sao để "ghép đơn", "đi chung" và tối ưu hóa Load Factor? Chiến thuật Milk-run là gì?',
@@ -99,7 +99,7 @@ export const series_c_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Thay vì mỗi nhà cung cấp chở hàng lẻ tẻ đến kho của mình (vừa tốn xe, vừa kẹt cổng kho), Hải cho 1 chiếc xe tải lớn của mình chạy một vòng qua các nhà cung cấp A -> B -> C để gom hàng, rồi đem về kho. Giống như đi vắt sữa từng con bò vậy.\n\nKết quả: Tăng độ đầy thùng xe (Load Factor), giảm số lượng chuyến xe (Trip reduction), và quan trọng nhất là mình **chủ động** được thời gian hàng về.' }],
+                children: [{ _type: 'span', text: 'Thay vì mỗi nhà cung cấp chở hàng lẻ tẻ đến kho của mình (vừa tốn xe, vừa kẹt cổng kho), Hải cho 1 chiếc xe tải lớn của mình chạy một vòng qua các nhà cung cấp A -> B -> C để gom hàng, rồi đem về kho. Giống như đi vắt sữa từng con bò vậy.\n\nKết quả: Tăng độ đầy thùng xe (Load Factor), giảm số lượng chuyến xe (Trip reduction), và quan trọng nhất là mình chủ động được thời gian hàng về.' }],
             },
             {
                 _type: 'block',
@@ -109,7 +109,7 @@ export const series_c_1 = [
         ]
     },
     {
-        title: '[Logistics Masterclass #3] Cold Chain: Chuỗi cung ứng lạnh - Cuộc chơi của nhà giàu ❄️',
+        title: '[Logistics Masterclass #3] Cold Chain: Chuỗi cung ứng lạnh - Cuộc chơi của nhà giàu ',
         slug: { current: 'logistics-masterclass-3-cold-chain' },
         publishedAt: new Date(Date.now() - 25000000).toISOString(),
         excerpt: 'Làm hàng khô (Dry goods) đã khó, làm hàng lạnh (Fresh/Frozen) còn khó gấp 10 lần. Nhiệt độ chỉ cần lệch 2 độ C là đi tong cả container tôm hùm. Những "bẫy" chết người trong Cold Chain.',
@@ -151,12 +151,12 @@ export const series_c_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Ngày nay không ai tin vào sổ tay tài xế ("Anh thề là máy lạnh chạy suốt"). Chúng ta dùng **Data Logger**. Một con chip nhỏ xíu thả vào thùng hàng. Nó ghi lại nhiệt độ mỗi 5 phút/lần. Cuối hành trình cắm vào máy tính, nó vẽ ra biểu đồ. Lộ ra ngay lúc nào tài xế tắt máy lạnh để tiết kiệm dầu. Trong Cold Chain, Dữ liệu là quan tòa trung thực nhất.' }],
+                children: [{ _type: 'span', text: 'Ngày nay không ai tin vào sổ tay tài xế ("Anh thề là máy lạnh chạy suốt"). Chúng ta dùng Data Logger. Một con chip nhỏ xíu thả vào thùng hàng. Nó ghi lại nhiệt độ mỗi 5 phút/lần. Cuối hành trình cắm vào máy tính, nó vẽ ra biểu đồ. Lộ ra ngay lúc nào tài xế tắt máy lạnh để tiết kiệm dầu. Trong Cold Chain, Dữ liệu là quan tòa trung thực nhất.' }],
             }
         ]
     },
     {
-        title: '[Logistics Masterclass #4] Procurement: Nghệ thuật mua hàng - Mua rẻ chưa chắc đã ngon 💰',
+        title: '[Logistics Masterclass #4] Procurement: Nghệ thuật mua hàng - Mua rẻ chưa chắc đã ngon ',
         slug: { current: 'logistics-masterclass-4-procurement' },
         publishedAt: new Date(Date.now() - 35000000).toISOString(),
         excerpt: 'Procurement (Thu mua chiến lược) khác gì với Purchasing (Mua hàng sự vụ)? Tại sao chọn nhà cung cấp rẻ nhất thường là con đường dẫn đến thảm họa?',
@@ -178,7 +178,7 @@ export const series_c_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Giá mua (Price) chỉ là phần nổi của tảng băng chìm. TCO mới là tổng chi phí thực sự.\n\nVí dụ: Bạn mua cái máy in rẻ hơn 2 triệu. Nhưng mực in của nó đắt gấp đôi, hay kẹt giấy, mỗi lần sửa tốn cả ngày chờ đợi (dừng sản xuất). Tính ra sau 1 năm, cái máy "rẻ" đó đắt hơn cái máy xịn gấp 3 lần.\n\nHải luôn training cho nhân viên Procurement: **"Đừng nhìn vào Price Tag, hãy nhìn vào Life Cycle Cost"**. Mua đắt một tí mà bền, dịch vụ hậu mãi tốt, giao hàng đúng hẹn (OTIF), thì vẫn là Rẻ.' }],
+                children: [{ _type: 'span', text: 'Giá mua (Price) chỉ là phần nổi của tảng băng chìm. TCO mới là tổng chi phí thực sự.\n\nVí dụ: Bạn mua cái máy in rẻ hơn 2 triệu. Nhưng mực in của nó đắt gấp đôi, hay kẹt giấy, mỗi lần sửa tốn cả ngày chờ đợi (dừng sản xuất). Tính ra sau 1 năm, cái máy "rẻ" đó đắt hơn cái máy xịn gấp 3 lần.\n\nHải luôn training cho nhân viên Procurement: "Đừng nhìn vào Price Tag, hãy nhìn vào Life Cycle Cost". Mua đắt một tí mà bền, dịch vụ hậu mãi tốt, giao hàng đúng hẹn (OTIF), thì vẫn là Rẻ.' }],
             },
             {
                 _type: 'block',
@@ -193,7 +193,7 @@ export const series_c_1 = [
         ]
     },
     {
-        title: '[Logistics Masterclass #5] Crisis Management: Đứt gãy chuỗi cung ứng - Bài học xương máu từ Covid 🦠',
+        title: '[Logistics Masterclass #5] Crisis Management: Đứt gãy chuỗi cung ứng - Bài học xương máu từ Covid ',
         slug: { current: 'logistics-masterclass-5-crisis-management' },
         publishedAt: new Date(Date.now() - 45000000).toISOString(),
         excerpt: 'Khi thiên nga đen xuất hiện (Covid, chiến tranh, tắc biên), kế hoạch hoàn hảo cũng vứt sọt rác. Làm sao xây dựng chuỗi cung ứng "nhựa sống" (Resilient Supply Chain)?',
@@ -215,7 +215,7 @@ export const series_c_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Trước đây, ai cũng tôn sùng Lean (tinh gọn) và Efficiency (Hiệu quả, chi phí thấp nhất). Kho phải min, nhân sự phải min. Nhưng khi khủng hoảng ập đến, những chuỗi cung ứng "tinh gọn" quá mức lại là những thằng gãy đầu tiên vì không có bộ đệm (Buffer).\n\nXu hướng mới bây giờ là **Resilience (Sự dẻo dai)**. Chấp nhận tốn kém hơn một chút (tồn kho nhiều hơn, sourcing ở gần hơn dù đắt hơn - Nearshoring) để khi có biến, mình vẫn sống sót.' }],
+                children: [{ _type: 'span', text: 'Trước đây, ai cũng tôn sùng Lean (tinh gọn) và Efficiency (Hiệu quả, chi phí thấp nhất). Kho phải min, nhân sự phải min. Nhưng khi khủng hoảng ập đến, những chuỗi cung ứng "tinh gọn" quá mức lại là những thằng gãy đầu tiên vì không có bộ đệm (Buffer).\n\nXu hướng mới bây giờ là Resilience (Sự dẻo dai). Chấp nhận tốn kém hơn một chút (tồn kho nhiều hơn, sourcing ở gần hơn dù đắt hơn - Nearshoring) để khi có biến, mình vẫn sống sót.' }],
             },
             {
                 _type: 'block',

@@ -24,7 +24,7 @@ export const bi_ai_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Business Intelligence (BI), nói dân dã là "Thông Minh Kinh Doanh", thực chất là việc **kể lại chuyện ngày hôm qua**.\n\nNó giống như việc bạn lái xe mà cứ nhìn chằm chằm vào gương chiếu hậu. Bạn thấy rất rõ con đường đã đi qua, ổ gà nào đã sụp, cô nào đã vẫy tay chào. Các sếp nhà mình khoái cái này lắm, vì nhìn vào thấy "kiểm soát" được tình hình.\n\nNhưng khổ nỗi, cái gương chiếu hậu không nói cho bạn biết phía trước 50 mét có cái hố ga đang mở nắp. Và thế là... RẦM! Doanh số tụt không phanh mà không hiểu tại sao.' }],
+                children: [{ _type: 'span', text: 'Business Intelligence (BI), nói dân dã là "Thông Minh Kinh Doanh", thực chất là việc kể lại chuyện ngày hôm qua.\n\nNó giống như việc bạn lái xe mà cứ nhìn chằm chằm vào gương chiếu hậu. Bạn thấy rất rõ con đường đã đi qua, ổ gà nào đã sụp, cô nào đã vẫy tay chào. Các sếp nhà mình khoái cái này lắm, vì nhìn vào thấy "kiểm soát" được tình hình.\n\nNhưng khổ nỗi, cái gương chiếu hậu không nói cho bạn biết phía trước 50 mét có cái hố ga đang mở nắp. Và thế là... RẦM! Doanh số tụt không phanh mà không hiểu tại sao.' }],
             },
             {
                 _type: 'block',
@@ -39,7 +39,7 @@ export const bi_ai_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Còn AI (Trí tuệ nhân tạo) - loại xịn ấy nha - thì nó giống như **GPS + Gia Cát Lượng** cộng lại.\n\nNó không quan tâm lắm chuyện hôm qua bạn bán được bao nhiêu. Nó quan tâm chuyện: "Sếp ơi, dựa vào việc thằng Tèo hay đi bar đêm thứ 6, em dự đoán 90% sáng mai nó sẽ đi làm muộn. Sếp lo kiếm người thay ca đi."\n\nĐấy, ăn tiền là ở chỗ đó! AI nó giúp mình **DỰ BÁO (Predict)** và **HÀNH ĐỘNG (Prescribe)** trước khi sự việc xảy ra. Nó biến mình từ thế "bị động chịu đòn" sang thế "chủ động né đòn".' }],
+                children: [{ _type: 'span', text: 'Còn AI (Trí tuệ nhân tạo) - loại xịn ấy nha - thì nó giống như GPS + Gia Cát Lượng cộng lại.\n\nNó không quan tâm lắm chuyện hôm qua bạn bán được bao nhiêu. Nó quan tâm chuyện: "Sếp ơi, dựa vào việc thằng Tèo hay đi bar đêm thứ 6, em dự đoán 90% sáng mai nó sẽ đi làm muộn. Sếp lo kiếm người thay ca đi."\n\nĐấy, ăn tiền là ở chỗ đó! AI nó giúp mình DỰ BÁO (Predict) và HÀNH ĐỘNG (Prescribe) trước khi sự việc xảy ra. Nó biến mình từ thế "bị động chịu đòn" sang thế "chủ động né đòn".' }],
             },
             {
                 _type: 'block',
@@ -49,7 +49,7 @@ export const bi_ai_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Nhiều sếp vui tính lắm. Tuyển mấy em làm báo cáo (BI) về rồi bắt các em ấy phải "phân tích thấu thị tương lai". Làm sao mà làm được?\n\n*   Muốn báo cáo đẹp, gọn gàng, sếp kiếm đội **Data Analyst/BI**.\n*   Muốn biết tháng sau có đạt KPI không, sếp phải kiếm đội **Data Scientist**.\n\nĐừng lẫn lộn. Lẫn lộn là tốn tiền mà chả được tích sự gì, lại còn hay "họp hành triền miên" để mổ xẻ mấy con số đã chết rồi.' }],
+                children: [{ _type: 'span', text: 'Nhiều sếp vui tính lắm. Tuyển mấy em làm báo cáo (BI) về rồi bắt các em ấy phải "phân tích thấu thị tương lai". Làm sao mà làm được?\n\n Muốn báo cáo đẹp, gọn gàng, sếp kiếm đội Data Analyst/BI.\n Muốn biết tháng sau có đạt KPI không, sếp phải kiếm đội Data Scientist.\n\nĐừng lẫn lộn. Lẫn lộn là tốn tiền mà chả được tích sự gì, lại còn hay "họp hành triền miên" để mổ xẻ mấy con số đã chết rồi.' }],
             },
             {
                 _type: 'block',

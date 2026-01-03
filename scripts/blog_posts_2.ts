@@ -1,6 +1,6 @@
 export const batch2 = [
     {
-        title: 'Thư gửi các bạn Nghiên cứu sinh chập chững vào nghề: Đừng "ngây thơ" trước Scopus ✍️',
+        title: 'Thư gửi các bạn Nghiên cứu sinh chập chững vào nghề: Đừng "ngây thơ" trước Scopus ',
         slug: { current: 'thu-gui-ncs-scopus' },
         publishedAt: new Date(Date.now() - 172800000).toISOString(),
         excerpt: 'Dạo này nhiều bạn inbox hỏi Hải: "Anh ơi làm sao để đăng báo Q1, Q2 cho nhanh để em còn bảo vệ?". Nghe câu hỏi mà Hải vừa thương vừa giận. Thương vì các bạn chưa biết gì, giận vì tư duy "mì ăn liền" trong làm khoa học. Để Hải kể chuyện "bị hành" cho nghe.',
@@ -98,7 +98,7 @@ export const batch2 = [
         ],
     },
     {
-        title: 'Review Văn Thơ: Đừng đọc nữa, hãy "Tổng hợp" 🧠 (Kỹ thuật Synthesis Matrix)',
+        title: 'Review Văn Thơ: Đừng đọc nữa, hãy "Tổng hợp" (Kỹ thuật Synthesis Matrix)',
         slug: { current: 'review-van-tho-synthesis' },
         publishedAt: new Date(Date.now() - 259200000).toISOString(),
         excerpt: 'Đọc 100 bài báo rồi mà đầu óc vẫn trống rỗng? Đó là do bạn đang "Review" như một con vẹt. Hãy dùng Synthesis Matrix để nâng tầm tư duy từ "Thợ hồ" lên "Kiến trúc sư".',

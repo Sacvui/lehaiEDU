@@ -1,6 +1,6 @@
 export const batch3 = [
     {
-        title: 'Nghệ thuật sa thải "Ngôi sao độc hại" (Toxic Star): Đau một lần rồi thôi 👋',
+        title: 'Nghệ thuật sa thải "Ngôi sao độc hại" (Toxic Star): Đau một lần rồi thôi ',
         slug: { current: 'sa-thai-toxic-star' },
         publishedAt: new Date(Date.now() - 345600000).toISOString(),
         excerpt: 'Sếp nào cũng sợ nhân viên giỏi nghỉ việc. Nhưng có một loại nhân viên CỰC GIỎI mà bạn phải tìm cách đuổi càng sớm càng tốt. Đó là Toxic Star. Giữ lại ngày nào là "ung thư" ngày đó.',
@@ -107,7 +107,7 @@ export const batch3 = [
         ],
     },
     {
-        title: 'Định Lượng vs Định Tính: Cuộc chiến không hồi kết của giới học thuật 🥊',
+        title: 'Định Lượng vs Định Tính: Cuộc chiến không hồi kết của giới học thuật ',
         slug: { current: 'dinh-luong-vs-dinh-tinh-war' },
         publishedAt: new Date(Date.now() - 432000000).toISOString(),
         excerpt: 'Bạn thuộc phe nào? Phe "Con số biết nói" (Quantitative) hay phe "Thấu hiểu lòng người" (Qualitative)? Tại sao phỏng vấn sâu lại bị coi thường? Khi nào thì nên chạy mô hình SPSS?',
