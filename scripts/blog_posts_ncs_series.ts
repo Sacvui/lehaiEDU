@@ -249,37 +249,47 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Thú thật với các bạn, hồi cấp 3 tôi dốt Toán lắm (đủ điểm qua môn thôi). Nhưng giờ tôi vẫn chạy mô hình SEM (Structural Equation Modeling) ầm ầm, dạy cả sinh viên. Vì sao?\n\nVì chúng ta là nhà nghiên cứu ứng dụng, không phải nhà toán học. Phần mềm (SPSS, SmartPLS) nó làm hết các phép tính phức tạp rồi. Việc của mình là: Bấm nút và Đọc kết quả.\n\nVới dân làm SmartPLS (phần mềm quốc dân hiện nay), bảng kết quả nó dài dằng dặc như tờ sớ. Nhưng đừng hoảng. Hãy nhớ thần chú 3 bước này, chỉ cần thọc tay vào đúng 3 chỗ này là ra bài:' }],
+                children: [{ _type: 'span', text: 'Thú thật với các bạn, hồi cấp 3 tôi dốt Toán lắm (đủ điểm qua môn thôi). Nhưng giờ tôi vẫn chạy mô hình SEM (Structural Equation Modeling) ầm ầm, dạy cả sinh viên. Vì sao?\n\nVì chúng ta là nhà nghiên cứu ứng dụng, không phải nhà toán học. Phần mềm (như SmartPLS cho mô hình SEM, hay SPSS cho hồi quy đơn) nó làm hết các phép tính phức tạp rồi. Việc của mình là: Bấm nút và Đọc kết quả.\n\nDưới đây là quy trình 3 bước cốt lõi khi dùng SmartPLS (với SPSS logic cũng tương tự nhưng output sẽ khác chút nhé):' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Bước 1: Kiểm tra độ tin cậy (Outer Model) -> Cronbach Alpha > 0.7' }],
+                children: [{ _type: 'span', text: 'Bước 1: Kiểm tra độ tin cậy (Reliability) -> Cronbach Alpha > 0.7' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Cái này để xem người trả lời có tick bừa không, và câu hỏi có đo đúng vấn đề không.\nNhìn cột Cronbach\'s Alpha và Composite Reliability. Cứ thấy nó xanh lét (> 0.7) là cười.\nNếu nó đỏ (< 0.7)? Vứt bớt mấy biến quan sát (câu hỏi nhỏ) bị điểm thấp đi. Vứt cho đến khi nào nó xanh thì thôi. (Đây gọi là kỹ thuật "tỉa cành").' }],
+                children: [{ _type: 'span', text: 'Cái này đo lường sự "nhất quán" (Consistency) của bộ câu hỏi. Nghĩa là các câu hỏi cùng đo 1 vấn đề thì người trả lời phải trả lời xuôi chiều như nhau.\n\nNhìn cột Cronbach\'s Alpha. Cứ thấy nó xanh lét (> 0.7) là cười.\n❗️ CẢNH BÁO: Nếu nó đỏ (< 0.7), đừng vội vàng vứt biến đi để làm đẹp số liệu! Hãy xem xét kỹ:\n1. Về mặt lý thuyết: Câu hỏi đó có quan trọng không? \n2. Về mặt thống kê: Nếu xóa nó đi, chỉ số có tăng lên đáng kể không?\nXóa bừa bãi không có lý do lý thuyết (Theoretical Justification) là bị Reviewer "gõ đầu" đấy.' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Bước 2: Kiểm tra sức mạnh mô hình -> R-square (R bình phương)' }],
+                children: [{ _type: 'span', text: 'Bước 1.5: Kiểm tra Tính Giá trị (Validity) - (Bước quan trọng hay bị quên)' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Nó cho biết mô hình của bạn "xịn" đến đâu, giải thích được bao nhiêu % thực tế.\nVí dụ R-square của biến "Ý định mua hàng" = 0.6. Nghĩa là các yếu tố bạn nghiên cứu (Giá, Chất lượng, Thương hiệu...) giải thích được 60% lý do khách mua hàng. \nCòn 40% còn lại là do cái gì? Do trời mưa, do khách thất tình, do khách trúng số... (cái này gọi là sai số, mình không quan tâm).\nThường dân kinh tế thấy R-square tầm 0.25 là chấp nhận được, 0.5 là ngon, 0.75 là quá đỉnh.' }],
+                children: [{ _type: 'span', text: 'Nhiều bạn newbie hay bỏ qua bước này. Nhưng các tạp chí xịn (Q1, Q2) họ soi rất kỹ.\n\n1. Hội tụ (Convergent Validity): Các câu hỏi phải cùng quy về 1 mối. Chỉ số AVE phải > 0.5.\n2. Phân biệt (Discriminant Validity): Khái niệm A phải khác khái niệm B. Chỉ số HTMT phải < 0.85 (hoặc < 0.9).\n\nNếu Reliability là "đo chính xác", thì Validity là "đo đúng cái cần đo". Thiếu 1 trong 2 là vứt.' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Bước 3: Kiểm định giả thuyết (Inner Model) -> P-value < 0.05' }],
+                children: [{ _type: 'span', text: 'Bước 2: Kiểm tra sức mạnh mô hình -> R-square' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đây là \'Number of God\'. Quyết định sinh mạng của bài báo.\n\n Nhìn cột P-value. \n Nếu P < 0.05 (nó thường hiện màu xanh): Chúc mừng! Giả thuyết được chấp nhận. (Ví dụ: Sếp đẹp trai CÓ tác động đến Động lực nhân viên).\n Nếu P > 0.05 (màu đỏ): Chia buồn! Không có ý nghĩa thống kê. (Ví dụ: Sếp đẹp trai hay xấu trai thì nhân viên vẫn lười như nhau, chả liên quan).\n\nThấy chưa? Đâu cần tích phân vi phân gì đâu. Cứ nhìn màu xanh màu đỏ là phán. Dễ hơn chơi chứng khoán!' }],
+                children: [{ _type: 'span', text: 'Nó cho biết mô hình của bạn giải thích được bao nhiêu % thực tế.\nVí dụ R-square = 0.6. Nghĩa là các biến độc lập (X) giải thích được 60% sự thay đổi của biến phụ thuộc (Y). \nCòn 40% còn lại là do "ông trời" (các yếu tố khác chưa đưa vào mô hình).\nR-square càng cao càng tốt, nhưng 0.25 là tạm chấp nhận, 0.5 là mức trung bình khá, 0.75 là mức xuất sắc.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Bước 3: Kiểm định giả thuyết -> P-value < 0.05' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Nhìn cột P-value để xem mối quan hệ có "Ý nghĩa thống kê" không.\n\n Nếu P < 0.05: Giả thuyết được chấp nhận (Có mối quan hệ).\n Nếu P > 0.05: Bác bỏ (Không có mối quan hệ rõ ràng).\n\n⚠️ LƯU Ý QUAN TRỌNG: P-value chỉ cho biết "Có" hay "Không". Nó không cho biết mối quan hệ đó "Mạnh" hay "Yếu".\nMuốn biết mạnh hay yếu, phải nhìn hệ số tác động (Path Coefficient / Beta). Đừng thần thánh hóa P-value quá mức nhé.\n\n(Và đừng quên check các Giả định như Đa cộng tuyến (VIF), Phân phối chuẩn... trước khi kết luận nhé. Cái này nói sau).' }],
             }
         ]
     },

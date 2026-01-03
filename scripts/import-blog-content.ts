@@ -16,6 +16,7 @@ import { series_c_1 } from './blog_posts_series_c_1'
 import { series_c_2 } from './blog_posts_series_c_2'
 import { dms_failure_post } from './blog_posts_dms_failure';
 import { dms_evolution_post } from './blog_posts_dms_evolution';
+import { r101_series } from './blog_posts_r101';
 import { book_intro } from './blog_posts_book'
 import { bi_ai_post } from './blog_posts_bi_ai'
 import { ncs_series_post } from './blog_posts_ncs_series'
@@ -96,6 +97,13 @@ const categories = [
         slug: { current: 'rtm-distribution' },
         description: 'Route-to-Market strategies and channel management mastery.',
         color: '#dc2626',
+    },
+    {
+        _type: 'category',
+        title: 'Data Analysis',
+        slug: { current: 'data-analysis' },
+        description: 'Quantitative analysis, statistics, and data visualization using R and other tools.',
+        color: '#4f46e5',
     },
     {
         _type: 'category',
@@ -189,7 +197,8 @@ const posts = [
     ...ncs_series_post,
     ...dms_post,
     ...dms_failure_post,
-    ...dms_evolution_post
+    ...dms_evolution_post,
+    ...r101_series
 ];
 
 async function importData() {
