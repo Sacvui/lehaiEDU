@@ -59,9 +59,9 @@ const navItems: NavItem[] = [
       },
       {
         label: 'Research Methodology',
-        href: '/blog?category=research-methods',
-        icon: BookOpen,
         desc: 'Nền tảng võ công, tránh tẩu hỏa nhập ma',
+        href: '/blog?tag=Methodology',
+        icon: FileText,
         items: [
           { label: 'Quantitative', href: '/blog?tag=quantitative' },
           { label: 'Qualitative', href: '/blog?tag=qualitative' },
