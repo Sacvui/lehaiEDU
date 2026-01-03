@@ -31,9 +31,6 @@ const navItems: NavItem[] = [
   { label: 'Solutions', href: '#solutions', icon: Rocket },
   { label: 'Books', href: '/books', icon: BookOpen },
   {
-    label: 'Học Tập (Blog)',
-    href: '/blog',
-    icon: TrendingUp,
     label: 'Learning Hub',
     href: '/blog',
     icon: TrendingUp,
