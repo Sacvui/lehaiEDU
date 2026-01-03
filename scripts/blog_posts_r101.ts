@@ -3,13 +3,13 @@ export const r101_series = [
     {
         title: 'R101 - Bài 1: R là cái quái gì mà dân tình mê mẩn? (Kèm Hướng Dẫn Cài Đặt 5 Phút) 🚀',
         slug: { current: 'r101-bai-1-intro-install' },
-        publishedAt: new Date().toISOString(),
+        publishedAt: new Date(Date.now() - 432000000).toISOString(),
         excerpt: 'Bạn đã bao giờ phát điên vì file Excel 500MB treo máy? Hay nhìn bảng kết quả SPSS xấu đau xấu đớn? Chào mừng đến với R - tình yêu đích thực của dân Data Analyst.',
         categorySlug: 'data-analysis',
-        coverImage: '/blog/r101_lesson1_cover_1767437733009.png', // Placeholder, will update with real path
+        coverImage: '/blog/r101_lesson1_cover_1767437895311.png',
         featured: true,
         readingTime: 10,
-        tags: ['R101', 'Data Analysis', 'R Programming', 'Góc nhìn HaiLP'],
+        tags: ['Quantitative', 'R101', 'Data Analysis', 'R Programming', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -34,7 +34,21 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Để chạy được R, chúng ta cần 2 thứ: \n1.  **R (Engine):** Cái lõi để tính toán. (Giống như cái động cơ xe).\n2.  **RStudio (IDE):** Cái giao diện đẹp đẽ để mình viết code. (Giống như cái vỏ xe, vô lăng, ghế ngồi).\n\n**Bước 1: Tải và cài R**\n*   Vào link: [cloud.r-project.org](https://cloud.r-project.org/)\n*   Chọn "Download R for Windows" (hoặc Mac).\n*   Bấm "install for the first time" -> Tải về -> Next liên tục đến khi xong.\n\n**Bước 2: Tải và cài RStudio**\n*   Vào link: [posit.co/download/rstudio-desktop](https://posit.co/download/rstudio-desktop/)\n*   Tải bản FREE -> Cài đặt Next liên tục.\n\nXong! Giờ bạn mở RStudio lên. Nó sẽ có 4 ô cửa sổ. Đừng hoảng, bài sau tôi sẽ chỉ các bạn múa trên 4 cái ô này.' }],
+                children: [{ _type: 'span', text: 'Để chạy được R, chúng ta cần 2 thứ: \n1.  **R (Engine):** Cái lõi để tính toán. (Giống như cái động cơ xe).\n2.  **RStudio (IDE):** Cái giao diện đẹp đẽ để mình viết code. (Giống như cái vỏ xe, vô lăng, ghế ngồi).\n\nLink tải đây (chọn bản Free nhé): [Posit.co](https://posit.co/download/rstudio-desktop/)\nSau khi cài xong, mở RStudio lên, bạn sẽ thấy nó chia làm 4 góc như "Bánh chưng" thế này:' }],
+            },
+            {
+                _type: 'image',
+                asset: {
+                    _type: 'reference',
+                    _ref: 'image-r101_body_l1_interface',
+                },
+                alt: 'Giao diện RStudio 4 góc',
+                caption: 'Giao diện RStudio: Góc trên trái là Bếp (Source), dưới trái là Chỗ thử món (Console), trên phải là Tủ lạnh (Environment), dưới phải là Tủ chén (Files/Plots).'
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: '**Giải ngố:**\n*   **Source (Góc 1):** Nơi viết công thức nấu ăn (lưu lại được).\n*   **Console (Góc 2):** Nơi nấu thử. Gõ `1 + 1` Enter cái nó ra `2` luôn. Tắt máy là mất.\n*   **Environment (Góc 3):** Kho nguyên liệu. Bạn nhập file excel vào, biến số nó sẽ nằm ở đây.\n*   **Files/Plots (Góc 4):** Nơi hiển thị biểu đồ vẽ ra. Đẹp hay xấu là nhìn vào đây.' }],
             },
             {
                 _type: 'block',
@@ -44,78 +58,92 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Trong R, bạn có thể dùng nó như một cái máy tính bỏ túi siêu cấp.\nGõ vào ô Console (góc dưới bên trái):\n\n`1 + 1`\n\nRồi ấn Enter. Nó sẽ ra:\n`[1] 2`\n\nChúc mừng! Bạn đã trở thành Coder! (Đùa đấy).\n\nThử cái này "ngầu" hơn nhé. Vẽ biểu đồ ngay lập tức:\n`plot(cars)`\nBùm! Một biểu đồ phân tán (Scatter plot) hiện ra ở góc phải. \n\nThấy chưa? R không hề đáng sợ. Nó chỉ là một công cụ, và Series R101 này sẽ biến nó thành vũ khí trong tay bạn. Hẹn gặp lại ở Bài 2: Dọn rác dữ liệu!' }],
+                children: [{ _type: 'span', text: 'Mở RStudio lên, gõ dòng này vào Console rồi Enter:\n\n`print("Xin chào, tôi là Researcher cool ngầu!")`\n\nNó hiện ra:\n`[1] "Xin chào, tôi là Researcher cool ngầu!"`\n\nChúc mừng! Bạn đã chính thức trở thành "Coder". Dễ quá mức quy định đúng không? Hẹn gặp lại ở bài sau chúng ta sẽ "bẻ khóa" Dữ liệu.' }],
             }
         ]
     },
     {
         title: 'R101 - Bài 2: Dọn Rác Dữ Liệu (Data Cleaning) - Ác Mộng Của Mọi Researcher 🧹',
         slug: { current: 'r101-bai-2-data-cleaning' },
-        publishedAt: new Date(Date.now() - 86400000).toISOString(),
-        excerpt: 'Dữ liệu thực tế không bao giờ đẹp như trong sách giáo khoa. Nó lộn xộn, thiếu hụt (NA), sai format. Nếu không biết dọn rác (Clean Data), bạn chạy mô hình kiểu gì cũng ra rác.',
+        publishedAt: new Date(Date.now() - 345600000).toISOString(),
+        excerpt: '80% thời gian làm Data là để... dọn rác. Thiếu dữ liệu (NA), sai định dạng, dư khoảng trắng. Đừng lo, gói `tidyverse` sẽ là cái chổi thần kỳ của bạn.',
         categorySlug: 'data-analysis',
-        coverImage: '/blog/r101_lesson2_cover_1767437733009.png', // Placeholder
+        coverImage: '/blog/r101_lesson2_cover_1767437910547.png',
         featured: false,
         readingTime: 12,
-        tags: ['R101', 'Data Cleaning', 'Wrangling', 'Góc nhìn HaiLP'],
+        tags: ['Quantitative', 'R101', 'Data Cleaning', 'dplyr', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Có một sự thật đắng lòng: Dân làm Data dành 80% thời gian để **Dọn dữ liệu (Data Cleaning)** và chỉ 20% thời gian để chạy mô hình.\n\nSếp đưa bạn file Excel khách hàng. Và hỡi ôi:\n*   Cột Tuổi thì có người ghi "25", có người ghi "hai mươi lăm".\n*   Cột Thu nhập thì có người bỏ trống (NA).\n*   Cột Giới tính thì lúc "Male", lúc "M", lúc "Nam".\n\nNém cái đống này vào SPSS hay chạy hồi quy là lỗi tung tóe ngay. Hôm nay tôi sẽ hướng dẫn các bạn dùng bộ chổi thần thánh **`tidyverse`** trong R để dọn sạch đống rác này.' }],
+                children: [{ _type: 'span', text: 'Sếp gửi cho bạn file `customer_data.csv`. Bạn hý hửng mở ra và... ối giời ơi:\n*   Cột tuổi thì có ông điền "chín mươi", ông điền "90".\n*   Cột thu nhập thì ông điền số, ông điền "5 củ".\n*   Cột giới tính thì "Nam", "Male", "M", "Boy" loạn xì ngầu.\n\nNếu đưa đống rác này vào chạy SPSS hay Excel thì nó báo lỗi ngay. R có một cái máy hút bụi cực mạnh tên là `dplyr`.' }],
+            },
+            {
+                _type: 'image',
+                asset: {
+                    _type: 'reference',
+                    _ref: 'image-r101_body_l2_cleaning',
+                },
+                alt: 'Data Cleaning Process',
+                caption: 'Quy trình dọn rác: Input Rác -> Qua phễu lọc -> Output Sạch bong kin kít.'
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: '1. Tải bộ dữ liệu mẫu (Thực hành ngay!)' }],
+                children: [{ _type: 'span', text: '1. Load dữ liệu & Thư viện' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Tôi đã chuẩn bị sẵn một file CSV "bẩn bựa" đúng chuẩn thực tế cho các bạn thực hành.\n\n👉 **[Tải file marketing_sample.csv tại đây](/datasets/marketing_sample.csv)**\n\nTải về, lưu vào một thư mục (ví dụ `D:/R_Project`).\nMở RStudio lên, tạo một script mới (File -> New File -> R Script) và bắt đầu gõ theo tôi.' }],
+                children: [{ _type: 'span', text: '`library(tidyverse)`  (Gọi chổi thần)\n`df <- read_csv("marketing_sample.csv")` (Đọc file)\n\nLệnh `read_csv` hay hơn `read.csv` của R gốc nhiều. Nó thông minh hơn, tự đoán định dạng (số hay chữ) chuẩn hơn.' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: '2. Nhập khẩu dữ liệu (Import)' }],
+                children: [{ _type: 'span', text: '2. Các tuyệt chiêu dọn nhà' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đầu tiên phải gọi "thần chú" (Load thư viện). Nếu chưa có thì cài: `install.packages("tidyverse")`.\n\n`library(tidyverse)`\n\nSau đó đọc file:\n`df <- read_csv("D:/R_Project/marketing_sample.csv")`\n\n(Lưu ý: R dùng dấu gạch chéo `/` chứ không phải gạch ngược `\\` như Windows nhé).\n\nGõ `View(df)` để xem dữ liệu. Bạn sẽ thấy ngay sự lộn xộn: Có mấy ô ghi `NA` (Not Available), có ô trống hoác.' }],
+                children: [{ _type: 'span', text: '*   **Lọc khách hàng (Filter):** Chỉ lấy khách VIP?\n    `df_vip <- filter(df, Customer_Type == "VIP")`\n\n*   **Chọn cột (Select):** Bảng 100 cột, chỉ lấy cột Tên và Tuổi?\n    `df_small <- select(df, Name, Age)`\n\n*   **Tạo biến mới (Mutate):** Muốn tính Lương Năm = Lương Tháng * 12?\n    `df <- mutate(df, Annual_Income = Monthly_Income * 12)`\n\n*   **Sắp xếp (Arrange):** Ai giàu nhất đứng đầu?\n    `df <- arrange(df, desc(Income))`\n\nThấy chưa? Viết code mà như viết văn tả cảnh vậy. `filter` là lọc, `arrange` là sắp xếp. Dễ hiểu đến phát khóc.' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: '3. Xử lý dữ liệu thiếu (Missing Values - NA)' }],
+                children: [{ _type: 'span', text: 'Ví dụ thực tế (Simulation)' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Rất nhiều dòng bị thiếu thông tin. Giờ làm sao?\n\n**Cách 1: Nhà giàu đạp đổ (Xóa hết dòng thiếu)**\n`clean_df <- df %>% drop_na()`\nLệnh này sẽ xóa phăng tất cả dòng nào có ít nhất 1 ô trống. Sạch sẽ, nhưng mất dữ liệu. Nếu data ít thì đừng dùng.\n\n**Cách 2: Điền vào chỗ trống (Imputation)**\nVí dụ cột Tuổi (Age) bị thiếu. Ta có thể điền bằng giá trị trung bình (Mean) của cả cột.\n`df <- df %>% mutate(Age = replace_na(Age, mean(Age, na.rm = TRUE)))`\n\n(Hàm `mutate` là để tạo/sửa cột mới. `na.rm = TRUE` là bảo R hãy tính trung bình các số có sẵn thôi, kệ mấy thằng NA ra).' }],
+                children: [{ _type: 'span', text: 'Giả sử ta có bảng dữ liệu gốc:' }],
             },
             {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: '4. Lọc và Chọn (Filter & Select)' }],
+                _type: 'code',
+                language: 'markdown',
+                code: '| ID | Name   | Age | Income   |\n|----|--------|-----|----------|\n| 1  | Tuan   | 25  | 1000     |\n| 2  | Huong  | NA  | 2000     |\n| 3  | Lan    | 30  | NA       |'
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Sếp bảo: "Chỉ lấy cho anh khách hàng Nữ ở Hà Nội thôi".\n\nDễ ợt:\n`female_hanoi <- df %>% filter(Gender == "Female" & Location == "Hanoi")`\n\nSếp bảo tiếp: "Bảng nhiều cột quá, chỉ giữ lại cột Tuổi và Thu nhập để anh xem".\n\n`mini_df <- df %>% select(Age, Income)`\n\nCác bạn thấy ngôn ngữ R nó tự nhiên không? `filter` là lọc, `select` là chọn. Đọc sao viết vậy. Đây chính là sức mạnh của `dplyr` trong `tidyverse`. Học xong cái này bạn sẽ thấy Excel mệt mỏi vô cùng.\n\n**Bài tập về nhà:** Hãy thử tính Thu nhập trung bình của khách hàng Nam tại TP.HCM trong file trên. Đáp án post dưới comment nhé!' }],
+                children: [{ _type: 'span', text: 'Chạy lệnh dọn rác:\n`df_clean <- df %>% drop_na()`\n\nKết quả (Bùm!):' }],
+            },
+            {
+                _type: 'code',
+                language: 'markdown',
+                code: '| ID | Name   | Age | Income   |\n|----|--------|-----|----------|\n| 1  | Tuan   | 25  | 1000     |'
             }
         ]
     },
     {
         title: 'R101 - Bài 3: Vẽ Hình Nghệ Thuật Với ggplot2 - Đừng Làm Xấu Mặt Excel Nữa 🎨',
         slug: { current: 'r101-bai-3-data-viz-ggplot2' },
-        publishedAt: new Date(Date.now() - 172800000).toISOString(),
+        publishedAt: new Date(Date.now() - 259200000).toISOString(),
         excerpt: 'Nếu data là nguyên liệu, thì biểu đồ (Chart) là món ăn. Excel nấu món này chín nhưng trình bày... xấu. ggplot2 của R là nhà hàng Michelin 3 sao về khoản trình bày.',
         categorySlug: 'data-analysis',
         coverImage: '/blog/r101_lesson3_cover_1767438616732.png',
         featured: false,
         readingTime: 12,
-        tags: ['R101', 'Data Visualization', 'ggplot2', 'Góc nhìn HaiLP'],
+        tags: ['Quantitative', 'R101', 'Data Visualization', 'ggplot2', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -133,9 +161,18 @@ export const r101_series = [
                 children: [{ _type: 'span', text: '`gg` viết tắt của Grammar of Graphics (Ngữ pháp đồ họa). Vẽ hình trong R giống như xếp hình Lego, bạn xếp từng lớp (Layer) lên nhau:\n1. **Data:** Nền móng (Dữ liệu của bạn)\n2. **Aesthetics (aes):** Trục X là gì? Trục Y là gì? Màu sắc theo cột nào?\n3. **Geometries (geom):** Vẽ cái gì? (Cột, đường, chấm...)\n\nCông thức thần thánh:\n`ggplot(data, aes(x=..., y=...)) + geom_...()`' }],
             },
             {
+                _type: 'image',
+                asset: {
+                    _type: 'reference',
+                    _ref: 'image-r101_body_l3_ggplot',
+                },
+                alt: 'ggplot2 Layers Infographic',
+                caption: 'Tư duy xếp hình Lego của ggplot2: Cứ xếp chồng từng lớp lên là thành tác phẩm.'
+            },
+            {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Thực hành 1: Biểu đồ cột (Bar Chart) - So sánh Thu nhập' }],
+                children: [{ _type: 'span', text: 'Thực hành 1: Biểu đồ cột (Bar Chart)' }],
             },
             {
                 _type: 'block',
@@ -145,7 +182,7 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Thực hành 2: Biểu đồ phân tán (Scatter Plot) - Mối quan hệ' }],
+                children: [{ _type: 'span', text: 'Thực hành 2: Biểu đồ phân tán (Scatter Plot)' }],
             },
             {
                 _type: 'block',
@@ -157,18 +194,27 @@ export const r101_series = [
     {
         title: 'R101 - Bài 4: Thống Kê Mô Tả - Kể Chuyện Bằng Những Con Số 📊',
         slug: { current: 'r101-bai-4-descriptive-stats' },
-        publishedAt: new Date(Date.now() - 259200000).toISOString(),
+        publishedAt: new Date(Date.now() - 172800000).toISOString(),
         excerpt: 'Mean, Median, Mode là gì? Tại sao "Thu nhập bình quân" lại là cú lừa thế kỷ? Hãy cùng giải mã những con số biết nói.',
         categorySlug: 'data-analysis',
         coverImage: '/blog/r101_lesson4_cover_1767438634611.png',
         featured: false,
         readingTime: 12,
-        tags: ['R101', 'Descriptive Statistics', 'Table 1', 'Góc nhìn HaiLP'],
+        tags: ['Quantitative', 'R101', 'Descriptive Statistics', 'Table 1', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Trước khi chạy mô hình cao siêu, bạn phải hiểu dữ liệu của mình mặt mũi ra sao đã. Đó là nhiệm vụ của **Thống kê mô tả (Descriptive Statistics)**.\n\nNhưng cẩn thận, những con số này biết nói dối đấy. Ví dụ kinh điển: Lớp có 9 bạn nghèo rớt mồng tơi (thu nhập 5 triệu/tháng). Bỗng nhiên tỷ phú Phạm Nhật Vượng bước vào lớp (thu nhập 1000 tỷ/tháng). \n-> Bùm! Thu nhập TRUNG BÌNH (Mean) của cả lớp vọt lên 100 tỷ/tháng. \n-> Kết luận: Cả lớp giàu nứt đố đổ vách? Sai bét!\n\nĐó là lý do ta cần phân biệt Mean và Median.' }],
+            },
+            {
+                _type: 'image',
+                asset: {
+                    _type: 'reference',
+                    _ref: 'image-r101_body_l4_dist',
+                },
+                alt: 'Mean vs Median Distribution',
+                caption: 'Khi dữ liệu bị lệch (như Thu nhập), Mean (Trung bình) sẽ bị kéo lệch đi. Median (Trung vị) mới là chân ái.'
             },
             {
                 _type: 'block',
@@ -183,22 +229,141 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: '2. Độ lệch chuẩn (Standard Deviation - SD)' }],
+                children: [{ _type: 'span', text: '2. Độ lệch chuẩn (SD) - Ai ổn định hơn?' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Có 2 nhân viên Sale cùng bán được trung bình 100 triệu/tháng.\n*   Ông A: Tháng nào cũng tèn tèn 100 triệu.\n*   Ông B: Tháng thì 0 đồng, tháng thì 200 triệu.\n\nAi ổn định hơn? Ông A. Làm sao biết? Nhìn **SD**.\nSD càng nhỏ -> Càng ổn định (Dữ liệu rúc vào nhau).\nSD càng to -> Càng bấp bênh (Dữ liệu nhảy múa).\n\nTrong R: `sd(df$Income)`' }],
+                children: [{ _type: 'span', text: 'Có 2 nhân viên Sale cùng bán được trung bình 100 triệu/tháng. Nhưng ông A tháng nào cũng 100tr, ông B tháng 0 đồng tháng 200tr. \nNhìn **SD** để biết:\nSD ông A = 0 (Rất ổn định).\nSD ông B = 100 (Rất bấp bênh).\n\nTrong R: `sd(df$Income)`' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: '3. Table 1 thần thánh (Dành cho dân nghiên cứu)' }],
+                children: [{ _type: 'span', text: '3. Table 1 thần thánh' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Làm bài báo khoa học thì cái bảng đầu tiên (Table 1) luôn là "Thông tin nhân khẩu học". Ngồi đếm tay trong Excel thì mòn mỏi thanh xuân.\n\nTrong R, chỉ 1 dòng code với gói `tableone`:\n\n`library(tableone)`\n`CreateTableOne(data = df)`\n\nNó tự động tính hết: Có bao nhiêu Nam/Nữ (%), Tuổi trung bình bao nhiêu (SD), Thu nhập Median bao nhiêu (IQR)... rồi xuất ra bảng đẹp long lanh. Dân chơi là phải thế!' }],
+                children: [{ _type: 'span', text: 'Làm bài báo khoa học thì cái bảng đầu tiên (Table 1) luôn là "Thông tin nhân khẩu học".\n\nTrong R, chỉ 1 dòng code với gói `tableone`:\n\n`library(tableone)`\n`CreateTableOne(data = df)`\n\nKết quả nó tự vẽ ra (tưởng tượng nhé):' }],
+            },
+            {
+                _type: 'code',
+                language: 'markdown',
+                code: '|              | Overall    | Male       | Female     | P-value |\n|--------------|------------|------------|------------|---------|\n| n            | 100        | 45         | 55         |         |\n| Age (mean (SD)) | 34.5 (10.2)| 35.1 (9.8) | 33.9 (10.5)| 0.452   |\n| Income (median)| 15.5       | 16.0       | 15.0       | 0.123   |'
+            }
+        ]
+    },
+    {
+        title: 'R101 - Bài 5: Kiểm Định Thang Đo: Cronbach\'s Alpha & EFA - Đừng "Đốt Nhà" Trước Khi Xây 🧐',
+        slug: { current: 'r101-bai-5-cronbach-efa' },
+        publishedAt: new Date(Date.now() - 86400000).toISOString(),
+        excerpt: 'Việc đầu tiên của mọi nghiên cứu là xem "thước đo" có chuẩn không. Thước cong mà đòi đo đường thẳng thì vứt. Cronbach Alpha và EFA chính là bộ đôi kiểm chứng chất lượng thước đo này.',
+        categorySlug: 'data-analysis',
+        coverImage: '/blog/r101_lesson5_cover_1767438987405.png',
+        featured: false,
+        readingTime: 15,
+        tags: ['Quantitative', 'R101', 'Cronbach Alpha', 'EFA', 'Reliability', 'Góc nhìn HaiLP'],
+        body: [
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Nhiều bạn newbie hăm hở lao vào chạy hồi quy ngay lập tức. Giống như đi xây nhà lầu mà xây trên nền cát vậy. Nó sập lúc nào không hay.\n\nTrong nghiên cứu khoa học, trước khi xem "X có tác động đến Y không", ta phải xem "X và Y có được đo lường chuẩn xác không".\n\nCó 2 khái niệm bạn phải khắc cốt ghi tâm:\n1. **Độ tin cậy (Reliability):** Đo lường sự ổn định, nhất quán của thang đo. (Công cụ: Cronbach\'s Alpha).\n2. **Giá trị (Validity):** Đo lường xem nó có đo đúng cái cần đo không, hay đo nhầm sang cái khác? (Công cụ: EFA - Phân tích nhân tố khám phá).' }],
+            },
+            {
+                _type: 'image',
+                asset: {
+                    _type: 'reference',
+                    _ref: 'image-r101_body_l5_efa',
+                },
+                alt: 'EFA Concept Visual',
+                caption: 'EFA giúp gom nhóm các câu hỏi rời rạc (Q1, Q2...) thành các khái niệm lớn (Factor 1, Factor 2).'
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '1. Cronbach\'s Alpha: Kiểm tra độ "Đoàn kết"' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Giả sử bạn dùng 3 câu hỏi (Sat1, Sat2, Sat3) để đo lường "Sự hài lòng". Nếu một khách hàng trả lời Sat1 = 5 điểm (Rất hài lòng), Sat2 cũng phải tầm 4-5 điểm. Chứ Sat2 mà tụt xuống 1 điểm thì chứng tỏ bộ câu hỏi này "nội bộ lủng củng".\n\nTrong R, ta dùng gói `psych`:\n\n`library(psych)`\n`alpha(df %>% select(Sat1, Sat2, Sat3))`\n\nNhìn vào chỉ số **raw_alpha**:\n*   > 0.7 (xanh): Ngon lành. Đoàn kết tốt.\n*   0.6 - 0.7: Tạm chấp nhận (với nghiên cứu mới).\n*   < 0.6: Vứt. Nội bộ lục đục. Cần loại bỏ câu hỏi làm rầu nồi canh.\n\n⚠️ **Lưu ý xương máu:** Đừng thấy thấp là xóa câu hỏi vô tội vạ. Phải xem xét lý thuyết (như tôi đã nói trong bài NCS101). Nếu xóa mà làm mất ý nghĩa của khái niệm thì thà để thấp còn hơn.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '2. EFA (Exploratory Factor Analysis): Gom nhóm tinh gọn' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Bạn có 20 câu hỏi loằng ngoằng. Máy tính (và người đọc) sẽ bị overload.\nEFA giúp bạn "gom" 20 câu này thành 3-4 nhóm (Nhân tố) chính. Ví dụ: Gom 3 câu về lương thưởng vào nhóm "Tài chính". Gom 4 câu về đồng nghiệp vào nhóm "Môi trường".\n\nChạy EFA trong R:\n\n`fa(r = cor(df_scale), nfactors = 3, rotate = "varimax")`\n\n(Trong đó `nfactors` là số nhóm bạn mong muốn).\n\nĐọc kết quả:\n1. **KMO:** Phải > 0.5 (Đủ điều kiện phân tích).\n2. **Bartlett Test:** P-value phải < 0.05 (Các biến có tương quan).\n3. **Extraction Loadings:** Phải > 0.5. Biến nào < 0.5 là "không thuộc về nhóm nào" -> Loại.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Tổng kết Module kiểm định' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Nếu Cronbach Alpha là vòng gửi xe, thì EFA là vòng sơ khảo. Qua được 2 ải này thì dữ liệu của bạn mới "đủ tuổi" để chạy hồi quy. Nhiều bạn làm đến đây là rụng như sung rụng vì dữ liệu rác. Nên nhớ bài 1 tôi nói gì không? **Data Cleaning là quan trọng nhất!**' }],
+            }
+        ]
+    },
+    {
+        title: 'R101 - Bài 6: Tương Quan & Hồi Quy Tuyến Tính (Regression) - Đi Tìm Chân Lý 🎯',
+        slug: { current: 'r101-bai-6-regression' },
+        publishedAt: new Date(Date.now() - 60000).toISOString(),
+        excerpt: 'Đây rồi! "Trùm cuối" của nghiên cứu định lượng. Hồi quy tuyến tính sẽ trả lời câu hỏi triệu đô: Yếu tố nào tác động mạnh nhất đến sự hài lòng của khách hàng?',
+        categorySlug: 'data-analysis',
+        coverImage: '/blog/r101_lesson6_cover_1767439003143.png',
+        featured: false,
+        readingTime: 15,
+        tags: ['Quantitative', 'R101', 'Correlation', 'Regression', 'P-value', 'Góc nhìn HaiLP'],
+        body: [
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Chào mừng các bạn đến với trận chung kết. Sau khi làm sạch dữ liệu, vẽ hình đẹp đẽ, kiểm định thang đo ok, giờ là lúc ta "thịt" bộ dữ liệu để lòi ra kết quả cuối cùng.\n\nMục tiêu: Tìm xem Lương (Salary), Đồng nghiệp (Colleague), Sếp (Boss) -> Cái nào làm Nhân viên Hài lòng (Satisfaction) nhất?' }],
+            },
+            {
+                _type: 'image',
+                asset: {
+                    _type: 'reference',
+                    _ref: 'image-r101_body_l6_regression',
+                },
+                alt: 'Regression Slope Visual',
+                caption: 'Đường thẳng hồi quy (màu cam) sẽ cố gắng đi qua giữa đám mây điểm. Khoảng cách từ điểm đến đường thẳng gọi là Phần dư (Residual).'
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '1. Ma trận tương quan (Correlation Matrix)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Trước khi chạy mô hình, hãy xem các cặp biến có "tình ý" gì với nhau không.\n\n`library(ggcorrplot)`\n`corr <- cor(df_final)`\n`ggcorrplot(corr, lab = TRUE)`\n\nNó sẽ vẽ ra một cái bản đồ nhiệt (Heatmap):\n*   Màu đỏ đậm (Gần 1): Tương quan dương cực mạnh (Lương tăng -> Hài lòng tăng).\n*   Màu xanh đậm (Gần -1): Tương quan âm (Áp lực tăng -> Hài lòng giảm).\n*   Màu trắng (Gần 0): Chả liên quan gì.\n\nNếu thấy biến Độc lập (X) mà tương quan quá mạnh với nhau (> 0.9) thì cẩn thận: Có thể bị **Đa cộng tuyến** (Hai ông chồng cùng nói một lúc, không biết nghe ông nào).' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '2. Hồi quy tuyến tính (Linear Regression)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Câu thần chú gọi Rồng Thần trong R:\n\n`model <- lm(Satisfaction ~ Salary + Colleague + Boss, data = df_final)`\n`summary(model)`\n\nBảng kết quả hiện ra. Nhìn vào đâu?\n\n **P-value (Pr(>|t|)):** Tìm những dòng có dấu sao *** (< 0.001) hoặc * (< 0.05). Đó là những yếu tố có ý nghĩa thống kê.\n **Estimate (Beta):** Hệ số tác động. \n   - Estimate dương: Tác động thuận chiều.\n   - Estimate âm: Tác động ngược chiều.\n   - Số càng to (về trị tuyệt đối) -> Tác động càng mạnh.\n **R-squared:** Mô hình giải thích được bao nhiêu % (như bài NCS101 đã nói).' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '3. Đừng quên kiểm tra sức khỏe mô hình (Assumptions)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Chạy ra kết quả chưa xong đâu. Phải khám sức khỏe cho nó. Nếu mô hình bị bệnh, kết quả là vô nghĩa.\n\n*   **Đa cộng tuyến (Multicollinearity):** Dùng hàm `vif(model)`. Nếu VIF > 10 (hoặc khắt khe là > 5) -> Bị bệnh. Phải loại biến.\n*   **Phân phối chuẩn của phần dư:** `plot(model, which = 2)`. Các điểm phải nằm trên đường chéo.\n\nLàm nghiên cứu là phải kỹ tính. Reviewer soi mấy cái này kỹ lắm. Đừng để bị bắt bài nhé!\n\nVậy là kết thúc Series R101 cơ bản. Từ con số 0, giờ bạn đã biết cài R, vẽ hình, kiểm định và chạy hồi quy. Bạn đã hơn 90% dân số thế giới về khoản này rồi đấy. Chúc mừng!' }],
             }
         ]
     }

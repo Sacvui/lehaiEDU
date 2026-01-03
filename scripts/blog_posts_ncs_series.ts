@@ -148,7 +148,7 @@ export const ncs_series_post = [
         coverImage: '/blog/research_series_4_methodology.png',
         featured: false,
         readingTime: 12,
-        tags: ['NCS101', 'Methodology', 'Qual vs Quan', 'Góc nhìn HaiLP'],
+        tags: ['NCS101', 'Methodology', 'Qual vs Quan', 'Quantitative', 'Qualitative', 'Mixed Methods', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -302,7 +302,7 @@ export const ncs_series_post = [
         coverImage: '/blog/research_series_2_topic.png',
         featured: false,
         readingTime: 12,
-        tags: ['NCS101', 'IMRaD', 'Academic Writing', 'Structure'],
+        tags: ['NCS101', 'IMRaD', 'Academic Writing', 'Structure', 'thesis-script'],
         body: [
             {
                 _type: 'block',
@@ -375,7 +375,17 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Tạp chí trong danh mục Scopus/SSCI thường chia làm 4 hạng (Quartile):\n\n Q1 (Top 25%): Hàng hiệu, tinh hoa nhân loại. Review cực gắt (3-4 vòng), tỷ lệ reject 90-95%. Đăng được 1 bài Q1 là đủ tiêu chuẩn ra trường, thậm chí được thưởng nóng cả trăm triệu.\n Q2 (Top 25-50%): Khá, uy tín. Phù hợp cho giảng viên, nghiên cứu sinh cứng tay.\n Q3/Q4 (Nửa dưới): Vừa sức cho người mới (Newbie). Quy trình dễ thở hơn, nhưng vẫn phải tuân thủ chuẩn mực.\n\nLời khuyên: Mới tập chơi, bài đầu tay thì nhắm Q3, Q4 thôi. Kiếm cái tạp chí nào của mấy trường đại học ở Đông Âu, Malaysia, Thổ Nhĩ Kỳ... mà nằm trong Scopus ấy. Đừng ảo tưởng sức mạnh nộp Q1 ngay (trừ khi có thầy hướng dẫn "khủng" bảo kê), bị reject trong 1 nốt nhạc thì sốc tâm lý, trầm cảm đấy.\n\nDùng trang Scimago Journal Rank để check xem tạp chí đó thuộc hạng nào. Check kỹ chỉ số H-index và xem nó còn trong danh mục Scopus không nhé, hay bị đá đít ra rồi.' }],
+                children: [{ _type: 'span', text: 'Tạp chí trong danh mục Scopus/SSCI thường chia làm 4 hạng (Quartile):\n\n Q1 (Top 25%): Hàng hiệu, tinh hoa nhân loại. Review cực gắt (3-4 vòng), tỷ lệ reject 90-95%. Ở nhiều chương trình đào tạo, đăng được 1 bài Q1 là đủ tiêu chuẩn ra trường, thậm chí được thưởng nóng cả trăm triệu.\n Q2 (Top 25-50%): Khá, uy tín. Phù hợp cho giảng viên, nghiên cứu sinh cứng tay.\n Q3/Q4 (Nửa dưới): Vừa sức cho người mới (Newbie). Quy trình dễ thở hơn, nhưng vẫn phải tuân thủ chuẩn mực.\n\nLời khuyên: Mới tập chơi, bài đầu tay thì nhắm Q3, Q4 thôi. Một số tạp chí của các trường đại học ở Đông Âu, Malaysia, Thổ Nhĩ Kỳ... thường có mức độ phù hợp hơn cho người mới, nhưng vẫn cần kiểm tra kỹ uy tín (xem nó còn trong Scopus không). Đừng ảo tưởng sức mạnh nộp Q1 ngay (trừ khi có thầy hướng dẫn "khủng" bảo kê), bị reject trong 1 nốt nhạc thì sốc tâm lý, trầm cảm đấy.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Checklist 5 Bước "Soi" Tạp Chí (Tránh Tiền Mất Tật Mang)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Trước khi nộp bài (Submit), hãy dành 5 phút check kỹ checklist này:\n\n1. Check Scimago & Scopus Source: Tạp chí còn nằm trong danh mục không? Hay mới bị đá văng năm ngoái?\n2. Publisher là ai?: Có phải Elsevier, Springer, Taylor & Francis, Wiley, Emerald không? Nếu là cái tên lạ hoắc thì cẩn thận.\n3. Thời gian Review: Nếu nó ghi "Review 1 tuần" thì chạy ngay đi. Trung bình phải 3-6 tháng.\n4. Sự phù hợp (Scope): Bài gần nhất nó đăng có cùng chủ đề với mình không? Đừng nộp bài Marketing vào tạp chí Kỹ thuật.\n5. Phí đăng bài (APC): Có minh bạch không? (Các tạp chí xịn thường miễn phí, hoặc phí công khai rõ ràng cho Open Access).\n\nCẩn tắc vô áy náy. Bút sa gà chết, chọn nhầm tạp chí là đi tong cả năm lao động đấy các bạn ạ.' }],
             }
         ]
     },
@@ -393,27 +403,42 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '2 giờ sáng, ting ting! Email báo kết quả từ tạp chí. Tim đập chân run. Mở ra xem...\n\n Reviewer 1: "Bài viết thú vị, đóng góp tốt. Cần sửa vài lỗi chính tả." -> Yeah! Yêu thế!\n Reviewer 2: "Bài viết rác rưởi. Phương pháp sai lầm. Tiếng Anh ngô nghê. Không hiểu tác giả đang viết cái gì. Đề nghị từ chối (Reject)." -> Đùng! Sét đánh ngang tai.\n\nChào mừng bạn đến với thế giới thực. Reviewer 2 là một khái niệm huyền thoại (meme) trong giới học thuật, ám chỉ những người phản biện khó tính, khắc nghiệt và đôi khi... hằn học. Hắn sẽ bới lông tìm vết, chê bài của bạn nát bươm như tương bần.' }],
+                children: [{ _type: 'span', text: '2 giờ sáng, ting ting! Email báo kết quả từ tạp chí. Tim đập chân run. Mở ra xem...\n\n Reviewer 1: "Bài viết thú vị, đóng góp tốt. Cần sửa vài lỗi chính tả." -> Yeah! Yêu thế!\n Reviewer 2: "Bài viết này có vấn đề lớn về phương pháp luận. Tiếng Anh chưa đạt chuẩn học thuật. Lập luận thiếu căn cứ. Đề nghị từ chối (Reject)." -> Đùng! Sét đánh ngang tai.\n\nChào mừng bạn đến với thế giới thực. Reviewer 2 là một khái niệm huyền thoại (meme) trong giới học thuật, ám chỉ những người phản biện khó tính, cực kỳ khắt khe. Họ sẽ bới lông tìm vết, chê bài của bạn tơi tả.' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Năm giai đoạn đau khổ' }],
+                children: [{ _type: 'span', text: 'Năm giai đoạn đau khổ (Kèm cách xử lý)' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '1. Chối bỏ: "Chắc nó đọc nhầm bài ai ấy chứ?"\n2. Giận dữ: "Thằng này ngu vãi, chả hiểu gì bài mình cả! Muốn đấm nó!"\n3. Mặc cả: "Hay là mình email chửi lại nó nhỉ?"\n4. Trầm cảm: "Mình dốt quá, chắc bỏ học thôi."\n5. Chấp nhận: "Thôi được rồi, sửa thì sửa."' }],
+                children: [{ _type: 'span', text: '1. Chối bỏ: "Chắc họ đọc nhầm bài ai ấy chứ?"\n2. Giận dữ: "Ông này chả hiểu gì bài mình cả! Sao nhận xét vô lý thế!"\n3. Trầm cảm: "Mình dốt quá, chắc nghỉ nghiên cứu thôi."\n4. Chấp nhận: "Khoan đã, hình như họ nói cũng... có lý."' }],
+            },
+            {
+                _type: 'block',
+                style: 'blockquote',
+                children: [{ _type: 'span', text: 'Công bằng mà nói, nhiều Reviewer 2 khó tính chính là những người đã cứu bài của tôi khỏi việc trở thành một nghiên cứu hời hợt. Nhờ những lời chê "rát mặt" đó mà bài báo chặt chẽ hơn hẳn.' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Tuyệt chiêu: "Dạ, anh nói gì cũng đúng" (Kill them with kindness)' }],
+                children: [{ _type: 'span', text: 'Checklist "Sinh Tồn": Cách xử lý Reviewer 2' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Khi viết thư trả lời (Response Letter), tuyệt đối KHÔNG cãi tay đôi, không tỏ thái độ lồi lõm với Reviewer (dù nó ngu thật). Hãy nhớ, nó đang nắm sinh mệnh bài báo của bạn.\n\nHãy dùng chiến thuật "Bánh mì kẹp thịt":\n Lớp vỏ trên (Open): "Chúng tôi xin chân thành cảm ơn Reviewer 2 vì những nhận xét vô cùng sâu sắc, giúp nâng tầm bài viết..." (Dù trong lòng đang chửi thề).\n Lớp thịt (Explain/Revise): "Về ý kiến X, chúng tôi đã sửa lại ở trang Y dòng Z... Tuy nhiên, về ý kiến W, do giới hạn dữ liệu không cho phép, chúng tôi xin phép giải trình như sau... và đã đưa vấn đề này vào mục Hạn chế của nghiên cứu."\n Lớp vỏ dưới (Close): "Một lần nữa, xin cảm ơn sự đóng góp quý báu..."\n\nNhớ nhé: Thái độ quan trọng hơn trình độ. Bạn ngoan, cầu thị, sửa từng li từng tí (tô màu highlight rõ ràng) thì Reviewer khó tính mấy cũng mủi lòng. Cãi là chết.' }],
+                children: [{ _type: 'span', text: 'Đừng phản ứng theo cảm xúc. Hãy làm việc như một cái máy chuyên nghiệp:\n\n✅ 1. Tắt máy đi ngủ: Đọc comment xong thì đóng lại ngay. Đừng trả lời khi đang nóng giận (sau 24h hãy quay lại).\n✅ 2. Bóc tách từng ý: Đừng trả lời chung chung. Hãy copy nguyên văn từng câu hỏi của Reviewer và trả lời ngay bên dưới.\n✅ 3. Highlight thay đổi: Sửa chỗ nào trong bài thì phải tô màu hoặc chỉ rõ "Dòng X, Trang Y". Giúp Reviewer đỡ mất công tìm.\n✅ 4. Không bao giờ nói "Reviewer hiểu nhầm ý tôi": Hãy nhận lỗi về mình: "Cảm ơn Reviewer đã chỉ ra chỗ chưa rõ nghĩa, chúng tôi xin viết lại đoạn này để rõ hơn..."\n✅ 5. Nếu không sửa được: Phải có lý do thuyết phục + trích dẫn tài liệu (Reference) để bảo vệ quan điểm. Đừng cãi cùn.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Tuyệt chiêu: "Bánh mì kẹp thịt" (The Sandwich Method)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Khi viết thư trả lời (Response Letter), thái độ quan trọng hơn trình độ. Hãy dùng chiến thuật này:\n\n Lớp vỏ trên (Positive): "Chúng tôi xin chân thành cảm ơn Reviewer 2 vì những nhận xét vô cùng sâu sắc (insightful comments), giúp nâng tầm chất lượng bài viết..."\n Lớp thịt (Constructive): Trình bày chi tiết cách sửa từng lỗi. "Về ý kiến X, chúng tôi đã sửa lại... Về ý kiến Y, chúng tôi xin giải trình..."\n Lớp vỏ dưới (Grateful): "Một lần nữa, cảm ơn ông/bà đã dành thời gian quý báu..."\n\nBạn ngoan, cầu thị, chuyên nghiệp thì Reviewer khó tính mấy cũng sẽ gật đầu. Chúc các bạn "thuần phục" được mọi Reviewer!' }],
             }
         ]
     },
