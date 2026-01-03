@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Github, Linkedin, Mail, Twitter, User, GraduationCap, Rocket, BookOpen, TrendingUp, Zap, FlaskConical, Menu, X, ChevronDown, Phone } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter, User, GraduationCap, Rocket, BookOpen, TrendingUp, Zap, FlaskConical, Menu, X, ChevronDown, Phone, FileText } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
