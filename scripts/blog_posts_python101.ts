@@ -194,5 +194,99 @@ export const python101_series = [
                 children: [{ _type: 'span', text: 'Kết quả là một biểu đồ với 3 cụm màu khác nhau. Bạn sẽ thấy rõ:\n*   Nhóm 1: Thu nhập cao, tiêu ít (Kiệt sỉ).\n*   Nhóm 2: Thu nhập cao, tiêu nhiều (Vip).\n*   Nhóm 3: Thu nhập thấp, tiêu nhiều (Nguy hiểm).\n\nTừ đó Marketing sẽ có chiến lược riêng cho từng nhóm. Đây chính là Data-driven Marketing!' }],
             }
         ]
+    },
+    {
+        title: 'Python101 - Bài 6: A/B Testing - So Sánh Hiệu Quả Chiến Dịch (T-test & ANOVA) ⚖️',
+
+        slug: { current: 'python101-bai-6-ab-testing-ttest-anova' },
+        publishedAt: new Date(Date.now() - 432000000).toISOString(),
+        excerpt: 'Sếp hỏi: "Landing Page A hay B bán hàng tốt hơn?". "Khách miền Bắc hay miền Nam chi tiêu nhiều hơn?". T-test và ANOVA trong Python sẽ giúp bạn trả lời bằng con số P-value đầy thuyết phục.',
+        categorySlug: 'data-analysis',
+        coverImage: '/blog/python101_lesson6_cover_placeholder.png',
+        featured: false,
+        readingTime: 12,
+        tags: ['Python101', 'Quantitative', 'A/B Testing', 'T-test', 'ANOVA', 'Marketing Analytics'],
+        body: [
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Trong Marketing hiện đại, A/B Testing là vua. Nhưng làm sao biết sự chênh lệch giữa A và B là "thật" hay chỉ do may mắn ngẫu nhiên?\n\nCâu trả lời là dùng kiểm định so sánh giá trị trung bình (Compare Means). Python có thư viện `pingouin` và `scipy` cân hết việc này.' }],
+            },
+            {
+                _type: 'image',
+                localPath: '/blog/python101_body_l6_abtesting_1767447996168.png',
+                alt: 'A/B Testing Visualization',
+                caption: 'Nhìn bằng mắt thường thấy cột B cao hơn A. Nhưng cao hơn có ý nghĩa thống kê không? Hãy hỏi P-value.'
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '1. Independent T-test: So sánh 2 nhóm độc lập' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Ví dụ: So sánh chi tiêu của khách hàng Nam và Nữ.\n\n`import pingouin as pg`\n`res = pg.ttest(df_male["Spending"], df_female["Spending"])`\n`print(res)`\n\nNếu **p-val < 0.05**: Chúc mừng, sự khác biệt là thật. Marketing nên có chiến lược riêng cho từng nhóm.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '2. One-way ANOVA: So sánh nhiều nhóm' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Ví dụ: So sánh hiệu quả của 3 mẫu quảng cáo (Ad A, Ad B, Ad C).\n\n`res = pg.anova(data=df, dv="CTR", between="Ad_Type")`\n`print(res)`\n\nNếu p-unc < 0.05 -> Các mẫu quảng cáo có hiệu quả khác nhau. Để biết cụ thể ông nào hơn ông nào, ta dùng `pg.pairwise_tests(..., subject="Ad_Type")` (Hậu kiểm Post-hoc).' }],
+            }
+        ]
+    },
+    {
+        title: 'Python101 - Bài 7: Chi-Square Test & Cross-tab - Tìm Mối Liên Hệ Giữa Các Dòng Sản Phẩm 🔗',
+        slug: { current: 'python101-bai-7-chi-square' },
+        publishedAt: new Date(Date.now() - 518400000).toISOString(),
+        excerpt: 'Liệu Giới tính (Nam/Nữ) có ảnh hưởng đến việc chọn mua iPhone hay Samsung không? Hay là ngẫu nhiên? Chi-Square Test sẽ vạch trần mối liên hệ bí ẩn này.',
+        categorySlug: 'data-analysis',
+        coverImage: '/blog/python101_lesson7_cover_placeholder.png',
+        featured: false,
+        readingTime: 10,
+        tags: ['Python101', 'Quantitative', 'Chi-Square', 'Association', 'Marketing Analytics'],
+        body: [
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'T-test dùng cho biến số (Doanh thu, Điểm số...). Còn nếu bạn muốn tìm mối liên hệ giữa các biến phân loại (Categorical) thì sao?\nVí dụ: Nam giới thì hay mua màu đen, Nữ giới hay mua màu hồng. Đây là định kiến hay sự thật?\n\nCông cụ: **Chi-Square Test of Independence**.' }],
+            },
+            {
+                _type: 'image',
+                localPath: '/blog/python101_body_l7_chisquare_1767448019536.png',
+                alt: 'Chi-Square Analysis Visual',
+                caption: 'Bảng chéo (Crosstab) thể hiện tần suất xuất hiện của các cặp giá trị. Chi-Square sẽ tính xem phân phối này có ngẫu nhiên không.'
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '1. Tạo bảng chéo (Crosstab)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: '`ct = pd.crosstab(df["Gender"], df["Product_Color"])`\n`print(ct)`\n\nBạn sẽ thấy bảng tần số. Nhưng nhìn bảng chưa đủ kết luận.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '2. Chạy kiểm định Chi-Square' }],
+            },
+            {
+                _type: 'code',
+                language: 'python',
+                code: 'from scipy.stats import chi2_contingency\n\nchi2, p, dof, expected = chi2_contingency(ct)\nprint(f"P-value: {p}")'
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Nếu **P-value < 0.05**: Có mối liên hệ (Association). Tức là Giới tính CÓ ảnh hưởng đến việc chọn màu sắc.\nMarketing Action: Chạy ads màu hồng target vào nữ, màu đen target vào nam.\n\nĐấy, nghiên cứu định lượng trong kinh doanh nó thực dụng như thế đấy!' }],
+            }
+        ]
     }
 ];
