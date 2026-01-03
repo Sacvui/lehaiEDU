@@ -183,7 +183,6 @@ const authors = [
 const posts = [
     ...batch1, ...batch2, ...batch3, ...batch4, ...batch5, ...batch6,
     ...series_a_1, ...series_a_2,
-    ...series_b_1, ...series_b_2,
     ...series_c_1, ...series_c_2,
     ...book_intro,
     ...bi_ai_post,
