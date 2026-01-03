@@ -17,6 +17,7 @@ import { series_c_2 } from './blog_posts_series_c_2'
 import { dms_failure_post } from './blog_posts_dms_failure';
 import { dms_evolution_post } from './blog_posts_dms_evolution';
 import { r101_series } from './blog_posts_r101';
+import { python101_series } from './blog_posts_python101';
 import { book_intro } from './blog_posts_book'
 import { bi_ai_post } from './blog_posts_bi_ai'
 import { ncs_series_post } from './blog_posts_ncs_series'
@@ -198,7 +199,8 @@ const posts = [
     ...dms_post,
     ...dms_failure_post,
     ...dms_evolution_post,
-    ...r101_series
+    ...r101_series,
+    ...python101_series
 ];
 
 async function importData() {

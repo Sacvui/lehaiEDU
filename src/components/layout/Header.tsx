@@ -58,6 +58,17 @@ const navItems: NavItem[] = [
         ]
       },
       {
+        label: 'Python101',
+        href: '/blog?tag=Python101',
+        icon: TrendingUp, // Using TrendingUp for "Growth/Analysis" feel
+        desc: 'Vũ khí Big Data: Pandas, Statsmodels & AI',
+        items: [
+          { label: 'Setup Environment', href: '/blog/python101-bai-1-setup-research-env' },
+          { label: 'Quantitative Research', href: '/blog?tag=Quantitative' },
+          { label: 'Marketing Analytics', href: '/blog?tag=Marketing%20Analytics' },
+        ]
+      },
+      {
         label: 'Research Methodology',
         desc: 'Nền tảng võ công, tránh tẩu hỏa nhập ma',
         href: '/blog?tag=Methodology',

@@ -38,10 +38,7 @@ export const r101_series = [
             },
             {
                 _type: 'image',
-                asset: {
-                    _type: 'reference',
-                    _ref: 'image-r101_body_l1_interface',
-                },
+                localPath: '/blog/r101_body_l1_interface_1767441094620.png',
                 alt: 'Giao diện RStudio 4 góc',
                 caption: 'Giao diện RStudio: Góc trên trái là Bếp (Source), dưới trái là Chỗ thử món (Console), trên phải là Tủ lạnh (Environment), dưới phải là Tủ chén (Files/Plots).'
             },
@@ -80,10 +77,7 @@ export const r101_series = [
             },
             {
                 _type: 'image',
-                asset: {
-                    _type: 'reference',
-                    _ref: 'image-r101_body_l2_cleaning',
-                },
+                localPath: '/blog/r101_body_l2_cleaning_1767441110597.png',
                 alt: 'Data Cleaning Process',
                 caption: 'Quy trình dọn rác: Input Rác -> Qua phễu lọc -> Output Sạch bong kin kít.'
             },
@@ -162,10 +156,7 @@ export const r101_series = [
             },
             {
                 _type: 'image',
-                asset: {
-                    _type: 'reference',
-                    _ref: 'image-r101_body_l3_ggplot',
-                },
+                localPath: '/blog/r101_body_l3_ggplot_1767441132505.png',
                 alt: 'ggplot2 Layers Infographic',
                 caption: 'Tư duy xếp hình Lego của ggplot2: Cứ xếp chồng từng lớp lên là thành tác phẩm.'
             },
@@ -209,10 +200,7 @@ export const r101_series = [
             },
             {
                 _type: 'image',
-                asset: {
-                    _type: 'reference',
-                    _ref: 'image-r101_body_l4_dist',
-                },
+                localPath: '/blog/r101_body_l4_dist_1767441203566.png',
                 alt: 'Mean vs Median Distribution',
                 caption: 'Khi dữ liệu bị lệch (như Thu nhập), Mean (Trung bình) sẽ bị kéo lệch đi. Median (Trung vị) mới là chân ái.'
             },
@@ -271,10 +259,7 @@ export const r101_series = [
             },
             {
                 _type: 'image',
-                asset: {
-                    _type: 'reference',
-                    _ref: 'image-r101_body_l5_efa',
-                },
+                localPath: '/blog/r101_body_l5_efa_1767441222051.png',
                 alt: 'EFA Concept Visual',
                 caption: 'EFA giúp gom nhóm các câu hỏi rời rạc (Q1, Q2...) thành các khái niệm lớn (Factor 1, Factor 2).'
             },
@@ -328,10 +313,7 @@ export const r101_series = [
             },
             {
                 _type: 'image',
-                asset: {
-                    _type: 'reference',
-                    _ref: 'image-r101_body_l6_regression',
-                },
+                localPath: '/blog/r101_body_l6_regression_1767441242977.png',
                 alt: 'Regression Slope Visual',
                 caption: 'Đường thẳng hồi quy (màu cam) sẽ cố gắng đi qua giữa đám mây điểm. Khoảng cách từ điểm đến đường thẳng gọi là Phần dư (Residual).'
             },
@@ -363,7 +345,125 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Chạy ra kết quả chưa xong đâu. Phải khám sức khỏe cho nó. Nếu mô hình bị bệnh, kết quả là vô nghĩa.\n\n*   **Đa cộng tuyến (Multicollinearity):** Dùng hàm `vif(model)`. Nếu VIF > 10 (hoặc khắt khe là > 5) -> Bị bệnh. Phải loại biến.\n*   **Phân phối chuẩn của phần dư:** `plot(model, which = 2)`. Các điểm phải nằm trên đường chéo.\n\nLàm nghiên cứu là phải kỹ tính. Reviewer soi mấy cái này kỹ lắm. Đừng để bị bắt bài nhé!\n\nVậy là kết thúc Series R101 cơ bản. Từ con số 0, giờ bạn đã biết cài R, vẽ hình, kiểm định và chạy hồi quy. Bạn đã hơn 90% dân số thế giới về khoản này rồi đấy. Chúc mừng!' }],
+                children: [{ _type: 'span', text: 'Chạy ra kết quả chưa xong đâu. Phải khám sức khỏe cho nó. Nếu mô hình bị bệnh, kết quả là vô nghĩa.\n\n*   **Đa cộng tuyến (Multicollinearity):** Dùng hàm `vif(model)`. Nếu VIF > 10 (hoặc khắt khe là > 5) -> Bị bệnh. Phải loại biến.\n*   **Phân phối chuẩn của phần dư:** `plot(model, which = 2)`. Các điểm phải nằm trên đường chéo.\n\nLàm nghiên cứu là phải kỹ tính. Reviewer soi mấy cái này kỹ lắm. Đừng để bị bắt bài nhé!' }],
+            }
+        ]
+    },
+    {
+        title: 'R101 - Bài 7: So Sánh Khác Biệt: T-test & ANOVA - Cuộc Chiến Giữa Các Phe Phái ⚔️',
+        slug: { current: 'r101-bai-7-ttest-anova' },
+        publishedAt: new Date().toISOString(),
+        excerpt: 'Sếp hỏi: "Khách hàng Nam và Nữ, ai hài lòng hơn?". "Khách miền Bắc, Trung, Nam, ai chịu chi hơn?". Đừng đoán mò. Hãy dùng T-test và ANOVA để trả lời sếp bằng con số biết nói.',
+        categorySlug: 'data-analysis',
+        coverImage: '/blog/r101_lesson7_cover_placeholder.png',
+        featured: false,
+        readingTime: 12,
+        tags: ['Quantitative', 'R101', 'T-test', 'ANOVA', 'Hypothesis Testing', 'Góc nhìn HaiLP'],
+        body: [
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Trong kinh doanh và nghiên cứu, chúng ta suốt ngày phải đi so sánh.\n- Sếp hỏi: "Chạy quảng cáo Facebook hiệu quả hơn hay Google hiệu quả hơn?"\n- HR hỏi: "Nhân viên nam hay nữ có lương cao hơn?"\n- Marketing hỏi: "Khách hàng ở HN, ĐN, SG, ai mua hàng nhiều nhất?"\n\nTrả lời bằng cảm tính ("Em thấy hình như...") là ra đường ở ngay. Phải dùng kiểm định thống kê. Có 2 vũ khí chính:' }],
+            },
+            {
+                _type: 'image',
+                localPath: '/blog/r101_body_l7_comparison.png',
+                alt: 'T-test vs ANOVA comparison',
+                caption: 'T-test dùng để so sánh 2 phe (Nam vs Nữ). ANOVA dùng để "đấu lộn xộn" 3 phe trở lên (Bắc - Trung - Nam).'
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '1. T-test: Cuộc đấu tay đôi (2 nhóm)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Dùng khi bạn muốn so sánh TRUNG BÌNH của 2 nhóm biến định tính (Ví dụ: Giới tính -> Nam/Nữ).\n\nCú pháp siêu ngắn gọn trong R:\n`t.test(Income ~ Gender, data = df)`\n\n(Dịch: So sánh Thu nhập (Income) theo Giới tính (Gender)).\n\n**Đọc kết quả:**\nNhìn vào **P-value**:\n*   Nếu P < 0.05: Có sự khác biệt "có ý nghĩa thống kê". (Ví dụ: Nam lương cao hơn Nữ thật sự, chứ không phải do ngẫu nhiên).\n*   Nếu P > 0.05: Không có sự khác biệt (Hai nhóm như nhau).' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Ví dụ: Sếp hỏi "Nam với Nữ ai lương cao hơn?"' }],
+            },
+            {
+                _type: 'code',
+                language: 'markdown',
+                code: 'Result:\nmean in group Female: 15.5 triệu\nmean in group Male: 16.2 triệu\np-value = 0.03\n\n-> Kết luận: P < 0.05, vậy là có sự khác biệt. Nam lương cao hơn Nữ thật (dù chỉ chênh nhau 0.7 triệu).'
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '2. ANOVA: Tam Quốc Diễn Nghĩa (> 2 nhóm)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Nếu bạn có 3 nhóm trở lên (Ví dụ: Vùng miền -> Bắc, Trung, Nam), dùng T-test so từng cặp thì rất mất thời gian và dễ sai. Hãy dùng ANOVA (Analysis of Variance).\n\nCú pháp:\n`model_aov <- aov(Income ~ Region, data = df)`\n`summary(model_aov)`\n\n**Đọc kết quả:**\nCũng nhìn **P-value (< 0.05)**. Nếu < 0.05, chứng tỏ "Ít nhất có một ông khác biệt với mấy ông còn lại".\n\nNhưng ông nào khác? Bắc khác Nam? Hay Trung khác Nam? \nĐể biết cụ thể, ta dùng thêm "kính lúp" **TukeyHSD**:\n`TukeyHSD(model_aov)`\n\nNó sẽ so sánh từng cặp cho bạn: Bắc-Trung, Bắc-Nam, Trung-Nam. Cặp nào P < 0.05 là cặp đó khác nhau.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '3. Visual hóa sự khác biệt' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Số liệu khô khan khó thuyết phục sếp. Hãy vẽ cái **Boxplot**:\n\n`ggplot(df, aes(x = Region, y = Income, fill = Region)) +`\n`  geom_boxplot() +`\n`  theme_minimal()`\n\nNhìn vào biểu đồ, sếp sẽ thấy ngay cái hộp nào cao hơn, hộp nào thấp hơn. Trực quan sinh động!' }],
+            }
+        ]
+    },
+    {
+        title: 'R101 - Bài 8: R Markdown - Viết Báo Cáo Tự Động (Tạm Biệt Copy-Paste) 📝',
+        slug: { current: 'r101-bai-8-rmarkdown' },
+        publishedAt: new Date().toISOString(),
+        excerpt: 'Bạn chạy mô hình xong, copy bảng ra Excel, rồi dán vào Word, rồi chỉnh font, rồi sếp bắt chạy lại mô hình... Ôi ác mộng! R Markdown sẽ cứu rỗi cuộc đời bạn.',
+        categorySlug: 'data-analysis',
+        coverImage: '/blog/r101_lesson8_cover_placeholder.png',
+        featured: false,
+        readingTime: 12,
+        tags: ['Quantitative', 'R101', 'R Markdown', 'Reporting', 'Automated Report', 'Góc nhìn HaiLP'],
+        body: [
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Kịch bản quen thuộc: Bạn hì hụi làm báo cáo cả tuần. Sếp bảo: "Em ơi, dữ liệu này cũ rồi, cập nhật số liệu mới đi".\n\nThế là bạn phải: Chạy lại SPSS -> Copy kết quả -> Paste lại vào Word -> Định dạng lại bảng -> Vẽ lại hình -> Copy vào Word... Sai một ly đi một dặm.\n\nVới **R Markdown**, bạn chỉ cần bấm nút **KNIT**. Bùm! Báo cáo mới toanh (PDF/Word/HTML) hiện ra trong 3 giây. Dữ liệu thay đổi? Kệ nó, code tự chạy lại.' }],
+            },
+            {
+                _type: 'image',
+                localPath: '/blog/r101_body_l8_rmarkdown.png',
+                alt: 'RMarkdown Workflow',
+                caption: 'Quy trình "Nhà máy" R Markdown: Nguyên liệu là Code + Text. Bấm nút Knit là ra thành phẩm Báo cáo đẹp lung linh.'
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '1. Cấu trúc một file R Markdown (.Rmd)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Nó có 3 phần:\n\n*   **YAML Header (Đầu bài):** Khai báo tên bài, tác giả, loại file xuất ra (Word hay PDF).\n*   **Text (Văn bản):** Viết như viết Word bình thường (hoặc dùng Markdown).\n*   **Code Chunks (Khối lệnh):** Chỗ để viết code R. Được rào lại bằng 3 dấu huyền ```{r} ... ```.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '2. Ví dụ thực chiến' }],
+            },
+            {
+                _type: 'code',
+                language: 'markdown',
+                code: '---\ntitle: "Báo cáo doanh số tháng 10"\nauthor: "HaiLP"\noutput: word_document\n---\n\n## 1. Doanh số tổng quan\nTháng này doanh số tăng trưởng mạnh.\n\n```{r}\nsummary(df$Sales)\n```\n\n## 2. Biểu đồ xu hướng\nBiểu đồ dưới đây cho thấy xu hướng tăng dần đều:\n\n```{r}\nggplot(df, aes(x=Date, y=Sales)) + geom_line()\n```'
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '3. Nút Knit thần thánh' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Bạn bấm nút cái icon **Cuộn len (Knit)** trên thanh công cụ. RStudio sẽ tự động:\n1. Chạy tất cả các dòng code.\n2. Lấy kết quả (bảng, hình) chèn đúng vào vị trí bạn muốn.\n3. Xuất ra file Word đẹp đẽ.\n\nSếp bảo sửa số liệu? Cập nhật file excel đầu vào, bấm Knit lại. Xong. Thời gian tiết kiệm được để đi uống cafe sướng hơn không?\n\nVậy là trọn bộ R101 đã hoàn tất (8 bài). Nếu các bạn muốn "đổi gió" sang Python (ngôn ngữ hot nhất hiện nay cho AI), hãy đón chờ series **Python101: Phân Tích Định Lượng** sắp lên sóng nhé!' }],
             }
         ]
     }
