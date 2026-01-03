@@ -9,7 +9,7 @@ export const python101_series = [
         coverImage: '/blog/python101_lesson1_cover_placeholder.png',
         featured: true,
         readingTime: 10,
-        tags: ['Python101', 'Quantitative Research', 'Jupyter', 'Anaconda', 'Góc nhìn HaiLP'],
+        tags: ['Python101', 'Quantitative', 'Quantitative Research', 'Jupyter', 'Anaconda', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -100,7 +100,7 @@ export const python101_series = [
         coverImage: '/blog/python101_lesson3_cover_placeholder.png',
         featured: false,
         readingTime: 15,
-        tags: ['Python101', 'Cronbach Alpha', 'EFA', 'Factor Analysis', 'Pingouin'],
+        tags: ['Python101', 'Quantitative', 'Cronbach Alpha', 'EFA', 'Factor Analysis', 'Pingouin'],
         body: [
             {
                 _type: 'block',
@@ -138,7 +138,7 @@ export const python101_series = [
         coverImage: '/blog/python101_lesson4_cover_placeholder.png',
         featured: false,
         readingTime: 15,
-        tags: ['Python101', 'Regression', 'Statsmodels', 'Hypothesis Testing', 'Quantitative'],
+        tags: ['Python101', 'Quantitative', 'Marketing Analytics', 'Regression', 'Statsmodels', 'Hypothesis Testing'],
         body: [
             {
                 _type: 'block',
@@ -171,7 +171,7 @@ export const python101_series = [
         coverImage: '/blog/python101_lesson5_cover_placeholder.png',
         featured: false,
         readingTime: 15,
-        tags: ['Python101', 'Segmentation', 'K-Means', 'Clustering', 'Marketing Analytics'],
+        tags: ['Python101', 'Quantitative', 'Marketing Analytics', 'Segmentation', 'K-Means', 'Clustering'],
         body: [
             {
                 _type: 'block',
