@@ -18,8 +18,21 @@ interface SeriesNavigatorProps {
 export function SeriesNavigator({ currentPostId, seriesTag, posts }: SeriesNavigatorProps) {
     if (!posts || posts.length < 2) return null
 
-    // Sort by PublishedAt (Oldest first) to ensure correct numerical order
-    const sortedPosts = [...posts].sort((a, b) => new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime())
+    // Sort by Title Number (Bài 1, Bài 2...) if available, otherwise PublishedAt
+    const sortedPosts = [...posts].sort((a, b) => {
+        const getEpisode = (title: string) => {
+            const match = title.match(/Bài (\d+)/);
+            return match ? parseInt(match[1]) : 999;
+        };
+        const epA = getEpisode(a.title);
+        const epB = getEpisode(b.title);
+
+        if (epA !== 999 && epB !== 999) {
+            return epA - epB;
+        }
+
+        return new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime();
+    })
 
     return (
         <div className="my-10 p-6 bg-amber-50/50 dark:bg-amber-900/10 rounded-2xl border border-amber-100 dark:border-amber-900/30">
