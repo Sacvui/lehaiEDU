@@ -4,17 +4,17 @@ export const dms_evolution_post = [
         title: 'DMS 2010 vs 2025: Từ "Cai Ngục" Đến "Trợ Lý Ảo" - Sếp Đã Nâng Cấp Tư Duy Chưa? 🤖',
         slug: { current: 'dms-2010-vs-2025-evolution' },
         publishedAt: new Date().toISOString(),
-        excerpt: 'Nếu năm 2025 mà Sếp vẫn dùng DMS chỉ để soi GPS nhân viên thì Sếp đang sống ở thời đồ đá rồi. Cùng Hải Morning nhìn lại cuộc cách mạng 15 năm của DMS để xem mình đang đứng ở đâu.',
+        excerpt: 'Nếu năm 2025 mà Sếp vẫn dùng DMS chỉ để soi GPS nhân viên thì Sếp đang sống ở thời đồ đá rồi. Cùng HaiLP nhìn lại cuộc cách mạng 15 năm của DMS để xem mình đang đứng ở đâu.',
         categorySlug: 'digital-transformation',
         coverImage: '/blog/dms_evolution_cover.png',
         featured: true,
         readingTime: 12,
-        tags: ['DMS Evolution', 'AI for Sales', 'Future of Sales', 'Góc nhìn Hải Morning'],
+        tags: ['DMS Evolution', 'AI for Sales', 'Future of Sales', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Chào các bạn, Hải Morning đây.\n\nTôi vừa đi dự một hội thảo về Retail Tech. Có một anh CEO hỏi tôi: "Hải ơi, anh thấy cái DMS bây giờ nó cũng y chang cái hồi 2010 anh dùng lúc mới khởi nghiệp. Cũng chấm công, cũng lên đơn, cũng báo cáo. Có gì khác đâu mà tụi nó hét giá kinh thế?"\n\nTôi bảo: "Anh ơi, cái Nokia 1100 cũng nghe gọi nhắn tin được, cái iPhone 15 cũng nghe gọi nhắn tin được. Nhưng anh có dám cầm con Nokia 1100 đi gặp đối tác không?"\n\n15 năm trôi qua (2010 - 2025), thế giới DMS đã thay đổi một trời một vực. Nó chuyển mình từ kỷ nguyên **"Kiểm soát" (Policing)** sang kỷ nguyên **"Trao quyền" (Empowering)**. Nếu Sếp vẫn giữ tư duy cũ, thì Sếp đang cầm iPhone 15 nhưng chỉ để... chọi chó.' }],
+                children: [{ _type: 'span', text: 'Chào các bạn, Hải đây.\n\nTôi vừa đi dự một hội thảo về Retail Tech. Có một anh CEO hỏi tôi: "Hải ơi, anh thấy cái DMS bây giờ nó cũng y chang cái hồi 2010 anh dùng lúc mới khởi nghiệp. Cũng chấm công, cũng lên đơn, cũng báo cáo. Có gì khác đâu mà tụi nó hét giá kinh thế?"\n\nTôi bảo: "Anh ơi, cái Nokia 1100 cũng nghe gọi nhắn tin được, cái iPhone 15 cũng nghe gọi nhắn tin được. Nhưng anh có dám cầm con Nokia 1100 đi gặp đối tác không?"\n\n15 năm trôi qua (2010 - 2025), thế giới DMS đã thay đổi một trời một vực. Nó chuyển mình từ kỷ nguyên **"Kiểm soát" (Policing)** sang kỷ nguyên **"Trao quyền" (Empowering)**. Nếu Sếp vẫn giữ tư duy cũ, thì Sếp đang cầm iPhone 15 nhưng chỉ để... chọi chó.' }],
             },
             {
                 _type: 'block',
@@ -74,7 +74,7 @@ export const dms_evolution_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Công nghệ 2025 đã quá xịn. Nhưng đáng buồn là tư duy của nhiều Sếp Việt Nam vẫn đang kẹt ở 2010.\n\nSếp vẫn thích soi GPS hơn là xem gợi ý đơn hàng. Sếp vẫn thích phạt nhân viên hơn là trao công cụ cho họ kiếm tiền.\n\nHãy nhớ: **DMS sinh ra là để giúp Sales bán được nhiều hàng hơn, chứ không phải để bắt họ làm việc nhiều giờ hơn.**\n\nNếu Sếp thay đổi được tư duy này, thì Sếp mới xứng đáng cầm trên tay "vũ khí" của năm 2025.\n\n**Hải Morning.**' }],
+                children: [{ _type: 'span', text: 'Công nghệ 2025 đã quá xịn. Nhưng đáng buồn là tư duy của nhiều Sếp Việt Nam vẫn đang kẹt ở 2010.\n\nSếp vẫn thích soi GPS hơn là xem gợi ý đơn hàng. Sếp vẫn thích phạt nhân viên hơn là trao công cụ cho họ kiếm tiền.\n\nHãy nhớ: **DMS sinh ra là để giúp Sales bán được nhiều hàng hơn, chứ không phải để bắt họ làm việc nhiều giờ hơn.**\n\nNếu Sếp thay đổi được tư duy này, thì Sếp mới xứng đáng cầm trên tay "vũ khí" của năm 2025.\n\n**HaiLP.**' }],
             }
         ]
     }

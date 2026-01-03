@@ -9,7 +9,7 @@ export const ncs_series_post = [
         coverImage: '/blog/research_series_1_mindset.png',
         featured: false,
         readingTime: 10,
-        tags: ['NCS101', 'Góc nhìn Hải Morning', 'PhD Life', 'Tư duy ngược'],
+        tags: ['NCS101', 'Góc nhìn HaiLP', 'PhD Life', 'Tư duy ngược'],
         body: [
             {
                 _type: 'block',
@@ -57,7 +57,7 @@ export const ncs_series_post = [
         coverImage: '/blog/research_series_2_topic.png',
         featured: false,
         readingTime: 12,
-        tags: ['NCS101', 'Research Topic', 'Idea Generation', 'Hải Morning Style'],
+        tags: ['NCS101', 'Research Topic', 'Idea Generation', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -148,7 +148,7 @@ export const ncs_series_post = [
         coverImage: '/blog/research_series_4_methodology.png',
         featured: false,
         readingTime: 12,
-        tags: ['NCS101', 'Methodology', 'Qual vs Quan', 'Hải Morning Style'],
+        tags: ['NCS101', 'Methodology', 'Qual vs Quan', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -451,7 +451,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Một bài báo khoa học được in ra, nó nằm đó vĩnh viễn trong thư viện nhân loại. Con cháu bạn sau này có thể Google ra tên bạn. Bạn muốn chúng nó thấy gì? Một nhà khoa học chân chính, đóng góp tri thức cho đời? Hay một kẻ lừa đảo học thuật?\n\nĐường đi khó, không khó vì ngăn sông cách núi, mà khó vì lòng người ngại núi e sông. Chúc các bạn chân cứng đá mềm, bút sắc lòng trong, sớm có ngày được thấy tên mình trên "bảng vàng" Q1 nhé!\n\n**Hải Morning chào thân ái và quyết thắng!** 👋' }],
+                children: [{ _type: 'span', text: 'Một bài báo khoa học được in ra, nó nằm đó vĩnh viễn trong thư viện nhân loại. Con cháu bạn sau này có thể Google ra tên bạn. Bạn muốn chúng nó thấy gì? Một nhà khoa học chân chính, đóng góp tri thức cho đời? Hay một kẻ lừa đảo học thuật?\n\nĐường đi khó, không khó vì ngăn sông cách núi, mà khó vì lòng người ngại núi e sông. Chúc các bạn chân cứng đá mềm, bút sắc lòng trong, sớm có ngày được thấy tên mình trên "bảng vàng" Q1 nhé!\n\n**Hải chào thân ái và quyết thắng!** 👋' }],
             }
         ]
     }

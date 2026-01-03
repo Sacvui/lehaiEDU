@@ -9,7 +9,7 @@ export const dms_post = [
         coverImage: '/blog/dms_tricks_cover.png', // Custom generated image
         featured: true,
         readingTime: 10,
-        tags: ['DMS', 'Sales Tricks', 'Góc nhìn Hải Morning', 'Quản trị hệ thống'],
+        tags: ['DMS', 'Sales Tricks', 'Góc nhìn HaiLP', 'Quản trị hệ thống'],
         body: [
             {
                 _type: 'block',

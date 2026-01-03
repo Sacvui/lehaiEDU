@@ -7,7 +7,7 @@ export const batch3 = [
         categorySlug: 'mentorship-career',
         featured: true,
         readingTime: 18,
-        tags: ['Leadership', 'HR', 'Culture', 'Management', 'Toxic Employee', 'Hai Morning Style'],
+        tags: ['Leadership', 'HR', 'Culture', 'Management', 'Toxic Employee', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -114,7 +114,7 @@ export const batch3 = [
         categorySlug: 'academic-corner',
         featured: false,
         readingTime: 20,
-        tags: ['Research Method', 'Quantitative', 'Qualitative', 'Mixed Methods', 'PhD Life', 'Hai Morning Style'],
+        tags: ['Research Method', 'Quantitative', 'Qualitative', 'Mixed Methods', 'PhD Life', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',

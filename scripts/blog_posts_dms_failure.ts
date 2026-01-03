@@ -9,12 +9,12 @@ export const dms_failure_post = [
         coverImage: '/blog/dms_failure_cover.png',
         featured: true,
         readingTime: 15,
-        tags: ['DMS', 'Project Failure', 'Góc nhìn Hải Morning', 'Digital Transformation'],
+        tags: ['DMS', 'Project Failure', 'Góc nhìn HaiLP', 'Digital Transformation'],
         body: [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Chào các bạn, Hải Morning đây.\n\nTrong suốt 15 năm làm nghề, tôi đã chứng kiến (và trực tiếp đi dọn dẹp) không biết bao nhiêu cái "bãi chiến trường" mang tên DMS (Distribution Management System). Có những tập đoàn lớn, tiền không thiếu, thuê tư vấn Big 4, mua giải pháp SAP/Oracle triệu đô, nhưng cuối cùng dự án vẫn nằm đắp chiếu hoặc thoi thóp thở oxy.\n\nTheo thống kê không chính thức (nhưng rất đau lòng) của tôi: 70% các dự án DMS tại Việt Nam không đạt được kỳ vọng ban đầu, hoặc tệ hơn là thất bại toàn tập sau 1 năm.\n\nTại sao vậy? Tại sao một công cụ quyền năng như thế lại trở thành gánh nặng? Hôm nay, chúng ta sẽ cùng mổ xẻ những cái "xác chết" này để tìm ra nguyên nhân. Bài viết này sẽ hơi đau, nhưng thuốc đắng giã tật.' }],
+                children: [{ _type: 'span', text: 'Chào các bạn, Hải đây.\n\nTrong suốt 15 năm làm nghề, tôi đã chứng kiến (và trực tiếp đi dọn dẹp) không biết bao nhiêu cái "bãi chiến trường" mang tên DMS (Distribution Management System). Có những tập đoàn lớn, tiền không thiếu, thuê tư vấn Big 4, mua giải pháp SAP/Oracle triệu đô, nhưng cuối cùng dự án vẫn nằm đắp chiếu hoặc thoi thóp thở oxy.\n\nTheo thống kê không chính thức (nhưng rất đau lòng) của tôi: 70% các dự án DMS tại Việt Nam không đạt được kỳ vọng ban đầu, hoặc tệ hơn là thất bại toàn tập sau 1 năm.\n\nTại sao vậy? Tại sao một công cụ quyền năng như thế lại trở thành gánh nặng? Hôm nay, chúng ta sẽ cùng mổ xẻ những cái "xác chết" này để tìm ra nguyên nhân. Bài viết này sẽ hơi đau, nhưng thuốc đắng giã tật.' }],
             },
             {
                 _type: 'block',

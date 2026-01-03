@@ -7,7 +7,7 @@ export const batch1 = [
         categorySlug: 'digital-transformation',
         featured: true,
         readingTime: 20,
-        tags: ['DMS', 'Quản trị Sales', 'Chuyển đổi số', 'Hai Morning Style', 'SME', 'Sales Tricks'],
+        tags: ['DMS', 'Quản trị Sales', 'Chuyển đổi số', 'Góc nhìn HaiLP', 'SME', 'Sales Tricks'],
         body: [
             {
                 _type: 'block',
@@ -145,7 +145,7 @@ export const batch1 = [
         categorySlug: 'strategic-leadership',
         featured: true,
         readingTime: 25,
-        tags: ['RTM', 'Logistics', 'Cost-to-Serve', 'Profit', 'FMCG', 'Hai Morning Style'],
+        tags: ['RTM', 'Logistics', 'Cost-to-Serve', 'Profit', 'FMCG', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',

@@ -7,7 +7,7 @@ export const batch4 = [
         categorySlug: 'strategic-leadership',
         featured: false,
         readingTime: 25,
-        tags: ['Gemba Walk', 'Sales Management', 'Field Work', 'Leadership', 'Hai Morning Style'],
+        tags: ['Gemba Walk', 'Sales Management', 'Field Work', 'Leadership', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -227,7 +227,7 @@ export const batch4 = [
         categorySlug: 'strategic-leadership',
         featured: false,
         readingTime: 22,
-        tags: ['Incentive', 'Motivation', 'HR Strategy', 'Compensation', 'Hai Morning Style'],
+        tags: ['Incentive', 'Motivation', 'HR Strategy', 'Compensation', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -435,7 +435,7 @@ export const batch4 = [
         categorySlug: 'mentorship-career',
         featured: false,
         readingTime: 15,
-        tags: ['Professionalism', 'Soft Skills', 'Detail Oriented', 'Attitude', 'Hai Morning Style'],
+        tags: ['Professionalism', 'Soft Skills', 'Detail Oriented', 'Attitude', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',

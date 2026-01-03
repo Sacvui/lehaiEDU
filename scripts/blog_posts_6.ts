@@ -7,7 +7,7 @@ export const batch6 = [
         categorySlug: 'mentorship-career',
         featured: false,
         readingTime: 18,
-        tags: ['Personal Branding', 'LinkedIn', 'Career Growth', 'Authenticity', 'Hai Morning Style'],
+        tags: ['Personal Branding', 'LinkedIn', 'Career Growth', 'Authenticity', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -79,7 +79,7 @@ export const batch6 = [
         categorySlug: 'mentorship-career',
         featured: false,
         readingTime: 12,
-        tags: ['Mindset', 'Growth', 'Failure', 'Resilience', 'Hai Morning Style'],
+        tags: ['Mindset', 'Growth', 'Failure', 'Resilience', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -146,7 +146,7 @@ export const batch6 = [
         categorySlug: 'mentorship-career',
         featured: false,
         readingTime: 15,
-        tags: ['Soft Skills', 'Empathy', 'Future of Work', 'AI vs Human', 'Hai Morning Style'],
+        tags: ['Soft Skills', 'Empathy', 'Future of Work', 'AI vs Human', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -203,7 +203,7 @@ export const batch6 = [
         categorySlug: 'mentorship-career',
         featured: false,
         readingTime: 15,
-        tags: ['Life Lessons', 'Youth', 'Regrets', 'Advice', 'Hai Morning Style'],
+        tags: ['Life Lessons', 'Youth', 'Regrets', 'Advice', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',

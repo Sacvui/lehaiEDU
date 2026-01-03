@@ -7,7 +7,7 @@ export const batch5 = [
         categorySlug: 'enterprise-strategy',
         featured: false,
         readingTime: 18,
-        tags: ['BCG Matrix', 'Strategy', 'Innovation', 'Business Growth', 'Hai Morning Style'],
+        tags: ['BCG Matrix', 'Strategy', 'Innovation', 'Business Growth', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -86,7 +86,7 @@ export const batch5 = [
         categorySlug: 'strategic-leadership',
         featured: false,
         readingTime: 20,
-        tags: ['KPI', 'OKR', 'Management', 'Creativity', 'Hai Morning Style'],
+        tags: ['KPI', 'OKR', 'Management', 'Creativity', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -161,7 +161,7 @@ export const batch5 = [
         categorySlug: 'logistics-supply-chain',
         featured: false,
         readingTime: 22,
-        tags: ['Supply Chain', 'Logistics', 'Bullwhip Effect', 'Crisis Management', 'Hai Morning Style'],
+        tags: ['Supply Chain', 'Logistics', 'Bullwhip Effect', 'Crisis Management', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -230,7 +230,7 @@ export const batch5 = [
         categorySlug: 'digital-transformation',
         featured: false,
         readingTime: 20,
-        tags: ['Digital Transformation', 'ERP', 'CRM', 'Change Management', 'Hai Morning Style'],
+        tags: ['Digital Transformation', 'ERP', 'CRM', 'Change Management', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -296,7 +296,7 @@ export const batch5 = [
         categorySlug: 'mentorship-career',
         featured: false,
         readingTime: 15,
-        tags: ['Networking', 'Relationship Building', 'Soft Skills', 'Career Growth', 'Hai Morning Style'],
+        tags: ['Networking', 'Relationship Building', 'Soft Skills', 'Career Growth', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',

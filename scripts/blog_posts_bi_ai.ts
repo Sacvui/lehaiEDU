@@ -9,7 +9,7 @@ export const bi_ai_post = [
         coverImage: '/blog/rtm_masterclass_9_data_tech.png',
         featured: true,
         readingTime: 6,
-        tags: ['Góc nhìn Hải Morning', 'Chém gió công nghệ', 'BI vs AI', 'Sự thật trần trụi'],
+        tags: ['Góc nhìn HaiLP', 'Chém gió công nghệ', 'BI vs AI', 'Sự thật trần trụi'],
         body: [
             {
                 _type: 'block',

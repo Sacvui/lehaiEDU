@@ -7,7 +7,7 @@ export const batch2 = [
         categorySlug: 'academic-corner',
         featured: true,
         readingTime: 22,
-        tags: ['PhD', 'Research', 'Academic Publishing', 'Scopus', 'Mindset', 'Hai Morning Style'],
+        tags: ['PhD', 'Research', 'Academic Publishing', 'Scopus', 'Mindset', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
@@ -105,7 +105,7 @@ export const batch2 = [
         categorySlug: 'academic-corner',
         featured: true,
         readingTime: 20,
-        tags: ['Literature Review', 'Synthesis Matrix', 'AI Tools', 'Research Method', 'Hai Morning Style'],
+        tags: ['Literature Review', 'Synthesis Matrix', 'AI Tools', 'Research Method', 'Góc nhìn HaiLP'],
         body: [
             {
                 _type: 'block',
