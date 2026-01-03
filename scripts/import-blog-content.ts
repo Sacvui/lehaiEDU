@@ -14,6 +14,7 @@ import { series_b_1 } from './blog_posts_series_b_1'
 import { series_b_2 } from './blog_posts_series_b_2'
 import { series_c_1 } from './blog_posts_series_c_1'
 import { series_c_2 } from './blog_posts_series_c_2'
+import { dms_failure_post } from './blog_posts_dms_failure';
 import { book_intro } from './blog_posts_book'
 import { bi_ai_post } from './blog_posts_bi_ai'
 import { ncs_series_post } from './blog_posts_ncs_series'
@@ -186,7 +187,8 @@ const posts = [
     ...book_intro,
     ...bi_ai_post,
     ...ncs_series_post,
-    ...dms_post
+    ...dms_post,
+    ...dms_failure_post
 ];
 
 async function importData() {
