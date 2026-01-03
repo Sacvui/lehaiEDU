@@ -38,6 +38,11 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     }
 }
 
+import { SeriesNavigator } from '@/components/blog/SeriesNavigator'
+
+// Tags that shouldn't be treated as a Series Identifier
+const IGNORED_SERIES_TAGS = ['Góc nhìn HaiLP', 'Featured', 'Hot', 'Tips', 'Knowledge', 'Deep Dive', 'New']
+
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params
     const post = await sanityFetch<any>({
@@ -49,17 +54,31 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         notFound()
     }
 
-    // Get related posts (same category)
+    // Get all posts for related & series logic
     const allPosts = await sanityFetch<any[]>({ query: ALL_POSTS_QUERY })
+
+    // 1. Series Logic
+    // Find the first tag that looks like a series (not in ignore list)
+    // Priority: Tags ending in numbers (e.g. NCS101) or specific known series
+    const seriesTag = post.tags?.find((t: string) =>
+        !IGNORED_SERIES_TAGS.includes(t) &&
+        (t.match(/\d+$/) || t.includes('Series')) // Heuristic: "101", "Series" usually means series
+    ) || post.tags?.find((t: string) => !IGNORED_SERIES_TAGS.includes(t)) // Fallback to first non-ignored tag
+
+    const seriesPosts = seriesTag
+        ? allPosts.filter(p => p.tags?.includes(seriesTag))
+        : []
+
+    // 2. Related Posts (Same category, excluding current series posts to avoid duplication)
     const relatedPosts = allPosts
         ?.filter(p =>
             p._id !== post._id &&
+            !seriesPosts.some(sp => sp._id === p._id) && // Don't show series posts in "Related"
             p.categories?.some((cat: any) =>
                 post.categories?.some((postCat: any) => postCat._id === cat._id)
             )
         )
         .slice(0, 3) || []
-
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-amber-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
@@ -199,6 +218,15 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                             }),
                         }}
                     />
+
+                    {/* Series Navigator */}
+                    {seriesTag && seriesPosts.length > 1 && (
+                        <SeriesNavigator
+                            currentPostId={post._id}
+                            seriesTag={seriesTag}
+                            posts={seriesPosts}
+                        />
+                    )}
 
                     {/* Content */}
                     <div className="prose prose-lg dark:prose-invert max-w-none">
