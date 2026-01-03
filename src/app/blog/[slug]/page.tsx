@@ -189,7 +189,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                                     name: 'Le Phuc Hai',
                                     logo: {
                                         '@type': 'ImageObject',
-                                        url: 'https://lehai.edu.vn/logo.png',
+                                        url: 'https://lehai.edu.vn/uploads/profile-founder.jpg',
                                     },
                                 },
                                 mainEntityOfPage: {

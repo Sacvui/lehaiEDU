@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from '@/components/layout/Header'
@@ -7,17 +7,24 @@ import { Footer } from '@/components/layout/Footer'
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'Lê Phúc Hải | Strategic Leadership & Digital Transformation',
+  metadataBase: new URL('https://lehai.edu.vn'),
+  title: {
+    default: 'Lê Phúc Hải | Strategic Leadership & Digital Transformation',
+    template: '%s | Lê Phúc Hải'
+  },
   description: 'Official website of Le Phuc Hai - National Business Development Director & PhD Researcher. Insights on RTM, Logistics, Leadership and Academic Research.',
   keywords: ['Le Phuc Hai', 'RTM', 'Logistics', 'Business Strategy', 'Academic Research', 'PhD Journey', 'Mentorship'],
   openGraph: {
-    title: 'Lê Phúc Hải | Strategic Leadership & Digital Transformation',
+    title: {
+      default: 'Lê Phúc Hải | Strategic Leadership & Digital Transformation',
+      template: '%s | Lê Phúc Hải'
+    },
     description: 'Insights on RTM, Logistics, Leadership and Academic Research.',
     url: 'https://lehai.edu.vn',
     siteName: 'Le Phuc Hai Official',
     images: [
       {
-        url: 'https://lehai.edu.vn/uploads/profile-founder.jpg',
+        url: '/uploads/profile-founder.jpg',
         width: 1200,
         height: 630,
         alt: 'Le Phuc Hai Profile',
@@ -28,11 +35,22 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Lê Phúc Hải | Strategic Leadership & Digital Transformation',
+    title: {
+      default: 'Lê Phúc Hải | Strategic Leadership & Digital Transformation',
+      template: '%s | Lê Phúc Hải'
+    },
     description: 'Insights from a Scholar-Practitioner.',
-    images: ['https://lehai.edu.vn/uploads/profile-founder.jpg'],
+    images: ['/uploads/profile-founder.jpg'],
     creator: '@hailp',
   },
+  manifest: '/manifest.json',
+};
+
+export const viewport: Viewport = {
+  themeColor: '#0f172a',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({

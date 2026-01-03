@@ -1,13 +1,10 @@
-'use client';
-
 import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, Calendar, Clock, Tag } from 'lucide-react';
 import { sanityFetch } from '@/sanity/lib/fetch';
 import { RECENT_POSTS_QUERY } from '@/sanity/lib/queries';
 import { urlForImage } from '@/sanity/lib/image';
-import { motion } from "framer-motion";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 const MOCK_ARTICLES = [
     {
@@ -90,27 +87,19 @@ const MOCK_ARTICLES = [
 ];
 // Force rebuild for image assets
 
-export function LatestInsights() {
-    const [articles, setArticles] = useState<any[]>(MOCK_ARTICLES);
-    const [loading, setLoading] = useState(true);
-
-    useEffect(() => {
-        const fetchArticles = async () => {
-            try {
-                const fetchedArticles = await sanityFetch<any[]>({ query: RECENT_POSTS_QUERY });
-                if (fetchedArticles && fetchedArticles.length > 0) {
-                    setArticles(fetchedArticles);
-                } else {
-                    setArticles(MOCK_ARTICLES);
-                }
-            } catch (error) {
-                console.error("Failed to fetch articles:", error);
-            } finally {
-                setLoading(false);
-            }
-        };
-        fetchArticles();
-    }, []);
+export async function LatestInsights() {
+    let articles: any[] = [];
+    try {
+        const fetchedArticles = await sanityFetch<any[]>({ query: RECENT_POSTS_QUERY });
+        if (fetchedArticles && fetchedArticles.length > 0) {
+            articles = fetchedArticles;
+        } else {
+            articles = MOCK_ARTICLES;
+        }
+    } catch (error) {
+        console.error("Failed to fetch articles:", error);
+        articles = MOCK_ARTICLES;
+    }
 
     if (!articles || articles.length === 0) {
         return null;
