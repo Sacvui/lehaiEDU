@@ -174,7 +174,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
                     {/* Featured Image */}
                     {post.mainImage && (
-                        <div className="my-12 rounded-2xl overflow-hidden">
+                        <div className="my-12 rounded-2xl overflow-hidden relative group">
                             <Image
                                 src={urlForImage(post.mainImage).url()}
                                 alt={post.mainImage.alt || post.title}
@@ -183,6 +183,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                                 className="w-full h-auto"
                                 priority
                             />
+                            {/* Watermark Overlay */}
+                            <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-md text-xs text-white/90 font-semibold select-none pointer-events-none tracking-wide">
+                                lehai.edu.vn
+                            </div>
                         </div>
                     )}
 

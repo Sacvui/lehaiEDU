@@ -9,7 +9,7 @@ export const portableTextComponents: PortableTextComponents = {
                 return null
             }
             return (
-                <div className="my-8 rounded-xl overflow-hidden">
+                <div className="my-8 rounded-xl overflow-hidden relative group">
                     <Image
                         src={urlForImage(value).url()}
                         alt={value.alt || 'Blog image'}
@@ -17,6 +17,11 @@ export const portableTextComponents: PortableTextComponents = {
                         height={600}
                         className="w-full h-auto"
                     />
+                    {/* Watermark Overlay */}
+                    <div className="absolute bottom-3 right-3 bg-black/50 backdrop-blur-sm px-2 py-1 rounded text-[10px] text-white/80 font-medium select-none pointer-events-none">
+                        lehai.edu.vn
+                    </div>
+
                     {value.caption && (
                         <p className="text-sm text-slate-500 dark:text-slate-400 text-center mt-2 italic">
                             {value.caption}
