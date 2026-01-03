@@ -31,41 +31,52 @@ const navItems: NavItem[] = [
   { label: 'Solutions', href: '#solutions', icon: Rocket },
   { label: 'Books', href: '/books', icon: BookOpen },
   {
-    label: 'Blog',
+    label: 'Học Tập (Blog)',
     href: '/blog',
     icon: TrendingUp,
     submenu: [
       {
-        label: 'Biz Tactics',
-        href: '/blog?category=business',
-        icon: TrendingUp,
-        desc: 'Chiến thuật kinh doanh thực chiến',
+        label: 'Góc NCS (NCS101)',
+        href: '/blog?tag=NCS101',
+        icon: GraduationCap,
+        desc: 'Hành trình sinh lầy thành Tiến sĩ',
         items: [
-          { label: 'RTM Masterclass', href: '/blog?category=rtm-distribution' },
-          { label: 'Logistics & Supply Chain', href: '/blog?category=logistics-supply-chain' },
-          { label: 'Digital Transformation', href: '/blog?category=digital-transformation' },
-          { label: 'Enterprise Strategy', href: '/blog?category=enterprise-strategy' },
-        ]
-      },
-      {
-        label: 'Career Hacks',
-        href: '/blog?category=career',
-        icon: Zap,
-        desc: 'Tư vấn nghề nghiệp & thăng tiến',
-        items: [
-          { label: 'Mentorship', href: '/blog?category=mentorship-career' },
-          { label: 'Leadership', href: '/blog?category=strategic-leadership' },
-          { label: 'Data & Tech (BI)', href: '/blog?category=ai-technology' },
-        ]
-      },
-      {
-        label: 'Nerd Lab',
-        href: '/blog?category=research',
-        icon: FlaskConical,
-        desc: 'Nghiên cứu & Đam mê',
-        items: [
-          { label: 'Research Zero-to-Pro', href: '/blog?category=academic-corner' },
+          { label: 'Mindset & Tư duy', href: '/blog/ncs-101-bai-1-mindset' },
+          { label: 'Survival Guide', href: '/blog?tag=NCS101' },
           { label: 'Academic Writing', href: '/blog?category=academic-corner' },
+        ]
+      },
+      {
+        label: 'Dữ Liệu & R (R101)',
+        href: '/blog?tag=R101',
+        icon: FlaskConical,
+        desc: 'Phân tích định lượng cho Marketer',
+        items: [
+          { label: 'Nhập môn R', href: '/blog/r101-bai-1-intro-r' },
+          { label: 'Data Cleaning', href: '/blog/r101-bai-2-data-cleaning' },
+          { label: 'Visual & Report', href: '/blog?tag=R101' },
+        ]
+      },
+      {
+        label: 'Phương Pháp Nghiên Cứu',
+        href: '/blog?category=research-methods',
+        icon: BookOpen,
+        desc: 'Nền tảng học thuật vững chắc',
+        items: [
+          { label: 'Quantitative Methods', href: '/blog?tag=quantitative' },
+          { label: 'Qualitative Methods', href: '/blog?tag=qualitative' },
+          { label: 'Review Literature', href: '/blog?tag=literature-review' },
+        ]
+      },
+      {
+        label: 'Kịch Bản Mẫu (Luận Văn)',
+        href: '/blog?tag=thesis-script',
+        icon: Zap,
+        desc: 'Cầm tay chỉ việc làm luận văn',
+        items: [
+          { label: 'Cấu trúc bài luận', href: '/blog?tag=thesis-structure' },
+          { label: 'Mẫu lời mở đầu', href: '/blog?tag=thesis-intro' },
+          { label: 'Mẫu kết luận', href: '/blog?tag=thesis-conclusion' },
         ]
       },
     ]
