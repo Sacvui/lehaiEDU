@@ -18,9 +18,8 @@ interface SeriesNavigatorProps {
 export function SeriesNavigator({ currentPostId, seriesTag, posts }: SeriesNavigatorProps) {
     if (!posts || posts.length < 2) return null
 
-    // Sort by Title to ensure "Bài 1", "Bài 2" order 
-    // (Assuming naming convention is consistent, otherwise publishedAt is fallback)
-    const sortedPosts = [...posts].sort((a, b) => a.title.localeCompare(b.title))
+    // Sort by PublishedAt (Oldest first) to ensure correct numerical order
+    const sortedPosts = [...posts].sort((a, b) => new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime())
 
     return (
         <div className="my-10 p-6 bg-amber-50/50 dark:bg-amber-900/10 rounded-2xl border border-amber-100 dark:border-amber-900/30">
@@ -39,8 +38,8 @@ export function SeriesNavigator({ currentPostId, seriesTag, posts }: SeriesNavig
                             key={post._id}
                             href={`/blog/${post.slug.current}`}
                             className={`group flex items-start gap-3 p-3 rounded-lg transition-colors ${isCurrent
-                                    ? 'bg-amber-100 dark:bg-amber-900/30 cursor-default'
-                                    : 'hover:bg-white dark:hover:bg-slate-800'
+                                ? 'bg-amber-100 dark:bg-amber-900/30 cursor-default'
+                                : 'hover:bg-white dark:hover:bg-slate-800'
                                 }`}
                         >
                             <div className="mt-1 flex-shrink-0">
@@ -51,8 +50,8 @@ export function SeriesNavigator({ currentPostId, seriesTag, posts }: SeriesNavig
                                 )}
                             </div>
                             <div className={`text-sm ${isCurrent
-                                    ? 'font-bold text-amber-900 dark:text-amber-300'
-                                    : 'text-slate-600 dark:text-slate-400 group-hover:text-amber-700 dark:group-hover:text-amber-400'
+                                ? 'font-bold text-amber-900 dark:text-amber-300'
+                                : 'text-slate-600 dark:text-slate-400 group-hover:text-amber-700 dark:group-hover:text-amber-400'
                                 }`}>
                                 {post.title}
                             </div>
