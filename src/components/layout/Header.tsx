@@ -34,49 +34,52 @@ const navItems: NavItem[] = [
     label: 'Học Tập (Blog)',
     href: '/blog',
     icon: TrendingUp,
+    label: 'Learning Hub',
+    href: '/blog',
+    icon: TrendingUp,
     submenu: [
       {
-        label: 'Góc NCS (NCS101)',
+        label: 'NCS101',
         href: '/blog?tag=NCS101',
         icon: GraduationCap,
-        desc: 'Hành trình sinh lầy thành Tiến sĩ',
+        desc: 'Từ "con nai vàng" thành "cáo già" học thuật',
         items: [
-          { label: 'Mindset & Tư duy', href: '/blog/ncs-101-bai-1-mindset' },
+          { label: 'Mindset', href: '/blog/ncs-101-bai-1-mindset' },
           { label: 'Survival Guide', href: '/blog?tag=NCS101' },
           { label: 'Academic Writing', href: '/blog?category=academic-corner' },
         ]
       },
       {
-        label: 'Dữ Liệu & R (R101)',
+        label: 'R101',
         href: '/blog?tag=R101',
         icon: FlaskConical,
-        desc: 'Phân tích định lượng cho Marketer',
+        desc: 'Code R không khó, chỉ cần... copy paste',
         items: [
-          { label: 'Nhập môn R', href: '/blog/r101-bai-1-intro-r' },
+          { label: 'Crash Course', href: '/blog/r101-bai-1-intro-r' },
           { label: 'Data Cleaning', href: '/blog/r101-bai-2-data-cleaning' },
           { label: 'Visual & Report', href: '/blog?tag=R101' },
         ]
       },
       {
-        label: 'Phương Pháp Nghiên Cứu',
+        label: 'Research Methodology',
         href: '/blog?category=research-methods',
         icon: BookOpen,
-        desc: 'Nền tảng học thuật vững chắc',
+        desc: 'Nền tảng võ công, tránh tẩu hỏa nhập ma',
         items: [
-          { label: 'Quantitative Methods', href: '/blog?tag=quantitative' },
-          { label: 'Qualitative Methods', href: '/blog?tag=qualitative' },
-          { label: 'Review Literature', href: '/blog?tag=literature-review' },
+          { label: 'Quantitative', href: '/blog?tag=quantitative' },
+          { label: 'Qualitative', href: '/blog?tag=qualitative' },
+          { label: 'Literature Review', href: '/blog?tag=literature-review' },
         ]
       },
       {
-        label: 'Kịch Bản Mẫu (Luận Văn)',
+        label: 'Thesis Masterclass',
         href: '/blog?tag=thesis-script',
         icon: Zap,
-        desc: 'Cầm tay chỉ việc làm luận văn',
+        desc: 'Văn mẫu "mì ăn liền" cho luận văn',
         items: [
-          { label: 'Cấu trúc bài luận', href: '/blog?tag=thesis-structure' },
-          { label: 'Mẫu lời mở đầu', href: '/blog?tag=thesis-intro' },
-          { label: 'Mẫu kết luận', href: '/blog?tag=thesis-conclusion' },
+          { label: 'Thesis Structure', href: '/blog?tag=thesis-structure' },
+          { label: 'Introduction Script', href: '/blog?tag=thesis-intro' },
+          { label: 'Conclusion Script', href: '/blog?tag=thesis-conclusion' },
         ]
       },
     ]
