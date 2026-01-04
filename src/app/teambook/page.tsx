@@ -56,11 +56,13 @@ export default async function ForTeamPage() {
         return keywords.map(k => find(k)).filter(Boolean); // Remove undefined/not found
     };
 
-    {
-        _id: 'manual-foreword',
+    // --- MANUAL INTRO CONTENT ---
+    const introPosts = [
+        {
+            _id: 'manual-foreword',
             title: 'Lời Tựa: Viết cho những ngày chông chênh nhất',
-                slug: { current: 'loi-noi-dau' },
-        readingTime: 5,
+            slug: { current: 'loi-noi-dau' },
+            readingTime: 5,
             body: [
                 {
                     _type: 'block',
@@ -123,8 +125,8 @@ export default async function ForTeamPage() {
                     children: [{ _type: 'span', text: 'Chúc các bạn một ngày làm việc đầy năng lượng (Hai Morning)! \n\n**Lê Phúc Hải**' }]
                 }
             ]
-    },
-    ]
+        }
+    ];
     // --- BRIDGE CONTENT: CHAPTER INTROS ---
     // These help glue the blog posts together into a cohesive book
     const chap1_intro = {
