@@ -2,6 +2,20 @@ import { PortableText, PortableTextComponents } from '@portabletext/react'
 import Image from 'next/image'
 import { urlForImage } from '@/sanity/lib/image'
 
+// Helper to generate IDs
+const slugify = (text: string) => {
+    return text
+        .toString()
+        .toLowerCase()
+        .normalize('NFD') // Split accents
+        .replace(/[\u0300-\u036f]/g, '') // Remove accents
+        .replace(/\s+/g, '-')
+        .replace(/[^\w\-]+/g, '')
+        .replace(/\-\-+/g, '-')
+        .replace(/^-+/, '')
+        .replace(/-+$/, '');
+}
+
 export const portableTextComponents: PortableTextComponents = {
     types: {
         image: ({ value }) => {
@@ -32,18 +46,18 @@ export const portableTextComponents: PortableTextComponents = {
         },
     },
     block: {
-        h1: ({ children }) => (
-            <h1 className="text-4xl font-bold text-slate-900 dark:text-white mt-12 mb-6">
+        h1: ({ children, value }) => (
+            <h1 id={slugify(value.children[0]?.text || '')} className="text-4xl font-bold text-slate-900 dark:text-white mt-12 mb-6 scroll-mt-24">
                 {children}
             </h1>
         ),
-        h2: ({ children }) => (
-            <h2 className="text-3xl font-bold text-slate-900 dark:text-white mt-10 mb-5">
+        h2: ({ children, value }) => (
+            <h2 id={slugify(value.children[0]?.text || '')} className="text-3xl font-bold text-slate-900 dark:text-white mt-10 mb-5 scroll-mt-24">
                 {children}
             </h2>
         ),
-        h3: ({ children }) => (
-            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4">
+        h3: ({ children, value }) => (
+            <h3 id={slugify(value.children[0]?.text || '')} className="text-2xl font-bold text-slate-900 dark:text-white mt-8 mb-4 scroll-mt-24">
                 {children}
             </h3>
         ),

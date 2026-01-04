@@ -44,6 +44,23 @@ import { SeriesControls } from '@/components/blog/SeriesControls'
 // Tags that shouldn't be treated as a Series Identifier
 const IGNORED_SERIES_TAGS = ['Góc nhìn HaiLP', 'Featured', 'Hot', 'Tips', 'Knowledge', 'Deep Dive', 'New']
 
+import { TableOfContents } from '@/components/blog/TableOfContents'
+
+// Helper to extract headings from PortableText
+// Duplicate slugify logic to ensure server-side match
+const slugify = (text: string) => {
+    return text
+        .toString()
+        .toLowerCase()
+        .normalize('NFD')
+        .replace(/[\u0300-\u036f]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/[^\w\-]+/g, '')
+        .replace(/\-\-+/g, '-')
+        .replace(/^-+/, '')
+        .replace(/-+$/, '');
+}
+
 export default async function BlogPostPage({ params }: { params: Promise<{ slug: string }> }) {
     const { slug } = await params
     const post = await sanityFetch<any>({
@@ -54,6 +71,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     if (!post) {
         notFound()
     }
+
+    // Extract Headings for TOC
+    const headings = post.body
+        ?.filter((block: any) => block._type === 'block' && ['h2', 'h3'].includes(block.style))
+        .map((block: any) => ({
+            id: slugify(block.children?.[0]?.text || ''),
+            text: block.children?.[0]?.text || '',
+            level: block.style === 'h2' ? 2 : 3
+        })) || []
+
 
     // Get all posts for related & series logic
     const allPosts = await sanityFetch<any[]>({ query: ALL_POSTS_QUERY })
@@ -85,111 +112,75 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-amber-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
             {/* Hero Section */}
             <article className="pt-32 pb-16">
-                <div className="container mx-auto max-w-4xl px-4">
+                <div className="container mx-auto max-w-7xl px-4">
                     {/* Back Button */}
-                    <Link
-                        href="/blog"
-                        className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-amber-700 dark:hover:text-amber-400 transition-colors mb-8"
-                    >
-                        <ArrowLeft className="w-4 h-4" />
-                        Back to Blog
-                    </Link>
-
-                    {/* Categories */}
-                    <div className="flex flex-wrap gap-2 mb-6">
-                        {post.categories?.map((category: any, index: number) => (
-                            <span
-                                key={category.slug?.current || index}
-                                className="px-3 py-1 rounded-full text-sm font-semibold"
-                                style={{
-                                    backgroundColor: category.color ? `${category.color}20` : '#f1f5f9',
-                                    color: category.color || '#64748b'
-                                }}
-                            >
-                                {category.title}
-                            </span>
-                        ))}
+                    <div className="max-w-4xl mx-auto">
+                        <Link
+                            href="/blog"
+                            className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-amber-700 dark:hover:text-amber-400 transition-colors mb-8"
+                        >
+                            <ArrowLeft className="w-4 h-4" />
+                            Back to Blog
+                        </Link>
                     </div>
 
-                    {/* Title */}
-                    <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-900 dark:text-white mb-6 leading-tight">
-                        {post.title}
-                    </h1>
-
-                    {/* Excerpt */}
-                    {post.excerpt && (
-                        <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
-                            {post.excerpt}
-                        </p>
-                    )}
-
-                    {/* Meta Info */}
-                    <div className="flex flex-wrap items-center gap-6 pb-8 border-b border-slate-200 dark:border-slate-800">
-                        {/* Author */}
-                        <div className="flex items-center gap-3">
-                            {post.author?.image && (
-                                <Image
-                                    src={urlForImage(post.author.image).url()}
-                                    alt={post.author.name}
-                                    width={48}
-                                    height={48}
-                                    className="rounded-full"
-                                />
-                            )}
-                            <div>
-                                <p className="font-semibold text-slate-900 dark:text-white">
-                                    {post.author?.name}
-                                </p>
-                                {post.author?.role && (
-                                    <p className="text-sm text-slate-500 dark:text-slate-400">
-                                        {post.author.role}
-                                    </p>
-                                )}
-                            </div>
+                    {/* Blog Header (Centered) */}
+                    <div className="max-w-4xl mx-auto">
+                        {/* Categories */}
+                        <div className="flex flex-wrap gap-2 mb-6">
+                            {post.categories?.map((category: any, index: number) => (
+                                <span
+                                    key={index}
+                                    className="px-3 py-1 bg-amber-100 dark:bg-amber-900/30 text-amber-800 dark:text-amber-300 rounded-full text-xs font-semibold tracking-wide uppercase"
+                                >
+                                    {category.title}
+                                </span>
+                            ))}
                         </div>
 
-                        {/* Date & Reading Time */}
-                        <div className="flex items-center gap-4 text-sm text-slate-500 dark:text-slate-400">
-                            <span className="flex items-center gap-1">
+                        {/* Title */}
+                        <h1 className="text-3xl md:text-5xl font-extrabold text-slate-900 dark:text-white mb-6 leading-tight">
+                            {post.title}
+                        </h1>
+
+                        {/* Excerpt */}
+                        {post.excerpt && (
+                            <p className="text-xl text-slate-600 dark:text-slate-400 mb-8 leading-relaxed">
+                                {post.excerpt}
+                            </p>
+                        )}
+
+                        {/* Meta */}
+                        <div className="flex flex-wrap items-center gap-6 text-slate-500 dark:text-slate-400 text-sm mb-12 border-b border-slate-200 dark:border-slate-800 pb-8">
+                            <div className="flex items-center gap-2">
                                 <Calendar className="w-4 h-4" />
-                                {new Date(post.publishedAt).toLocaleDateString('en-US', {
-                                    year: 'numeric',
-                                    month: 'long',
-                                    day: 'numeric'
-                                })}
-                            </span>
-                            <span className="flex items-center gap-1">
+                                <time dateTime={post.publishedAt}>
+                                    {new Date(post.publishedAt).toLocaleDateString('vi-VN', {
+                                        year: 'numeric',
+                                        month: 'long',
+                                        day: 'numeric'
+                                    })}
+                                </time>
+                            </div>
+                            <div className="flex items-center gap-2">
                                 <Clock className="w-4 h-4" />
-                                {post.readingTime} min read
-                            </span>
-                        </div>
-
-                        {/* Share Buttons */}
-                        <div className="ml-auto flex items-center gap-2">
-                            <Button variant="outline" size="sm" className="rounded-full">
-                                <Share2 className="w-4 h-4 mr-2" />
-                                Share
-                            </Button>
-                        </div>
-                    </div>
-
-                    {/* Featured Image */}
-                    {post.mainImage && (
-                        <div className="my-12 rounded-2xl overflow-hidden relative group">
-                            <Image
-                                src={urlForImage(post.mainImage).url()}
-                                alt={post.mainImage.alt || post.title}
-                                width={1200}
-                                height={675}
-                                className="w-full h-auto"
-                                priority
-                            />
-                            {/* Watermark Overlay */}
-                            <div className="absolute bottom-4 right-4 bg-black/50 backdrop-blur-md px-3 py-1.5 rounded-md text-xs text-white/90 font-semibold select-none pointer-events-none tracking-wide">
-                                lehai.edu.vn
+                                <span>{post.readingTime} min read</span>
                             </div>
                         </div>
-                    )}
+
+                        {/* Feature Image */}
+                        {post.mainImage && (
+                            <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-2xl mb-16 group">
+                                <Image
+                                    src={urlForImage(post.mainImage).url()}
+                                    alt={post.title}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                    priority
+                                />
+                            </div>
+                        )}
+                    </div>
 
                     {/* JSON-LD Schema for SEO */}
                     <script
@@ -223,22 +214,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                             }),
                         }}
                     />
-
-                    {/* Series Navigator */}
-                    {seriesTag && seriesPosts.length > 1 && (
-                        <SeriesNavigator
-                            currentPostId={post._id}
-                            seriesTag={seriesTag}
-                            posts={seriesPosts}
-                        />
-                    )}
-
-                    <div className="prose prose-lg dark:prose-invert max-w-none">
-                        <PortableText
-                            value={post.body}
-                            components={portableTextComponents}
-                        />
-                    </div>
 
                     {/* Series Controls (Next/Prev) */}
                     {seriesTag && seriesPosts.length > 1 && (
