@@ -81,127 +81,88 @@ export default async function ForTeamPage() {
     // MANUAL INTRO CONTENT (Simulated Posts)
     const introPosts = [
         {
+            _id: 'manual-foreword',
+            title: 'Lời Mở Đầu: Gửi những người em, những người đồng đội',
+            slug: { current: 'loi-noi-dau' },
+            readingTime: 6,
+            body: [
+                {
+                    _type: 'block',
+                    style: 'normal',
+                    children: [{ _type: 'span', text: 'Chào các bạn,' }]
+                },
+                {
+                    _type: 'block',
+                    style: 'normal',
+                    children: [{ _type: 'span', text: 'Tôi viết những dòng này không phải với tư cách một người Sếp, một Giám đốc hay một Tiến sĩ. Tôi viết với tâm thế của một người anh đi trước, người đã từng chật vật tìm đường giống như các bạn bây giờ.' }]
+                },
+                {
+                    _type: 'block',
+                    style: 'normal',
+                    children: [{ _type: 'span', text: '15 năm trước, tôi cũng là một chàng sinh viên mới ra trường, đầy nhiệt huyết nhưng cũng đầy hoang mang. Tôi đã từng bị từ chối, từng thất bại, từng làm sai báo cáo và bị sếp mắng đến mức muốn bỏ nghề. Những đêm thức trắng làm thầu, những chuyến công tác tỉnh xa nhà hàng tháng trời... tất cả những "vết sẹo" đó đã hun đúc nên tôi của ngày hôm nay.' }]
+                },
+                {
+                    _type: 'block',
+                    style: 'blockquote',
+                    children: [{ _type: 'span', text: '"Thành công không phải là đích đến, mà là những bài học chúng ta nhặt được trên đường đi."' }]
+                },
+                {
+                    _type: 'block',
+                    style: 'normal',
+                    children: [{ _type: 'span', text: 'Cuốn sách nhỏ này không phải là giáo trình. Nó không chứa đựng những lý thuyết đao to búa lớn. Nó là tập hợp những ghi chép chân thực nhất, những "bí kíp" sinh tồn mà tôi ước gì có ai đó đã nói cho tôi nghe khi tôi 20 tuổi.\n\nTôi cùng đội ngũ biên tập đã dành rất nhiều tâm huyết để hệ thống hóa nó lại, không phải để dạy đời, mà để **chia sẻ**. Để các bạn không phải mất 10 năm dò đường như tôi. Để các bạn có thể đi nhanh hơn, vững vàng hơn.\n\nHãy coi đây là món quà tôi dành tặng cho Team. Đừng đọc nó như sách giáo khoa. Hãy đọc nó như đang ngồi cà phê với tôi, nghe tôi kể chuyện nghề.\n\nMong rằng các bạn sẽ tìm thấy chính mình đâu đó trong những trang sách này.' }]
+                },
+                {
+                    _type: 'block',
+                    style: 'normal',
+                    children: [{ _type: 'span', text: 'Thân mến,\nAnh Hải.' }]
+                }
+            ]
+        },
+        {
             _id: 'manual-authors',
-            title: 'Giới Thiệu Tác Giả',
+            title: 'Người Đồng Hành Cùng Bạn',
             slug: { current: 'gioi-thieu-tac-gia' },
             readingTime: 4,
             body: [
                 {
                     _type: 'block',
                     style: 'h2',
-                    children: [{ _type: 'span', text: '1. Tác giả chính: Lê Phúc Hải (Mr.)' }]
+                    children: [{ _type: 'span', text: '1. Lê Phúc Hải - Người kể chuyện Data' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Strategic Leadership & Digital Transformation Expert' }]
-                },
-                {
-                    _type: 'block',
-                    style: 'blockquote',
-                    children: [{ _type: 'span', text: '"Kinh nghiệm không phải là những gì bạn đã trải qua, mà là những gì bạn đúc kết được từ nó."' }]
+                    children: [{ _type: 'span', text: 'Nhiều người biết đến tôi qua các chức danh hào nhoáng: Giám đốc Phát triển Kinh doanh Quốc gia, Quản lý Thương mại Cấp cao... Nhưng sâu thẳm, tôi chỉ xem mình là một người đam mê giải quyết vấn đề.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Với hơn 13 năm lăn lộn trên "chiến trường" kinh doanh, từ vị trí ERP Consultant tại FPT Software đến các vị trí quản lý cấp cao (Sales Trainer, Commercial Excellence, Training Manager) tại những tập đoàn đa quốc gia hàng đầu như Coca-Cola, Mondelez Kinh Đô, Japfa Comfeed và Nova Group. Anh Hải sở hữu góc nhìn đa chiều: vừa am hiểu tường tận kỹ thuật hệ thống (DMS, ERP), vừa thấu hiểu sâu sắc tâm lý con người và nghệ thuật quản trị bán hàng.' }]
+                    children: [{ _type: 'span', text: 'Từ những ngày đầu làm kỹ thuật tại FPT Software, tôi đã luôn trăn trở: "Làm sao để công nghệ thực sự phục vụ con người, chứ không phải làm khổ con người?". Câu hỏi đó đã dẫn dắt tôi đi qua Coca-Cola, Mondelez, Japfa, Nova Group... Ở mỗi nơi, tôi đều học được những bài học vô giá về Con người và Hệ thống.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    listItem: 'bullet',
-                    children: [{ _type: 'span', text: 'Học vấn: Đang nghiên cứu Tiến sĩ Quản trị Kinh doanh (DBA) về "Green Marketing". Thạc sĩ QTKD (MBA).' }]
-                },
-                {
-                    _type: 'block',
-                    style: 'normal',
-                    listItem: 'bullet',
-                    children: [{ _type: 'span', text: 'Giảng dạy: Giảng viên Doanh nhân tại ĐH Tôn Đức Thắng (Khoa Marketing) và ĐH FPT (Khoa QTKD), trực tiếp hướng dẫn sinh viên và Startup.' }]
-                },
-                {
-                    _type: 'block',
-                    style: 'normal',
-                    listItem: 'bullet',
-                    children: [{ _type: 'span', text: 'Dự án tiêu biểu: Triển khai DMS cho Pepsico, Trung Nguyên, BP Castrol; Xây dựng lộ trình đào tạo Sales Force cho Mondelez.' }]
+                    children: [{ _type: 'span', text: 'Hiện tại, bên cạnh công việc điều hành, tôi dành phần lớn thời gian cho đam mê lớn nhất: **Giáo dục**. Tại giảng đường ĐH Tôn Đức Thắng và ĐH FPT, tôi không dạy sinh viên học thuộc lòng. Tôi dạy các bạn tư duy phản biện, dạy cách đối mặt với thất bại và khát khao vươn lên.' }]
                 },
                 {
                     _type: 'block',
                     style: 'h2',
-                    children: [{ _type: 'span', text: '2. Trợ lý khoa học: TS. Carmen Châu (Ms.)' }]
+                    children: [{ _type: 'span', text: '2. TS. Carmen Châu - Người bảo chứng Khoa học' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Academic Advisor & Account Manager' }]
-                },
-                {
-                    _type: 'block',
-                    style: 'blockquote',
-                    children: [{ _type: 'span', text: '"Dữ liệu biết nói, nếu chúng ta biết lắng nghe."' }]
+                    children: [{ _type: 'span', text: 'Đồng hành cùng tôi trong dự án này là Tiến sĩ Carmen Châu. Cô không chỉ là một nhà nghiên cứu hàn lâm sắc sảo, mà còn là một "chiến binh" Sales & Marketing thực thụ.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Tiến sĩ Carmen Châu (Nguyễn Lê Thị Ngọc Châu) đóng vai trò là Cố vấn Khoa học, đảm bảo tính chính xác và chặt chẽ về mặt học thuật cho các mô hình quản trị trong cuốn sách này. Cô có hơn 10 năm kinh nghiệm thực chiến trong lĩnh vực Marketing, Sales và Quản lý Khách hàng (Account Management).' }]
+                    children: [{ _type: 'span', text: 'Carmen đã từng tự mình gây dựng doanh số tăng trưởng 1200% cho OKXE, từng lăn lộn với các dự án Activation cho Aeon Mall, Guardian. Cô hiểu rõ áp lực của KPI, của doanh số.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    listItem: 'bullet',
-                    children: [{ _type: 'span', text: 'Kinh nghiệm: Từng giữ vị trí Key Account Manager, Business Development Manager tại các công ty lớn như CommerceX, OKXE Vietnam (Tăng trưởng 1265% e-contracts), Kids Plaza.' }]
-                },
-                {
-                    _type: 'block',
-                    style: 'normal',
-                    listItem: 'bullet',
-                    children: [{ _type: 'span', text: 'Thế mạnh: Xây dựng chiến lược khách hàng trọng điểm (Key Accounts), Phân tích dữ liệu người dùng (Customer Insight) và Trade Marketing.' }]
-                },
-                {
-                    _type: 'block',
-                    style: 'normal',
-                    listItem: 'bullet',
-                    children: [{ _type: 'span', text: 'Vai trò: Phản biện khoa học, chuẩn hóa các khái niệm học thuật và xây dựng hệ thống case study thực tế.' }]
-                }
-            ]
-        },
-        {
-            _id: 'manual-foreword',
-            title: 'Lời Nói Đầu: Tại sao cuốn sách này ra đời?',
-            slug: { current: 'loi-noi-dau' },
-            readingTime: 5,
-            body: [
-                {
-                    _type: 'block',
-                    style: 'h3',
-                    children: [{ _type: 'span', text: 'Gửi đội ngũ kế thừa của Lehai Education,' }]
-                },
-                {
-                    _type: 'block',
-                    style: 'normal',
-                    children: [{ _type: 'span', text: 'Cuốn sách bạn đang cầm trên tay (hoặc đang lướt trên màn hình) không phải là giáo trình đại học, càng không phải là tuyển tập những lời khuyên sáo rỗng thường thấy trên LinkedIn.\n\nĐây là những "vết sẹo".\n\nLà tổng hợp 15 năm lăn lộn của tôi từ một gã thực tập sinh (Intern) ngáo ngơ, bị sếp mắng xối xả vì không biết dùng Excel, cho đến khi ngồi vào ghế Giám đốc Điều hành (CEO/Director) của những tập đoàn nghìn tỷ.\n\nTôi viết nó không phải để khoe khoang. Tôi viết để các bạn - những người đi sau - không phải vấp lại những cái hố mà tôi đã từng ngã. Tôi muốn các bạn đi nhanh hơn tôi, xa hơn tôi.' }]
-                },
-                {
-                    _type: 'block',
-                    style: 'normal',
-                    children: [{ _type: 'span', text: 'Cuốn sách này chia làm 4 phần, tương ứng với 4 giai đoạn phát triển của một nhân sự cấp cao:\n\n1. Mindset (Tư duy): Sửa cái đầu trước khi sửa cái tay.\n2. Toolkit (Công cụ): Vũ khí của người làm Data & Research.\n3. Strategy (Chiến lược): Hiểu cuộc chơi kinh doanh.\n4. Future (Tương lai): Đón đầu công nghệ AI.' }]
-                }
-            ]
-        },
-        {
-            _id: 'manual-preface',
-            title: 'Lời Tựa: Hướng dẫn sử dụng "Vũ Khi"',
-            slug: { current: 'loi-tua' },
-            readingTime: 3,
-            body: [
-                {
-                    _type: 'block',
-                    style: 'normal',
-                    children: [{ _type: 'span', text: 'Đừng đọc cuốn sách này một mạch từ đầu đến cuối.' }]
-                },
-                {
-                    _type: 'block',
-                    style: 'normal',
-                    children: [{ _type: 'span', text: 'Hãy coi nó là một cuốn từ điển, một hộp công cụ (Toolkit).\n\n- Khi bạn thấy mông lung về sự nghiệp? Hãy đọc Phần I.\n- Khi sếp bắt làm báo cáo phân tích dữ liệu? Hãy mở ngay Phần II.\n- Khi phải lập kế hoạch kinh doanh năm tới? Phần III là dành cho bạn.\n\nHãy đọc, ngẫm, và quan trọng nhất: THỰC HÀNH.\n\nChúc các bạn chân cứng đá mềm.\n\nLe Phuc Hai.' }]
+                    children: [{ _type: 'span', text: 'Sự kết hợp giữa tư duy thực chiến của tôi và sự chặt chẽ khoa học của Carmen chính là linh hồn của cuốn sách này. Chúng tôi muốn mang đến cho các bạn những kiến thức vừa sâu sắc về mặt học thuật, vừa sát sườn với thực tế doanh nghiệp.' }]
                 }
             ]
         }
