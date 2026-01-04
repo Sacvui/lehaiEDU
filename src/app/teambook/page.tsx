@@ -60,54 +60,64 @@ export default async function ForTeamPage() {
     const introPosts = [
         {
             _id: 'manual-foreword',
-            title: 'Lời Tựa: Tấm Bản Đồ Cho Người Làm Nghiên Cứu',
+            title: 'Lời Tựa: Viết cho những ngày chông chênh nhất',
             slug: { current: 'loi-noi-dau' },
             readingTime: 5,
             body: [
                 {
                     _type: 'block',
                     style: 'h3',
-                    children: [{ _type: 'span', text: 'Kính gửi Quý độc giả,' }]
+                    children: [{ _type: 'span', text: 'Chào các bạn, Hải đây.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Trong hành trình 15 năm làm nghề và giảng dạy, tôi đã chứng kiến vô số bạn trẻ đầy nhiệt huyết nhưng lại lạc lối trong ma trận của thông tin và công cụ. Các bạn giỏi kỹ năng, nhưng thiếu tư duy nền tảng. Hoặc ngược lại, các bạn nắm vững lý thuyết nhưng lại lúng túng khi đối mặt với dữ liệu thực tế.' }]
+                    children: [{ _type: 'span', text: 'Nếu bạn đang cầm trên tay (hoặc lướt trên màn hình) cuốn cẩm nang này, có lẽ bạn đang tìm kiếm một "tấm bản đồ" cho sự nghiệp của mình. Tôi cũng từng như vậy. Từng là một Intern "ngáo ngơ", từng bị sếp mắng vì không biết vẽ chart, và từng hoang  mang không biết Research là cái quái gì.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Cuốn sách "Intern to Researcher" này không đơn thuần là một tuyển tập các bài viết blog. Nó là nỗ lực của tôi nhằm hệ thống hóa lại con đường phát triển năng lực nghiên cứu một cách bài bản nhất.' }]
+                    children: [{ _type: 'span', text: '"Intern to Researcher" không phải là giáo trình khô khan. Nó là tập hợp những gì "xương máu" nhất tôi đúc kết được sau 15 năm chinh chiến. Tôi viết nó với giọng văn của một người anh đi trước, kể lại cho đàn em nghe về cách để sống sót và vươn lên.' }]
                 },
                 {
                     _type: 'block',
                     style: 'h4',
-                    children: [{ _type: 'span', text: 'Cấu trúc cuốn sách được biên tập theo dòng chảy tư duy logic:' }]
+                    children: [{ _type: 'span', text: 'Lộ trình này dành cho ai?' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: '**1. Chương 1: Tư Duy Nền Tảng (The Mindset)** - Trước khi học cách chạy mô hình hay phân tích số liệu, bạn cần học cách đặt câu hỏi. Một người làm nghiên cứu giỏi không phải là người có câu trả lời hay nhất, mà là người biết đặt câu hỏi đúng ngay từ đầu.' }]
+                    children: [{ _type: 'span', text: 'Dành cho những bạn không chấp nhận sự hời hợt. Dành cho những ai muốn làm việc dựa trên bằng chứng (Evidence-based) chứ không phải cảm tính.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: '**2. Chương 2 & 3: Vũ Khí & Chiến Lược (The Toolset & Skillset)** - Khi tư duy đã thông suốt, bạn cần những vũ khí sắc bén. Tại đây, chúng ta sẽ làm chủ R, Python và các mô hình định lượng để biến dữ liệu thô thành những "insight" đắt giá.' }]
+                    children: [{ _type: 'span', text: 'Chúng ta sẽ đi cùng nhau qua 4 chặng:' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: '**3. Chương 4: Tầm Nhìn (The Vision)** - Cuối cùng, nghiên cứu để làm gì? Để phục vụ chiến lược, để ra quyết định và để kiến tạo giá trị. Đó là đích đến cuối cùng của một Researcher chuyên nghiệp.' }]
+                    children: [{ _type: 'span', text: '👉 **Chương 1 (Mindset):** Xây lại tư duy. Bỏ ngay cái kiểu "em tưởng", "em nghĩ". Làm Research là phải nói có sách, mách có chứng.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Mời bạn lật giở từng trang, không phải để đọc nhanh, mà để suy ngẫm và thực hành.' }]
+                    children: [{ _type: 'span', text: '👉 **Chương 2 (Skillset):** Trang bị "súng đạn". R, Python, SPSS... không đáng sợ như bạn nghĩ đâu. Tôi làm được, bạn cũng làm được.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Trân trọng,\n**Lê Phúc Hải**' }]
+                    children: [{ _type: 'span', text: '👉 **Chương 3 & 4 (Strategy):** Dùng dữ liệu để ra quyết định sống còn. Đây là lúc bạn chuyển mình từ "Thợ làm số" thành "Nhà tư vấn".' }]
+                },
+                {
+                    _type: 'block',
+                    style: 'normal',
+                    children: [{ _type: 'span', text: 'Hành trình vạn dặm bắt đầu từ bước chân đầu tiên. Hãy lật trang tiếp theo và bắt chiến ngay thôi!' }]
+                },
+                {
+                    _type: 'block',
+                    style: 'normal',
+                    children: [{ _type: 'span', text: 'Chúc các bạn một ngày làm việc đầy năng lượng (Hai Morning)! \n\n**Lê Phúc Hải**' }]
                 }
             ]
         },
