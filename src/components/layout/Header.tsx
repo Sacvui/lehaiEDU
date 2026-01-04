@@ -31,7 +31,6 @@ const navItems: NavItem[] = [
   { label: 'Solutions', href: '#solutions', icon: Rocket },
   { label: 'Books', href: '/books', icon: BookOpen },
   {
-  {
     label: 'Blog',
     href: '/blog',
     icon: BookOpen, // Changed icon to match "Blog"
