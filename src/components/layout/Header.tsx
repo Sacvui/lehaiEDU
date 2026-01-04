@@ -31,15 +31,16 @@ const navItems: NavItem[] = [
   { label: 'Solutions', href: '#solutions', icon: Rocket },
   { label: 'Books', href: '/books', icon: BookOpen },
   {
-    label: 'Learning Hub',
+  {
+    label: 'Blog',
     href: '/blog',
-    icon: TrendingUp,
+    icon: BookOpen, // Changed icon to match "Blog"
     submenu: [
       {
-        label: 'Research Lab',
+        label: 'Learning Hub', // Was "Research Lab"
         href: '/blog?group=research',
         icon: GraduationCap,
-        desc: 'Hành trình từ "nai vàng" thành "cáo già" học thuật',
+        desc: 'Nghiên cứu khoa học & Phương pháp luận (R, Python)',
         items: [
           { label: 'NCS101: PhD Mindset', href: '/blog?tag=NCS101' },
           { label: 'R101: Data Analysis', href: '/blog?tag=R101' },
@@ -66,6 +67,16 @@ const navItems: NavItem[] = [
         items: [
           { label: 'Digital Transformation', href: '/blog?category=digital-transformation' },
           { label: 'AI & Technology', href: '/blog?category=ai-technology' },
+          // Removed 'Real Case Studies' from here to make it a standalone section if needed, or keep it.
+          // User asked for "Case Research" as a main section.
+        ]
+      },
+      {
+        label: 'Case Research', // New standalone section requested by user
+        href: '/blog?category=case-studies',
+        icon: Microscope, // Using Microscope for "Research/Case" feel
+        desc: 'Các tình huống quản trị thực tế & Bài học',
+        items: [
           { label: 'Real Case Studies', href: '/blog?category=case-studies' },
         ]
       },
