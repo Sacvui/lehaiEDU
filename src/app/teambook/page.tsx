@@ -128,52 +128,66 @@ export default async function ForTeamPage() {
         }
     ];
     // --- BRIDGE CONTENT: CHAPTER INTROS ---
-    // These help glue the blog posts together into a cohesive book
+    // Editorial Note: These intros serve as the 'glue' (Narrative Bridge)
+
     const chap1_intro = {
         _id: 'chap1-intro',
-        title: 'Dẫn nhập Chương 1: Tại sao phải có Tư duy trước?',
+        title: 'Lời dẫn Chương 1: Đừng bắt đầu bằng Dữ liệu',
         slug: { current: 'chap1-intro' },
-        readingTime: 3,
+        readingTime: 4,
         body: [
-            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Đừng vội lao vào chạy Tool!' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Sai lầm lớn nhất của các bạn trẻ (và cả tôi ngày xưa) là cứ thấy dữ liệu là lao vào vẽ biểu đồ. Hậu quả là vẽ ra những thứ "vô hồn", đúng về mặt kỹ thuật nhưng sai về mặt bản chất.' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Chương này sẽ giúp bạn "thắng lại" một nhịp. Chúng ta sẽ cùng nhau học cách đặt câu hỏi nghiên cứu trúng đích, cách đọc tài liệu nhanh và hiệu quả, cũng như rèn luyện tư duy phản biện (Critical Thinking) trước khi bắt tay vào xử lý bất kỳ con số nào. Hãy bắt đầu bằng việc xác định lại tâm thế của một người làm nghiên cứu.' }] }
+            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Tư duy đi trước, Công cụ theo sau' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Sai lầm kinh điển của người làm dữ liệu non trẻ là nôn nóng muốn nhảy vào "chạy tool" ngay. Nhưng Dữ liệu (Data) chỉ là nguyên liệu. Tư duy (Mindset) mới là công thức nấu ăn.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Để tránh việc tạo ra những báo cáo "rác" (Garbage In, Garbage Out), chương này sẽ giúp bạn set-up lại bộ não:' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '1. **NCS101 - Bài 1 & 2:** Chúng ta học cách tìm vấn đề. Một câu hỏi nghiên cứu (Research Question) tồi sẽ dẫn đến toàn bộ dự án vứt đi.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '2. **NCS101 - Bài 3:** Học kỹ năng đọc tài liệu (Literature Review). Đừng phát minh lại cái bánh xe, hãy xem thế giới họ đã làm gì.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '3. **NCS101 - Bài 10:** Cái tâm của người làm nghiên cứu (Ethics). Trung thực với số liệu là yêu cầu tối thượng.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Giữ cái đầu lạnh, và bắt đầu thôi.' }] }
         ]
     };
 
     const chap2_intro = {
         _id: 'chap2-intro',
-        title: 'Dẫn nhập Chương 2: Làm chủ Vũ khí trong tay',
+        title: 'Lời dẫn Chương 2: Làm chủ Vũ khí',
         slug: { current: 'chap2-intro' },
-        readingTime: 3,
+        readingTime: 4,
         body: [
-            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Từ Tư duy đến Hành động' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Khi tư duy đã thông suốt, bạn cần những công cụ đủ mạnh để hiện thực hóa ý tưởng. Excel là tốt, nhưng chưa đủ. Để đi xa hơn trong thế giới dữ liệu lớn, bạn cần làm chủ R và Python.' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Đừng sợ code. Code chỉ là ngôn ngữ để bạn giao tiếp với máy tính. Chương này tôi sẽ cầm tay chỉ việc, giúp bạn đi từ con số 0 đến lúc tự tay chạy được những dòng code phân tích đầu tiên.' }] }
+            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Excel là không đủ.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Khi bài toán trở nên phức tạp, bạn cần những vũ khí hạng nặng hơn. Đừng lo lắng nếu bạn chưa từng code. R và Python sinh ra là để phục vụ phân tích, không phải để làm khó bạn.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Lộ trình trang bị vũ khí của chúng ta như sau:' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '1. **Nhập môn (R101/Python101 - Bài 1):** Cài đặt môi trường. Vượt qua nỗi sợ "màn hình đen".' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '2. **Làm sạch (Bài 2):** 80% thời gian của bạn sẽ dành cho việc "dọn rác" dữ liệu. Hãy học cách làm nó thật nhanh.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '3. **Trực quan hóa (Bài 3):** Biến con số thành hình ảnh biết nói. Sếp của bạn không có thời gian đọc bảng số liệu đâu.' }] }
         ]
     };
 
     const chap3_intro = {
         _id: 'chap3-intro',
-        title: 'Dẫn nhập Chương 3: Phân tích để ra Chiến lược',
+        title: 'Lời dẫn Chương 3: Phân tích & Ra quyết định',
         slug: { current: 'chap3-intro' },
-        readingTime: 3,
+        readingTime: 4,
         body: [
-            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Số liệu biết nói' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Có tư duy, có công cụ, giờ là lúc "nấu cỗ". Dữ liệu thô (Raw Data) tựa như nguyên liệu tươi sống ở ngoài chợ. Nhiệm vụ của bạn là chế biến nó thành món ăn ngon (Insight) để phục vụ thực khách (Sếp/Khách hàng).' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Trong phần này, chúng ta sẽ đi sâu vào các kỹ thuật phân tích cốt lõi như Hồi quy, Phân khúc khách hàng, và Kiểm định A/B để tìm ra câu trả lời cho các bài toán kinh doanh hóc búa.' }] }
+            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Để số liệu kể chuyện' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Đây là phần "thịt" của cuốn sách. Chúng ta sẽ áp dụng Tư duy (Chương 1) và Công cụ (Chương 2) để giải quyết các bài toán Business cụ thể.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '- Muốn biết yếu tố nào tác động đến Doanh thu? -> Đọc bài **Hồi quy (Regression)**.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '- Muốn biết khách hàng của mình là ai? -> Đọc bài **Phân khúc (Clustering)**.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '- Muốn biết chiến dịch A hay B tốt hơn? -> Đọc bài **Kiểm định giả thuyết (Hypothesis Testing)**.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Đừng học vẹt công thức. Hãy hiểu ý nghĩa kinh doanh đằng sau mỗi con số p-value.' }] }
         ]
     };
 
     const chap4_intro = {
         _id: 'chap4-intro',
-        title: 'Dẫn nhập Chương 4: Tầm nhìn C-Level',
+        title: 'Lời dẫn Chương 4: Tầm nhìn Lãnh đạo',
         slug: { current: 'chap4-intro' },
-        readingTime: 3,
+        readingTime: 4,
         body: [
-            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Vượt lên trên những con số' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Làm thợ thì dễ, làm thầy mới khó. Để vươn lên vị trí C-Level (Giám đốc), bạn không thể cứ cắm mặt vào máy tính chạy mô hình mãi được. Bạn cần hiểu về bức tranh lớn hơn: Chiến lược công ty, Xu hướng công nghệ (AI), và Quản trị con người.' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Chương cuối này là những lời nhắn nhủ tâm huyết nhất của tôi dành cho thế hệ lãnh đạo kế cận, những người sẽ cầm lái con thuyền doanh nghiệp trong tương lai.' }] }
+            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Từ Specialist đến Strategist' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Bạn đã giỏi chuyên môn, tốt. Nhưng để ngồi vào ghế C-Level, bạn cần thoát khỏi cái hố sâu của chuyên môn hẹp.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Chương cuối này là những cuộc thảo luận về bức tranh lớn:' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '- **BI vs AI:** Công nghệ đang thay đổi cuộc chơi như thế nào? Bạn sẽ điều khiển AI hay để AI thay thế bạn?' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '- **Project Next:** Tương lai của ngành dữ liệu và con đường sự nghiệp của bạn.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Khép lại cuốn sách, nhưng mở ra sự nghiệp của bạn.' }] }
         ]
     };
 
