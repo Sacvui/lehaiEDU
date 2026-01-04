@@ -198,8 +198,8 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                                                     className={cn(
                                                         "text-left w-full text-sm py-1.5 px-2 rounded-md transition-all line-clamp-1",
                                                         activePostId === post._id
-                                                            ? "bg-amber-100 text-amber-900 font-semibold"
-                                                            : "text-slate-600 hover:text-slate-900 hover:bg-white/50"
+                                                            ? "bg-amber-100 text-amber-900 font-semibold text-base"
+                                                            : "text-slate-800 font-medium hover:text-black hover:bg-white/50"
                                                     )}
                                                 >
                                                     {post.title}
@@ -214,8 +214,8 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                 </div>
 
                 <div className="p-4 border-t border-[#e5e0d5] bg-[#ece8df]">
-                    <button onClick={() => setIsReading(false)} className="flex items-center gap-2 text-sm text-slate-600 hover:text-amber-700 font-sans font-medium">
-                        <ArrowLeft size={16} /> Quit Request
+                    <button onClick={() => setIsReading(false)} className="flex items-center gap-2 text-sm text-slate-800 hover:text-amber-700 font-sans font-bold uppercase tracking-wider">
+                        <ArrowLeft size={16} /> Quay lại trang bìa
                     </button>
                 </div>
             </aside>
@@ -228,7 +228,7 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                 {activePost ? (
                     <article className="max-w-3xl mx-auto px-5 py-20 md:py-24">
                         {/* Paper Texture Overlay */}
-                        <div className="fixed inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-30 pointer-events-none mix-blend-multiply"></div>
+                        <div className="fixed inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-20 pointer-events-none mix-blend-multiply"></div>
 
                         <div className="mb-10 text-center">
                             <span className="text-amber-700 font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
@@ -255,7 +255,7 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                             </div>
                         )}
 
-                        <div className="prose prose-lg prose-slate prose-p:text-slate-800 prose-p:leading-loose prose-p:font-serif prose-headings:font-sans prose-headings:font-bold prose-headings:text-slate-900 prose-a:text-amber-700 max-w-none">
+                        <div className="prose prose-lg prose-slate prose-p:text-slate-900 prose-p:leading-loose prose-p:font-serif prose-headings:font-sans prose-headings:font-bold prose-headings:text-black prose-li:text-slate-900 prose-strong:text-black prose-a:text-amber-700 max-w-none">
                             <PortableText value={activePost.body} components={portableTextComponents} />
                         </div>
 
