@@ -241,7 +241,7 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                             <div className="flex items-center justify-center gap-4 text-slate-700 italic text-sm font-serif font-medium">
                                 <span>{Math.ceil(activePost.readingTime || 5)} phút đọc</span>
                                 <span>•</span>
-                                <span>Le Phuc Hai</span>
+                                <span>Hải Rong Chơi</span>
                             </div>
                         </div>
 
