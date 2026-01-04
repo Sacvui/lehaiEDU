@@ -10,6 +10,14 @@ import { cn } from '@/lib/utils';
 // Re-use existing components
 import { portableTextComponents } from '@/components/PortableTextComponents';
 
+import { Merriweather } from 'next/font/google'; // Added at top
+
+const merriweather = Merriweather({
+    subsets: ['vietnamese'],
+    weight: ['300', '400', '700', '900'],
+    display: 'swap',
+});
+
 interface BookPost {
     _id: string;
     title: string;
@@ -138,15 +146,6 @@ export default function BookReader({ chapters }: BookReaderProps) {
         );
     }
 
-    import { Merriweather } from 'next/font/google';
-
-    const merriweather = Merriweather({
-        subsets: ['vietnamese'],
-        weight: ['300', '400', '700', '900'],
-        display: 'swap',
-    });
-
-    // ... inside component ...
     // READER VIEW
     return (
         <div className={cn("min-h-screen bg-[#fdfbf7] flex relative", merriweather.className)}>
