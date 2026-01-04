@@ -66,22 +66,58 @@ const SERIES_CONFIG = [
 ];
 
 export default function BlogClient({ posts, categories }: BlogClientProps) {
+    const router = useRouter();
     const searchParams = useSearchParams();
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
     const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
-    // Initialize from URL
+    // Initialize from URL AND Sync on Change
     useEffect(() => {
         const categoryParam = searchParams.get('category');
         const tagParam = searchParams.get('tag');
         const groupParam = searchParams.get('group');
 
-        if (categoryParam) setSelectedCategory(categoryParam);
-        if (tagParam) setSelectedTag(tagParam);
-        if (groupParam) setSelectedCategory(groupParam); // Map group to selectedCategory logic for simplicity
+        // Always sync state with URL (including reset to null)
+        if (groupParam) {
+            setSelectedCategory(groupParam);
+        } else if (categoryParam) {
+            setSelectedCategory(categoryParam);
+        } else {
+            setSelectedCategory(null);
+        }
+
+        setSelectedTag(tagParam || null);
 
     }, [searchParams]);
+
+    // Update URL when filtering (Optional but good for UX, but let's rely on Link from Header first).
+    // The user issue is clicking 'Blog' (Link to /blog) doesn't reset. The above useEffect fix solves that.
+
+    const updateFilterResult = (key: string | null, type: 'category' | 'tag' | 'group' = 'category') => {
+        // Build new URL
+        const params = new URLSearchParams(searchParams.toString());
+
+        // Clear existing compatible filters
+        if (type === 'group' || type === 'category') {
+            params.delete('group');
+            params.delete('category');
+            if (key) params.set(type === 'group' ? 'group' : 'category', key);
+        }
+
+        if (type === 'tag') {
+            if (key) params.set('tag', key);
+            else params.delete('tag');
+        }
+
+        // Push to URL - this triggers useEffect above
+        router.push(`/blog?${params.toString()}`, { scroll: false });
+    };
+
+    const clearFilters = () => {
+        setSearchQuery('');
+        router.push('/blog'); // Reset URL to clean /blog
+    };
 
     // Filter posts
     const filteredPosts = useMemo(() => {
@@ -210,10 +246,7 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                             {Object.keys(CATEGORY_GROUPS).map((groupKey) => (
                                 <button
                                     key={groupKey}
-                                    onClick={() => {
-                                        setSelectedCategory(groupKey);
-                                        setSelectedTag(null);
-                                    }}
+                                    onClick={() => router.push(`/blog?group=${groupKey}`, { scroll: false })}
                                     className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedCategory === groupKey
                                         ? 'bg-blue-600 text-white shadow-lg'
                                         : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700'
@@ -224,10 +257,7 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                             ))}
                             {/* Specific "General Research" Quick Filter */}
                             <button
-                                onClick={() => {
-                                    setSelectedCategory('academic-corner');
-                                    setSelectedTag(null);
-                                }}
+                                onClick={() => router.push('/blog?category=academic-corner', { scroll: false })}
                                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedCategory === 'academic-corner'
                                     ? 'bg-indigo-600 text-white shadow-lg'
                                     : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700'
