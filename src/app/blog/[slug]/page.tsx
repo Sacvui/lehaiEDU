@@ -39,6 +39,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
 }
 
 import { SeriesNavigator } from '@/components/blog/SeriesNavigator'
+import { SeriesControls } from '@/components/blog/SeriesControls'
 
 // Tags that shouldn't be treated as a Series Identifier
 const IGNORED_SERIES_TAGS = ['Góc nhìn HaiLP', 'Featured', 'Hot', 'Tips', 'Knowledge', 'Deep Dive', 'New']
@@ -232,13 +233,21 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                         />
                     )}
 
-                    {/* Content */}
                     <div className="prose prose-lg dark:prose-invert max-w-none">
                         <PortableText
                             value={post.body}
                             components={portableTextComponents}
                         />
                     </div>
+
+                    {/* Series Controls (Next/Prev) */}
+                    {seriesTag && seriesPosts.length > 1 && (
+                        <SeriesControls
+                            currentPostId={post._id}
+                            seriesTag={seriesTag}
+                            posts={seriesPosts}
+                        />
+                    )}
 
                     {/* Tags */}
                     {post.tags && post.tags.length > 0 && (

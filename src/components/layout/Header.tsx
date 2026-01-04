@@ -82,7 +82,7 @@ const navItems: NavItem[] = [
       },
     ]
   },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Contact', href: '#contact', icon: Mail },
 ];
 
 export function Header() {
@@ -140,10 +140,10 @@ export function Header() {
 
               {/* Desktop Dropdown Menu */}
               {item.submenu && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top w-[500px]">
+                <div className="absolute top-full right-0 md:left-1/2 md:-translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top w-[640px] z-50 px-4 md:px-0">
                   <div className="bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 p-4 grid grid-cols-2 gap-4">
                     {item.submenu.map((subItem, idx) => (
-                      <div key={subItem.label} className={cn("flex flex-col gap-2 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group/item", idx === 0 ? "col-span-2 md:col-span-1 row-span-2 bg-slate-50/50 dark:bg-slate-800/50" : "col-span-2 md:col-span-1")}>
+                      <div key={subItem.label} className="flex flex-col gap-2 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group/item">
                         <Link href={subItem.href} className="flex items-start gap-3">
                           <div className="mt-1 p-1.5 rounded-md bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 group-hover/item:bg-blue-100 dark:group-hover/item:bg-slate-700 transition-colors">
                             {subItem.icon && <subItem.icon className="w-4 h-4" />}

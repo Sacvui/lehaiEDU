@@ -142,7 +142,7 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Có một câu nói rất hay: "A picture is worth a thousand numbers". Các sếp không có thời gian đọc bảng số liệu của bạn đâu. Họ chỉ nhìn vào biểu đồ 3 giây để ra quyết định.\n\nNhưng khổ nỗi, biểu đồ mặc định của Excel nó... phèn. Màu mè lòe loẹt, 3D sến súa.\nHôm nay tôi giới thiệu với các bạn `ggplot2` - vũ khí hạng nặng của R, được dùng để vẽ biểu đồ cho các báo cáo của New York Times hay BBC.' }],
+                children: [{ _type: 'span', text: 'Có một câu nói rất hay: "A picture is worth a thousand numbers". \n\n*Business Insight:* Sếp của bạn (C-level) cực kỳ bận. Họ không có thời gian soi từng con số. Một biểu đồ tốt phải giúp họ nắm bắt "đại ý" trong vòng 3 giây. Nếu cần > 5 giây để hiểu, biểu đồ đó thất bại. Đây gọi là nguyên tắc **"Giảm tải nhận thức" (Cognitive Load Reduction)**.\n\nExcel thường vi phạm điều này với mấy cái hiệu ứng 3D, bóng đổ (Shadow) lòe loẹt làm rối mắt. `ggplot2` của R đi theo tư duy tối giản (Minimalism) của Edward Tufte - Tối đa hóa **Tỷ lệ Dữ liệu-Mực in (Data-Ink Ratio)**.' }],
             },
             {
                 _type: 'block',
@@ -227,7 +227,17 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: '3. Table 1 thần thánh' }],
+                children: [{ _type: 'span', text: '3. Có "bình thường" không? (Kiểm định phân phối chuẩn)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Mean và SD chỉ có ý nghĩa khi dữ liệu phân phối chuẩn (hình chuông). Nếu dữ liệu méo mó, dùng Median an toàn hơn.\n\n*Góc nhìn khoa học: Để chắc chắn, hãy dùng Shapiro-Wilk test:*\n`shapiro.test(df$Income)`\n- Nếu p < 0.05 -> Không chuẩn -> Nên báo cáo Median (IQR).\n- Nếu p > 0.05 -> Chuẩn -> Báo cáo Mean (SD).\n\nLàm đúng quy trình này thì Reviewer chỉ có gật gù khen bạn chuyên nghiệp.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '4. Table 1 thần thánh' }],
             },
             {
                 _type: 'block',
@@ -271,7 +281,7 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Giả sử bạn dùng 3 câu hỏi (Sat1, Sat2, Sat3) để đo lường "Sự hài lòng". Nếu một khách hàng trả lời Sat1 = 5 điểm (Rất hài lòng), Sat2 cũng phải tầm 4-5 điểm. Chứ Sat2 mà tụt xuống 1 điểm thì chứng tỏ bộ câu hỏi này "nội bộ lủng củng".\n\nTrong R, ta dùng gói `psych`:\n\n`library(psych)`\n`alpha(df %>% select(Sat1, Sat2, Sat3))`\n\nNhìn vào chỉ số raw_alpha:\n- > 0.7 (xanh): Ngon lành. Đoàn kết tốt.\n- 0.6 - 0.7: Tạm chấp nhận (với nghiên cứu mới).\n- < 0.6: Vứt. Nội bộ lục đục. Cần loại bỏ câu hỏi làm rầu nồi canh.\n\n Lưu ý xương máu: Đừng thấy thấp là xóa câu hỏi vô tội vạ. Phải xem xét lý thuyết (như tôi đã nói trong bài NCS101). Nếu xóa mà làm mất ý nghĩa của khái niệm thì thà để thấp còn hơn.' }],
+                children: [{ _type: 'span', text: 'Giả sử bạn dùng 3 câu hỏi (Sat1, Sat2, Sat3) để đo lường "Sự hài lòng". Nếu một khách hàng trả lời Sat1 = 5 điểm (Rất hài lòng), Sat2 cũng phải tầm 4-5 điểm. Chứ Sat2 mà tụt xuống 1 điểm thì chứng tỏ bộ câu hỏi này "nội bộ lủng củng".\n\nTrong R, ta dùng gói `psych`:\n\n`library(psych)`\n`alpha(df %>% select(Sat1, Sat2, Sat3), check.keys=TRUE)`\n\nNhìn vào 2 chỉ số:\n1. raw_alpha: > 0.7 là ngon lành.\n2. r.drop (Item-total Correlation): Phải > 0.3. Nếu nhỏ hơn 0.3 nghĩa là câu hỏi đó "lạc quẻ", cần xóa.\n\nLưu ý: Nếu có câu hỏi ngược (Reverse items), nhớ thêm `check.keys=TRUE` để R tự động đảo chiều cho đúng.' }],
             },
             {
                 _type: 'block',
@@ -281,7 +291,7 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Bạn có 20 câu hỏi loằng ngoằng. Máy tính (và người đọc) sẽ bị overload.\nEFA giúp bạn "gom" 20 câu này thành 3-4 nhóm (Nhân tố) chính. Ví dụ: Gom 3 câu về lương thưởng vào nhóm "Tài chính". Gom 4 câu về đồng nghiệp vào nhóm "Môi trường".\n\nChạy EFA trong R:\n\n`fa(r = cor(df_scale), nfactors = 3, rotate = "varimax")`\n\n(Trong đó `nfactors` là số nhóm bạn mong muốn).\n\nĐọc kết quả:\n1. KMO: Phải > 0.5 (Đủ điều kiện phân tích).\n2. Bartlett Test: P-value phải < 0.05 (Các biến có tương quan).\n3. Extraction Loadings: Phải > 0.5. Biến nào < 0.5 là "không thuộc về nhóm nào" -> Loại.' }],
+                children: [{ _type: 'span', text: 'Bạn không thể "mơ" ra số nhóm được. Phải dùng thuật toán để chọn số nhóm tối ưu (Eigenvalues > 1).\n\nBước 1: Vẽ biểu đồ đá cuội (Scree Plot) xem nên chọn mấy nhóm\n`fa.parallel(df_scale)` -> Nó sẽ gợi ý dòng "Parallel analysis suggests n factors".\n\nBước 2: Chạy EFA chính thức\n`fa(r = cor(df_scale), nfactors = 3, rotate = "promax")`\n*(Thay số 3 bằng số gợi ý ở trên)*\n\nDân kinh tế ưu tiên xoay Promax (xoay xiên) hơn Varimax (vuông góc) vì các khái niệm xã hội thường dính dây mơ rễ má với nhau.' }],
             },
             {
                 _type: 'block',
@@ -309,7 +319,7 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Chào mừng các bạn đến với trận chung kết. Sau khi làm sạch dữ liệu, vẽ hình đẹp đẽ, kiểm định thang đo ok, giờ là lúc ta "thịt" bộ dữ liệu để lòi ra kết quả cuối cùng.\n\nMục tiêu: Tìm xem Lương (Salary), Đồng nghiệp (Colleague), Sếp (Boss) -> Cái nào làm Nhân viên Hài lòng (Satisfaction) nhất?' }],
+                children: [{ _type: 'span', text: 'Chào mừng các bạn đến với trận chung kết. Sau khi làm sạch dữ liệu, vẽ hình đẹp đẽ, kiểm định thang đo ok, giờ là lúc ta "thịt" bộ dữ liệu để lòi ra kết quả cuối cùng.\n\nMục tiêu: Tìm xem Lương (Salary), Đồng nghiệp (Colleague), Sếp (Boss) -> Yếu tố nào dự báo "tốt nhất" sự Hài lòng (Satisfaction)?\n\n*Lưu ý: Hồi quy cho ta biết mối liên hệ (Association), không chắc chắn là Nhân quả (Causation). Tuy nhiên trong kinh doanh, nếu lý thuyết hỗ trợ, ta có thể dùng nó để ra quyết định.*' }],
             },
             {
                 _type: 'image',
@@ -345,7 +355,7 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Chạy ra kết quả chưa xong đâu. Phải khám sức khỏe cho nó. Nếu mô hình bị bệnh, kết quả là vô nghĩa.\n\n- Đa cộng tuyến (Multicollinearity): Dùng hàm `vif(model)`. Nếu VIF > 10 (hoặc khắt khe là > 5) -> Bị bệnh. Phải loại biến.\n- Phân phối chuẩn của phần dư: `plot(model, which = 2)`. Các điểm phải nằm trên đường chéo.\n\nLàm nghiên cứu là phải kỹ tính. Reviewer soi mấy cái này kỹ lắm. Đừng để bị bắt bài nhé!' }],
+                children: [{ _type: 'span', text: 'Chạy ra kết quả chưa xong đâu. Phải khám sức khỏe cho nó.\n\n*Insight:* Tại sao phải soi phần dư (Residuals)? Phần dư chính là những gì mô hình *không giải thích được*. \n- Nếu phần dư lộn xộn ngẫu nhiên -> Tốt.\n- Nếu phần dư có quy luật (VD: Mô hình dự báo sai lệch nhiều ở nhóm Thu nhập cao) -> Chứng tỏ bạn đang bỏ sót một biến quan trọng nào đó. Hiện tượng này gọi là **Thiên lệch do biến bị bỏ sót (Omitted Variable Bias)**.\n- Những điểm ngoại lai (Outliers) trong phần dư đôi khi lại là "Mỏ vàng" - **Thị trường ngách (Niche Market)** mà đối thủ bỏ qua.\n\nChecklist:\n- Đa cộng tuyến (Multicollinearity): `vif(model)` > 5 là báo động.\n- Phân phối chuẩn của phần dư: `plot(model, which = 2)`. Các điểm phải ôm sát đường chéo.' }],
             }
         ]
     },
