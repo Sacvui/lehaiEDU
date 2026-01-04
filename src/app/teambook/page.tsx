@@ -56,13 +56,11 @@ export default async function ForTeamPage() {
         return keywords.map(k => find(k)).filter(Boolean); // Remove undefined/not found
     };
 
-    // --- MANUAL INTRO CONTENT ---
-    const introPosts = [
-        {
-            _id: 'manual-foreword',
+    {
+        _id: 'manual-foreword',
             title: 'Lời Tựa: Viết cho những ngày chông chênh nhất',
-            slug: { current: 'loi-noi-dau' },
-            readingTime: 5,
+                slug: { current: 'loi-noi-dau' },
+        readingTime: 5,
             body: [
                 {
                     _type: 'block',
@@ -72,7 +70,7 @@ export default async function ForTeamPage() {
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Nếu bạn đang cầm trên tay (hoặc lướt trên màn hình) cuốn cẩm nang này, có lẽ bạn đang tìm kiếm một "tấm bản đồ" cho sự nghiệp của mình. Tôi cũng từng như vậy. Từng là một Intern "ngáo ngơ", từng bị sếp mắng vì không biết vẽ chart, và từng hoang  mang không biết Research là cái quái gì.' }]
+                    children: [{ _type: 'span', text: 'Nếu bạn đang cầm trên tay cuốn cẩm nang này, có lẽ bạn đang tìm kiếm một "tấm bản đồ" cho sự nghiệp của mình. Tôi cũng từng như vậy. Từng là một Intern "ngáo ngơ", từng bị sếp mắng vì không biết vẽ chart, và từng hoang mang không biết Research là cái quái gì.' }]
                 },
                 {
                     _type: 'block',
@@ -82,32 +80,37 @@ export default async function ForTeamPage() {
                 {
                     _type: 'block',
                     style: 'h4',
-                    children: [{ _type: 'span', text: 'Lộ trình này dành cho ai?' }]
+                    children: [{ _type: 'span', text: 'Ai là một "Researcher"?' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Dành cho những bạn không chấp nhận sự hời hợt. Dành cho những ai muốn làm việc dựa trên bằng chứng (Evidence-based) chứ không phải cảm tính.' }]
+                    children: [{ _type: 'span', text: 'Đừng nhầm lẫn. Researcher không chỉ là những học giả (Academic Scholars) ngồi trong tháp ngà nghiên cứu. Trong thời đại này, Researcher còn là những Nhà lãnh đạo doanh nghiệp (Business Leaders) biết dùng dữ liệu để ra quyết định.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Chúng ta sẽ đi cùng nhau qua 4 chặng:' }]
+                    children: [{ _type: 'span', text: 'Dù bạn muốn trở thành tiến sĩ hay một giám đốc chiến lược, tư duy nghiên cứu (Research Mindset) đều là vũ khí quan trọng nhất.' }]
+                },
+                {
+                    _type: 'block',
+                    style: 'h4',
+                    children: [{ _type: 'span', text: 'Lộ trình 4 chặng của chúng ta:' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: '👉 **Chương 1 (Mindset):** Xây lại tư duy. Bỏ ngay cái kiểu "em tưởng", "em nghĩ". Làm Research là phải nói có sách, mách có chứng.' }]
+                    children: [{ _type: 'span', text: '1. Chương 1 (Mindset): Xây lại tư duy. Bỏ ngay cái kiểu "em tưởng", "em nghĩ". Làm Research là phải nói có sách, mách có chứng.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: '👉 **Chương 2 (Skillset):** Trang bị "súng đạn". R, Python, SPSS... không đáng sợ như bạn nghĩ đâu. Tôi làm được, bạn cũng làm được.' }]
+                    children: [{ _type: 'span', text: '2. Chương 2 (Skillset): Trang bị công cụ. R, Python, SPSS... không đáng sợ như bạn nghĩ đâu.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: '👉 **Chương 3 & 4 (Strategy):** Dùng dữ liệu để ra quyết định sống còn. Đây là lúc bạn chuyển mình từ "Thợ làm số" thành "Nhà tư vấn".' }]
+                    children: [{ _type: 'span', text: '3. Chương 3 & 4 (Strategy & Vision): Dùng dữ liệu để ra quyết định sống còn và hoạch định chiến lược tầm cao.' }]
                 },
                 {
                     _type: 'block',
@@ -120,7 +123,8 @@ export default async function ForTeamPage() {
                     children: [{ _type: 'span', text: 'Chúc các bạn một ngày làm việc đầy năng lượng (Hai Morning)! \n\n**Lê Phúc Hải**' }]
                 }
             ]
-        },
+    },
+    ]
     // --- BRIDGE CONTENT: CHAPTER INTROS ---
     // These help glue the blog posts together into a cohesive book
     const chap1_intro = {
@@ -131,9 +135,7 @@ export default async function ForTeamPage() {
         body: [
             { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Đừng vội lao vào chạy Tool!' }] },
             { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Sai lầm lớn nhất của các bạn trẻ (và cả tôi ngày xưa) là cứ thấy dữ liệu là lao vào vẽ biểu đồ. Hậu quả là vẽ ra những thứ "vô hồn", đúng về mặt kỹ thuật nhưng sai về mặt bản chất.' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Chương này sẽ giúp bạn "thắng lại" một nhịp. Chúng ta sẽ học cách:' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '- Đặt câu hỏi nghiên cứu sao cho "trúng".\n- Đọc tài liệu sao cho "nhanh".\n- Và quan trọng nhất: Giữ được cái đầu lạnh (Critical Thinking).' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Hãy bắt đầu bằng việc xác định lại tâm thế của một người làm nghiên cứu.' }] }
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Chương này sẽ giúp bạn "thắng lại" một nhịp. Chúng ta sẽ cùng nhau học cách đặt câu hỏi nghiên cứu trúng đích, cách đọc tài liệu nhanh và hiệu quả, cũng như rèn luyện tư duy phản biện (Critical Thinking) trước khi bắt tay vào xử lý bất kỳ con số nào. Hãy bắt đầu bằng việc xác định lại tâm thế của một người làm nghiên cứu.' }] }
         ]
     };
 
@@ -144,7 +146,7 @@ export default async function ForTeamPage() {
         readingTime: 3,
         body: [
             { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Từ Tư duy đến Hành động' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Khi tư duy đã thông suốt, bạn cần những công cụ đủ mạnh để hiện thực hóa ý tưởng. Excel là tốt, nhưng chưa đủ. Để đi xa hơn, bạn cần R và Python.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Khi tư duy đã thông suốt, bạn cần những công cụ đủ mạnh để hiện thực hóa ý tưởng. Excel là tốt, nhưng chưa đủ. Để đi xa hơn trong thế giới dữ liệu lớn, bạn cần làm chủ R và Python.' }] },
             { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Đừng sợ code. Code chỉ là ngôn ngữ để bạn giao tiếp với máy tính. Chương này tôi sẽ cầm tay chỉ việc, giúp bạn đi từ con số 0 đến lúc tự tay chạy được những dòng code phân tích đầu tiên.' }] }
         ]
     };
@@ -157,7 +159,7 @@ export default async function ForTeamPage() {
         body: [
             { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Số liệu biết nói' }] },
             { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Có tư duy, có công cụ, giờ là lúc "nấu cỗ". Dữ liệu thô (Raw Data) tựa như nguyên liệu tươi sống ở ngoài chợ. Nhiệm vụ của bạn là chế biến nó thành món ăn ngon (Insight) để phục vụ thực khách (Sếp/Khách hàng).' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Chúng ta sẽ đi sâu vào các kỹ thuật phân tích cốt lõi: Hồi quy, Phân khúc khách hàng, và Kiểm định A/B.' }] }
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Trong phần này, chúng ta sẽ đi sâu vào các kỹ thuật phân tích cốt lõi như Hồi quy, Phân khúc khách hàng, và Kiểm định A/B để tìm ra câu trả lời cho các bài toán kinh doanh hóc búa.' }] }
         ]
     };
 
@@ -169,7 +171,7 @@ export default async function ForTeamPage() {
         body: [
             { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Vượt lên trên những con số' }] },
             { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Làm thợ thì dễ, làm thầy mới khó. Để vươn lên vị trí C-Level (Giám đốc), bạn không thể cứ cắm mặt vào máy tính chạy mô hình mãi được. Bạn cần hiểu về bức tranh lớn hơn: Chiến lược công ty, Xu hướng công nghệ (AI), và Quản trị con người.' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Chương cuối này là những lời nhắn nhủ tâm huyết nhất của tôi dành cho thế hệ lãnh đạo kế cận.' }] }
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Chương cuối này là những lời nhắn nhủ tâm huyết nhất của tôi dành cho thế hệ lãnh đạo kế cận, những người sẽ cầm lái con thuyền doanh nghiệp trong tương lai.' }] }
         ]
     };
 
