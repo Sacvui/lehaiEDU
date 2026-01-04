@@ -284,26 +284,27 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                                 components={{
                                     ...portableTextComponents,
                                     block: {
-                                        ...portableTextComponents.block,
+                                        // @ts-ignore - Spreading optional block types
+                                        ...(portableTextComponents.block || {}),
                                         normal: ({ children }: any) => (
-                                            <p className="text-xl mb-6 font-serif">
+                                            <p className="text-xl mb-6 font-serif text-black font-medium leading-relaxed">
                                                 {children}
                                             </p>
                                         ),
-                                        h1: ({ children }: any) => <h1 className="text-4xl mt-12 mb-6 font-sans">{children}</h1>,
-                                        h2: ({ children }: any) => <h2 className="text-3xl mt-10 mb-5 font-sans">{children}</h2>,
-                                        h3: ({ children }: any) => <h3 className="text-2xl mt-8 mb-4 font-sans">{children}</h3>,
-                                        h4: ({ children }: any) => <h4 className="text-xl mt-6 mb-3 font-sans">{children}</h4>,
+                                        h1: ({ children }: any) => <h1 className="text-4xl mt-12 mb-6 font-sans font-extrabold text-black">{children}</h1>,
+                                        h2: ({ children }: any) => <h2 className="text-3xl mt-10 mb-5 font-sans font-bold text-black">{children}</h2>,
+                                        h3: ({ children }: any) => <h3 className="text-2xl mt-8 mb-4 font-sans font-bold text-black">{children}</h3>,
+                                        h4: ({ children }: any) => <h4 className="text-xl mt-6 mb-3 font-sans font-bold text-black">{children}</h4>,
                                     },
                                     list: {
-                                        bullet: ({ children }: any) => <ul className="list-disc list-inside space-y-2 mb-6 text-xl">{children}</ul>,
-                                        number: ({ children }: any) => <ol className="list-decimal list-inside space-y-2 mb-6 text-xl">{children}</ol>,
+                                        bullet: ({ children }: any) => <ul className="list-disc list-inside space-y-2 mb-6 text-xl text-black font-medium">{children}</ul>,
+                                        number: ({ children }: any) => <ol className="list-decimal list-inside space-y-2 mb-6 text-xl text-black font-medium">{children}</ol>,
                                     },
                                     listItem: {
-                                        bullet: ({ children }: any) => <li className="ml-4">{children}</li>,
-                                        number: ({ children }: any) => <li className="ml-4">{children}</li>,
+                                        bullet: ({ children }: any) => <li className="ml-4 marker:text-black">{children}</li>,
+                                        number: ({ children }: any) => <li className="ml-4 marker:text-black">{children}</li>,
                                     },
-                                }}
+                                } as any}
                             />
                         </div>
 
