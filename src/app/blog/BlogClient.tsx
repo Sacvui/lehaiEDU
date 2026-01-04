@@ -3,7 +3,7 @@
 import { useState, useMemo, useEffect } from 'react';
 import Image from "next/image";
 import Link from "next/link";
-import { useSearchParams } from 'next/navigation';
+import { useSearchParams, useRouter } from 'next/navigation';
 import { urlForImage } from "@/sanity/lib/image";
 import { Calendar, Clock, ArrowRight, Search, Filter, X, Zap, GraduationCap, TrendingUp, BookOpen } from "lucide-react";
 
@@ -162,11 +162,7 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
     const featuredPosts = filteredPosts.filter(post => post.featured);
     const regularPosts = filteredPosts.filter(post => !post.featured);
 
-    const clearFilters = () => {
-        setSearchQuery('');
-        setSelectedCategory(null);
-        setSelectedTag(null);
-    };
+    // clearFilters removed (duplicate)
 
     const isFiltering = searchQuery || selectedCategory || selectedTag;
 
