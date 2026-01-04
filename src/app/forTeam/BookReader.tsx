@@ -138,9 +138,18 @@ export default function BookReader({ chapters }: BookReaderProps) {
         );
     }
 
+    import { Merriweather } from 'next/font/google';
+
+    const merriweather = Merriweather({
+        subsets: ['vietnamese'],
+        weight: ['300', '400', '700', '900'],
+        display: 'swap',
+    });
+
+    // ... inside component ...
     // READER VIEW
     return (
-        <div className="min-h-screen bg-[#fdfbf7] font-serif flex relative">
+        <div className={cn("min-h-screen bg-[#fdfbf7] flex relative", merriweather.className)}>
             {/* Mobile Sidebar Toggle */}
             <button
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}
