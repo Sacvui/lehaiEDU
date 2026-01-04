@@ -121,81 +121,125 @@ export default async function ForTeamPage() {
                 }
             ]
         },
-        {
-            _id: 'manual-authors',
-            title: 'Ban Biên Tập & Cố Vấn Chuyên Môn',
-            slug: { current: 'gioi-thieu-tac-gia' },
-            readingTime: 3,
-            body: [
-                { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Để đảm bảo tính chính xác và hàn lâm cho ấn phẩm này, đội ngũ biên tập đã làm việc nghiêm túc để đối chiếu các kiến thức thực chiến với các chuẩn mực khoa học quốc tế.' }] },
-                { _type: 'block', style: 'h3', children: [{ _type: 'span', text: '1. Chủ biên: Le Phuc Hai (Mr.)' }] },
-                { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Giám đốc Phát triển Kinh doanh Quốc gia & Giảng viên Doanh nhân. Tác giả chịu trách nhiệm về khung nội dung và các bài học thực chiến.' }] },
-                { _type: 'block', style: 'h3', children: [{ _type: 'span', text: '2. Cố vấn Khoa học: TS. Carmen Châu (Ms.)' }] },
-                { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Tiến sĩ Marketing (PhD). Chịu trách nhiệm hiệu đính, kiểm tra các phương pháp nghiên cứu (Methodology) và đảm bảo tính Evidence-based cho các lập luận trong sách.' }] }
-            ]
-        }
-    ];
+    // --- BRIDGE CONTENT: CHAPTER INTROS ---
+    // These help glue the blog posts together into a cohesive book
+    const chap1_intro = {
+        _id: 'chap1-intro',
+        title: 'Dẫn nhập Chương 1: Tại sao phải có Tư duy trước?',
+        slug: { current: 'chap1-intro' },
+        readingTime: 3,
+        body: [
+            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Đừng vội lao vào chạy Tool!' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Sai lầm lớn nhất của các bạn trẻ (và cả tôi ngày xưa) là cứ thấy dữ liệu là lao vào vẽ biểu đồ. Hậu quả là vẽ ra những thứ "vô hồn", đúng về mặt kỹ thuật nhưng sai về mặt bản chất.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Chương này sẽ giúp bạn "thắng lại" một nhịp. Chúng ta sẽ học cách:' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '- Đặt câu hỏi nghiên cứu sao cho "trúng".\n- Đọc tài liệu sao cho "nhanh".\n- Và quan trọng nhất: Giữ được cái đầu lạnh (Critical Thinking).' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Hãy bắt đầu bằng việc xác định lại tâm thế của một người làm nghiên cứu.' }] }
+        ]
+    };
+
+    const chap2_intro = {
+        _id: 'chap2-intro',
+        title: 'Dẫn nhập Chương 2: Làm chủ Vũ khí trong tay',
+        slug: { current: 'chap2-intro' },
+        readingTime: 3,
+        body: [
+            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Từ Tư duy đến Hành động' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Khi tư duy đã thông suốt, bạn cần những công cụ đủ mạnh để hiện thực hóa ý tưởng. Excel là tốt, nhưng chưa đủ. Để đi xa hơn, bạn cần R và Python.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Đừng sợ code. Code chỉ là ngôn ngữ để bạn giao tiếp với máy tính. Chương này tôi sẽ cầm tay chỉ việc, giúp bạn đi từ con số 0 đến lúc tự tay chạy được những dòng code phân tích đầu tiên.' }] }
+        ]
+    };
+
+    const chap3_intro = {
+        _id: 'chap3-intro',
+        title: 'Dẫn nhập Chương 3: Phân tích để ra Chiến lược',
+        slug: { current: 'chap3-intro' },
+        readingTime: 3,
+        body: [
+            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Số liệu biết nói' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Có tư duy, có công cụ, giờ là lúc "nấu cỗ". Dữ liệu thô (Raw Data) tựa như nguyên liệu tươi sống ở ngoài chợ. Nhiệm vụ của bạn là chế biến nó thành món ăn ngon (Insight) để phục vụ thực khách (Sếp/Khách hàng).' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Chúng ta sẽ đi sâu vào các kỹ thuật phân tích cốt lõi: Hồi quy, Phân khúc khách hàng, và Kiểm định A/B.' }] }
+        ]
+    };
+
+    const chap4_intro = {
+        _id: 'chap4-intro',
+        title: 'Dẫn nhập Chương 4: Tầm nhìn C-Level',
+        slug: { current: 'chap4-intro' },
+        readingTime: 3,
+        body: [
+            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Vượt lên trên những con số' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Làm thợ thì dễ, làm thầy mới khó. Để vươn lên vị trí C-Level (Giám đốc), bạn không thể cứ cắm mặt vào máy tính chạy mô hình mãi được. Bạn cần hiểu về bức tranh lớn hơn: Chiến lược công ty, Xu hướng công nghệ (AI), và Quản trị con người.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Chương cuối này là những lời nhắn nhủ tâm huyết nhất của tôi dành cho thế hệ lãnh đạo kế cận.' }] }
+        ]
+    };
+
+    // --- EXPANDED AUTHOR BIO ---
+    const detailedAuthors = {
+        _id: 'manual-authors',
+        title: 'Ban Biên Tập & Cố Vấn Chuyên Môn',
+        slug: { current: 'gioi-thieu-tac-gia' },
+        readingTime: 10,
+        body: [
+            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: '1. Chủ biên: Le Phuc Hai (Mr.)' }] },
+            { _type: 'block', style: 'blockquote', children: [{ _type: 'span', text: '"Tôi không dạy lý thuyết. Tôi chia sẻ những vết sẹo của mình để các bạn không phải dẫm vào nó nữa."' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Anh Lê Phúc Hải hiện là **Giám đốc Phát triển Kinh doanh Quốc gia (National Business Development Director)** và là Giảng viên Doanh nhân tại nhiều trường đại học lớn.' }] },
+            { _type: 'block', style: 'h4', children: [{ _type: 'span', text: 'Kinh nghiệm thực chiến:' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '- 15+ năm kinh nghiệm trong lĩnh vực Quản trị Chiến lược & Phân tích Dữ liệu.\n- Từng giữ vị trí C-Level tại các tập đoàn đa quốc gia.\n- Mentor cho hàng trăm sinh viên và nhân sự trẻ phát triển sự nghiệp.' }] },
+            { _type: 'block', style: 'h4', children: [{ _type: 'span', text: 'Triết lý giáo dục:' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Anh theo đuổi triết lý "Thực học - Thực nghiệp". Mọi kiến thức anh chia sẻ đều phải trả lời được câu hỏi: "Cái này áp dụng vào công việc ngày mai như thế nào?". Phong cách giảng dạy của anh nổi tiếng với sự gần gũi, hài hước (Hai Morning) nhưng cực kỳ sâu sắc.' }] },
+
+            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: '2. Cố vấn Khoa học: TS. Carmen Châu (Ms.)' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '**Tiến sĩ (PhD) chuyên ngành Marketing.**' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Cô chịu trách nhiệm bảo chứng tính khoa học cho toàn bộ nội dung trong cuốn sách này. Nếu anh Hải mang đến hơi thở của chiến trường ác liệt, thì cô Châu mang đến sự chuẩn mực, chặt chẽ của tháp ngà học thuật.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Sự kết hợp này đảm bảo rằng: Những gì bạn học được vừa **dùng được ngay**, lại vừa **đúng chuẩn quốc tế**.' }] }
+        ]
+    };
 
     // --- CHAPTER 1: MINDSET (TƯ DUY) ---
-    // Focus: Critical Thinking, Research Mindset
     const chap1_mindset = findMany([
-        'NCS101 - Bài 1', // Mindset
-        'NCS101 - Bài 2', // Finding Problems
-        'NCS101 - Bài 3', // Reading Skills
-        'NCS101 - Bài 10', // Ethics
+        'NCS101 - Bài 1', 'NCS101 - Bài 2', 'NCS101 - Bài 3', 'NCS101 - Bài 10',
     ]);
 
     // --- CHAPTER 2: SKILLSET (CÔNG CỤ) ---
-    // Focus: Hard Skills (R, Python, Data)
     const chap2_tools = findMany([
-        'R101 - Bài 1', // Intro R
-        'Python101 - Bài 1', // Intro Python
-        'R101 - Bài 2', // Cleaning
-        'R101 - Bài 3', // Visualization
-        'R101 - Bài 8', // Reporting
+        'R101 - Bài 1', 'Python101 - Bài 1', 'R101 - Bài 2', 'R101 - Bài 3', 'R101 - Bài 8',
     ]);
 
     // --- CHAPTER 3: STRATEGY (CHIẾN LƯỢC) ---
-    // Focus: Applying Data to Business
     const chap3_strategy = findMany([
-        'NCS101 - Bài 6', // Analysis Framework
-        'Python101 - Bài 5', // Segmentation
-        'R101 - Bài 6', // Regression
-        'Python101 - Bài 6', // A/B Testing
+        'NCS101 - Bài 6', 'Python101 - Bài 5', 'R101 - Bài 6', 'Python101 - Bài 6',
     ]);
 
     // --- CHAPTER 4: LEADERSHIP (LÃNH ĐẠO) ---
-    // Focus: Big Picture
     const chap4_future = findMany([
-        'BI vs AI', // Tech Vision
-        'Project Next', // Leadership
+        'BI vs AI', 'Project Next',
     ]);
 
     const chapters = [
         {
             id: 'intro',
             title: 'PHẦN MỞ ĐẦU',
-            posts: introPosts as any[]
+            posts: [introPosts[0], detailedAuthors] // Use expanded authors
         },
         {
             id: 'chap1',
             title: 'CHƯƠNG 1: TƯ DUY NỀN TẢNG (THE MINDSET)',
-            posts: chap1_mindset
+            posts: [chap1_intro, ...chap1_mindset] // Inject Bridge Post
         },
         {
             id: 'chap2',
             title: 'CHƯƠNG 2: XÂY DỰNG VŨ KHÍ (THE SKILLSET)',
-            posts: chap2_tools
+            posts: [chap2_intro, ...chap2_tools] // Inject Bridge Post
         },
         {
             id: 'chap3',
             title: 'CHƯƠNG 3: PHÂN TÍCH & CHIẾN LƯỢC (THE STRATEGY)',
-            posts: chap3_strategy
+            posts: [chap3_intro, ...chap3_strategy] // Inject Bridge Post
         },
         {
             id: 'chap4',
             title: 'CHƯƠNG 4: TẦM NHÌN C-LEVEL (THE FUTURE)',
-            posts: chap4_future
+            posts: [chap4_intro, ...chap4_future] // Inject Bridge Post
         }
     ];
 

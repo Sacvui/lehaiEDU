@@ -256,7 +256,7 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                             </div>
                         )}
 
-                        <div className="prose prose-lg prose-slate prose-p:text-slate-900 prose-p:leading-loose prose-p:font-serif prose-headings:font-sans prose-headings:font-bold prose-headings:text-black prose-li:text-slate-900 prose-strong:text-black prose-a:text-amber-700 max-w-none">
+                        <div className="prose prose-lg prose-slate prose-p:text-black prose-p:font-medium prose-p:leading-loose prose-p:font-serif prose-headings:font-sans prose-headings:font-extrabold prose-headings:text-black prose-li:text-black prose-li:font-medium prose-strong:text-black prose-strong:font-bold prose-a:text-amber-700 max-w-none">
                             <PortableText value={activePost.body} components={portableTextComponents} />
                         </div>
 
