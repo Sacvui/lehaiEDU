@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Github, Linkedin, Mail, Twitter, User, GraduationCap, Rocket, BookOpen, TrendingUp, Zap, FlaskConical, Menu, X, ChevronDown, Phone, FileText } from 'lucide-react';
+import { Github, Linkedin, Mail, Twitter, User, GraduationCap, Rocket, BookOpen, TrendingUp, Zap, FlaskConical, Menu, X, ChevronDown, Phone, FileText, Microscope } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
@@ -72,12 +72,12 @@ const navItems: NavItem[] = [
         ]
       },
       {
-        label: 'Case Research', // New standalone section requested by user
-        href: '/blog?category=case-studies',
-        icon: Microscope, // Using Microscope for "Research/Case" feel
-        desc: 'Các tình huống quản trị thực tế & Bài học',
+        label: 'Thesis Walkthrough (Chapter 1-5)',
+        href: '/blog?category=academic-corner',
+        icon: Microscope,
+        desc: 'Hướng dẫn làm luận án từ A-Z',
         items: [
-          { label: 'Real Case Studies', href: '/blog?category=case-studies' },
+          { label: 'Thesis Walkthrough (Chapter 1-5)', href: '/blog?category=academic-corner' },
         ]
       },
       {
