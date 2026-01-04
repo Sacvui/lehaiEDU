@@ -226,18 +226,18 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                 "md:ml-80" // Offset for sidebar
             )}>
                 {activePost ? (
-                    <article className="max-w-3xl mx-auto px-6 py-16 md:py-24">
+                    <article className="max-w-3xl mx-auto px-5 py-20 md:py-24">
                         {/* Paper Texture Overlay */}
                         <div className="fixed inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-30 pointer-events-none mix-blend-multiply"></div>
 
-                        <div className="mb-12 text-center">
-                            <span className="text-amber-600 font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
+                        <div className="mb-10 text-center">
+                            <span className="text-amber-700 font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
                                 {chapters.find(c => c.id === activeChapterId)?.title}
                             </span>
                             <h1 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight mb-6 font-serif">
                                 {activePost.title}
                             </h1>
-                            <div className="flex items-center justify-center gap-4 text-slate-500 italic text-sm font-serif">
+                            <div className="flex items-center justify-center gap-4 text-slate-700 italic text-sm font-serif font-medium">
                                 <span>{Math.ceil(activePost.readingTime || 5)} phút đọc</span>
                                 <span>•</span>
                                 <span>Le Phuc Hai</span>
@@ -245,7 +245,7 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                         </div>
 
                         {activePost.mainImage && (
-                            <div className="relative w-full aspect-video mb-12 rounded-sm overflow-hidden shadow-md grayscale-[20%] sepia-[10%]">
+                            <div className="relative w-full aspect-video mb-10 rounded-sm overflow-hidden shadow-md grayscale-[10%]">
                                 <Image
                                     src={urlForImage(activePost.mainImage).url()}
                                     alt={activePost.title}
@@ -255,7 +255,7 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                             </div>
                         )}
 
-                        <div className="prose prose-lg prose-slate prose-p:font-serif prose-headings:font-sans prose-headings:font-bold prose-a:text-amber-700 max-w-none">
+                        <div className="prose prose-lg prose-slate prose-p:text-slate-800 prose-p:leading-loose prose-p:font-serif prose-headings:font-sans prose-headings:font-bold prose-headings:text-slate-900 prose-a:text-amber-700 max-w-none">
                             <PortableText value={activePost.body} components={portableTextComponents} />
                         </div>
 
