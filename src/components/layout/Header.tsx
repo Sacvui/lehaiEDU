@@ -36,58 +36,48 @@ const navItems: NavItem[] = [
     icon: TrendingUp,
     submenu: [
       {
-        label: 'NCS101',
-        href: '/blog?tag=NCS101',
+        label: 'Research Lab',
+        href: '/blog?group=research',
         icon: GraduationCap,
-        desc: 'Từ "con nai vàng" thành "cáo già" học thuật',
+        desc: 'Hành trình từ "nai vàng" thành "cáo già" học thuật',
         items: [
-          { label: 'Mindset', href: '/blog/ncs-101-bai-1-mindset' },
-          { label: 'Survival Guide', href: '/blog?tag=NCS101' },
-          { label: 'Academic Writing', href: '/blog?category=academic-corner' },
+          { label: 'NCS101: PhD Mindset', href: '/blog?tag=NCS101' },
+          { label: 'R101: Data Analysis', href: '/blog?tag=R101' },
+          { label: 'Python101: Quant Research', href: '/blog?tag=Python101' },
+          { label: 'Thesis Masterclass', href: '/blog?tag=thesis-script' },
         ]
       },
       {
-        label: 'R101',
-        href: '/blog?tag=R101',
-        icon: FlaskConical,
-        desc: 'Code R không khó, chỉ cần... copy paste',
+        label: 'Business Hub',
+        href: '/blog?group=business',
+        icon: TrendingUp,
+        desc: 'Chiến lược thực chiến & Quản trị bài bản',
         items: [
-          { label: 'Crash Course', href: '/blog/r101-bai-1-intro-r' },
-          { label: 'Data Cleaning', href: '/blog/r101-bai-2-data-cleaning' },
-          { label: 'Visual & Report', href: '/blog?tag=R101' },
+          { label: 'Strategic Leadership', href: '/blog?category=strategic-leadership' },
+          { label: 'RTM Distribution', href: '/blog?category=rtm-distribution' },
+          { label: 'Logistics & Supply Chain', href: '/blog?category=logistics-supply-chain' },
         ]
       },
       {
-        label: 'Python101',
-        href: '/blog?tag=Python101',
-        icon: TrendingUp, // Using TrendingUp for "Growth/Analysis" feel
-        desc: 'Vũ khí Big Data: Pandas, Statsmodels & AI',
-        items: [
-          { label: 'Setup Environment', href: '/blog/python101-bai-1-setup-research-env' },
-          { label: 'Quantitative Research', href: '/blog?tag=Quantitative' },
-          { label: 'Marketing Analytics', href: '/blog?tag=Marketing%20Analytics' },
-        ]
-      },
-      {
-        label: 'Research Methodology',
-        desc: 'Nền tảng võ công, tránh tẩu hỏa nhập ma',
-        href: '/blog?tag=Methodology',
-        icon: FileText,
-        items: [
-          { label: 'Quantitative', href: '/blog?tag=quantitative' },
-          { label: 'Qualitative', href: '/blog?tag=qualitative' },
-          { label: 'Literature Review', href: '/blog?tag=literature-review' },
-        ]
-      },
-      {
-        label: 'Thesis Masterclass',
-        href: '/blog?tag=thesis-script',
+        label: 'Tech Trends',
+        href: '/blog?group=tech',
         icon: Zap,
-        desc: 'Văn mẫu "mì ăn liền" cho luận văn',
+        desc: 'AI, Digital & Công nghệ tương lai',
         items: [
-          { label: 'Thesis Structure', href: '/blog?tag=thesis-structure' },
-          { label: 'Introduction Script', href: '/blog?tag=thesis-intro' },
-          { label: 'Conclusion Script', href: '/blog?tag=thesis-conclusion' },
+          { label: 'Digital Transformation', href: '/blog?category=digital-transformation' },
+          { label: 'AI & Technology', href: '/blog?category=ai-technology' },
+          { label: 'Real Case Studies', href: '/blog?category=case-studies' },
+        ]
+      },
+      {
+        label: 'Career Growth',
+        href: '/blog?group=career',
+        icon: Rocket,
+        desc: 'Định hướng sự nghiệp & Mentor 1-1',
+        items: [
+          { label: 'Mentorship & Advice', href: '/blog?category=mentorship-career' },
+          { label: 'Book: Intern to CEO', href: '/blog?category=book-intern-to-ceo' },
+          { label: 'Research Life', href: '/blog?category=academic-corner' },
         ]
       },
     ]

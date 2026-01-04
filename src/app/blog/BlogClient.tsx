@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useSearchParams } from 'next/navigation';
 import { urlForImage } from "@/sanity/lib/image";
-import { Calendar, Clock, ArrowRight, Search, Filter, X } from "lucide-react";
+import { Calendar, Clock, ArrowRight, Search, Filter, X, Zap, GraduationCap, TrendingUp, BookOpen } from "lucide-react";
 
 interface BlogClientProps {
     posts: any[];
@@ -13,35 +13,81 @@ interface BlogClientProps {
 }
 
 const CATEGORY_GROUPS: Record<string, string[]> = {
-    'business': ['enterprise-strategy', 'digital-transformation', 'logistics-supply-chain', 'strategic-leadership', 'case-studies', 'ai-technology'],
-    'career': ['mentorship-career'],
-    'research': ['research-innovation', 'academic-corner']
+    'business': ['enterprise-strategy', 'digital-transformation', 'logistics-supply-chain', 'strategic-leadership', 'case-studies', 'ai-technology', 'rtm-distribution'],
+    'career': ['mentorship-career', 'book-intern-to-ceo', 'academic-corner'], // Added academic-corner here for "General Research Life" fallback
+    'research': ['research-innovation', 'academic-corner', 'data-analysis'], // Broad research group
+    'tech': ['ai-technology', 'digital-transformation']
 };
 
 const GROUP_NAMES: Record<string, string> = {
-    'business': 'Biz Tactics',
-    'career': 'Career Hacks',
-    'research': 'Nerd Lab'
+    'business': 'Business Hub',
+    'career': 'Career Growth',
+    'research': 'Research Lab',
+    'tech': 'Tech Trends'
 };
+
+const SERIES_CONFIG = [
+    {
+        id: 'ncs101',
+        tag: 'NCS101',
+        title: 'NCS101: PhD Mindset',
+        desc: 'Tư duy làm nghiên cứu từ A-Z. Đừng để đời PhD là "bể khổ".',
+        icon: GraduationCap,
+        color: 'bg-indigo-600',
+        gradient: 'from-indigo-600 to-violet-600'
+    },
+    {
+        id: 'r101',
+        tag: 'R101',
+        title: 'R101: Data Analysis',
+        desc: 'Phân tích dữ liệu cho dân kinh tế. Code R dễ như ăn kẹo (nếu biết cách).',
+        icon: Filter,
+        color: 'bg-blue-600',
+        gradient: 'from-blue-600 to-cyan-500'
+    },
+    {
+        id: 'python101',
+        tag: 'Python101',
+        title: 'Python101: Quant Research',
+        desc: 'Vũ khí hạng nặng cho Marketer: Big Data, AI & Segmentation.',
+        icon: Zap,
+        color: 'bg-emerald-600',
+        gradient: 'from-emerald-600 to-teal-500'
+    },
+    {
+        id: 'book',
+        category: 'book-intern-to-ceo',
+        title: 'Book: Intern to CEO',
+        desc: '300 bài học xương máu từ thực chiến. Đọc để bớt vấp ngã.',
+        icon: BookOpen,
+        color: 'bg-amber-600',
+        gradient: 'from-amber-600 to-orange-500'
+    }
+];
 
 export default function BlogClient({ posts, categories }: BlogClientProps) {
     const searchParams = useSearchParams();
     const [searchQuery, setSearchQuery] = useState('');
     const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+    const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
     // Initialize from URL
     useEffect(() => {
         const categoryParam = searchParams.get('category');
-        if (categoryParam) {
-            setSelectedCategory(categoryParam);
-        }
+        const tagParam = searchParams.get('tag');
+        const groupParam = searchParams.get('group');
+
+        if (categoryParam) setSelectedCategory(categoryParam);
+        if (tagParam) setSelectedTag(tagParam);
+        if (groupParam) setSelectedCategory(groupParam); // Map group to selectedCategory logic for simplicity
+
     }, [searchParams]);
 
-    // Filter posts based on search and category
+    // Filter posts
     const filteredPosts = useMemo(() => {
         let filtered = posts;
 
-        // Filter by category or group
+        // 1. Filter by Category OR Group
         if (selectedCategory) {
             if (CATEGORY_GROUPS[selectedCategory]) {
                 // It's a group (e.g., 'business')
@@ -50,14 +96,21 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                     post.categories?.some((cat: any) => allowedSlugs.includes(cat.slug.current))
                 );
             } else {
-                // It's a specific category
+                // It's a specific category slug
                 filtered = filtered.filter(post =>
                     post.categories?.some((cat: any) => cat.slug.current === selectedCategory)
                 );
             }
         }
 
-        // Filter by search query
+        // 2. Filter by Tag (for Series)
+        if (selectedTag) {
+            filtered = filtered.filter(post =>
+                post.tags?.includes(selectedTag)
+            );
+        }
+
+        // 3. Filter by Search Query
         if (searchQuery) {
             const query = searchQuery.toLowerCase();
             filtered = filtered.filter(post =>
@@ -68,131 +121,157 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
         }
 
         return filtered;
-    }, [posts, selectedCategory, searchQuery]);
+    }, [posts, selectedCategory, selectedTag, searchQuery]);
 
     const featuredPosts = filteredPosts.filter(post => post.featured);
     const regularPosts = filteredPosts.filter(post => !post.featured);
 
-    return (
-        <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-amber-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
-            {/* Hero Section */}
-            <section className="pt-32 pb-12 px-4">
-                <div className="container mx-auto max-w-7xl">
-                    <div className="text-center space-y-6 mb-12">
-                        <h1 className="text-4xl md:text-6xl font-bold text-slate-900 dark:text-white">
-                            Intelligence & <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-orange-600 dark:from-amber-400 dark:to-orange-400">Insights</span>
-                        </h1>
-                        <p className="text-lg md:text-xl text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                            Khám phá giao điểm giữa công nghệ, nghiên cứu và chuyển đổi doanh nghiệp
-                        </p>
-                    </div>
+    const clearFilters = () => {
+        setSearchQuery('');
+        setSelectedCategory(null);
+        setSelectedTag(null);
+    };
 
-                    {/* Search & Filter Bar */}
-                    <div className="max-w-4xl mx-auto space-y-4">
-                        {/* Search Input */}
-                        <div className="relative">
+    const isFiltering = searchQuery || selectedCategory || selectedTag;
+
+    return (
+        <div className="min-h-screen bg-slate-50 dark:bg-slate-950">
+            {/* Hero Section */}
+            <div className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800">
+                <section className="pt-32 pb-12 px-4">
+                    <div className="container mx-auto max-w-7xl">
+                        <div className="text-center space-y-4 mb-8">
+                            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white tracking-tight">
+                                Learning <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Hub</span>
+                            </h1>
+                            <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
+                                Kho tri thức thực chiến về Quản trị, Công nghệ và Nghiên cứu khoa học.
+                            </p>
+                        </div>
+
+                        {/* Search Bar */}
+                        <div className="max-w-2xl mx-auto relative mb-12">
                             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                             <input
                                 type="text"
-                                placeholder="Tìm kiếm bài viết theo tiêu đề, nội dung hoặc tag..."
+                                placeholder="Tìm kiếm bài viết..."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
-                                className="w-full pl-12 pr-4 py-4 rounded-xl border-2 border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder:text-slate-400 focus:border-amber-500 dark:focus:border-amber-500 focus:outline-none transition-colors"
+                                className="w-full pl-12 pr-12 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
                             />
                             {searchQuery && (
                                 <button
                                     onClick={() => setSearchQuery('')}
-                                    className="absolute right-4 top-1/2 -translate-y-1/2 p-1 hover:bg-slate-100 dark:hover:bg-slate-800 rounded-full transition-colors"
+                                    className="absolute right-4 top-1/2 -translate-y-1/2 p-1 hover:bg-slate-200 dark:hover:bg-slate-700 rounded-full"
                                 >
-                                    <X className="w-4 h-4 text-slate-400" />
+                                    <X className="w-4 h-4 text-slate-500" />
                                 </button>
                             )}
                         </div>
 
-                        {/* Category Filter */}
-                        <div className="flex items-center gap-3 overflow-x-auto pb-2 scrollbar-hide">
+                        {/* VISUAL SERIES INDEX - Only show when NOT searching/filtering deep */}
+                        {!isFiltering && (
+                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-12">
+                                {SERIES_CONFIG.map((series) => (
+                                    <button
+                                        key={series.id}
+                                        onClick={() => {
+                                            if (series.tag) setSelectedTag(series.tag);
+                                            if (series.category) setSelectedCategory(series.category);
+                                        }}
+                                        className="group relative overflow-hidden rounded-2xl p-6 text-left transition-all hover:shadow-xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 hover:-translate-y-1"
+                                    >
+                                        <div className={`absolute inset-0 opacity-0 group-hover:opacity-5 transition-opacity bg-gradient-to-br ${series.gradient}`} />
+                                        <div className={`w-12 h-12 rounded-lg mb-4 flex items-center justify-center text-white shadow-lg bg-gradient-to-br ${series.gradient}`}>
+                                            <series.icon className="w-6 h-6" />
+                                        </div>
+                                        <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
+                                            {series.title}
+                                        </h3>
+                                        <p className="text-sm text-slate-500 dark:text-slate-400 line-clamp-2">
+                                            {series.desc}
+                                        </p>
+                                    </button>
+                                ))}
+                            </div>
+                        )}
+
+                        {/* Topic Groups (Pills) */}
+                        <div className="flex flex-wrap items-center justify-center gap-2">
                             <button
-                                onClick={() => setSelectedCategory(null)}
-                                className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all ${selectedCategory === null
-                                    ? 'bg-amber-600 text-white shadow-lg'
-                                    : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-amber-500'
+                                onClick={clearFilters}
+                                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${!isFiltering
+                                    ? 'bg-slate-900 text-white dark:bg-white dark:text-slate-900'
+                                    : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700'
                                     }`}
                             >
-                                Tất cả ({posts.length})
+                                Tất cả
                             </button>
-
-                            {/* Group Filters */}
                             {Object.keys(CATEGORY_GROUPS).map((groupKey) => (
                                 <button
                                     key={groupKey}
-                                    onClick={() => setSelectedCategory(groupKey)}
-                                    className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all ${selectedCategory === groupKey
+                                    onClick={() => {
+                                        setSelectedCategory(groupKey);
+                                        setSelectedTag(null);
+                                    }}
+                                    className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedCategory === groupKey
                                         ? 'bg-blue-600 text-white shadow-lg'
-                                        : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-blue-500'
+                                        : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700'
                                         }`}
                                 >
                                     {GROUP_NAMES[groupKey]}
                                 </button>
                             ))}
-
-                            {/* Divider */}
-                            <div className="w-px h-6 bg-slate-300 dark:bg-slate-700 mx-2"></div>
-
-                            {/* Individual Categories */}
-                            {categories.map((category) => {
-                                const count = posts.filter(post =>
-                                    post.categories?.some((cat: any) => cat.slug.current === category.slug.current)
-                                ).length;
-
-                                return (
-                                    <button
-                                        key={category._id}
-                                        onClick={() => setSelectedCategory(category.slug.current)}
-                                        className={`px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap transition-all ${selectedCategory === category.slug.current
-                                            ? 'text-white shadow-lg'
-                                            : 'bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:border-amber-500'
-                                            }`}
-                                        style={{
-                                            backgroundColor: selectedCategory === category.slug.current ? category.color : undefined,
-                                        }}
-                                    >
-                                        {category.title} ({count})
-                                    </button>
-                                );
-                            })}
-                        </div>
-
-                        {/* Results Count */}
-                        <div className="text-center text-sm text-slate-600 dark:text-slate-400">
-                            {searchQuery || selectedCategory ? (
-                                <span>
-                                    {selectedCategory && (CATEGORY_GROUPS[selectedCategory] ? `Đang xem danh mục: ${GROUP_NAMES[selectedCategory]} - ` : '')}
-                                    Tìm thấy <strong className="text-amber-600 dark:text-amber-400">{filteredPosts.length}</strong> bài viết
-                                </span>
-                            ) : (
-                                <span>Tổng cộng <strong className="text-amber-600 dark:text-amber-400">{posts.length}</strong> bài viết</span>
-                            )}
+                            {/* Specific "General Research" Quick Filter */}
+                            <button
+                                onClick={() => {
+                                    setSelectedCategory('academic-corner');
+                                    setSelectedTag(null);
+                                }}
+                                className={`px-4 py-2 rounded-full text-sm font-medium transition-all ${selectedCategory === 'academic-corner'
+                                    ? 'bg-indigo-600 text-white shadow-lg'
+                                    : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700'
+                                    }`}
+                            >
+                                Đời Research
+                            </button>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
 
-            {/* Featured Posts */}
-            {featuredPosts.length > 0 && (
-                <section className="py-8 px-4">
-                    <div className="container mx-auto max-w-7xl">
+            {/* Content Area */}
+            <div className="container mx-auto max-w-7xl px-4 py-12">
+
+                {/* Active Filter Indicator */}
+                {isFiltering && (
+                    <div className="flex items-center gap-2 mb-8 text-sm text-slate-500">
+                        <span>Đang xem:</span>
+                        {selectedTag && <span className="font-bold text-slate-900 dark:text-white">Tag: {selectedTag}</span>}
+                        {selectedCategory && <span className="font-bold text-slate-900 dark:text-white">Danh mục: {GROUP_NAMES[selectedCategory] || selectedCategory}</span>}
+                        {searchQuery && <span className="font-bold text-slate-900 dark:text-white">Tìm kiếm: "{searchQuery}"</span>}
+
+                        <button onClick={clearFilters} className="ml-auto text-red-500 hover:underline flex items-center gap-1">
+                            <X className="w-3 h-3" /> Xóa bộ lọc
+                        </button>
+                    </div>
+                )}
+
+                {/* Featured Posts (Only show if filtering or on home) */}
+                {featuredPosts.length > 0 && (
+                    <section className="mb-16">
                         <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-                            <span className="w-1 h-6 bg-amber-600 rounded-full"></span>
-                            Bài viết nổi bật
+                            <TrendingUp className="w-6 h-6 text-amber-500" />
+                            Tiêu điểm
                         </h2>
-                        <div className="grid md:grid-cols-2 gap-6">
-                            {featuredPosts.map((post) => (
+                        <div className="grid md:grid-cols-2 gap-8">
+                            {featuredPosts.slice(0, 4).map((post) => (
                                 <Link
                                     key={post._id}
                                     href={`/blog/${post.slug.current}`}
-                                    className="group block"
+                                    className="group block h-full"
                                 >
-                                    <article className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-amber-500 dark:hover:border-amber-500 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1">
+                                    <article className="bg-white dark:bg-slate-900 rounded-2xl overflow-hidden border border-slate-200 dark:border-slate-800 transition-all hover:shadow-xl hover:-translate-y-1 h-full flex flex-col">
                                         {post.mainImage && (
                                             <div className="relative aspect-[16/9] overflow-hidden">
                                                 <Image
@@ -203,61 +282,49 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                                                 />
                                             </div>
                                         )}
-                                        <div className="p-6">
-                                            <div className="flex items-center gap-3 text-sm mb-3">
+                                        <div className="p-6 flex-1 flex flex-col">
+                                            <div className="flex items-center gap-3 text-xs mb-3">
                                                 {post.categories?.[0] && (
-                                                    <span
-                                                        className="px-3 py-1 rounded-full text-xs font-semibold"
-                                                        style={{
-                                                            backgroundColor: `${post.categories[0].color}20`,
-                                                            color: post.categories[0].color
-                                                        }}
-                                                    >
+                                                    <span className="px-2.5 py-0.5 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-300 font-medium">
                                                         {post.categories[0].title}
                                                     </span>
                                                 )}
-                                                <span className="flex items-center gap-1 text-slate-500 dark:text-slate-400">
-                                                    <Clock className="w-4 h-4" />
-                                                    {post.readingTime} phút
+                                                <span className="text-slate-400 flex items-center gap-1">
+                                                    <Clock className="w-3 h-3" /> {post.readingTime} phút
                                                 </span>
                                             </div>
-                                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors">
+                                            <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                                                 {post.title}
                                             </h3>
-                                            <p className="text-slate-600 dark:text-slate-400 mb-4 line-clamp-2">
+                                            <p className="text-slate-600 dark:text-slate-400 line-clamp-2 mb-4 flex-1">
                                                 {post.excerpt}
                                             </p>
-                                            <div className="flex items-center justify-between">
-                                                <div className="text-sm text-slate-500 dark:text-slate-400">
-                                                    {new Date(post.publishedAt).toLocaleDateString('vi-VN')}
-                                                </div>
-                                                <ArrowRight className="w-5 h-5 text-amber-600 group-hover:translate-x-2 transition-transform" />
+                                            <div className="flex items-center text-sm font-medium text-blue-600 dark:text-blue-400">
+                                                Đọc tiếp <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                                             </div>
                                         </div>
                                     </article>
                                 </Link>
                             ))}
                         </div>
-                    </div>
-                </section>
-            )}
+                    </section>
+                )}
 
-            {/* Regular Posts Grid */}
-            <section className="py-8 px-4 pb-24">
-                <div className="container mx-auto max-w-7xl">
-                    <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
-                        <span className="w-1 h-6 bg-amber-600 rounded-full"></span>
-                        {featuredPosts.length > 0 ? 'Tất cả bài viết' : 'Bài viết mới nhất'}
+                {/* Regular Posts Grid */}
+                <section>
+                    <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6">
+                        {isFiltering ? `Danh sách bài viết (${filteredPosts.length})` : 'Mới cập nhật'}
                     </h2>
-                    {regularPosts.length > 0 ? (
+
+                    {filteredPosts.length > 0 ? (
                         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                            {regularPosts.map((post) => (
+                            {(isFiltering ? filteredPosts : regularPosts).map((post) => (
                                 <Link
                                     key={post._id}
                                     href={`/blog/${post.slug.current}`}
                                     className="group block"
                                 >
-                                    <article className="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 hover:border-amber-500 dark:hover:border-amber-500 transition-all h-full flex flex-col hover:shadow-lg hover:-translate-y-1">
+                                    <article className="bg-white dark:bg-slate-900 rounded-xl overflow-hidden border border-slate-200 dark:border-slate-800 transition-all hover:shadow-lg hover:-translate-y-1 h-full flex flex-col">
                                         {post.mainImage && (
                                             <div className="relative aspect-[16/9] overflow-hidden">
                                                 <Image
@@ -269,48 +336,41 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                                             </div>
                                         )}
                                         <div className="p-5 flex-1 flex flex-col">
-                                            <div className="flex items-center gap-2 text-xs mb-3">
-                                                {post.categories?.[0] && (
-                                                    <span
-                                                        className="px-2 py-1 rounded-full font-semibold"
-                                                        style={{
-                                                            backgroundColor: `${post.categories[0].color}20`,
-                                                            color: post.categories[0].color
-                                                        }}
-                                                    >
-                                                        {post.categories[0].title}
-                                                    </span>
-                                                )}
-                                                <span className="flex items-center gap-1 text-slate-500 dark:text-slate-400">
-                                                    <Clock className="w-3 h-3" />
-                                                    {post.readingTime}p
-                                                </span>
+                                            <div className="flex items-center gap-2 text-xs mb-3 text-slate-500">
+                                                <span>{new Date(post.publishedAt).toLocaleDateString('vi-VN')}</span>
+                                                <span>•</span>
+                                                <span>{post.readingTime}p đọc</span>
                                             </div>
-                                            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors line-clamp-2">
+                                            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 line-clamp-2">
                                                 {post.title}
                                             </h3>
-                                            <p className="text-sm text-slate-600 dark:text-slate-400 mb-4 line-clamp-2 flex-1">
+                                            <p className="text-sm text-slate-600 dark:text-slate-400 line-clamp-2 flex-1">
                                                 {post.excerpt}
                                             </p>
-                                            <div className="text-xs text-slate-500 dark:text-slate-400">
-                                                {new Date(post.publishedAt).toLocaleDateString('vi-VN')}
-                                            </div>
                                         </div>
                                     </article>
                                 </Link>
                             ))}
                         </div>
                     ) : (
-                        <div className="text-center py-20 bg-white/50 dark:bg-slate-900/50 rounded-2xl border border-slate-200 dark:border-slate-800 border-dashed">
-                            <p className="text-slate-600 dark:text-slate-400 text-lg">
-                                {searchQuery || selectedCategory
-                                    ? 'Không tìm thấy bài viết nào phù hợp. Thử tìm kiếm khác nhé!'
-                                    : 'Chưa có bài viết nào. Quay lại sau nhé!'}
+                        <div className="text-center py-20 bg-white dark:bg-slate-900 rounded-2xl border border-dashed border-slate-300 dark:border-slate-800">
+                            <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-800 mb-4">
+                                <Search className="w-8 h-8 text-slate-400" />
+                            </div>
+                            <h3 className="text-lg font-medium text-slate-900 dark:text-white mb-2">Không tìm thấy bài viết</h3>
+                            <p className="text-slate-500 max-w-sm mx-auto">
+                                Thử thay đổi từ khóa tìm kiếm hoặc chọn danh mục khác bạn nhé.
                             </p>
+                            <button
+                                onClick={clearFilters}
+                                className="mt-6 px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
+                            >
+                                Xóa bộ lọc
+                            </button>
                         </div>
                     )}
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
     );
 }
