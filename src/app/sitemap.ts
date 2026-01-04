@@ -5,7 +5,7 @@ import { ALL_POSTS_QUERY } from '@/sanity/lib/queries'
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const posts = await sanityFetch<any[]>({ query: ALL_POSTS_QUERY })
 
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:9999'
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lehai.edu.vn'
 
     const blogPosts = posts?.map((post) => ({
         url: `${baseUrl}/blog/${post.slug.current}`,

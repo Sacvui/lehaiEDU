@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:9999'
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lehai.edu.vn'
 
     return {
         rules: [
