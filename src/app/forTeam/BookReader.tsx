@@ -10,22 +10,19 @@ import { cn } from '@/lib/utils';
 // Re-use existing components
 import { portableTextComponents } from '@/components/PortableTextComponents';
 
-import { Merriweather } from 'next/font/google'; // Added at top
+interface BookReaderProps {
+    chapters: BookChapter[];
+    fontClass?: string;
+}
 
-const merriweather = Merriweather({
-    subsets: ['vietnamese'],
-    weight: ['300', '400', '700', '900'],
-    display: 'swap',
-});
-
-interface BookPost {
+export default function BookReader({ chapters, fontClass }: BookReaderProps) {
     _id: string;
     title: string;
     slug: { current: string };
     body: any[];
-    mainImage?: any;
-    excerpt?: string;
-    readingTime?: number;
+    mainImage ?: any;
+    excerpt ?: string;
+    readingTime ?: number;
 }
 
 interface BookChapter {
@@ -36,9 +33,10 @@ interface BookChapter {
 
 interface BookReaderProps {
     chapters: BookChapter[];
+    fontClass?: string;
 }
 
-export default function BookReader({ chapters }: BookReaderProps) {
+export default function BookReader({ chapters, fontClass }: BookReaderProps) {
     const [isReading, setIsReading] = useState(false);
     const [activeChapterId, setActiveChapterId] = useState<string>(chapters[0]?.id || '');
     const [activePostId, setActivePostId] = useState<string>('');
@@ -148,7 +146,7 @@ export default function BookReader({ chapters }: BookReaderProps) {
 
     // READER VIEW
     return (
-        <div className={cn("min-h-screen bg-[#fdfbf7] flex relative", merriweather.className)}>
+        <div className={cn("min-h-screen bg-[#fdfbf7] flex relative", fontClass)}>
             {/* Mobile Sidebar Toggle */}
             <button
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}

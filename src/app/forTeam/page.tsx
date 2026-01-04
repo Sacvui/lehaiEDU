@@ -31,6 +31,14 @@ export const metadata = {
     }
 };
 
+import { Merriweather } from 'next/font/google';
+
+const merriweather = Merriweather({
+    subsets: ['vietnamese'],
+    weight: ['300', '400', '700', '900'],
+    display: 'swap',
+});
+
 export default async function ForTeamPage() {
     const posts = await client.fetch(QUERY, {}, { next: { revalidate: 60 } });
 
@@ -197,6 +205,7 @@ export default async function ForTeamPage() {
     ];
 
     return (
-        <BookReader chapters={chapters} />
+        <BookReader chapters={chapters} fontClass={merriweather.className} />
     );
 }
+```
