@@ -256,8 +256,37 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                             </div>
                         )}
 
-                        <div className="prose prose-lg max-w-none prose-headings:font-sans prose-headings:font-extrabold prose-headings:text-black prose-p:text-black prose-p:font-medium prose-p:leading-loose prose-li:text-black prose-li:font-medium prose-strong:text-black prose-strong:font-bold prose-a:text-amber-700 prose-img:rounded-md prose-img:shadow-lg prose-img:border prose-img:border-slate-200 prose-figcaption:text-center prose-figcaption:italic prose-figcaption:text-slate-600 prose-blockquote:border-l-4 prose-blockquote:border-amber-500 prose-blockquote:bg-amber-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:not-italic text-black font-medium">
-                            <PortableText value={activePost.body} components={portableTextComponents} />
+                        <div className="prose prose-lg max-w-none prose-img:rounded-md prose-img:shadow-lg prose-img:border prose-img:border-slate-200 prose-figcaption:text-center prose-figcaption:italic prose-figcaption:text-slate-600 prose-blockquote:border-l-4 prose-blockquote:border-amber-500 prose-blockquote:bg-amber-50 prose-blockquote:py-2 prose-blockquote:px-4 prose-blockquote:not-italic mx-auto">
+                            <PortableText
+                                value={activePost.body}
+                                components={{
+                                    ...portableTextComponents,
+                                    block: {
+                                        ...portableTextComponents.block,
+                                        normal: ({ children }: any) => (
+                                            <p className="text-xl text-black leading-loose mb-6 font-medium font-serif">
+                                                {children}
+                                            </p>
+                                        ),
+                                        h1: ({ children }: any) => <h1 className="text-4xl font-extrabold text-black mt-12 mb-6 font-sans">{children}</h1>,
+                                        h2: ({ children }: any) => <h2 className="text-3xl font-extrabold text-black mt-10 mb-5 font-sans">{children}</h2>,
+                                        h3: ({ children }: any) => <h3 className="text-2xl font-bold text-black mt-8 mb-4 font-sans">{children}</h3>,
+                                        h4: ({ children }: any) => <h4 className="text-xl font-bold text-black mt-6 mb-3 font-sans">{children}</h4>,
+                                    },
+                                    list: {
+                                        bullet: ({ children }: any) => <ul className="list-disc list-inside space-y-2 mb-6 text-black font-medium text-lg">{children}</ul>,
+                                        number: ({ children }: any) => <ol className="list-decimal list-inside space-y-2 mb-6 text-black font-medium text-lg">{children}</ol>,
+                                    },
+                                    listItem: {
+                                        bullet: ({ children }: any) => <li className="ml-4 text-black font-medium">{children}</li>,
+                                        number: ({ children }: any) => <li className="ml-4 text-black font-medium">{children}</li>,
+                                    },
+                                    marks: {
+                                        ...portableTextComponents.marks,
+                                        strong: ({ children }: any) => <strong className="font-bold text-black">{children}</strong>
+                                    }
+                                }}
+                            />
                         </div>
 
                         {/* Navigation Footer */}
