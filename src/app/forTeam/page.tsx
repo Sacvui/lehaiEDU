@@ -208,4 +208,3 @@ export default async function ForTeamPage() {
         <BookReader chapters={chapters} fontClass={merriweather.className} />
     );
 }
-```

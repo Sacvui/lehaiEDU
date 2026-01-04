@@ -10,19 +10,15 @@ import { cn } from '@/lib/utils';
 // Re-use existing components
 import { portableTextComponents } from '@/components/PortableTextComponents';
 
-interface BookReaderProps {
-    chapters: BookChapter[];
-    fontClass?: string;
-}
-
-export default function BookReader({ chapters, fontClass }: BookReaderProps) {
+interface BookPost {
     _id: string;
     title: string;
     slug: { current: string };
     body: any[];
-    mainImage ?: any;
-    excerpt ?: string;
-    readingTime ?: number;
+    mainImage?: any;
+    excerpt?: string;
+    readingTime?: number;
+    chapterId?: string; // Client-side augmentation
 }
 
 interface BookChapter {
@@ -62,7 +58,7 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
         if (activePostIndex < allPosts.length - 1) {
             const nextPost = allPosts[activePostIndex + 1];
             setActivePostId(nextPost._id);
-            setActiveChapterId(nextPost.chapterId);
+            setActiveChapterId(nextPost.chapterId || '');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
@@ -71,7 +67,7 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
         if (activePostIndex > 0) {
             const prevPost = allPosts[activePostIndex - 1];
             setActivePostId(prevPost._id);
-            setActiveChapterId(prevPost.chapterId);
+            setActiveChapterId(prevPost.chapterId || '');
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     };
