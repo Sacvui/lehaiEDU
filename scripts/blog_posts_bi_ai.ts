@@ -1,7 +1,7 @@
 
 export const bi_ai_post = [
     {
-        title: 'BI vs AI: Đừng Để "Thuật Ngữ" Dắt Mũi �',
+        title: 'BI vs AI: Đừng Để "Thuật Ngữ" Dắt Mũi',
         slug: { current: 'bi-vs-ai-hai-morning' },
         publishedAt: new Date().toISOString(),
         excerpt: 'Sáng nay ngồi cafe nghe mấy sếp bàn chuyện "AI 4.0" mà tôi suýt sặc. Hóa ra nhiều người vẫn tưởng vẽ cái biểu đồ đẹp đẹp là AI. Không phải đâu các bạn mình ơi!',
@@ -49,7 +49,7 @@ export const bi_ai_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Nhiều sếp vui tính lắm. Tuyển mấy em làm báo cáo (BI) về rồi bắt các em ấy phải "phân tích thấu thị tương lai". Làm sao mà làm được?\n\n Muốn báo cáo đẹp, gọn gàng, sếp kiếm đội Data Analyst/BI.\n Muốn biết tháng sau có đạt KPI không, sếp phải kiếm đội Data Scientist.\n\nĐừng lẫn lộn. Lẫn lộn là tốn tiền mà chả được tích sự gì, lại còn hay "họp hành triền miên" để mổ xẻ mấy con số đã chết rồi.' }],
+                children: [{ _type: 'span', text: 'Nhiều sếp vui tính lắm. Tuyển mấy em làm báo cáo (BI) về rồi bắt các em ấy phải "phân tích thấu thị tương lai". Làm sao mà làm được?\n\n - Muốn báo cáo đẹp, gọn gàng, sếp kiếm đội Data Analyst/BI.\n - Muốn biết tháng sau có đạt KPI không, sếp phải kiếm đội Data Scientist.\n\nĐừng lẫn lộn. Lẫn lộn là tốn tiền mà chả được tích sự gì, lại còn hay "họp hành triền miên" để mổ xẻ mấy con số đã chết rồi.' }],
             },
             {
                 _type: 'block',

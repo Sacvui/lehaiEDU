@@ -1,6 +1,6 @@
 export const batch6 = [
     {
-        title: 'Xây dựng Thương hiệu cá nhân (Personal Branding): Đừng làm "màu", hãy làm "nội dung" ',
+        title: 'Xây dựng Thương hiệu cá nhân (Personal Branding): Đừng làm "màu", hãy làm "nội dung"',
         slug: { current: 'personal-branding-no-bullshit' },
         publishedAt: new Date(Date.now() - 1582400000).toISOString(),
         excerpt: 'Bạn nghĩ thương hiệu cá nhân là chụp hình sang chảnh, check-in resort 5 sao? Sai rồi. Thương hiệu là những gì người ta nói về bạn khi bạn không có mặt trong phòng. Làm sao để xây dựng nó một cách tử tế?',
@@ -72,7 +72,7 @@ export const batch6 = [
         ],
     },
     {
-        title: 'Thất bại không đáng sợ, đáng sợ là... thất bại mà không học được gì ',
+        title: 'Thất bại không đáng sợ, đáng sợ là... thất bại mà không học được gì',
         slug: { current: 'failure-learning' },
         publishedAt: new Date(Date.now() - 1668800000).toISOString(),
         excerpt: 'Chúng ta hay tung hô thành công, nhưng lại giấu nhẹm thất bại. Tại sao Hải lại khuyên nhân viên: "Hãy thất bại nhanh lên" (Fail Fast)?',
@@ -139,7 +139,7 @@ export const batch6 = [
         ],
     },
     {
-        title: 'Kỹ năng của tương lai: Không phải Coding, mà là... Empathy (Thấu cảm) ',
+        title: 'Kỹ năng của tương lai: Không phải Coding, mà là... Empathy (Thấu cảm)',
         slug: { current: 'future-skills-empathy' },
         publishedAt: new Date(Date.now() - 1755200000).toISOString(),
         excerpt: 'AI đang code thay lập trình viên, viết bài thay Copywriter. Vậy con người còn lại gì để cạnh tranh? Đó là trái tim nóng hổi biết rung động trước nỗi đau của người khác.',
@@ -196,7 +196,7 @@ export const batch6 = [
         ],
     },
     {
-        title: 'Gửi Hải của năm 20 tuổi: Những điều anh ước mình biết sớm hơn ',
+        title: 'Gửi Hải của năm 20 tuổi: Những điều anh ước mình biết sớm hơn',
         slug: { current: 'letter-to-my-20s' },
         publishedAt: new Date(Date.now() - 1841600000).toISOString(),
         excerpt: 'Nếu có cỗ máy thời gian quay lại gặp thằng Hải năm 20 tuổi ngáo ngơ, Hải sẽ tát nó một cái cho tỉnh, rồi dặn nó 3 điều này.',

@@ -1,7 +1,7 @@
 
 export const book_intro = [
     {
-        title: 'Project Next: 300 Nursery Rhymes - A Strategic Blueprint for Aspiring Leaders ',
+        title: 'Project Next: 300 Nursery Rhymes - A Strategic Blueprint for Aspiring Leaders',
         slug: { current: 'book-project-intro' },
         publishedAt: new Date().toISOString(),
         excerpt: 'A synthesis of practical wisdom and strategic frameworks. Bridging the gap between academic theory and the raw reality of business execution in Vietnam.',

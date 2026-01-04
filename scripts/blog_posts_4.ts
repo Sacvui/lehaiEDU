@@ -1,10 +1,11 @@
 export const batch4 = [
     {
-        title: 'Nghệ thuật "Đi tuần" (Gemba Walk): Tại sao sếp văn phòng không bao giờ hiểu được thị trường? ',
+        title: 'Nghệ thuật "Đi tuần" (Gemba Walk): Tại sao sếp văn phòng không bao giờ hiểu được thị trường?',
         slug: { current: 'gemba-walk-sales-management' },
         publishedAt: new Date(Date.now() - 518400000).toISOString(),
         excerpt: 'Bạn có bao giờ tự hỏi tại sao chỉ đạo từ trụ sở chính xuống tới thực địa (field) lại bị tam sao thất bản? Đó là vì bạn thiếu "Gemba Walk". Hãy xỏ giày vào và đi ra đường, bạn sẽ thấy sự thật trần trụi khác xa báo cáo Excel.',
         categorySlug: 'strategic-leadership',
+        coverImage: '/blog/gemba_walk_sales_management.png',
         featured: false,
         readingTime: 25,
         tags: ['Gemba Walk', 'Sales Management', 'Field Work', 'Leadership', 'Góc nhìn HaiLP'],
@@ -34,7 +35,6 @@ export const batch4 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Hải từng chứng kiến một ông sếp ra lệnh: "Bắt buộc 100% tạp hóa phải treo bảng hiệu công ty". Ổng đâu biết là ở vùng nông thôn, tạp hóa toàn là nhà dân, tường vôi cũ nát, treo cái bảng to đùng lên là sập tường nhà người ta. Nếu ổng chịu đi một vong (Gemba), ổng đã không ra cái lệnh ngớ ngẩn đó.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -75,7 +75,6 @@ export const batch4 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Thấy lính làm sai, đừng chửi nó tại trận. Ghi nhận lại, về họp với quản lý trực tiếp của nó (Sales Sup/ASM) để coach lại. Bạn mà chửi lính trước mặt khách hàng là bạn giết chết danh dự của nó và uy tín của công ty.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -96,7 +95,6 @@ export const batch4 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Hải về, ký ngay quyết định: Tung chương trình tặng ô dù cầm tay cho tiểu thương. Doanh số bật lại ngay tức khắc. Nếu cứ ngồi ở Sài Gòn nghe báo cáo "do mưa bão" thì chắc chết đói cả nút.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -112,11 +110,12 @@ export const batch4 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Chúc các bạn có những chuyến Gemba đầy bụi bặm nhưng "ra tiền"!' }],
             }
-        ],
+        ]
     },
     {
-        title: 'Hội chứng "Kẻ mạo danh" (Imposter Syndrome): Tại sao bạn giỏi mà vẫn thấy mình kém cỏi? ',
+        title: 'Hội chứng "Kẻ mạo danh" (Imposter Syndrome): Tại sao bạn giỏi mà vẫn thấy mình kém cỏi?',
         slug: { current: 'imposter-syndrome-career' },
+        coverImage: '/blog/imposter_syndrome_career.png',
         publishedAt: new Date(Date.now() - 604800000).toISOString(),
         excerpt: 'Bạn vừa được thăng chức, nhưng trong lòng nơm nớp lo sợ: "Chắc mình may mắn thôi. Lỡ người ta phát hiện ra mình không giỏi như họ nghĩ thì sao?". Chúc mừng, bạn đang mắc hội chứng Imposter Syndrome. Để Hải chỉ cho cách trị.',
         categorySlug: 'mentorship-career',
@@ -139,7 +138,6 @@ export const batch4 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Đó chính là Imposter Syndrome (Hội chứng kẻ mạo danh). Và tin vui cho các bạn: 70% người thành đạt đều từng bị ít nhất một lần. Từ Elon Musk cho tới bà bán bún bò đầu ngõ.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -155,7 +153,6 @@ export const batch4 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Thứ hai: Hiệu ứng Dunning-Kruger ngược. Người càng giỏi càng biết mình ngu. Càng biết nhiều, càng thấy cái bể kiến thức nó mênh mông quá, mình chỉ là hạt cát. Nên lúc nào cũng thấy mình thiếu sót.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -201,7 +198,6 @@ export const batch4 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Hải có một cuốn sổ tay nhỏ. Mỗi ngày Hải ghi lại 3 việc mình làm tốt. "Hôm nay giải quyết êm xuôi vụ khiếu nại khách hàng A", "Hôm nay nhân viên B cảm ơn vì mình đã hướng dẫn nó". Những ngày thấy mình kém cỏi, Hải lôi cuốn sổ ra đọc. Nó là liều doping tinh thần cực mạnh.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -216,12 +212,13 @@ export const batch4 = [
                 _type: 'block',
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Bạn giỏi hơn bạn nghĩ nhiều. Tin Hải đi!' }],
-            },
-        ],
+            }
+        ]
     },
     {
-        title: 'Thuyết "Cây gậy và Củ cà rốt": Dùng sao cho không bị... phản tác dụng? ',
+        title: 'Thuyết "Cây gậy và Củ cà rốt": Dùng sao cho không bị... phản tác dụng?',
         slug: { current: 'carrot-and-stick-strategy' },
+        coverImage: '/blog/carrot_and_stick_strategy.png',
         publishedAt: new Date(Date.now() - 691200000).toISOString(),
         excerpt: 'Thưởng (Cà rốt) và Phạt (Gậy) là hai công cụ kinh điển. Nhưng coi chừng: Thưởng sai cách thì nhân viên ỷ lại, Phạt sai cách thì nhân viên oán giận. Nghệ thuật nằm ở sự cân bằng.',
         categorySlug: 'strategic-leadership',
@@ -244,7 +241,6 @@ export const batch4 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Đó là lúc Hải nhận ra: Củ cà rốt (Tiền) có tác dụng phụ. Nó gây nghiện và lờn thuốc (Habituation). Nếu cứ dùng tiền để kích thích, liều sau phải cao hơn liều trước. Đến lúc công ty hết tiền thì sao? Nhân viên cũng hết làm.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -280,7 +276,6 @@ export const batch4 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Nhân viên đi trễ, phạt 50k. Họ sẽ nghĩ: "OK, 50k mua được 15 phút ngủ nướng, rẻ quá". Họ sẵn sàng nộp phạt để vi phạm. Đó là tư duy trao đổi (Transaction). Thay vì phạt tiền, hãy để họ tự kiểm điểm, công khai xin lỗi team, hoặc trực nhật... những hình thức tác động vào lòng tự trọng (Social Pressure) thường hiệu quả hơn nhiều.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -309,7 +304,6 @@ export const batch4 = [
                 listItem: 'number',
                 children: [{ _type: 'span', text: 'P3 - Performance (Hiệu quả): Thưởng theo kết quả kinh doanh. Cái này phải chiếm 30-50% tổng thu nhập thì mới máu lửa.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -325,11 +319,12 @@ export const batch4 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Hãy nhớ: Tiền mua được sức lao động, nhưng không mua được trái tim và sự trung thành. Trái tim thì phải đổi bằng trái tim thôi, sếp ạ!' }],
             }
-        ],
+        ]
     },
     {
-        title: 'Viết luận văn bằng AI: "Trợ lý" hay "Kẻ hủy diệt" tư duy? ',
+        title: 'Viết luận văn bằng AI: "Trợ lý" hay "Kẻ hủy diệt" tư duy?',
         slug: { current: 'ai-writing-thesis-ethics' },
+        coverImage: '/blog/ai_writing_thesis_ethics.png',
         publishedAt: new Date(Date.now() - 777600000).toISOString(),
         excerpt: 'ChatGPT, Claude, Gemini... giờ viết văn hay hơn cả người. Sinh viên hí hửng copy-paste nộp bài. Nhưng coi chừng, "gậy ông đập lưng ông". AI giúp bạn đi nhanh, nhưng cũng làm cho não bạn "teo" đi nếu lạm dụng.',
         categorySlug: 'academic-corner',
@@ -347,7 +342,6 @@ export const batch4 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Nhiều bạn sinh viên hí hửng: "Ôi thầy Hải ơi, em xong luận văn rồi, AI nó cân tất". Hải cười nhạt: "Ừ, mang ra hội đồng rồi biết tay".' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -358,7 +352,6 @@ export const batch4 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'AI nó là mô hình ngôn ngữ, nó không phải là kho tri thức sự thật. Nó được huấn luyện để tạo ra những câu văn "nghe có vẻ hợp lý" (plausible), chứ không phải "chính xác" (accurate). Nó sẵn sàng bịa ra một cái tên tác giả: "Nguyễn Văn A (2025) đã nói..." trong khi ông A chả nói gì cả, thậm chí chả có ông A nào. Bạn copy vào luận văn, ra hội đồng phản biện check một phát là bạn rớt ngay lập tức vì tội "bịa đặt số liệu" (Fabrication).' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -409,7 +402,6 @@ export const batch4 = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Bài báo dài 50 trang lười đọc quá? Quăng vào bảo nó: "Tóm tắt cho tao 5 luận điểm chính". Nó giúp bạn tiết kiệm thời gian đọc hiểu.' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
@@ -424,12 +416,13 @@ export const batch4 = [
                 _type: 'block',
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Viết lách là tư duy (Writing is Thinking). Đừng giao phó tư duy của mình cho cái máy!' }],
-            },
-        ],
+            }
+        ]
     },
     {
-        title: 'Câu chuyện "Cái Bình Nước" và bài học về sự chuyên nghiệp ',
+        title: 'Câu chuyện "Cái Bình Nước" và bài học về sự chuyên nghiệp',
         slug: { current: 'water-bottle-professionalism' },
+        coverImage: '/blog/water_bottle_professionalism.png',
         publishedAt: new Date(Date.now() - 864000000).toISOString(),
         excerpt: 'Chuyện nhỏ như con kiến nhưng giết chết sự nghiệp như chơi. Tại sao Hải luôn soi nhân viên từ cái bình nước, cái ghế ngồi? "Thánh soi" hay là tiêu chuẩn cao?',
         categorySlug: 'mentorship-career',
@@ -449,68 +442,52 @@ export const batch4 = [
             },
             {
                 _type: 'block',
-                style: 'normal',
-                children: [{ _type: 'span', text: 'Hải chỉ vào vũng nước: "Em quản lý cái ly nước của mình còn chưa xong, làm sao anh dám giao cho em quản lý lịch trình và tài liệu mật của anh?".' }],
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Câu trả lời của Hải: "Em không quản lý nổi một ly nước, sao anh dám giao em quản lý lịch trình của anh?"' }],
             },
-
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Nhiều bạn sẽ bảo: "Anh khó tính quá, chuyện nhỏ xíu". Không đâu các bạn. Cách bạn làm một việc là cách bạn làm mọi việc (How you do anything is how you do everything). Cái ly nước hôm nay sẽ là cái hợp đồng bị đổ cà phê ngày mai, là cái email gửi khách hàng sai chính tả, là cái phòng họp bừa bộn sau khi khách về.' }],
+            },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Cách bạn làm một việc là cách bạn làm mọi việc (How you do anything is how you do everything)' }],
+                children: [{ _type: 'span', text: 'Sự chuyên nghiệp (Professionalism) đến từ đâu?' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Các bạn trẻ hay nghĩ: "Chuyện nhỏ mà anh, soi mói làm gì, quan trọng là việc lớn em làm tốt". Sai lầm! Việc lớn được cấu thành từ hàng ngàn việc nhỏ. Một con ốc vít lỏng có thể làm rơi cả chiếc máy bay.' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                children: [{ _type: 'span', text: 'Sự chuyên nghiệp (Professionalism) không phải là mặc vest đẹp, đi giày tây bóng. Nó thể hiện ở:' }],
+                children: [{ _type: 'span', text: 'Nó không đến từ bộ vest đắt tiền hay cái CV hoành tráng. Nó đến từ:' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: 'Đứng dậy kéo cái ghế vào:' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                children: [{ _type: 'span', text: 'Họp xong, đứng dậy đi về, cái ghế cứ để chỏng chơ giữa đường đi lối lại. Người sau đi vấp té sấp mặt. Cái hành động kéo ghế vào gầm bàn mất 2 giây thôi, nhưng nó thể hiện bạn là người có ý thức (Considerate), biết nghĩ cho người khác.' }],
+                children: [{ _type: 'span', text: 'Cái ghế bạn đẩy vào sau khi đứng dậy.' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: 'Cái Subject Email:' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                children: [{ _type: 'span', text: 'Gửi cái email xin việc mà Subject ghi mỗi chữ "CV" hay "Xin viec". Hay tệ hơn là không ghi gì (No Subject). Hải delete thẳng tay. Ít nhất phải ghi được: "Ứng tuyển vị trí X - Tên Nguyễn Văn A". Đó là tôn trọng người đọc.' }],
+                children: [{ _type: 'span', text: 'Cái ly nước bạn lau sạch đáy trước khi đặt lên bàn.' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: 'Đúng giờ (Punctuality):' }],
+                children: [{ _type: 'span', text: 'Lời "Cảm ơn" và "Xin lỗi" đúng lúc.' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Hẹn 9h, 9h05 tới rồi cười xòa: "Kẹt xe quá anh ơi". Không ai quan tâm lý do của bạn đâu. Nếu kẹt xe, sao không đi sớm hơn? Đến trễ là ăn cắp thời gian của người khác.' }],
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: 'Việc đi đúng giờ (On time nghĩa là đến sớm 5 phút).' }],
             },
-
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Muốn làm tướng tài, phải bắt đầu từ tên lính giỏi' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                children: [{ _type: 'span', text: 'Đừng chê việc nhỏ. Ngày xưa Hải mới ra trường, cũng phải đi bưng trà rót nước, đi photo tài liệu. Nhưng Hải photo đẹp, không bị lệch, sắp xếp ngay ngắn, kẹp ghim cẩn thận. Sếp thấy thằng này chỉn chu, mới tin tưởng giao cho làm cái báo cáo. Làm báo cáo ngon, mới giao cho đi gặp khách hàng.' }],
+                children: [{ _type: 'span', text: 'Kết' }],
             },
             {
                 _type: 'block',
@@ -521,7 +498,7 @@ export const batch4 = [
                 _type: 'block',
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Sống tử tế, làm kỹ lưỡng. Đời sẽ không phụ bạn đâu.' }],
-            },
-        ],
+            }
+        ]
     }
 ];

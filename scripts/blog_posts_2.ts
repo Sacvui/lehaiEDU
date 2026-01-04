@@ -1,10 +1,11 @@
 export const batch2 = [
     {
-        title: 'Thư gửi các bạn Nghiên cứu sinh chập chững vào nghề: Đừng "ngây thơ" trước Scopus ',
+        title: 'Định Lượng vs Định Tính: Cuộc chiến không hồi kết của giới học thuật',
         slug: { current: 'thu-gui-ncs-scopus' },
         publishedAt: new Date(Date.now() - 172800000).toISOString(),
         excerpt: 'Dạo này nhiều bạn inbox hỏi Hải: "Anh ơi làm sao để đăng báo Q1, Q2 cho nhanh để em còn bảo vệ?". Nghe câu hỏi mà Hải vừa thương vừa giận. Thương vì các bạn chưa biết gì, giận vì tư duy "mì ăn liền" trong làm khoa học. Để Hải kể chuyện "bị hành" cho nghe.',
         categorySlug: 'academic-corner',
+        coverImage: '/blog/thu_gui_ncs_scopus.png',
         featured: true,
         readingTime: 22,
         tags: ['PhD', 'Research', 'Academic Publishing', 'Scopus', 'Mindset', 'Góc nhìn HaiLP'],
@@ -103,6 +104,7 @@ export const batch2 = [
         publishedAt: new Date(Date.now() - 259200000).toISOString(),
         excerpt: 'Đọc 100 bài báo rồi mà đầu óc vẫn trống rỗng? Đó là do bạn đang "Review" như một con vẹt. Hãy dùng Synthesis Matrix để nâng tầm tư duy từ "Thợ hồ" lên "Kiến trúc sư".',
         categorySlug: 'academic-corner',
+        coverImage: '/blog/review_van_tho_synthesis.png',
         featured: true,
         readingTime: 20,
         tags: ['Literature Review', 'Synthesis Matrix', 'AI Tools', 'Research Method', 'Góc nhìn HaiLP'],

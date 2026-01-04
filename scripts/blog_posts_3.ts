@@ -1,10 +1,11 @@
 export const batch3 = [
     {
-        title: 'Nghệ thuật sa thải "Ngôi sao độc hại" (Toxic Star): Đau một lần rồi thôi ',
+        title: 'Nghệ thuật sa thải "Ngôi sao độc hại" (Toxic Star): Đau một lần rồi thôi',
         slug: { current: 'sa-thai-toxic-star' },
         publishedAt: new Date(Date.now() - 345600000).toISOString(),
         excerpt: 'Sếp nào cũng sợ nhân viên giỏi nghỉ việc. Nhưng có một loại nhân viên CỰC GIỎI mà bạn phải tìm cách đuổi càng sớm càng tốt. Đó là Toxic Star. Giữ lại ngày nào là "ung thư" ngày đó.',
         categorySlug: 'mentorship-career',
+        coverImage: '/blog/sa_thai_toxic_star.png',
         featured: true,
         readingTime: 18,
         tags: ['Leadership', 'HR', 'Culture', 'Management', 'Toxic Employee', 'Góc nhìn HaiLP'],
@@ -112,6 +113,7 @@ export const batch3 = [
         publishedAt: new Date(Date.now() - 432000000).toISOString(),
         excerpt: 'Bạn thuộc phe nào? Phe "Con số biết nói" (Quantitative) hay phe "Thấu hiểu lòng người" (Qualitative)? Tại sao phỏng vấn sâu lại bị coi thường? Khi nào thì nên chạy mô hình SPSS?',
         categorySlug: 'academic-corner',
+        coverImage: '/blog/dinh_luong_vs_dinh_tinh_war.png',
         featured: false,
         readingTime: 20,
         tags: ['Research Method', 'Quantitative', 'Qualitative', 'Mixed Methods', 'PhD Life', 'Góc nhìn HaiLP'],

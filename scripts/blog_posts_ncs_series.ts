@@ -24,7 +24,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đừng nghĩ làm nghiên cứu là ngồi đọc sách thánh hiền rồi chép lại. Nghiên cứu khoa học (NCKH) thực chất là luyện Kỹ năng Giải quyết Vấn đề (Problem Solving) ở cấp độ cao nhất của nhân loại.\n\n Level Nhân viên: Sếp bảo "Em ơi doanh số tụt", nhân viên chạy đi in tờ rơi -> Giải quyết phần ngọn.\n Level Quản lý: Sếp bảo "Em ơi doanh số tụt", quản lý họp team tìm nguyên nhân, vẽ lại quy trình -> Giải quyết phần thân.\n Level PhD: Không ai bảo gì cả. Tự nhìn vào dữ liệu vĩ mô, thấy một "khoảng trống" (Gap) mà chưa ai trên thế giới giải thích được. Ví dụ: "Tại sao tung khuyến mãi càng nhiều khách càng bỏ đi?". Và PhD lao vào tìm ra cái Lý thuyết (Theory) đằng sau nó.\n\nHọc PhD là học tư duy logic cực đoan. Học cách nhìn một sự việc từ 10 hướng khác nhau, bóc tách từng lớp vỏ hành tây để tìm ra Chân lý (Truth). Mà cái này thì làm kinh doanh, làm chính trị, hay làm... chồng đều cần cả. Sếp nào mà có tư duy PhD thì nhân viên sướng vô cùng, vì sếp ra quyết định dựa trên bằng chứng (Evidence-based) chứ không phải kiểu "tao nằm mơ thấy thế".' }],
+                children: [{ _type: 'span', text: 'Đừng nghĩ làm nghiên cứu là ngồi đọc sách thánh hiền rồi chép lại. Nghiên cứu khoa học (NCKH) thực chất là luyện Kỹ năng Giải quyết Vấn đề (Problem Solving) ở cấp độ cao nhất của nhân loại.\n\n - Level Nhân viên: Sếp bảo "Em ơi doanh số tụt", nhân viên chạy đi in tờ rơi -> Giải quyết phần ngọn.\n - Level Quản lý: Sếp bảo "Em ơi doanh số tụt", quản lý họp team tìm nguyên nhân, vẽ lại quy trình -> Giải quyết phần thân.\n - Level PhD: Không ai bảo gì cả. Tự nhìn vào dữ liệu vĩ mô, thấy một "khoảng trống" (Gap) mà chưa ai trên thế giới giải thích được. Ví dụ: "Tại sao tung khuyến mãi càng nhiều khách càng bỏ đi?". Và PhD lao vào tìm ra cái Lý thuyết (Theory) đằng sau nó.\n\nHọc PhD là học tư duy logic cực đoan. Học cách nhìn một sự việc từ 10 hướng khác nhau, bóc tách từng lớp vỏ hành tây để tìm ra Chân lý (Truth). Mà cái này thì làm kinh doanh, làm chính trị, hay làm... chồng đều cần cả. Sếp nào mà có tư duy PhD thì nhân viên sướng vô cùng, vì sếp ra quyết định dựa trên bằng chứng (Evidence-based) chứ không phải kiểu "tao nằm mơ thấy thế".' }],
             },
             {
                 _type: 'block',
@@ -44,7 +44,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Nói màu hồng thế thôi chứ làm NCS là một cuộc tu hành khổ hạnh. \n\n Cô đơn: Chẳng ai hiểu bạn đang làm gì, kể cả vợ/chồng. Bạn nói về "biến điều tiết", họ hỏi "tối nay ăn gì".\n Áp lực: Deadline bài báo, áp lực từ giáo sư hướng dẫn (Supervisor), áp lực tiền bạc (nếu không có học bổng).\n Tự ti (Imposter Syndrome): Lúc nào cũng thấy mình ngu. Đọc càng nhiều thấy mình càng dốt.\n\nNhưng tin tôi đi, cái cảm giác khi bài báo đầu tiên được ACCEPTED... nó phê hơn người yêu cũ nhắn tin quay lại. Nó là sự khẳng định: "À, hóa ra mình cũng có sỏi trong đầu chứ không phải đậu phụ".\n\nKết: Đừng làm PhD chỉ để lấy cái danh "Tiến sĩ" in lên danh thiếp khè thiên hạ. Hãy làm vì nó nâng cấp "hệ điều hành" của não bộ bạn lên phiên bản Pro Max. Và quan trọng nhất: Làm Tiến sĩ là để giúp đời, chứ không phải để xa rời cuộc đời.' }],
+                children: [{ _type: 'span', text: 'Nói màu hồng thế thôi chứ làm NCS là một cuộc tu hành khổ hạnh. \n\n - Cô đơn: Chẳng ai hiểu bạn đang làm gì, kể cả vợ/chồng. Bạn nói về "biến điều tiết", họ hỏi "tối nay ăn gì".\n - Áp lực: Deadline bài báo, áp lực từ giáo sư hướng dẫn (Supervisor), áp lực tiền bạc (nếu không có học bổng).\n - Tự ti (Imposter Syndrome): Lúc nào cũng thấy mình ngu. Đọc càng nhiều thấy mình càng dốt.\n\nNhưng tin tôi đi, cái cảm giác khi bài báo đầu tiên được ACCEPTED... nó phê hơn người yêu cũ nhắn tin quay lại. Nó là sự khẳng định: "À, hóa ra mình cũng có sỏi trong đầu chứ không phải đậu phụ".\n\nKết: Đừng làm PhD chỉ để lấy cái danh "Tiến sĩ" in lên danh thiếp khè thiên hạ. Hãy làm vì nó nâng cấp "hệ điều hành" của não bộ bạn lên phiên bản Pro Max. Và quan trọng nhất: Làm Tiến sĩ là để giúp đời, chứ không phải để xa rời cuộc đời.' }],
             }
         ]
     },
@@ -135,7 +135,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Thời đại AI rồi, đừng hì hục in giấy ra gạch chân nữa. Tốn mực tốn giấy bảo vệ môi trường đi các bạn.\n\n Elicit.org: Công cụ thần thánh. Bạn gõ câu hỏi nghiên cứu vào, nó tìm cho 10 bài báo liên quan nhất, thậm chí tóm tắt luôn ý chính cho bạn. (Cẩn thận check lại nguồn kẻo nó bịa).\n Connected Papers: Bạn có 1 bài báo gốc siêu hay (Seminal Paper). Quăng vào đây, nó sẽ vẽ ra cả một cái mạng nhện các bài báo liên quan, bài nào trích dẫn bài nào. Nhìn phát biết ngay ai là "trùm" trong lĩnh vực này.\n Mendeley/Zotero: Phần mềm quản lý trích dẫn. Viết xong câu nào, bấm nút một cái nó tự chèn (Nguyen et al., 2024) vào, cuối bài tự động sinh ra danh mục tham khảo chuẩn APA/Harvard. Đừng bao giờ gõ tay Reference nhé, dại lắm!' }],
+                children: [{ _type: 'span', text: 'Thời đại AI rồi, đừng hì hục in giấy ra gạch chân nữa. Tốn mực tốn giấy bảo vệ môi trường đi các bạn.\n\n - Elicit.org: Công cụ thần thánh. Bạn gõ câu hỏi nghiên cứu vào, nó tìm cho 10 bài báo liên quan nhất, thậm chí tóm tắt luôn ý chính cho bạn. (Cẩn thận check lại nguồn kẻo nó bịa).\n - Connected Papers: Bạn có 1 bài báo gốc siêu hay (Seminal Paper). Quăng vào đây, nó sẽ vẽ ra cả một cái mạng nhện các bài báo liên quan, bài nào trích dẫn bài nào. Nhìn phát biết ngay ai là "trùm" trong lĩnh vực này.\n - Mendeley/Zotero: Phần mềm quản lý trích dẫn. Viết xong câu nào, bấm nút một cái nó tự chèn (Nguyen et al., 2024) vào, cuối bài tự động sinh ra danh mục tham khảo chuẩn APA/Harvard. Đừng bao giờ gõ tay Reference nhé, dại lắm!' }],
             }
         ]
     },
@@ -163,7 +163,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Là vác bản câu hỏi đi rải thảm 300-500 người. Dữ liệu về ném vào phần mềm (SPSS, SmartPLS, AMOS) cho nó chạy. Nó ra con số: P-value, R-square, Cronbach Alpha...\n\n Ưu điểm: Có quy trình chuẩn (Step-by-step). SAI là biết ngay sai ở đâu. Dễ sửa. Dễ xuất bản trên các tạp chí Q2, Q3 vì các con số nó khách quan. Rất hợp với mấy ông làm Kinh tế, Quản trị, Marketing.\n Nhược điểm: Tốn tiền (hoặc tốn quan hệ) đi rải phiếu. Số liệu về mà "xấu" (không có ý nghĩa thống kê) thì khóc tiếng Mán, phải dùng "thủ thuật" (sẽ bàn sau trong bóng tối).' }],
+                children: [{ _type: 'span', text: 'Là vác bản câu hỏi đi rải thảm 300-500 người. Dữ liệu về ném vào phần mềm (SPSS, SmartPLS, AMOS) cho nó chạy. Nó ra con số: P-value, R-square, Cronbach Alpha...\n\n - Ưu điểm: Có quy trình chuẩn (Step-by-step). SAI là biết ngay sai ở đâu. Dễ sửa. Dễ xuất bản trên các tạp chí Q2, Q3 vì các con số nó khách quan. Rất hợp với mấy ông làm Kinh tế, Quản trị, Marketing.\n - Nhược điểm: Tốn tiền (hoặc tốn quan hệ) đi rải phiếu. Số liệu về mà "xấu" (không có ý nghĩa thống kê) thì khóc tiếng Mán, phải dùng "thủ thuật" (sẽ bàn sau trong bóng tối).' }],
             },
             {
                 _type: 'block',
@@ -173,7 +173,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Là đi cafe với 10-15 ông chuyên gia/CEO, hỏi sâu, đào bới tâm gan người ta. Sau đó về nhà ngồi nghe băng ghi âm, gỡ băng (transcript) muốn gãy tay. Rồi dùng phần mềm (NVivo) hoặc dùng não để mã hóa (Coding) tìm ra các Chủ đề (Theme).\n\n Ưu điểm: Ra được những cái mới toanh (Novelty cực cao), những cái mà bảng câu hỏi cứng nhắc không đo được. Đăng được báo xịn Q1 nếu viết hay.\n Nhược điểm: Cực kỳ tốn não. Văn phong phải hay như tiểu thuyết, logic phải chặt chẽ. Reviewer nó rất hay bắt bẻ: "Tại sao ông phỏng vấn ông A mà không phỏng vấn bà B?", "Dựa vào đâu ông kết luận như thế hay ông bịa?". Yếu bóng vía là tẩu hỏa nhập ma ngay.' }],
+                children: [{ _type: 'span', text: 'Là đi cafe với 10-15 ông chuyên gia/CEO, hỏi sâu, đào bới tâm gan người ta. Sau đó về nhà ngồi nghe băng ghi âm, gỡ băng (transcript) muốn gãy tay. Rồi dùng phần mềm (NVivo) hoặc dùng não để mã hóa (Coding) tìm ra các Chủ đề (Theme).\n\n - Ưu điểm: Ra được những cái mới toanh (Novelty cực cao), những cái mà bảng câu hỏi cứng nhắc không đo được. Đăng được báo xịn Q1 nếu viết hay.\n - Nhược điểm: Cực kỳ tốn não. Văn phong phải hay như tiểu thuyết, logic phải chặt chẽ. Reviewer nó rất hay bắt bẻ: "Tại sao ông phỏng vấn ông A mà không phỏng vấn bà B?", "Dựa vào đâu ông kết luận như thế hay ông bịa?". Yếu bóng vía là tẩu hỏa nhập ma ngay.' }],
             },
             {
                 _type: 'block',
@@ -259,7 +259,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Cái này đo lường sự "nhất quán" (Consistency) của bộ câu hỏi. Nghĩa là các câu hỏi cùng đo 1 vấn đề thì người trả lời phải trả lời xuôi chiều như nhau.\n\nNhìn cột Cronbach\'s Alpha. Cứ thấy nó xanh lét (> 0.7) là cười.\n❗️ CẢNH BÁO: Nếu nó đỏ (< 0.7), đừng vội vàng vứt biến đi để làm đẹp số liệu! Hãy xem xét kỹ:\n1. Về mặt lý thuyết: Câu hỏi đó có quan trọng không? \n2. Về mặt thống kê: Nếu xóa nó đi, chỉ số có tăng lên đáng kể không?\nXóa bừa bãi không có lý do lý thuyết (Theoretical Justification) là bị Reviewer "gõ đầu" đấy.' }],
+                children: [{ _type: 'span', text: 'Cái này đo lường sự "nhất quán" (Consistency) của bộ câu hỏi. Nghĩa là các câu hỏi cùng đo 1 vấn đề thì người trả lời phải trả lời xuôi chiều như nhau.\n\nNhìn cột Cronbach\'s Alpha. Cứ thấy nó xanh lét (> 0.7) là cười.\n[CẢNH BÁO]: Nếu nó đỏ (< 0.7), đừng vội vàng vứt biến đi để làm đẹp số liệu! Hãy xem xét kỹ:\n1. Về mặt lý thuyết: Câu hỏi đó có quan trọng không? \n2. Về mặt thống kê: Nếu xóa nó đi, chỉ số có tăng lên đáng kể không?\nXóa bừa bãi không có lý do lý thuyết (Theoretical Justification) là bị Reviewer "gõ đầu" đấy.' }],
             },
             {
                 _type: 'block',
@@ -289,7 +289,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Nhìn cột P-value để xem mối quan hệ có "Ý nghĩa thống kê" không.\n\n Nếu P < 0.05: Giả thuyết được chấp nhận (Có mối quan hệ).\n Nếu P > 0.05: Bác bỏ (Không có mối quan hệ rõ ràng).\n\n⚠️ LƯU Ý QUAN TRỌNG: P-value chỉ cho biết "Có" hay "Không". Nó không cho biết mối quan hệ đó "Mạnh" hay "Yếu".\nMuốn biết mạnh hay yếu, phải nhìn hệ số tác động (Path Coefficient / Beta). Đừng thần thánh hóa P-value quá mức nhé.\n\n(Và đừng quên check các Giả định như Đa cộng tuyến (VIF), Phân phối chuẩn... trước khi kết luận nhé. Cái này nói sau).' }],
+                children: [{ _type: 'span', text: 'Nhìn cột P-value để xem mối quan hệ có "Ý nghĩa thống kê" không.\n\n - Nếu P < 0.05: Giả thuyết được chấp nhận (Có mối quan hệ).\n - Nếu P > 0.05: Bác bỏ (Không có mối quan hệ rõ ràng).\n\n[LƯU Ý QUAN TRỌNG]: P-value chỉ cho biết "Có" hay "Không". Nó không cho biết mối quan hệ đó "Mạnh" hay "Yếu".\nMuốn biết mạnh hay yếu, phải nhìn hệ số tác động (Path Coefficient / Beta). Đừng thần thánh hóa P-value quá mức nhé.\n\n(Và đừng quên check các Giả định như Đa cộng tuyến (VIF), Phân phối chuẩn... trước khi kết luận nhé. Cái này nói sau).' }],
             }
         ]
     },
@@ -375,7 +375,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Tạp chí trong danh mục Scopus/SSCI thường chia làm 4 hạng (Quartile):\n\n Q1 (Top 25%): Hàng hiệu, tinh hoa nhân loại. Review cực gắt (3-4 vòng), tỷ lệ reject 90-95%. Ở nhiều chương trình đào tạo, đăng được 1 bài Q1 là đủ tiêu chuẩn ra trường, thậm chí được thưởng nóng cả trăm triệu.\n Q2 (Top 25-50%): Khá, uy tín. Phù hợp cho giảng viên, nghiên cứu sinh cứng tay.\n Q3/Q4 (Nửa dưới): Vừa sức cho người mới (Newbie). Quy trình dễ thở hơn, nhưng vẫn phải tuân thủ chuẩn mực.\n\nLời khuyên: Mới tập chơi, bài đầu tay thì nhắm Q3, Q4 thôi. Một số tạp chí của các trường đại học ở Đông Âu, Malaysia, Thổ Nhĩ Kỳ... thường có mức độ phù hợp hơn cho người mới, nhưng vẫn cần kiểm tra kỹ uy tín (xem nó còn trong Scopus không). Đừng ảo tưởng sức mạnh nộp Q1 ngay (trừ khi có thầy hướng dẫn "khủng" bảo kê), bị reject trong 1 nốt nhạc thì sốc tâm lý, trầm cảm đấy.' }],
+                children: [{ _type: 'span', text: 'Tạp chí trong danh mục Scopus/SSCI thường chia làm 4 hạng (Quartile):\n\n - Q1 (Top 25%): Hàng hiệu, tinh hoa nhân loại. Review cực gắt (3-4 vòng), tỷ lệ reject 90-95%. Ở nhiều chương trình đào tạo, đăng được 1 bài Q1 là đủ tiêu chuẩn ra trường, thậm chí được thưởng nóng cả trăm triệu.\n - Q2 (Top 25-50%): Khá, uy tín. Phù hợp cho giảng viên, nghiên cứu sinh cứng tay.\n - Q3/Q4 (Nửa dưới): Vừa sức cho người mới (Newbie). Quy trình dễ thở hơn, nhưng vẫn phải tuân thủ chuẩn mực.\n\nLời khuyên: Mới tập chơi, bài đầu tay thì nhắm Q3, Q4 thôi. Một số tạp chí của các trường đại học ở Đông Âu, Malaysia, Thổ Nhĩ Kỳ... thường có mức độ phù hợp hơn cho người mới, nhưng vẫn cần kiểm tra kỹ uy tín (xem nó còn trong Scopus không). Đừng ảo tưởng sức mạnh nộp Q1 ngay (trừ khi có thầy hướng dẫn "khủng" bảo kê), bị reject trong 1 nốt nhạc thì sốc tâm lý, trầm cảm đấy.' }],
             },
             {
                 _type: 'block',
@@ -403,7 +403,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '2 giờ sáng, ting ting! Email báo kết quả từ tạp chí. Tim đập chân run. Mở ra xem...\n\n Reviewer 1: "Bài viết thú vị, đóng góp tốt. Cần sửa vài lỗi chính tả." -> Yeah! Yêu thế!\n Reviewer 2: "Bài viết này có vấn đề lớn về phương pháp luận. Tiếng Anh chưa đạt chuẩn học thuật. Lập luận thiếu căn cứ. Đề nghị từ chối (Reject)." -> Đùng! Sét đánh ngang tai.\n\nChào mừng bạn đến với thế giới thực. Reviewer 2 là một khái niệm huyền thoại (meme) trong giới học thuật, ám chỉ những người phản biện khó tính, cực kỳ khắt khe. Họ sẽ bới lông tìm vết, chê bài của bạn tơi tả.' }],
+                children: [{ _type: 'span', text: '2 giờ sáng, ting ting! Email báo kết quả từ tạp chí. Tim đập chân run. Mở ra xem...\n\n - Reviewer 1: "Bài viết thú vị, đóng góp tốt. Cần sửa vài lỗi chính tả." -> Yeah! Yêu thế!\n - Reviewer 2: "Bài viết này có vấn đề lớn về phương pháp luận. Tiếng Anh chưa đạt chuẩn học thuật. Lập luận thiếu căn cứ. Đề nghị từ chối (Reject)." -> Đùng! Sét đánh ngang tai.\n\nChào mừng bạn đến với thế giới thực. Reviewer 2 là một khái niệm huyền thoại (meme) trong giới học thuật, ám chỉ những người phản biện khó tính, cực kỳ khắt khe. Họ sẽ bới lông tìm vết, chê bài của bạn tơi tả.' }],
             },
             {
                 _type: 'block',
@@ -428,7 +428,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đừng phản ứng theo cảm xúc. Hãy làm việc như một cái máy chuyên nghiệp:\n\n✅ 1. Tắt máy đi ngủ: Đọc comment xong thì đóng lại ngay. Đừng trả lời khi đang nóng giận (sau 24h hãy quay lại).\n✅ 2. Bóc tách từng ý: Đừng trả lời chung chung. Hãy copy nguyên văn từng câu hỏi của Reviewer và trả lời ngay bên dưới.\n✅ 3. Highlight thay đổi: Sửa chỗ nào trong bài thì phải tô màu hoặc chỉ rõ "Dòng X, Trang Y". Giúp Reviewer đỡ mất công tìm.\n✅ 4. Không bao giờ nói "Reviewer hiểu nhầm ý tôi": Hãy nhận lỗi về mình: "Cảm ơn Reviewer đã chỉ ra chỗ chưa rõ nghĩa, chúng tôi xin viết lại đoạn này để rõ hơn..."\n✅ 5. Nếu không sửa được: Phải có lý do thuyết phục + trích dẫn tài liệu (Reference) để bảo vệ quan điểm. Đừng cãi cùn.' }],
+                children: [{ _type: 'span', text: 'Đừng phản ứng theo cảm xúc. Hãy làm việc như một cái máy chuyên nghiệp:\n\n- 1. Tắt máy đi ngủ: Đọc comment xong thì đóng lại ngay. Đừng trả lời khi đang nóng giận (sau 24h hãy quay lại).\n- 2. Bóc tách từng ý: Đừng trả lời chung chung. Hãy copy nguyên văn từng câu hỏi của Reviewer và trả lời ngay bên dưới.\n- 3. Highlight thay đổi: Sửa chỗ nào trong bài thì phải tô màu hoặc chỉ rõ "Dòng X, Trang Y". Giúp Reviewer đỡ mất công tìm.\n- 4. Không bao giờ nói "Reviewer hiểu nhầm ý tôi": Hãy nhận lỗi về mình: "Cảm ơn Reviewer đã chỉ ra chỗ chưa rõ nghĩa, chúng tôi xin viết lại đoạn này để rõ hơn..."\n- 5. Nếu không sửa được: Phải có lý do thuyết phục + trích dẫn tài liệu (Reference) để bảo vệ quan điểm. Đừng cãi cùn.' }],
             },
             {
                 _type: 'block',
@@ -438,7 +438,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Khi viết thư trả lời (Response Letter), thái độ quan trọng hơn trình độ. Hãy dùng chiến thuật này:\n\n Lớp vỏ trên (Positive): "Chúng tôi xin chân thành cảm ơn Reviewer 2 vì những nhận xét vô cùng sâu sắc (insightful comments), giúp nâng tầm chất lượng bài viết..."\n Lớp thịt (Constructive): Trình bày chi tiết cách sửa từng lỗi. "Về ý kiến X, chúng tôi đã sửa lại... Về ý kiến Y, chúng tôi xin giải trình..."\n Lớp vỏ dưới (Grateful): "Một lần nữa, cảm ơn ông/bà đã dành thời gian quý báu..."\n\nBạn ngoan, cầu thị, chuyên nghiệp thì Reviewer khó tính mấy cũng sẽ gật đầu. Chúc các bạn "thuần phục" được mọi Reviewer!' }],
+                children: [{ _type: 'span', text: 'Khi viết thư trả lời (Response Letter), thái độ quan trọng hơn trình độ. Hãy dùng chiến thuật này:\n\n - Lớp vỏ trên (Positive): "Chúng tôi xin chân thành cảm ơn Reviewer 2 vì những nhận xét vô cùng sâu sắc (insightful comments), giúp nâng tầm chất lượng bài viết..."\n - Lớp thịt (Constructive): Trình bày chi tiết cách sửa từng lỗi. "Về ý kiến X, chúng tôi đã sửa lại... Về ý kiến Y, chúng tôi xin giải trình..."\n - Lớp vỏ dưới (Grateful): "Một lần nữa, cảm ơn ông/bà đã dành thời gian quý báu..."\n\nBạn ngoan, cầu thị, chuyên nghiệp thì Reviewer khó tính mấy cũng sẽ gật đầu. Chúc các bạn "thuần phục" được mọi Reviewer!' }],
             }
         ]
     },

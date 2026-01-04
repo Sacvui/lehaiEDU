@@ -1,7 +1,8 @@
 export const batch5 = [
     {
-        title: '"Con bò sữa" (Cash Cow) và cái bẫy của sự thành công ',
+        title: '"Con bò sữa" (Cash Cow) và cái bẫy của sự thành công',
         slug: { current: 'cash-cow-success-trap' },
+        coverImage: '/blog/cash_cow_success_trap.png',
         publishedAt: new Date(Date.now() - 950400000).toISOString(),
         excerpt: 'Sản phẩm nào đang nuôi sống công ty bạn? Hãy cẩn thận. Chính con bò sữa đó có thể là nguyên nhân khiến công ty sụp đổ nếu bạn vắt kiệt nó mà không chịu nuôi con bê mới.',
         categorySlug: 'enterprise-strategy',
@@ -79,8 +80,9 @@ export const batch5 = [
         ],
     },
     {
-        title: 'KPI hay là "Kẻ Phá Hoại" sự sáng tạo? ',
+        title: 'KPI hay là "Kẻ Phá Hoại" sự sáng tạo?',
         slug: { current: 'kpi-vs-creativity' },
+        coverImage: '/blog/kpi_vs_creativity.png',
         publishedAt: new Date(Date.now() - 1036800000).toISOString(),
         excerpt: 'Áp KPI máy móc là cách nhanh nhất để biến nhân viên thành rô-bốt. Tại sao Google cho nhân viên 20% thời gian để "chơi"? Làm sao đo lường được sự sáng tạo?',
         categorySlug: 'strategic-leadership',
@@ -154,8 +156,9 @@ export const batch5 = [
         ],
     },
     {
-        title: 'Chuỗi cung ứng đứt gãy: Bài học từ gói mì tôm mùa dịch ',
+        title: 'Chuỗi cung ứng đứt gãy: Bài học từ gói mì tôm mùa dịch',
         slug: { current: 'supply-chain-breakdown-covid' },
+        coverImage: '/blog/supply_chain_breakdown_covid.png',
         publishedAt: new Date(Date.now() - 1223200000).toISOString(),
         excerpt: 'Nhớ lại mùa dịch Covid, có tiền cũng không mua được gói mì. Tại sao? Không phải vì hết mì, mà vì "đứt gãy chuỗi cung ứng". Bài học đắt giá về Bullwhip Effect mà dân Logistics phải khắc cốt ghi tâm.',
         categorySlug: 'logistics-supply-chain',
@@ -223,8 +226,9 @@ export const batch5 = [
         ],
     },
     {
-        title: 'Chuyển đổi số hay là "Chuyển đổi... chết"? (Digital Transformation) ',
+        title: 'Chuyển đổi số hay là "Chuyển đổi... chết"? (Digital Transformation)',
         slug: { current: 'digital-transformation-fail' },
+        coverImage: '/blog/digital_transformation_fail.png',
         publishedAt: new Date(Date.now() - 1309600000).toISOString(),
         excerpt: 'Mua phần mềm triệu đô về cài, ép nhân viên dùng, rồi tự phong là "Công ty 4.0". Khoan, bạn đang "số hóa" (Digitization) chứ chưa phải "chuyển đổi số" (Digital Transformation). Sai một ly đi một dặm.',
         categorySlug: 'digital-transformation',
@@ -289,8 +293,9 @@ export const batch5 = [
         ],
     },
     {
-        title: 'Networking: Đừng đi "săn" danh thiếp, hãy đi "gieo" giá trị ',
+        title: 'Networking: Đừng đi "săn" danh thiếp, hãy đi "gieo" giá trị',
         slug: { current: 'networking-farming-not-hunting' },
+        coverImage: '/blog/networking_farming_not_hunting.png',
         publishedAt: new Date(Date.now() - 1496000000).toISOString(),
         excerpt: 'Bạn đi hội thảo, rải danh thiếp như rải tờ rơi. Về nhà chờ mãi chả thấy ai gọi. Tại sao? Vì bạn đang đi săn (Hunting). Hãy đổi sang tư duy gieo trồng (Farming).',
         categorySlug: 'mentorship-career',
