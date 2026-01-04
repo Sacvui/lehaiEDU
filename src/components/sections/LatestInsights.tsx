@@ -73,32 +73,27 @@ const MOCK_ARTICLES = [
         mainImage: null,
         localImage: "/blog/rtm-6.png"
     },
-    {
-        _id: '7',
-        title: "In-Store Execution: Cuộc chiến trên kệ hàng",
-        slug: { current: 'rtm-masterclass-7' },
-        publishedAt: new Date(Date.now() - 518400000).toISOString(),
-        categories: ["Trade Marketing"],
-        readingTime: 5,
-        excerpt: "'Thấy là bán'. 7 bước bán hàng chuẩn và checklist chấm điểm Perfect Store.",
-        mainImage: null,
-        localImage: "/blog/rtm-7.png"
-    }
-];
-// Force rebuild for image assets
+// MOCK_ARTICLES removed to ensure data integrity from Sanity
 
 export async function LatestInsights() {
     let articles: any[] = [];
     try {
         const fetchedArticles = await sanityFetch<any[]>({ query: RECENT_POSTS_QUERY });
-        if (fetchedArticles && fetchedArticles.length > 0) {
+        if (fetchedArticles?.length > 0) {
             articles = fetchedArticles;
-        } else {
-            articles = MOCK_ARTICLES;
         }
     } catch (error) {
         console.error("Failed to fetch articles:", error);
-        articles = MOCK_ARTICLES;
+    }
+
+    if (articles.length === 0) {
+        return (
+            <section className="py-20 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
+                <div className="container mx-auto px-4 text-center">
+                    <p className="text-slate-500">Đang tải dữ liệu bài viết...</p>
+                </div>
+            </section>
+        )
     }
 
     if (!articles || articles.length === 0) {

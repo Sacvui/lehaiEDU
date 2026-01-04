@@ -247,7 +247,7 @@ export function Header() {
                                 <Link
                                   key={nest.label}
                                   href={nest.href}
-                                  className="text-sm text-slate-600 dark:text-slate-400 py-3 pl-3 hover:text-blue-600 dark:hover:text-blue-400 block"
+                                  className="text-sm text-slate-600 dark:text-slate-400 py-3.5 pl-4 hover:text-blue-600 dark:hover:text-blue-400 block active:bg-slate-50 dark:active:bg-slate-800 rounded-md transition-colors"
                                   onClick={() => setIsMobileMenuOpen(false)}
                                 >
                                   {nest.label}
