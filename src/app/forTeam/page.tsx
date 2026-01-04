@@ -88,7 +88,7 @@ export default async function ForTeamPage() {
             body: [
                 {
                     _type: 'block',
-                    style: 'normal',
+                    style: 'h3',
                     children: [{ _type: 'span', text: 'Chào các bạn,' }]
                 },
                 {
@@ -99,17 +99,17 @@ export default async function ForTeamPage() {
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: '15 năm trước, tôi cũng là một chàng sinh viên mới ra trường, đầy nhiệt huyết nhưng cũng đầy hoang mang. Tôi đã từng bị từ chối, từng thất bại, từng làm sai báo cáo và bị sếp mắng đến mức muốn bỏ nghề. Những đêm thức trắng làm thầu, những chuyến công tác tỉnh xa nhà hàng tháng trời... tất cả những "vết sẹo" đó đã hun đúc nên tôi của ngày hôm nay.' }]
-                },
-                {
-                    _type: 'block',
-                    style: 'blockquote',
-                    children: [{ _type: 'span', text: '"Thành công không phải là đích đến, mà là những bài học chúng ta nhặt được trên đường đi."' }]
+                    children: [{ _type: 'span', text: '15 năm, một chặng đường không quá dài nhưng đủ để nếm trải đủ vị ngọt bùi cay đắng. Từ một chàng sinh viên thực tập (Intern) ngáo ngơ, bị mắng xối xả vì file Excel lỗi, cho đến khi ngồi ở vị trí điều hành chiến lược. Cuốn sách này chính là cuốn nhật ký ghi lại hành trình đó, được sắp xếp lại theo **trục thời gian** phát triển của một đời người đi làm.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Cuốn sách nhỏ này không phải là giáo trình. Nó không chứa đựng những lý thuyết đao to búa lớn. Nó là tập hợp những ghi chép chân thực nhất, những "bí kíp" sinh tồn mà tôi ước gì có ai đó đã nói cho tôi nghe khi tôi 20 tuổi.\n\nTôi cùng đội ngũ biên tập đã dành rất nhiều tâm huyết để hệ thống hóa nó lại, không phải để dạy đời, mà để **chia sẻ**. Để các bạn không phải mất 10 năm dò đường như tôi. Để các bạn có thể đi nhanh hơn, vững vàng hơn.\n\nHãy coi đây là món quà tôi dành tặng cho Team. Đừng đọc nó như sách giáo khoa. Hãy đọc nó như đang ngồi cà phê với tôi, nghe tôi kể chuyện nghề.\n\nMong rằng các bạn sẽ tìm thấy chính mình đâu đó trong những trang sách này.' }]
+                    children: [{ _type: 'span', text: 'Tôi muốn các bạn hình dung sự nghiệp như một dòng chảy liên tục. Chúng ta sẽ đi từ việc "Xây nền" (Tư duy), đến "Mài rìu" (Công cụ), rồi mới bước ra "Chiến trường" (Quản trị) và cuối cùng là nhìn về "Bầu trời" (Tương lai).' }]
+                },
+                {
+                    _type: 'block',
+                    style: 'normal',
+                    children: [{ _type: 'span', text: 'Mong rằng các bạn sẽ tìm thấy chính mình đâu đó trong từng giai đoạn của cuốn sách này.' }]
                 },
                 {
                     _type: 'block',
@@ -120,49 +120,49 @@ export default async function ForTeamPage() {
         },
         {
             _id: 'manual-authors',
-            title: 'Người Đồng Hành Cùng Bạn',
+            title: 'Đội Ngũ Tác Giả & Biên Tập',
             slug: { current: 'gioi-thieu-tac-gia' },
             readingTime: 4,
             body: [
                 {
                     _type: 'block',
                     style: 'h2',
-                    children: [{ _type: 'span', text: '1. Lê Phúc Hải - Người kể chuyện Data' }]
+                    children: [{ _type: 'span', text: '1. Tác giả nội dung: Lê Phúc Hải (Mr.)' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Nhiều người biết đến tôi qua các chức danh hào nhoáng: Giám đốc Phát triển Kinh doanh Quốc gia, Quản lý Thương mại Cấp cao... Nhưng sâu thẳm, tôi chỉ xem mình là một người đam mê giải quyết vấn đề.' }]
+                    children: [{ _type: 'span', text: 'Toàn bộ nội dung, câu chuyện và các đúc kết thực chiến trong cuốn sách này đều được viết trực tiếp bởi anh Lê Phúc Hải.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Từ những ngày đầu làm kỹ thuật tại FPT Software, tôi đã luôn trăn trở: "Làm sao để công nghệ thực sự phục vụ con người, chứ không phải làm khổ con người?". Câu hỏi đó đã dẫn dắt tôi đi qua Coca-Cola, Mondelez, Japfa, Nova Group... Ở mỗi nơi, tôi đều học được những bài học vô giá về Con người và Hệ thống.' }]
+                    children: [{ _type: 'span', text: '"Tôi không thuê người viết hộ (Ghostwriter) vì tôi tin rằng chỉ có người trong cuộc mới kể được câu chuyện của chính mình một cách trung thực nhất."' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Hiện tại, bên cạnh công việc điều hành, tôi dành phần lớn thời gian cho đam mê lớn nhất: **Giáo dục**. Tại giảng đường ĐH Tôn Đức Thắng và ĐH FPT, tôi không dạy sinh viên học thuộc lòng. Tôi dạy các bạn tư duy phản biện, dạy cách đối mặt với thất bại và khát khao vươn lên.' }]
+                    children: [{ _type: 'span', text: 'Anh Hải hiện là Giám đốc Phát triển Kinh doanh Quốc gia và là Giảng viên Doanh nhân tại nhiều trường đại học. Phong cách viết của anh thiên về kể chuyện (Storytelling), dùng những ví dụ đời thường để giải thích các khái niệm quản trị phức tạp.' }]
                 },
                 {
                     _type: 'block',
                     style: 'h2',
-                    children: [{ _type: 'span', text: '2. TS. Carmen Châu - Người bảo chứng Khoa học' }]
+                    children: [{ _type: 'span', text: '2. Hiệu đính & Bảo chứng khoa học: TS. Carmen Châu (Ms.)' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Đồng hành cùng tôi trong dự án này là Tiến sĩ Carmen Châu. Cô không chỉ là một nhà nghiên cứu hàn lâm sắc sảo, mà còn là một "chiến binh" Sales & Marketing thực thụ.' }]
+                    children: [{ _type: 'span', text: 'Để đảm bảo cuốn sách không chỉ dừng lại ở kinh nghiệm cá nhân chủ quan, Tiến sĩ Carmen Châu (Nguyễn Lê Thị Ngọc Châu) đảm nhận vai trò Cố vấn Khoa học.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Carmen đã từng tự mình gây dựng doanh số tăng trưởng 1200% cho OKXE, từng lăn lộn với các dự án Activation cho Aeon Mall, Guardian. Cô hiểu rõ áp lực của KPI, của doanh số.' }]
+                    children: [{ _type: 'span', text: 'Cô chịu trách nhiệm rà soát toàn bộ các mô hình lý thuyết, đối chiếu với các nghiên cứu học thuật chuẩn mực, đảm bảo rằng những gì được viết ra đều có cơ sở khoa học (Evidence-based Management).' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Sự kết hợp giữa tư duy thực chiến của tôi và sự chặt chẽ khoa học của Carmen chính là linh hồn của cuốn sách này. Chúng tôi muốn mang đến cho các bạn những kiến thức vừa sâu sắc về mặt học thuật, vừa sát sườn với thực tế doanh nghiệp.' }]
+                    children: [{ _type: 'span', text: 'TS. Carmen Châu có hơn 10 năm kinh nghiệm trong lĩnh vực Marketing & Sales, từng giữ các vị trí quản lý nòng cốt tại OKXE và CommerceX, mang đến góc nhìn cân bằng giữa Học thuật và Thực tế.' }]
                 }
             ]
         }
@@ -176,22 +176,22 @@ export default async function ForTeamPage() {
         },
         {
             id: 'part1',
-            title: 'Phần I: Tư Duy & Định Hướng (Mindset)',
-            posts: dedup(part1_mindset).slice(0, 15) // Limit to 15 for "50 pages" feel initially? No, let's load what we use.
+            title: 'Chặng 1: Xây Dựng Nền Tảng (0-2 năm)',
+            posts: dedup(part1_mindset).slice(0, 15)
         },
         {
             id: 'part2',
-            title: 'Phần II: Vũ Khí & Kỹ Năng (The Toolkit)',
+            title: 'Chặng 2: Trang Bị Vũ Khí Dữ Liệu (2-5 năm)',
             posts: dedup(part2_skills)
         },
         {
             id: 'part3',
-            title: 'Phần III: Chiến Trường & Thực Thi (Business)',
+            title: 'Chặng 3: Tư Duy Quản Trị Chiến Lược (5-10 năm)',
             posts: dedup(part3_business)
         },
         {
             id: 'part4',
-            title: 'Phần IV: Vươn Ra Biển Lớn (Future Tech)',
+            title: 'Chặng 4: Tầm Nhìn Lãnh Đạo & Công Nghệ (10+ năm)',
             posts: dedup(part4_future)
         }
     ];
