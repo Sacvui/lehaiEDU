@@ -237,10 +237,41 @@ async function importData() {
 
             // Handle Image Upload (Cover)
             let mainImage = undefined;
-            if ((post as any).coverImage) {
-                const imagePath = path.join(process.cwd(), 'public', (post as any).coverImage);
+
+            // Define Default Covers Map
+            const DEFAULT_COVERS: Record<string, string> = {
+                'research-innovation': '/blog/cover_research_lab.png',
+                'academic-corner': '/blog/cover_research_lab.png',
+                'ncs101': '/blog/cover_research_lab.png',
+                'r101': '/blog/cover_research_lab.png',
+                'python101': '/blog/cover_research_lab.png',
+                'data-analysis': '/blog/cover_research_lab.png',
+
+                'enterprise-strategy': '/blog/cover_business_hub.png',
+                'strategic-leadership': '/blog/cover_business_hub.png',
+                'rtm-distribution': '/blog/cover_business_hub.png',
+                'logistics-supply-chain': '/blog/cover_business_hub.png',
+
+                'digital-transformation': '/blog/cover_tech_trends.png',
+                'ai-technology': '/blog/cover_tech_trends.png',
+                'case-studies': '/blog/cover_tech_trends.png',
+
+                'mentorship-career': '/blog/cover_career_growth.png',
+                'book-intern-to-ceo': '/blog/cover_career_growth.png'
+            };
+
+            let coverImagePath = (post as any).coverImage;
+
+            // 1. If no cover image provided, or file doesn't exist, use default
+            if (!coverImagePath || !fs.existsSync(path.join(process.cwd(), 'public', coverImagePath))) {
+                console.warn(`   ⚠️ Missing cover for "${post.title}". Using default for category: ${post.categorySlug}`);
+                coverImagePath = DEFAULT_COVERS[post.categorySlug] || '/blog/_cover_placeholder.png';
+            }
+
+            if (coverImagePath) {
+                const imagePath = path.join(process.cwd(), 'public', coverImagePath);
                 if (fs.existsSync(imagePath)) {
-                    console.log(`   Uploading cover image for ${post.title}...`);
+                    // console.log(`   Uploading cover image: ${path.basename(imagePath)}...`);
                     try {
                         const imageAsset = await client.assets.upload('image', fs.createReadStream(imagePath), {
                             filename: path.basename(imagePath)
@@ -250,11 +281,14 @@ async function importData() {
                             asset: {
                                 _type: "reference",
                                 _ref: imageAsset._id
-                            }
+                            },
+                            alt: post.title // Add alt text
                         };
                     } catch (err) {
                         console.error(`   Failed to upload cover image: ${err}`);
                     }
+                } else {
+                    console.error(`   ❌ Critical: Fallback image not found: ${imagePath}`);
                 }
             }
 
