@@ -34,7 +34,7 @@ export const python101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Mở Start Menu, gõ `Anaconda Navigator`, xong bấm **Launch Jupyter Lab**.\n\nNó sẽ mở ra một trang web. Đây chính là nơi ta làm việc. Nó cho phép bạn:\n*   Viết văn bản (Markdown) để giải thích (như Word).\n*   Viết code chạy ra kết quả ngay bên dưới.' }],
+                children: [{ _type: 'span', text: 'Mở Start Menu, gõ `Anaconda Navigator`, xong bấm Launch Jupyter Lab.\n\nNó sẽ mở ra một trang web. Đây chính là nơi ta làm việc. Nó cho phép bạn:\n   Viết văn bản (Markdown) để giải thích (như Word).\n   Viết code chạy ra kết quả ngay bên dưới.' }],
             },
             {
                 _type: 'code',
@@ -77,7 +77,7 @@ export const python101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Quy tắc nghiên cứu (Rule of Thumb):\n- Nếu thiếu ít (<5%): Có thể điền giá trị trung bình (Mean Imputation) hoặc Trung vị (Median). \n*Lưu ý: Cách này nhanh nhưng có thể làm giảm phương sai của dữ liệu. Nếu làm nghiên cứu xịn sò (PhD level), hãy tìm hiểu thuật toán KNN Imputer hoặc MICE.*\n- Nếu thiếu nhiều (>20%): Cân nhắc xóa luôn cột đó hoặc loại bỏ người trả lời đó.\n\n`df = df.fillna(df.mean())` (Cách "mì ăn liền" phổ biến nhất).' }],
+                children: [{ _type: 'span', text: 'Quy tắc nghiên cứu (Rule of Thumb):\n- Nếu thiếu ít (<5%): Có thể điền giá trị trung bình (Mean Imputation) hoặc Trung vị (Median). \nLưu ý: Cách này nhanh nhưng có thể làm giảm phương sai của dữ liệu. Nếu làm nghiên cứu xịn sò (PhD level), hãy tìm hiểu thuật toán KNN Imputer hoặc MICE.\n- Nếu thiếu nhiều (>20%): Cân nhắc xóa luôn cột đó hoặc loại bỏ người trả lời đó.\n\n`df = df.fillna(df.mean())` (Cách "mì ăn liền" phổ biến nhất).' }],
             },
             {
                 _type: 'block',
@@ -87,7 +87,7 @@ export const python101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Bạn có 3 câu hỏi cho biến Hài lòng (SAT1, SAT2, SAT3). Bạn cần tính biến tổng SAT.\n\n`df["SAT"] = df[["SAT1", "SAT2", "SAT3"]].mean(axis=1)`\n\n*Góc nhìn khoa học (Scientific View): Về lý thuyết, thang Likert là thang đo thứ bậc (Ordinal), không được cộng trừ nhân chia. Tuy nhiên, trong nghiên cứu thực nghiệm (Applied/Social Science), nếu thang đo có >= 5 điểm, chúng ta tạm chấp nhận coi nó là thang đo khoảng (Interval) để tính toán. Nhưng hãy cẩn thận khi phản biện với các giáo sư Toán thống kê khó tính!*' }],
+                children: [{ _type: 'span', text: 'Bạn có 3 câu hỏi cho biến Hài lòng (SAT1, SAT2, SAT3). Bạn cần tính biến tổng SAT.\n\n`df["SAT"] = df[["SAT1", "SAT2", "SAT3"]].mean(axis=1)`\n\nGóc nhìn khoa học (Scientific View): Về lý thuyết, thang Likert là thang đo thứ bậc (Ordinal), không được cộng trừ nhân chia. Tuy nhiên, trong nghiên cứu thực nghiệm (Applied/Social Science), nếu thang đo có >= 5 điểm, chúng ta tạm chấp nhận coi nó là thang đo khoảng (Interval) để tính toán. Nhưng hãy cẩn thận khi phản biện với các giáo sư Toán thống kê khó tính!' }],
             }
         ]
     },
@@ -105,7 +105,7 @@ export const python101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đây là bài quan trọng nhất cho dân làm luận văn/nghiên cứu. \n\n*Insight quy hoạch:* Trước khi định lượng xem "Khách hàng có hài lòng không", bạn phải chắc chắn cái thước đo "Sự hài lòng" của bạn nó chuẩn đã. Thước mà co giãn lung tung thì đo cái gì cũng sai. Nếu sếp hỏi "Tại sao phải tốn tiền làm khảo sát thử (Pilot)?", hãy trả lời: "Để kiểm tra **Giá trị khái niệm (Construct Validity)** của thước đo, tránh đốt tiền chạy khảo sát diện rộng mà thu về dữ liệu rác".\n\nTrong R có gói `psych`. Trong Python chúng ta có `pingouin` và `factor_analyzer`.' }],
+                children: [{ _type: 'span', text: 'Đây là bài quan trọng nhất cho dân làm luận văn/nghiên cứu. \n\nInsight quy hoạch: Trước khi định lượng xem "Khách hàng có hài lòng không", bạn phải chắc chắn cái thước đo "Sự hài lòng" của bạn nó chuẩn đã. Thước mà co giãn lung tung thì đo cái gì cũng sai. Nếu sếp hỏi "Tại sao phải tốn tiền làm khảo sát thử (Pilot)?", hãy trả lời: "Để kiểm tra Giá trị khái niệm (Construct Validity) của thước đo, tránh đốt tiền chạy khảo sát diện rộng mà thu về dữ liệu rác".\n\nTrong R có gói `psych`. Trong Python chúng ta có `pingouin` và `factor_analyzer`.' }],
             },
             {
                 _type: 'block',
@@ -125,7 +125,7 @@ export const python101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'SPSS chạy EFA phải bấm click click chục lần. Python chạy các bước chuẩn chỉnh:\n\n1. Kiểm tra bao nhiêu nhân tố là đủ (Eigenvalues > 1)?\n`ev, v = fa.get_eigenvalues()`\n`print(ev)` (Đếm xem có bao nhiêu số > 1 thì chọn bấy nhiêu nhân tố).\n\n2. Chạy EFA chính thức\n`fa = FactorAnalyzer(n_factors=3, rotation="promax")` \n*(Lưu ý: Thay số 3 bằng số nhân tố bạn tìm được ở bước 1)*\n\n3. Xem kết quả\n`print(fa.loadings_)`\n\nDân kinh tế dùng xoay Promax là chuẩn bài (vì các nhân tố thường tương quan với nhau).' }],
+                children: [{ _type: 'span', text: 'SPSS chạy EFA phải bấm click click chục lần. Python chạy các bước chuẩn chỉnh:\n\n1. Kiểm tra bao nhiêu nhân tố là đủ (Eigenvalues > 1)?\n`ev, v = fa.get_eigenvalues()`\n`print(ev)` (Đếm xem có bao nhiêu số > 1 thì chọn bấy nhiêu nhân tố).\n\n2. Chạy EFA chính thức\n`fa = FactorAnalyzer(n_factors=3, rotation="promax")` \n(Lưu ý: Thay số 3 bằng số nhân tố bạn tìm được ở bước 1)\n\n3. Xem kết quả\n`print(fa.loadings_)`\n\nDân kinh tế dùng xoay Promax là chuẩn bài (vì các nhân tố thường tương quan với nhau).' }],
             }
         ]
     },
@@ -158,7 +158,7 @@ export const python101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Nhìn vào bảng kết quả (Summary):\n1. Adj. R-squared: Dùng cái này thay vì R-squared thường (để tránh ảo tưởng khi thêm biến rác). > 0.5 là mô hình tốt.\n2. P>|t| (P-value): < 0.05 -> Biến có ý nghĩa thống kê.\n3. Coef: Hệ số hồi quy. Dương là tác động thuận, Âm là nghịch.\n\n*Lưu ý (Pro Tips): Đừng quên kiểm tra Đa cộng tuyến (VIF). Nếu VIF > 10 thì biến đó đang phá đám mô hình.*' }],
+                children: [{ _type: 'span', text: 'Nhìn vào bảng kết quả (Summary):\n1. Adj. R-squared: Dùng cái này thay vì R-squared thường (để tránh ảo tưởng khi thêm biến rác). > 0.5 là mô hình tốt.\n2. P>|t| (P-value): < 0.05 -> Biến có ý nghĩa thống kê.\n3. Coef: Hệ số hồi quy. Dương là tác động thuận, Âm là nghịch.\n\nLưu ý (Pro Tips): Đừng quên kiểm tra Đa cộng tuyến (VIF). Nếu VIF > 10 thì biến đó đang phá đám mô hình.' }],
             }
         ]
     },
@@ -210,7 +210,7 @@ export const python101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Trong Marketing hiện đại, A/B Testing là vua. Nhưng làm sao biết sự chênh lệch giữa A và B là "thật" hay chỉ do may mắn?\n\n*Insight:* Đừng chỉ nhìn P-value. Một mẫu thử đủ lớn (n=100.000) thì khác biệt bé tí tẹo cũng có P-value < 0.05. Nhưng khác biệt đó có **Ý nghĩa thực tiễn (Practical Significance)** không? Ví dụ doanh thu tăng 10đ (P<0.05) thì có đáng để thay đổi cả hệ thống không?\n-> Bạn cần quan tâm đến **Kích thước hiệu ứng (Effect Size)** (ví dụ: Cohen\'s d). Nó cho biết độ lớn thực sự của sự khác biệt.' }],
+                children: [{ _type: 'span', text: 'Trong Marketing hiện đại, A/B Testing là vua. Nhưng làm sao biết sự chênh lệch giữa A và B là "thật" hay chỉ do may mắn?\n\nInsight: Đừng chỉ nhìn P-value. Một mẫu thử đủ lớn (n=100.000) thì khác biệt bé tí tẹo cũng có P-value < 0.05. Nhưng khác biệt đó có Ý nghĩa thực tiễn (Practical Significance) không? Ví dụ doanh thu tăng 10đ (P<0.05) thì có đáng để thay đổi cả hệ thống không?\n-> Bạn cần quan tâm đến Kích thước hiệu ứng (Effect Size) (ví dụ: Cohen\'s d). Nó cho biết độ lớn thực sự của sự khác biệt.' }],
             },
             {
                 _type: 'image',
@@ -226,7 +226,7 @@ export const python101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Ví dụ: So sánh chi tiêu của khách hàng Nam và Nữ.\n\nBước 1: Kiểm tra phương sai đồng nhất (Levene Test)\n`pg.homoscedasticity(data=df, dv="Spending", group="Gender")`\nNếu p > 0.05 -> Phương sai đồng nhất -> Dùng T-test thường.\nNếu p < 0.05 -> Phương sai khác nhau -> Dùng Welch ANOVA.\n\nBước 2: Chạy T-test + Effect Size\n`res = pg.ttest(df_male["Spending"], df_female["Spending"], correction=True)`\n`print(res)` \n\n*Nhìn cột `cohen-d` (Kích thước hiệu ứng) trong kết quả:*\n- 0.2: Nhỏ (Không đáng kể)\n- 0.5: Trung bình (Đáng chú ý)\n- > 0.8: Lớn (Wow! Khác biệt rõ rệt - Hãy hành động ngay!)' }],
+                children: [{ _type: 'span', text: 'Ví dụ: So sánh chi tiêu của khách hàng Nam và Nữ.\n\nBước 1: Kiểm tra phương sai đồng nhất (Levene Test)\n`pg.homoscedasticity(data=df, dv="Spending", group="Gender")`\nNếu p > 0.05 -> Phương sai đồng nhất -> Dùng T-test thường.\nNếu p < 0.05 -> Phương sai khác nhau -> Dùng Welch ANOVA.\n\nBước 2: Chạy T-test + Effect Size\n`res = pg.ttest(df_male["Spending"], df_female["Spending"], correction=True)`\n`print(res)` \n\nNhìn cột `cohen-d` (Kích thước hiệu ứng) trong kết quả:\n- 0.2: Nhỏ (Không đáng kể)\n- 0.5: Trung bình (Đáng chú ý)\n- > 0.8: Lớn (Wow! Khác biệt rõ rệt - Hãy hành động ngay!)' }],
             },
             {
                 _type: 'block',
@@ -254,7 +254,7 @@ export const python101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'T-test dùng cho biến số (Doanh thu, Điểm số...). Còn nếu bạn muốn tìm mối liên hệ giữa các biến phân loại (Categorical) thì sao?\nVí dụ: Nam giới thì hay mua màu đen, Nữ giới hay mua màu hồng. Đây là định kiến hay sự thật?\n\nCông cụ: **Chi-Square Test of Independence**.' }],
+                children: [{ _type: 'span', text: 'T-test dùng cho biến số (Doanh thu, Điểm số...). Còn nếu bạn muốn tìm mối liên hệ giữa các biến phân loại (Categorical) thì sao?\nVí dụ: Nam giới thì hay mua màu đen, Nữ giới hay mua màu hồng. Đây là định kiến hay sự thật?\n\nCông cụ: Chi-Square Test of Independence.' }],
             },
             {
                 _type: 'image',

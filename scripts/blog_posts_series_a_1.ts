@@ -87,7 +87,7 @@ export const series_a_1 = [
         ]
     },
     {
-        title: '[RTM Masterclass #2] Audit: Bắt mạch khám bệnh hệ thống phân phối 🩺',
+        title: '[RTM Masterclass #2] Audit: Bắt mạch khám bệnh hệ thống phân phối ',
         slug: { current: 'rtm-masterclass-2-audit' },
         publishedAt: new Date(Date.now() - 200000000).toISOString(),
         excerpt: 'Trước khi muốn tăng trưởng, phải khám xem cơ thể doanh nghiệp có bệnh gì không đã. Làm sao biết hệ thống phân phối của bạn đang khỏe hay yếu? Đừng chỉ nhìn doanh số tổng.',

@@ -38,7 +38,7 @@ export const series_b_1 = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: "Các bạn thấy đấy, làm Sếp hay làm Tiến sĩ thì cũng dùng chung một cái đầu logic đó thôi. Khác biệt là Academy đòi hỏi sự **CHẶT CHẼ (Rigor)** và **BẰNG CHỨNG (Evidence-based)** cao hơn nhiều." }],
+                children: [{ _type: 'span', text: "Các bạn thấy đấy, làm Sếp hay làm Tiến sĩ thì cũng dùng chung một cái đầu logic đó thôi. Khác biệt là Academy đòi hỏi sự CHẶT CHẼ (Rigor) và BẰNG CHỨNG (Evidence-based) cao hơn nhiều." }],
             },
             {
                 _type: 'block',

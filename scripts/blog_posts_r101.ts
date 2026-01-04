@@ -34,7 +34,7 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Để chạy được R, chúng ta cần 2 thứ: \n1.  **R (Engine):** Cái lõi để tính toán. (Giống như cái động cơ xe).\n2.  **RStudio (IDE):** Cái giao diện đẹp đẽ để mình viết code. (Giống như cái vỏ xe, vô lăng, ghế ngồi).\n\nLink tải đây (chọn bản Free nhé): [Posit.co](https://posit.co/download/rstudio-desktop/)\nSau khi cài xong, mở RStudio lên, bạn sẽ thấy nó chia làm 4 góc như "Bánh chưng" thế này:' }],
+                children: [{ _type: 'span', text: 'Để chạy được R, chúng ta cần 2 thứ: \n1.  R (Engine): Cái lõi để tính toán. (Giống như cái động cơ xe).\n2.  RStudio (IDE): Cái giao diện đẹp đẽ để mình viết code. (Giống như cái vỏ xe, vô lăng, ghế ngồi).\n\nLink tải đây (chọn bản Free nhé): [Posit.co](https://posit.co/download/rstudio-desktop/)\nSau khi cài xong, mở RStudio lên, bạn sẽ thấy nó chia làm 4 góc như "Bánh chưng" thế này:' }],
             },
             {
                 _type: 'image',
@@ -99,7 +99,7 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '- Lọc khách hàng (Filter): Chỉ lấy khách VIP?\n    `df_vip <- filter(df, Customer_Type == "VIP")`\n\n- Chọn cột (Select): Bảng 100 cột, chỉ lấy cột Tên và Tuổi?\n    `df_small <- select(df, Name, Age)`\n\n- Tạo biến mới (Mutate): Muốn tính Lương Năm = Lương Tháng * 12?\n    `df <- mutate(df, Annual_Income = Monthly_Income * 12)`\n\n- Sắp xếp (Arrange): Ai giàu nhất đứng đầu?\n    `df <- arrange(df, desc(Income))`\n\nThấy chưa? Viết code mà như viết văn tả cảnh vậy. `filter` là lọc, `arrange` là sắp xếp. Dễ hiểu đến phát khóc.' }],
+                children: [{ _type: 'span', text: '- Lọc khách hàng (Filter): Chỉ lấy khách VIP?\n    `df_vip <- filter(df, Customer_Type == "VIP")`\n\n- Chọn cột (Select): Bảng 100 cột, chỉ lấy cột Tên và Tuổi?\n    `df_small <- select(df, Name, Age)`\n\n- Tạo biến mới (Mutate): Muốn tính Lương Năm = Lương Tháng  12?\n    `df <- mutate(df, Annual_Income = Monthly_Income  12)`\n\n- Sắp xếp (Arrange): Ai giàu nhất đứng đầu?\n    `df <- arrange(df, desc(Income))`\n\nThấy chưa? Viết code mà như viết văn tả cảnh vậy. `filter` là lọc, `arrange` là sắp xếp. Dễ hiểu đến phát khóc.' }],
             },
             {
                 _type: 'block',
@@ -142,7 +142,7 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Có một câu nói rất hay: "A picture is worth a thousand numbers". \n\n*Business Insight:* Sếp của bạn (C-level) cực kỳ bận. Họ không có thời gian soi từng con số. Một biểu đồ tốt phải giúp họ nắm bắt "đại ý" trong vòng 3 giây. Nếu cần > 5 giây để hiểu, biểu đồ đó thất bại. Đây gọi là nguyên tắc **"Giảm tải nhận thức" (Cognitive Load Reduction)**.\n\nExcel thường vi phạm điều này với mấy cái hiệu ứng 3D, bóng đổ (Shadow) lòe loẹt làm rối mắt. `ggplot2` của R đi theo tư duy tối giản (Minimalism) của Edward Tufte - Tối đa hóa **Tỷ lệ Dữ liệu-Mực in (Data-Ink Ratio)**.' }],
+                children: [{ _type: 'span', text: 'Có một câu nói rất hay: "A picture is worth a thousand numbers". \n\nBusiness Insight: Sếp của bạn (C-level) cực kỳ bận. Họ không có thời gian soi từng con số. Một biểu đồ tốt phải giúp họ nắm bắt "đại ý" trong vòng 3 giây. Nếu cần > 5 giây để hiểu, biểu đồ đó thất bại. Đây gọi là nguyên tắc "Giảm tải nhận thức" (Cognitive Load Reduction).\n\nExcel thường vi phạm điều này với mấy cái hiệu ứng 3D, bóng đổ (Shadow) lòe loẹt làm rối mắt. `ggplot2` của R đi theo tư duy tối giản (Minimalism) của Edward Tufte - Tối đa hóa Tỷ lệ Dữ liệu-Mực in (Data-Ink Ratio).' }],
             },
             {
                 _type: 'block',
@@ -222,7 +222,7 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Có 2 nhân viên Sale cùng bán được trung bình 100 triệu/tháng. Nhưng ông A tháng nào cũng 100tr, ông B tháng 0 đồng tháng 200tr. \nNhìn **SD** để biết:\nSD ông A = 0 (Rất ổn định).\nSD ông B = 100 (Rất bấp bênh).\n\nTrong R: `sd(df$Income)`' }],
+                children: [{ _type: 'span', text: 'Có 2 nhân viên Sale cùng bán được trung bình 100 triệu/tháng. Nhưng ông A tháng nào cũng 100tr, ông B tháng 0 đồng tháng 200tr. \nNhìn SD để biết:\nSD ông A = 0 (Rất ổn định).\nSD ông B = 100 (Rất bấp bênh).\n\nTrong R: `sd(df$Income)`' }],
             },
             {
                 _type: 'block',
@@ -232,7 +232,7 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Mean và SD chỉ có ý nghĩa khi dữ liệu phân phối chuẩn (hình chuông). Nếu dữ liệu méo mó, dùng Median an toàn hơn.\n\n*Góc nhìn khoa học: Để chắc chắn, hãy dùng Shapiro-Wilk test:*\n`shapiro.test(df$Income)`\n- Nếu p < 0.05 -> Không chuẩn -> Nên báo cáo Median (IQR).\n- Nếu p > 0.05 -> Chuẩn -> Báo cáo Mean (SD).\n\nLàm đúng quy trình này thì Reviewer chỉ có gật gù khen bạn chuyên nghiệp.' }],
+                children: [{ _type: 'span', text: 'Mean và SD chỉ có ý nghĩa khi dữ liệu phân phối chuẩn (hình chuông). Nếu dữ liệu méo mó, dùng Median an toàn hơn.\n\nGóc nhìn khoa học: Để chắc chắn, hãy dùng Shapiro-Wilk test:\n`shapiro.test(df$Income)`\n- Nếu p < 0.05 -> Không chuẩn -> Nên báo cáo Median (IQR).\n- Nếu p > 0.05 -> Chuẩn -> Báo cáo Mean (SD).\n\nLàm đúng quy trình này thì Reviewer chỉ có gật gù khen bạn chuyên nghiệp.' }],
             },
             {
                 _type: 'block',
@@ -291,7 +291,7 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Bạn không thể "mơ" ra số nhóm được. Phải dùng thuật toán để chọn số nhóm tối ưu (Eigenvalues > 1).\n\nBước 1: Vẽ biểu đồ đá cuội (Scree Plot) xem nên chọn mấy nhóm\n`fa.parallel(df_scale)` -> Nó sẽ gợi ý dòng "Parallel analysis suggests n factors".\n\nBước 2: Chạy EFA chính thức\n`fa(r = cor(df_scale), nfactors = 3, rotate = "promax")`\n*(Thay số 3 bằng số gợi ý ở trên)*\n\nDân kinh tế ưu tiên xoay Promax (xoay xiên) hơn Varimax (vuông góc) vì các khái niệm xã hội thường dính dây mơ rễ má với nhau.' }],
+                children: [{ _type: 'span', text: 'Bạn không thể "mơ" ra số nhóm được. Phải dùng thuật toán để chọn số nhóm tối ưu (Eigenvalues > 1).\n\nBước 1: Vẽ biểu đồ đá cuội (Scree Plot) xem nên chọn mấy nhóm\n`fa.parallel(df_scale)` -> Nó sẽ gợi ý dòng "Parallel analysis suggests n factors".\n\nBước 2: Chạy EFA chính thức\n`fa(r = cor(df_scale), nfactors = 3, rotate = "promax")`\n(Thay số 3 bằng số gợi ý ở trên)\n\nDân kinh tế ưu tiên xoay Promax (xoay xiên) hơn Varimax (vuông góc) vì các khái niệm xã hội thường dính dây mơ rễ má với nhau.' }],
             },
             {
                 _type: 'block',
@@ -319,7 +319,7 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Chào mừng các bạn đến với trận chung kết. Sau khi làm sạch dữ liệu, vẽ hình đẹp đẽ, kiểm định thang đo ok, giờ là lúc ta "thịt" bộ dữ liệu để lòi ra kết quả cuối cùng.\n\nMục tiêu: Tìm xem Lương (Salary), Đồng nghiệp (Colleague), Sếp (Boss) -> Yếu tố nào dự báo "tốt nhất" sự Hài lòng (Satisfaction)?\n\n*Lưu ý: Hồi quy cho ta biết mối liên hệ (Association), không chắc chắn là Nhân quả (Causation). Tuy nhiên trong kinh doanh, nếu lý thuyết hỗ trợ, ta có thể dùng nó để ra quyết định.*' }],
+                children: [{ _type: 'span', text: 'Chào mừng các bạn đến với trận chung kết. Sau khi làm sạch dữ liệu, vẽ hình đẹp đẽ, kiểm định thang đo ok, giờ là lúc ta "thịt" bộ dữ liệu để lòi ra kết quả cuối cùng.\n\nMục tiêu: Tìm xem Lương (Salary), Đồng nghiệp (Colleague), Sếp (Boss) -> Yếu tố nào dự báo "tốt nhất" sự Hài lòng (Satisfaction)?\n\nLưu ý: Hồi quy cho ta biết mối liên hệ (Association), không chắc chắn là Nhân quả (Causation). Tuy nhiên trong kinh doanh, nếu lý thuyết hỗ trợ, ta có thể dùng nó để ra quyết định.' }],
             },
             {
                 _type: 'image',
@@ -345,7 +345,7 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Câu thần chú gọi Rồng Thần trong R:\n\n`model <- lm(Satisfaction ~ Salary + Colleague + Boss, data = df_final)`\n`summary(model)`\n\nBảng kết quả hiện ra. Nhìn vào đâu?\n\n P-value (Pr(>|t|)): Tìm những dòng có dấu sao *** (< 0.001) hoặc * (< 0.05). Đó là những yếu tố có ý nghĩa thống kê.\n Estimate (Beta): Hệ số tác động. \n   - Estimate dương: Tác động thuận chiều.\n   - Estimate âm: Tác động ngược chiều.\n   - Số càng to (về trị tuyệt đối) -> Tác động càng mạnh.\n R-squared: Mô hình giải thích được bao nhiêu % (như bài NCS101 đã nói).' }],
+                children: [{ _type: 'span', text: 'Câu thần chú gọi Rồng Thần trong R:\n\n`model <- lm(Satisfaction ~ Salary + Colleague + Boss, data = df_final)`\n`summary(model)`\n\nBảng kết quả hiện ra. Nhìn vào đâu?\n\n P-value (Pr(>|t|)): Tìm những dòng có dấu sao  (< 0.001) hoặc  (< 0.05). Đó là những yếu tố có ý nghĩa thống kê.\n Estimate (Beta): Hệ số tác động. \n   - Estimate dương: Tác động thuận chiều.\n   - Estimate âm: Tác động ngược chiều.\n   - Số càng to (về trị tuyệt đối) -> Tác động càng mạnh.\n R-squared: Mô hình giải thích được bao nhiêu % (như bài NCS101 đã nói).' }],
             },
             {
                 _type: 'block',
@@ -355,7 +355,7 @@ export const r101_series = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Chạy ra kết quả chưa xong đâu. Phải khám sức khỏe cho nó.\n\n*Insight:* Tại sao phải soi phần dư (Residuals)? Phần dư chính là những gì mô hình *không giải thích được*. \n- Nếu phần dư lộn xộn ngẫu nhiên -> Tốt.\n- Nếu phần dư có quy luật (VD: Mô hình dự báo sai lệch nhiều ở nhóm Thu nhập cao) -> Chứng tỏ bạn đang bỏ sót một biến quan trọng nào đó. Hiện tượng này gọi là **Thiên lệch do biến bị bỏ sót (Omitted Variable Bias)**.\n- Những điểm ngoại lai (Outliers) trong phần dư đôi khi lại là "Mỏ vàng" - **Thị trường ngách (Niche Market)** mà đối thủ bỏ qua.\n\nChecklist:\n- Đa cộng tuyến (Multicollinearity): `vif(model)` > 5 là báo động.\n- Phân phối chuẩn của phần dư: `plot(model, which = 2)`. Các điểm phải ôm sát đường chéo.' }],
+                children: [{ _type: 'span', text: 'Chạy ra kết quả chưa xong đâu. Phải khám sức khỏe cho nó.\n\nInsight: Tại sao phải soi phần dư (Residuals)? Phần dư chính là những gì mô hình không giải thích được. \n- Nếu phần dư lộn xộn ngẫu nhiên -> Tốt.\n- Nếu phần dư có quy luật (VD: Mô hình dự báo sai lệch nhiều ở nhóm Thu nhập cao) -> Chứng tỏ bạn đang bỏ sót một biến quan trọng nào đó. Hiện tượng này gọi là Thiên lệch do biến bị bỏ sót (Omitted Variable Bias).\n- Những điểm ngoại lai (Outliers) trong phần dư đôi khi lại là "Mỏ vàng" - Thị trường ngách (Niche Market) mà đối thủ bỏ qua.\n\nChecklist:\n- Đa cộng tuyến (Multicollinearity): `vif(model)` > 5 là báo động.\n- Phân phối chuẩn của phần dư: `plot(model, which = 2)`. Các điểm phải ôm sát đường chéo.' }],
             }
         ]
     },
