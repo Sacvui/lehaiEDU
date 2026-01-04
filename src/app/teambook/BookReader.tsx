@@ -105,21 +105,22 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                     {/* Intro Text */}
                     <div className="space-y-8 text-center md:text-left">
                         <div>
-                            <p className="text-amber-700 font-sans tracking-[0.2em] text-sm font-bold uppercase mb-4">Internal Training Document</p>
+                            <p className="text-amber-700 font-sans tracking-[0.2em] text-sm font-bold uppercase mb-4">The Official Handbook</p>
                             <h1 className="text-5xl md:text-7xl font-bold leading-tight text-slate-900 mb-4 ">
                                 Intern to <br />
-                                <span className="italic font-light text-slate-600">C-Level</span>
+                                <span className="italic font-light text-slate-600">Researcher</span>
                             </h1>
                             <p className="text-xl md:text-2xl text-slate-500 font-light italic">
-                                "Cẩm nang sinh tồn & thăng tiến chốn công sở"
+                                "Hành trình từ Trang giấy trắng đến Tư duy Học thuật"
                             </p>
                         </div>
 
                         <div className="w-24 h-1 bg-amber-600 mx-auto md:mx-0"></div>
 
-                        <p className="text-lg leading-relaxed text-slate-700 max-w-lg">
-                            Tổng hợp hơn 70 bài viết tâm huyết, đúc kết 15 năm kinh nghiệm thực chiến.
-                            Được biên tập lại thành một lộ trình hoàn chỉnh: Từ Tư duy (Mindset) đến Kỹ năng (Skillset) và Chiến lược (Strategy).
+                        <p className="text-lg leading-relaxed text-slate-800 max-w-lg font-serif">
+                            Một lộ trình được biên tập bài bản, dẫn dắt bạn đi từ việc xây dựng <strong>Tư duy cốt lõi</strong> (Mindset), trang bị <strong>Công cụ phân tích</strong> (Toolset) đến khả năng <strong>Hoạch định chiến lược</strong> (Skillset).
+                            <br /><br />
+                            Đây không chỉ là sách, đây là tấm bản đồ cho sự nghiệp nghiên cứu của bạn.
                         </p>
 
                         <button
@@ -132,7 +133,7 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                         </button>
 
                         <p className="text-xs text-slate-400 font-sans uppercase tracking-widest mt-12">
-                            Lưu hành nội bộ • Lehai Education
+                            Lehai Education • Academic Edition 2026
                         </p>
                     </div>
                 </motion.div>
