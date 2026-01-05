@@ -163,22 +163,20 @@ export default async function ForTeamPage() {
     // --- EXPANDED AUTHOR BIO ---
     const detailedAuthors = {
         _id: 'manual-authors',
-        title: 'Ban Biên Tập & Cố Vấn Chuyên Môn',
+        title: 'Lời kết & Đội ngũ biên tập',
         slug: { current: 'gioi-thieu-tac-gia' },
-        readingTime: 10,
+        readingTime: 6,
         body: [
-            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: '1. Chủ biên: Le Phuc Hai (Mr.)' }] },
-            { _type: 'block', style: 'blockquote', children: [{ _type: 'span', text: '"Tôi không dạy lý thuyết. Tôi chia sẻ những vết sẹo của mình để các bạn không phải dẫm vào nó nữa."' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Anh Lê Phúc Hải hiện là **Giám đốc Phát triển Kinh doanh Quốc gia (National Business Development Director)** và là Giảng viên Doanh nhân tại nhiều trường đại học lớn.' }] },
-            { _type: 'block', style: 'h4', children: [{ _type: 'span', text: 'Kinh nghiệm thực chiến:' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '- 15+ năm kinh nghiệm trong lĩnh vực Quản trị Chiến lược & Phân tích Dữ liệu.\n- Từng giữ vị trí C-Level tại các tập đoàn đa quốc gia.\n- Mentor cho hàng trăm sinh viên và nhân sự trẻ phát triển sự nghiệp.' }] },
-            { _type: 'block', style: 'h4', children: [{ _type: 'span', text: 'Triết lý giáo dục:' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Anh theo đuổi triết lý "Thực học - Thực nghiệp". Mọi kiến thức anh chia sẻ đều phải trả lời được câu hỏi: "Cái này áp dụng vào công việc ngày mai như thế nào?". Phong cách giảng dạy của anh nổi tiếng với sự gần gũi, hài hước (Hai Morning) nhưng cực kỳ sâu sắc.' }] },
+            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: 'Người kể chuyện: Hải Rong Chơi' }] },
+            { _type: 'block', style: 'blockquote', children: [{ _type: 'span', text: '"Tôi viết cuốn sách này không phải để dạy ai cả. Tôi viết để trả nợ. Trả nợ những người thầy đã mắng tôi, những người sếp đã ép tôi vào chân tường, và những bài học xương máu mà tôi đã phải đánh đổi bằng cả thanh xuân."' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Hải không thích gọi mình là chuyên gia hay thầy bà. Hải chỉ là một người đi trước, đã từng vấp ngã rất đau và may mắn đứng dậy được. Trên hành trình từ một cậu sinh viên thực tập ngáo ngơ đến vị trí Giám đốc Phát triển Quốc gia, Hải nhận ra rằng:' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Khoảng cách giữa "Thợ" và "Thầy" không nằm ở kỹ năng (Skillset), mà nằm ở Tư duy (Mindset) và Tầm nhìn (Vision). Cuốn sách này là toàn bộ những gì Hải chắt lọc được sau 15 năm "lăn lộn", hy vọng nó sẽ giúp các bạn bớt đi vài vết sẹo trên hành trình của mình.' }] },
 
-            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: '2. Cố vấn Khoa học: TS. Carmen Châu (Ms.)' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '**Tiến sĩ (PhD) chuyên ngành Marketing.**' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Cô chịu trách nhiệm bảo chứng tính khoa học cho toàn bộ nội dung trong cuốn sách này. Nếu anh Hải mang đến hơi thở của chiến trường ác liệt, thì cô Châu mang đến sự chuẩn mực, chặt chẽ của tháp ngà học thuật.' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Sự kết hợp này đảm bảo rằng: Những gì bạn học được vừa **dùng được ngay**, lại vừa **đúng chuẩn quốc tế**.' }] }
+            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: 'Cố vấn Chuyên môn: TS. Carmen Châu' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '**Tiến sĩ (PhD) Tâm lý học Tổ chức & Nhân sự.**' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Nếu Hải đại diện cho sự thực chiến, xông xáo và đôi khi hơi "bụi bặm" của thương trường, thì Cô Châu là hiện thân của sự sâu sắc, chuẩn mực và thấu hiểu con người.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Với nền tảng học thuật vững chắc về Tâm lý học và Quản trị Nhân sự, Cô Châu giúp cân bằng lại những góc nhìn trong cuốn sách. Cô nhắc nhở chúng ta rằng: Dữ liệu (Data) dù có lạnh lùng đến đâu, thì đích đến cuối cùng vẫn là phục vụ Con người (Human). Chiến lược nào mà bỏ quên yếu tố con người, chiến lược đó chắc chắn thất bại.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Sự kết hợp giữa "Data lạnh" và "Trái tim nóng" chính là linh hồn của cuốn sách này.' }] }
         ]
     };
 
