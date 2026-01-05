@@ -1,0 +1,7 @@
+
+# Script files for data import
+scripts/
+scripts/*.ts
+
+# Data files
+scripts/blog_posts_*.ts
