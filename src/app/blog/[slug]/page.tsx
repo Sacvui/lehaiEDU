@@ -215,6 +215,26 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                         }}
                     />
 
+                    {/* Main Content Grid */}
+                    <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 pt-8">
+                        {/* Sidebar: Table of Contents (Desktop) */}
+                        <aside className="hidden lg:block lg:col-span-3">
+                            <div className="sticky top-24 max-h-[calc(100vh-8rem)] overflow-y-auto pr-4 scrollbar-thin scrollbar-thumb-slate-200 dark:scrollbar-thumb-slate-800">
+                                <TableOfContents headings={headings} />
+                            </div>
+                        </aside>
+
+                        {/* Article Body */}
+                        <div className="lg:col-span-8 lg:col-start-5">
+                            <div className="prose prose-lg md:prose-xl dark:prose-invert prose-headings:font-bold prose-headings:text-slate-900 dark:prose-headings:text-white prose-p:text-slate-700 dark:prose-p:text-slate-300 prose-a:text-amber-600 dark:prose-a:text-amber-400 prose-img:rounded-xl max-w-none">
+                                <PortableText
+                                    value={post.body}
+                                    components={portableTextComponents}
+                                />
+                            </div>
+                        </div>
+                    </div>
+
                     {/* Series Controls (Next/Prev) */}
                     {seriesTag && seriesPosts.length > 1 && (
                         <SeriesControls
