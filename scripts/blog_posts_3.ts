@@ -120,82 +120,197 @@ export const batch3 = [
         body: [
             {
                 _type: 'block',
-                style: 'normal',
-                children: [{ _type: 'span', text: 'Trong giới làm nghiên cứu (Research), có hai thái cực đập nhau chan chát suốt bao nhiêu năm nay, y như fan MU và fan Man City vậy. Đó là phe Định Lượng (Quantitative) và phe Định Tính (Qualitative).' }],
+                style: 'h3',
+                children: [{ _type: 'span', text: 'Lời nói đầu: Cuộc chiến của những "Kẻ cuồng tín"' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Hải ngày xưa mới vào nghề, cũng bị cuốn vào cuộc chiến này. Hồi đó mình dân Kinh tế gốc Toán, nên sùng bái con số lắm. Thấy ai làm định tính (phỏng vấn, quan sát) là mình bĩu môi: "Cái này là văn chương chứ khoa học gì, chém gió là giỏi". Nhưng sau này làm sâu, bị đời vùi dập, mới thấy mình nông cạn.' }],
+                children: [{ _type: 'span', text: 'Trong giới nghiên cứu (Academic & Market Research), có một cuộc chiến tranh lạnh đã kéo dài hàng thế kỷ, dai dẳng và khốc liệt không kém gì fan MU đại chiến fan Man City. Đó là cuộc đối đầu giữa hai trường phái: Định Lượng (Quantitative - Phe Toán Học) và Định Tính (Qualitative - Phe Nhân Văn).' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Hồi mới chân ướt chân ráo vào nghề, Hải tôi cũng từng là một "kẻ cuồng tín" của phe Định Lượng. Xuất thân dân khối A, tôi nhìn mọi thứ bằng con số. Thấy ai làm phỏng vấn sâu, tôi bĩu môi: "Mấy cái này là văn chương lãng mạn chứ khoa học gì? Chém gió là giỏi!". Tôi tin rằng nếu không đo lường được (measure), thì nó không tồn tại.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Nhưng rồi đời vùi dập. Những dự án triệu đô thất bại dù số liệu đẹp như mơ đã dạy cho tôi một bài học nhớ đời: "Con số không biết nói dối, nhưng nó không bao giờ nói hết sự thật".' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Bài viết này sẽ dài (khoảng 1500 từ), nhưng nó sẽ giúp bạn - những Researcher tương lai - không bị rơi vào cái bẫy "thầy bói xem voi".' }],
             },
 
+            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: 'PHẦN 1: PHE ĐỊNH LƯỢNG - "SHOW ME THE DATA!"' }] },
             {
                 _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: '1. Phe Định Lượng: "Show me the data!"' }],
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Hãy tưởng tượng phe Định Lượng là quân đội chính quy. Họ hành quân thẳng tắp, trang bị tận răng với SPSS, Python, R, SmartPLS. Khẩu hiệu của họ là: "Sự thật nằm ở số lớn" (Law of Large Numbers).' }],
+            },
+            {
+                _type: 'block',
+                style: 'h4',
+                children: [{ _type: 'span', text: 'Vũ khí chủ lực:' }]
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đặc điểm nhận dạng: Cuồng SPSS, STATA, R, AMOS/SmartPLS. Trong đầu lúc nào cũng lẩm nhẩm p-value phải nhỏ hơn 0.05, Alpha phải lớn hơn 0.7.' }],
+                children: [{ _type: 'span', text: '- Bảng khảo sát (Survey) diện rộng (n = 1000+).\n- Thử nghiệm A/B Testing.\n- Phân tích dữ liệu lớn (Big Data Analytics).' }]
+            },
+            {
+                _type: 'block',
+                style: 'h4',
+                children: [{ _type: 'span', text: 'Sức mạnh tuyệt đối:' }]
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Triết lý: Cái gì không đo lường được thì không quản lý được. Mọi thứ phải quy ra con số. Khảo sát 500 người, chạy mô hình, ra kết quả có ý nghĩa thống kê -> Chân lý. Khoa học là phải khách quan, không được đưa cảm xúc cá nhân vào.' }],
+                children: [{ _type: 'span', text: '1. **Tính Khách Quan (Objectivity):** Con số 1 là 1, 2 là 2. Không có chuyện hôm nay tôi vui thì tôi thấy nó là 1.5. Sếp thích nghe định lượng vì nó tạo cảm giác an toàn, chắc chắn.\n2. **Tính Tổng Quát Hóa (Generalizability):** Bạn khảo sát 1000 người, bạn có thể tự tin kết luận cho cả thị trường 1 triệu người (với sai số cho phép). Đây là điều phe Định Tính nằm mơ cũng không làm được.' }]
+            },
+            {
+                _type: 'block',
+                style: 'h4',
+                children: [{ _type: 'span', text: 'Gót chân Achilles: "New Coke" Disaster' }]
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Điểm yếu: Khô khan. Và đôi khi "Rác vào rác ra" (Garbage In Garbage Out). Người ta tick bừa vào bảng câu hỏi bạn cũng không biết. Kết quả ra tương quan dương, nhưng không giải thích được TẠI SAO nó lại dương. Chỉ biết là A tăng thì B tăng, còn cơ chế bên trong thì chịu chết.' }],
+                children: [{ _type: 'span', text: 'Rất nhiều người biết vụ thảm họa "New Coke" của Coca-Cola năm 1985. Họ đã thực hiện hơn **200.000** cuộc thử mù (blind taste tests) - một con số khổng lồ về định lượng. Kết quả? New Coke thắng áp đảo Pepsi và Old Coke về hương vị.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Dựa trên số liệu "không thể sai" đó, họ tung sản phẩm ra. Và BÙM! Thất bại thảm hại. Người dân Mỹ nổi giận, tẩy chay.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Tại sao? Vì Định Lượng đã bỏ qua một biến số không thể đo lường bằng nếm thử: **Cảm xúc và Hoài niệm**. Người ta uống Coke không chỉ vì ngọt, mà vì nó là biểu tượng văn hóa Mỹ. Định Lượng trả lời được câu hỏi "Cái gì" (What) và "Bao nhiêu" (How much), nhưng chết đứng trước câu hỏi "Tại sao" (Why).' }]
             },
 
+            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: 'PHẦN 2: PHE ĐỊNH TÍNH - "THICK DATA" NOT BIG DATA' }] },
             {
                 _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: '2. Phe Định Tính: "Hiểu sâu hơn hiểu rộng"' }],
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Nếu Định Lượng là quân đội chính quy, thì Định Tính là lực lượng đặc nhiệm (Spec Ops). Họ không đi đông, họ đi sâu. Họ không cần 1000 người, họ chỉ cần 10 người, nhưng họ sẽ "đào" đến tận tâm can của 10 người đó.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h4',
+                children: [{ _type: 'span', text: 'Vũ khí chủ lực:' }]
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đặc điểm nhận dạng: Thích đi cafe phỏng vấn sâu (In-depth Interview), thích đi Ethnography (Dân tộc học - sống cùng đối tượng nghiên cứu). Dùng phần mềm NVivo để mã hóa (Coding) văn bản.' }],
+                children: [{ _type: 'span', text: '- Phỏng vấn sâu (In-depth Interview).\n- Thảo luận nhóm (Focus Group).\n- Quan sát hành vi (Ethnography/Observation).\n- Netnography (Nghiên cứu cộng đồng mạng).' }]
+            },
+            {
+                _type: 'block',
+                style: 'h4',
+                children: [{ _type: 'span', text: 'Sức mạnh tuyệt đối:' }]
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Triết lý: Con số là vô tri. Hành vi con người phức tạp hơn nhiều. Phải đào sâu vào tâm lý, bối cảnh, văn hóa mới hiểu được bản chất vấn đề (The "Why" and "How"). Số liệu 500 người có thể nói dối, nhưng ánh mắt một người khi kể chuyện thì không.' }],
+                children: [{ _type: 'span', text: '1. **Phát hiện "Điểm mù" (Blind Spots):** Có những thứ bạn không bao giờ nghĩ ra để đưa vào bảng câu hỏi. Định tính giúp bạn "khai phá" những vùng đất mới.\n2. **Thấu hiểu bối cảnh (Context):** Một người tích vào ô "Hài lòng" có thể vì họ thực sự hài lòng, hoặc vì họ đang vội muốn cho xong. Chỉ có ngồi đối diện, nhìn ánh mắt, nghe giọng điệu, bạn mới biết đó là lời nói thật hay xã giao.' }]
+            },
+            {
+                _type: 'block',
+                style: 'h4',
+                children: [{ _type: 'span', text: 'Case Study: Cú lội ngược dòng của LEGO' }]
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Điểm yếu: Dễ bị chủ quan (Subjectivity). Kết quả phụ thuộc vào ông nghiên cứu. Và khó tổng quát hóa (Generalizability) - phỏng vấn 10 ông CEO không có nghĩa là 1 triệu ông CEO khác cũng nghĩ thế.' }],
+                children: [{ _type: 'span', text: 'Đầu những năm 2000, Lego suýt phá sản. Dữ liệu (Big Data) thời đó chỉ ra rằng: "Trẻ em thời nay (thế hệ Digital) không còn kiên nhẫn nữa. Chúng thích những thứ mì ăn liền, dễ chơi, dễ thắng". Lego nghe theo, làm ra những bộ lắp ráp to đùng, đơn giản. Doanh số càng tụt thê thảm.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Họ quyết định làm một cuộc nghiên cứu Định Tính (Ethnography). Họ cử các nhà nghiên cứu đến sống cùng các gia đình, quan sát trẻ em chơi. Họ phát hiện ra một cậu bé 11 tuổi, gia tài quý nhất của cậu là một đôi giày trượt ván cũ mèm, rách nát.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Khi được hỏi tại sao, cậu bé tự hào khoe: "Vì nhìn đôi giày này, tui bọn nó biết em là dân Pro. Em đã tập luyện hàng trăm giờ đến mòn cả giày mới có được trình độ này".' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Eureka! Insight chết người đây rồi: **Trẻ em không thích dễ. Chúng thích chinh phục để chứng tỏ đẳng cấp (Mastery).** Lego quay xe, tung ra những bộ lắp ghép siêu phức tạp, hàng nghìn chi tiết (như Lego Technic, Lego Architecture). Và Lego trở thành đế chế đồ chơi lớn nhất thế giới.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Nếu chỉ nhìn vào Big Data, Lego đã chết. Họ sống lại nhờ "Thick Data" (Dữ liệu dày/sâu).' }]
             },
 
+            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: 'PHẦN 3: MIXED METHODS - "SONG KIẾM HỢP BÍCH"' }] },
             {
                 _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'Vậy chọn phe nào? (Mixed Methods)' }],
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Đến năm 2025 rồi, nếu bạn vẫn còn hỏi "Nên chọn Định Tính hay Định Lượng?" thì bạn đã lỗi thời. Câu trả lời của dân chuyên nghiệp (Pro) là: **LẤY CẢ HAI.**' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Câu trả lời của năm 2025 là: Tại sao phải chọn? Ăn cả hai đi! (Mixed Methods).' }],
+                children: [{ _type: 'span', text: 'Phương pháp Kết hợp (Mixed Methods) chính là chìa khóa vạn năng. Nhưng kết hợp thế nào? Có 2 chiến lược kinh điển:' }]
+            },
+            {
+                _type: 'block',
+                style: 'h3',
+                children: [{ _type: 'span', text: 'Chiến lược 1: Exploratory (Khám phá trước - Đo lường sau)' }]
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Quy trình chuẩn bây giờ là: Làm Định tính trước để khám phá (Exploratory). Phỏng vấn chuyên gia để tìm ra các biến mới, mô hình mới. Sau đó dùng Định lượng để kiểm định lại (Confirmatory) trên diện rộng.' }],
+                children: [{ _type: 'span', text: '**Qual → Quant**' }]
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Ví dụ: Bạn muốn nghiên cứu tại sao nhân viên Gen Z hay nhảy việc. \n- Bước 1 (Qual): Phỏng vấn sâu 10 em Gen Z. Phát hiện ra một lý do lạ hoắc: "Do công ty không cho mang thú cưng đi làm".\n- Bước 2 (Quant): Đưa biến "Pet-friendly policy" vào bảng khảo sát 1000 em Gen Z. Chạy hồi quy xem nó có thực sự ảnh hưởng mạnh không.' }],
+                children: [{ _type: 'span', text: 'Dùng khi bạn mù tịt, chưa biết biến số nào quan trọng. Ví dụ: Bạn muốn biết "Tại sao nhân viên Gen Z nghỉ việc?".\n- Bước 1 (Qual): Mời 10 em Gen Z đi uống trà sữa, tâm sự mỏng. Phát hiện ra một lý do lạ hoắc: "Do công ty cấm mang thú cưng đi làm".\n- Bước 2 (Quant): Đưa biến "Pet-friendly policy" vào bảng khảo sát 1000 người để xem có bao nhiêu % thực sự quan tâm đến nó. Nếu 60% quan tâm -> Đây là vấn đề lớn.' }]
+            },
+            {
+                _type: 'block',
+                style: 'h3',
+                children: [{ _type: 'span', text: 'Chiến lược 2: Explanatory (Đo lường trước - Giải thích sau)' }]
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Kết hợp "Văn" và "Toán" như thế mới là cao thủ. Đừng cực đoan. Công cụ nào cũng tốt nếu biết dùng đúng việc. Chúc các bạn chọn được vũ khí phù hợp để chiến đấu với luận văn!' }],
+                children: [{ _type: 'span', text: '**Quant → Qual**' }]
             },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Dùng khi bạn có dữ liệu nhưng không hiểu tại sao nó lại thế. Ví dụ: Dữ liệu CRM báo cáo khách hàng ở khu vực Quận 7 bỏ đi hàng loạt (Churn rate tăng vọt).\n- Bước 1 (Quant): Chạy dữ liệu, khoanh vùng được nhóm khách hàng nam, 30-40 tuổi bỏ đi nhiều nhất.\n- Bước 2 (Qual): Gọi điện hoặc đến tận nhà phỏng vấn nhóm này. Hóa ra là do Shipper khu vực này thái độ lồi lõm, hay chửi khách.' }]
+            },
+
+            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: 'LỜI KẾT: ĐỪNG LÀ "THỢ", HÃY LÀ "KIẾN TRÚC SƯ"' }] },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Công cụ chỉ là công cụ. Đừng để SPSS hay NVivo định nghĩa bạn. Một Researcher giỏi (Full-stack Researcher) giống như một đầu bếp tài ba:' }]
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: '- Cần **Định Lượng** như cần Muối: Để món ăn đậm đà, có sức nặng, thuyết phục được đám đông (Sếp/Cổ đông).\n- Cần **Định Tính** như cần Gia vị hương liệu: Để tạo ra bản sắc, sự tinh tế và thấu cảm sâu sắc.' }]
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Đừng cực đoan. Hãy thực dụng (Pragmatism). Bất cứ phương pháp nào giúp bạn trả lời được câu hỏi kinh doanh (Business Question) một cách chính xác nhất, rẻ nhất, nhanh nhất -> Đó là phương pháp tốt nhất.' }]
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Chúc các bạn chân cứng đá mềm trên con đường truy tìm sự thật!' }]
+            }
         ],
     }
 ];

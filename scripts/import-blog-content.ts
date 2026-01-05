@@ -2,26 +2,26 @@ import { createClient } from '@sanity/client'
 import * as dotenv from 'dotenv'
 import path from 'path'
 import fs from 'fs'
-import { batch1 } from './blog_posts_1'
-import { batch2 } from './blog_posts_2'
-import { batch3 } from './blog_posts_3'
-import { batch4 } from './blog_posts_4'
-import { batch5 } from './blog_posts_5'
-import { batch6 } from './blog_posts_6'
-import { series_a_1 } from './blog_posts_series_a_1'
-import { series_a_2 } from './blog_posts_series_a_2'
-import { series_b_1 } from './blog_posts_series_b_1'
-import { series_b_2 } from './blog_posts_series_b_2'
-import { series_c_1 } from './blog_posts_series_c_1'
-import { series_c_2 } from './blog_posts_series_c_2'
-import { dms_failure_post } from './blog_posts_dms_failure';
-import { dms_evolution_post } from './blog_posts_dms_evolution';
-import { r101_series } from './blog_posts_r101';
-import { python101_series } from './blog_posts_python101';
-import { book_intro } from './blog_posts_book'
-import { bi_ai_post } from './blog_posts_bi_ai'
-import { ncs_series_post } from './blog_posts_ncs_series'
-import { dms_post } from './blog_posts_dms'
+import { batch1 } from './blog_posts_1.ts'
+import { batch2 } from './blog_posts_2.ts'
+import { batch3 } from './blog_posts_3.ts'
+import { batch4 } from './blog_posts_4.ts'
+import { batch5 } from './blog_posts_5.ts'
+import { batch6 } from './blog_posts_6.ts'
+import { series_a_1 } from './blog_posts_series_a_1.ts'
+import { series_a_2 } from './blog_posts_series_a_2.ts'
+import { series_b_1 } from './blog_posts_series_b_1.ts'
+import { series_b_2 } from './blog_posts_series_b_2.ts'
+import { series_c_1 } from './blog_posts_series_c_1.ts'
+import { series_c_2 } from './blog_posts_series_c_2.ts'
+import { dms_failure_post } from './blog_posts_dms_failure.ts';
+import { dms_evolution_post } from './blog_posts_dms_evolution.ts';
+import { r101_series } from './blog_posts_r101.ts';
+import { python101_series } from './blog_posts_python101.ts';
+import { book_intro } from './blog_posts_book.ts'
+import { bi_ai_post } from './blog_posts_bi_ai.ts'
+import { ncs_series_post } from './blog_posts_ncs_series.ts'
+import { dms_post } from './blog_posts_dms.ts'
 
 dotenv.config({ path: path.resolve(process.cwd(), '.env.local') })
 
