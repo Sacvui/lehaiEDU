@@ -115,29 +115,77 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{
-                    _type: 'span', text: `Mở ngay file Excel lên. Tạo các cột sau: 
-- Tên tác giả, Năm 
-- Lý thuyết sử dụng 
-- Biến độc lập, Biến phụ thuộc 
-- Kết quả chính 
-- Hạn chế (Gap - Cái họ chưa làm được)
-
-Mỗi lần đọc 1 bài, chỉ đi tìm đúng các thông tin đó điền vào Excel. Đừng quan tâm ông ấy văn hay chữ tốt thế nào. 
-
- Đọc Abstract (Tóm tắt) trước. Thấy không liên quan -> Next.
- Đọc Conclusion (Kết luận). Thấy hay -> Quay lại đọc Model.
- Đọc Future Research (Hướng nghiên cứu tương lai). Đây là mỏ vàng để tìm Gap.
-
-Sau khi điền được 50 dòng (50 bài), nhìn vào cái cột "Hạn chế", bạn sẽ thấy ánh sáng chân lý: "À, hóa ra bọn Tây nó toàn nghiên cứu ở nước phát triển (Developed), chưa ai kiểm định lại lý thuyết này ở thị trường mới nổi (Emerging Market) như Việt Nam!"
-
-[PRO TIP]: Gap không chỉ là "chưa ai làm". Gap "xịn" (Academic Gap) thường rơi vào 4 loại sau:
-1. Contextual Gap (Bối cảnh): Đã làm ở Tây, chưa làm ở VN. (Lưu ý: Phải biện luận tại sao bối cảnh VN lại đặc biệt? Ví dụ: Văn hóa tập thể vs Cá nhân).
-2. Theoretical Gap (Lý thuyết): Mâu thuẫn giữa Lý thuyết A và B -> Cần khung lý thuyết mới để hòa giải.
-3. Methodological Gap (Phương pháp): Người trước đo lường chưa chuẩn hoặc phương pháp cũ (Định tính) không khách quan -> Tôi dùng phương pháp mới (Định lượng/Mixed) để kiểm chứng.
-4. Conceptual Gap (Khái niệm): Các mô hình cũ không còn giải thích đủ hiện tượng mới (Ví dụ: Hành vi mua sắm trên Metaverse) -> Cần khái niệm/mô hình mới.
-
-Tìm được 1 trong 4 cái này là bài báo có "Soul" (Linh hồn) ngay.` }],
+                children: [{ _type: 'span', text: 'Mở ngay file Excel lên. Tạo các cột sau:' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: 'Tên tác giả, Năm' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: 'Lý thuyết sử dụng' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: 'Biến độc lập, Biến phụ thuộc' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: 'Kết quả chính' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: 'Hạn chế (Gap - Cái họ chưa làm được)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Mỗi lần đọc 1 bài, chỉ đi tìm đúng các thông tin đó điền vào Excel. Đừng quan tâm ông ấy văn hay chữ tốt thế nào.\n\nĐọc Abstract (Tóm tắt) trước. Thấy không liên quan -> Next.\nĐọc Conclusion (Kết luận). Thấy hay -> Quay lại đọc Model.\nĐọc Future Research (Hướng nghiên cứu tương lai). Đây là mỏ vàng để tìm Gap.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Sau khi điền được 50 dòng (50 bài), nhìn vào cái cột "Hạn chế", bạn sẽ thấy ánh sáng chân lý: "À, hóa ra bọn Tây nó toàn nghiên cứu ở nước phát triển (Developed), chưa ai kiểm định lại lý thuyết này ở thị trường mới nổi (Emerging Market) như Việt Nam!"' }],
+            },
+            {
+                _type: 'block',
+                style: 'h4',
+                children: [{ _type: 'span', text: '[PRO TIP]: Gap "xịn" (Academic Gap) thường rơi vào 4 loại sau:' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: '1. Contextual Gap (Bối cảnh): Đã làm ở Tây, chưa làm ở VN. (Lưu ý: Phải biện luận tại sao bối cảnh VN lại đặc biệt? Ví dụ: Văn hóa tập thể vs Cá nhân).' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: '2. Theoretical Gap (Lý thuyết): Mâu thuẫn giữa Lý thuyết A và B -> Cần khung lý thuyết mới để hòa giải.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: '3. Methodological Gap (Phương pháp): Người trước đo lường chưa chuẩn hoặc phương pháp cũ (Định tính) không khách quan -> Tôi dùng phương pháp mới (Định lượng/Mixed) để kiểm chứng.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: '4. Conceptual Gap (Khái niệm): Các mô hình cũ không còn giải thích đủ hiện tượng mới (Ví dụ: Hành vi mua sắm trên Metaverse) -> Cần khái niệm/mô hình mới.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Tìm được 1 trong 4 cái này là bài báo có "Soul" (Linh hồn) ngay.' }],
             },
             {
                 _type: 'block',
