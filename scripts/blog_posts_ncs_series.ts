@@ -109,6 +109,11 @@ export const ncs_series_post = [
             },
             {
                 _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: '[GÓC HỌC THUẬT - International Standard]:\n"In high-quality doctoral research, a literature review is expected to go beyond descriptive summarization and demonstrate analytical synthesis, theoretical positioning, and explicit identification of research gaps (Booth et al., 2016; Saunders et al., 2019)."\n(Dịch: Lit Review chuẩn TS không phải là tóm tắt, mà là phân tích tổng hợp, định vị lý thuyết và chỉ rõ khoảng trống nghiên cứu).' }],
+            },
+            {
+                _type: 'block',
                 style: 'h2',
                 children: [{ _type: 'span', text: 'Kỹ thuật Ma Trận Tổng Hợp (Synthesis Matrix)' }],
             },
@@ -205,7 +210,46 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Thời đại AI rồi, đừng hì hục in giấy ra gạch chân nữa. Tốn mực tốn giấy bảo vệ môi trường đi các bạn.\n\n - NotebookLM (Google): Công cụ "chân ái" mới nổi. Bạn ném 20 file PDF vào, nó đọc hiểu hết và cho phép bạn "chat" với đống tài liệu đó. Đặc biệt tính năng "Audio Overview" biến bài báo thành Podcast 2 người nói chuyện với nhau, nghe lúc lái xe cực cuốn.\n - Obsidian / Notion: Đừng chỉ lưu file PDF. Hãy lưu "Ý tưởng". Dùng Obsidian để xây dựng "Bộ não thứ hai" (Second Brain), liên kết các ghi chú lại với nhau. Đừng để kiến thức rơi vãi.\n - Elicit.org: Công cụ thần thánh tìm bài báo và tóm tắt Gap.\n - Connected Papers: Vẽ mạng nhện các bài báo liên quan, tìm ra bài "Gốc" (Seminal Paper).\n - Mendeley/Zotero: Quản lý trích dẫn tự động. Cái này là Basic, bắt buộc phải có.\n\n[LƯU Ý QUAN TRỌNG]: \n1. AI chỉ là trợ lý (Assistant) giúp tìm kiếm và gợi ý, KHÔNG thay thế được tư duy làm chủ (Judgment) của con người. Đừng bao giờ copy nguyên văn văn bản do AI viết vào bài (AI-generated text). Reviewer "già rơ" đọc phát biết ngay và sẽ Reject thẳng tay.\n2. BẢO MẬT DỮ LIỆU: Tuyệt đối KHÔNG upload các tài liệu nội bộ, bí mật (Confidential) hoặc dữ liệu thô chưa công bố (Unpublished Raw Data) lên các tool AI công cộng như NotebookLM hay ChatGPT. Dữ liệu của bạn có thể bị dùng để train lại cho AI.' }],
+                children: [{ _type: 'span', text: 'Thời đại AI rồi, đừng hì hục in giấy ra gạch chân nữa. Tốn mực tốn giấy bảo vệ môi trường đi các bạn.\n\n - NotebookLM (Google): Công cụ "chân ái" mới nổi. Bạn ném 20 file PDF vào, nó đọc hiểu hết và cho phép bạn "chat" với đống tài liệu đó. Đặc biệt tính năng "Audio Overview" biến bài báo thành Podcast 2 người nói chuyện với nhau, nghe lúc lái xe cực cuốn.\n - Obsidian / Notion: Đừng chỉ lưu file PDF. Hãy lưu "Ý tưởng". Dùng Obsidian để xây dựng "Bộ não thứ hai" (Second Brain), liên kết các ghi chú lại với nhau. Đừng để kiến thức rơi vãi.\n - Elicit.org: Công cụ thần thánh tìm bài báo và tóm tắt Gap.\n - Connected Papers: Vẽ mạng nhện các bài báo liên quan, tìm ra bài "Gốc" (Seminal Paper).\n - Mendeley/Zotero: Quản lý trích dẫn tự động. Cái này là Basic, bắt buộc phải có.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: '[WARNING - Research Integrity]:\n1. AI tools should be used strictly for exploratory and organizational purposes, NOT for generating final academic text. Using AI to write your thesis violates research integrity standards and increases the risk of desk rejection.\n2. DATA PRIVACY: Tuyệt đối KHÔNG upload dữ liệu thô (Raw Data) hoặc tài liệu nội bộ (Internal/Confidential) lên các AI công cụ công cộng. Rủi ro rò rỉ dữ liệu là cực kỳ cao.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Ghi chú thuật ngữ (Academic Glossary)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Để đảm bảo tính chính xác học thuật, mời các bạn tham khảo bảng đối chiếu thuật ngữ sau:' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Xào nấu ý tưởng" -> Synthesize and Re-contextualize prior studies' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Bố đời hơn" -> Stronger argumentative positioning' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Lẩu thập cẩm" -> Descriptive review without analytical integration' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Soul của bài báo" -> Clear scholarly contribution' }],
             },
             {
                 _type: 'block',
