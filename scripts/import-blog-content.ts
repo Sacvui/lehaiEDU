@@ -207,28 +207,24 @@ async function importData() {
     try {
         console.log('🚀 Starting import of ' + posts.length + ' posts...')
 
-        // 1. Delete all existing data
-        console.log('🗑️ Clearing existing blog posts...')
-        await client.delete({ query: '*[_type == "post"]' })
+        // 1. Delete all existing data -> DISABLED FOR SAFETY
+        // console.log('🗑️ Clearing existing blog posts...')
+        // await client.delete({ query: '*[_type == "post"]' })
 
-        // 2. Import Categories
-        console.log('📚 Importing categories...')
-        for (const category of categories) {
-            const categoryId = `category-${category.slug.current}`
-            await client.createOrReplace({ ...category, _id: categoryId })
+        // Filter posts if args provided
+        const args = process.argv.slice(2);
+        let postsToImport = posts;
+
+        const slugArg = args.find(arg => arg.startsWith('--slug='));
+        if (slugArg) {
+            const slug = slugArg.split('=')[1];
+            postsToImport = posts.filter(p => p.slug.current === slug);
+            console.log(`🎯 Filtering: Only importing post with slug "${slug}"`);
         }
 
-        // 3. Import Authors
-        console.log('👤 Importing authors...')
-        for (const author of authors) {
-            const authorId = `author-${author.slug.current}`
-            await client.createOrReplace({ ...author, _id: authorId })
-        }
-
-        // 4. Import Posts
-        console.log('📝 Importing blog posts...')
+        console.log('📝 Importing ' + postsToImport.length + ' blog posts...')
         let count = 0;
-        for (const post of posts) {
+        for (const post of postsToImport) {
             count++;
             const randomAuthor = authors[Math.floor(Math.random() * authors.length)]
             const authorId = `author-${randomAuthor.slug.current}`

@@ -107,11 +107,7 @@ export const ncs_series_post = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Nhiều bạn than với tôi: "Anh ơi em đọc 50 bài báo xong em tẩu hỏa nhập ma, đầu óc quay cuồng, chả nhớ ai nói cái gì, ông A nói gà bà B nói vịt."\n\nĐúng rồi, vì em đọc bài báo khoa học mà như đọc truyện ngôn tình. Đọc từ đầu đến cuối, đọc từng chữ. Thôi xin can! Đọc thế thì đến mùa quýt sang năm mới viết xong Chapter 2.\n\nDân chuyên nghiệp người ta không "đọc". Người ta "Scan" (Quét) và "Synthesize" (Tổng hợp).' }],
             },
-            {
-                _type: 'block',
-                style: 'normal',
-                children: [{ _type: 'span', text: '[GÓC HỌC THUẬT - International Standard]:\n"In high-quality doctoral research, a literature review is expected to go beyond descriptive summarization and demonstrate analytical synthesis, theoretical positioning, and explicit identification of research gaps (Booth et al., 2016; Saunders et al., 2019)."\n(Dịch: Lit Review chuẩn TS không phải là tóm tắt, mà là phân tích tổng hợp, định vị lý thuyết và chỉ rõ khoảng trống nghiên cứu).' }],
-            },
+
             {
                 _type: 'block',
                 style: 'h2',
@@ -132,7 +128,7 @@ export const ncs_series_post = [
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: 'Lý thuyết sử dụng' }],
+                children: [{ _type: 'span', text: 'Lý thuyết sử dụng (Nếu họ không ghi rõ tên lý thuyết, hãy ghi lại các biến cốt lõi họ dùng)' }],
             },
             {
                 _type: 'block',
@@ -180,7 +176,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '3. Methodological Gap (Phương pháp): Người trước đo lường chưa chuẩn hoặc phương pháp cũ (Định tính) không khách quan -> Tôi dùng phương pháp mới (Định lượng/Mixed) để kiểm chứng.' }],
+                children: [{ _type: 'span', text: '3. Methodological Gap (Phương pháp): Người trước mới chỉ dừng ở việc "khám phá mô hình" bằng Định tính -> Tôi dùng Định lượng để "kiểm định diện rộng" (Generalizability). Ngược lại, người trước đã kiểm định (Quant) nhưng chưa ai giải thích "tại sao" (Qual) -> Tôi làm Định tính.' }],
             },
             {
                 _type: 'block',
@@ -215,7 +211,18 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '[WARNING - Research Integrity]:\n1. AI tools should be used strictly for exploratory and organizational purposes, NOT for generating final academic text. Using AI to write your thesis violates research integrity standards and increases the risk of desk rejection.\n2. DATA PRIVACY: Tuyệt đối KHÔNG upload dữ liệu thô (Raw Data) hoặc tài liệu nội bộ (Internal/Confidential) lên các AI công cụ công cộng. Rủi ro rò rỉ dữ liệu là cực kỳ cao.' }],
+                children: [{ _type: 'span', text: '[CẢNH BÁO "KHÉT LẸT" - Research Integrity]:\n1. AI là Đệ tử, không phải Đại ca: Dùng AI (NotebookLM, ChatGPT) để brainstorm, tóm tắt, tìm ý thì OK. Nhưng bảo nó viết hộ cả đoạn văn (Generate Text) rồi bê nguyên vào luận văn thì "toang" đấy. Tool check đạo văn giờ nó khôn hơn bạn tưởng nhiều. Đừng đùa với lửa.\n2. BẢO MẬT DỮ LIỆU: Tuyệt đối CẤM upload dữ liệu thô (Raw Data) của công ty hay tài liệu nội bộ (Confidential) lên các con AI "chùa" trên mạng. Nó mà học trộm rồi lộ ra ngoài thì xác định là ăn biên bản, bay ghế như chơi đấy nhé. Tỉnh táo lên các đạo hữu!' }],
+            },
+
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Lời Kết: Biến "Lẩu Thập Cẩm" thành "Fine Dining"' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Lit Review là chứng minh bạn đã đọc đủ, hiểu sâu và tìm ra được chỗ đứng cho nghiên cứu của mình. Đừng biến nó thành nồi lẩu thập cẩm ai ném gì vào cũng được. Hãy biến nó thành một bữa tiệc Fine Dining, nơi mỗi món ăn (mỗi bài báo trích dẫn) đều được bạn "xào nấu" tinh tế để tôn vinh món chính (là luận điểm của bạn).\n\nĐã có ý tưởng (Bài 2), đã có lý thuyết nền tảng (Bài 3). Giờ là lúc chọn vũ khí để ra trận thực chiến. Nên dùng Định lượng (Súng máy) hay Định tính (Dao mổ)?\n\n👉 Mời các bạn đón đọc Bài 4: Phương Pháp Nghiên Cứu - Chọn "Súng" Hay Chọn "Dao"?' }],
             },
             {
                 _type: 'block',
@@ -253,21 +260,16 @@ export const ncs_series_post = [
             },
             {
                 _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'Lời Kết: Biến "Lẩu Thập Cẩm" thành "Fine Dining"' }],
-            },
-            {
-                _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Lit Review là chứng minh bạn đã đọc đủ, hiểu sâu và tìm ra được chỗ đứng cho nghiên cứu của mình. Đừng biến nó thành nồi lẩu thập cẩm ai ném gì vào cũng được. Hãy biến nó thành một bữa tiệc Fine Dining, nơi mỗi món ăn (mỗi bài báo trích dẫn) đều được bạn "xào nấu" tinh tế để tôn vinh món chính (là luận điểm của bạn).\n\nĐã có ý tưởng (Bài 2), đã có lý thuyết nền tảng (Bài 3). Giờ là lúc chọn vũ khí để ra trận thực chiến. Nên dùng Định lượng (Súng máy) hay Định tính (Dao mổ)?\n\n👉 Mời các bạn đón đọc Bài 4: Phương Pháp Nghiên Cứu - Chọn "Súng" Hay Chọn "Dao"?' }],
+                children: [{ _type: 'span', text: '[GÓC HỌC THUẬT - International Standard]:\n"In high-quality doctoral research, a literature review is expected to go beyond descriptive summarization and demonstrate analytical synthesis, theoretical positioning, and explicit identification of research gaps (Booth et al., 2016; Saunders et al., 2019)."\n(Dịch: Lit Review chuẩn TS không phải là tóm tắt, mà là phân tích tổng hợp, định vị lý thuyết và chỉ rõ khoảng trống nghiên cứu).' }],
             }
         ]
     },
     {
-        title: 'NCS101 - Bài 4: Phương Pháp Nghiên Cứu - Chọn "Súng" Hay Chọn "Dao"? ',
+        title: 'NCS101 - Bài 4: Phương Pháp Nghiên Cứu - Đừng Chỉ Là "Ngư Dân Kiếm Cơm", Hãy Là "Nhà Hải Dương Học"',
         slug: { current: 'ncs-101-bai-4-methodology' },
         publishedAt: new Date(Date.now() - 259200000).toISOString(),
-        excerpt: 'Định tính (Qualitative) thì sâu sắc nhưng dễ bị chém gió. Định lượng (Quantitative) thì rõ ràng nhưng khô khan. Chọn cái nào để không bị Reviewer "bắn bỏ"?',
+        excerpt: 'Định lượng (Quantitative) là quăng lưới bắt cả đàn. Định tính (Qualitative) là lặn xuống hiểu từng con cá. Chọn "Lưới" hay chọn "Bình lặn" để không về tay trắng?',
         categorySlug: 'academic-corner',
         coverImage: '/blog/research_series_4_methodology.png',
         featured: false,
@@ -277,38 +279,155 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Có bạn hỏi tôi: "Anh Hải ơi, em dốt toán lắm, em nhìn con số em buồn ngủ, em làm Định tính (phỏng vấn) cho dễ được không?"\n\nTôi cười nhạt: "Em ơi, làm Định tính mà làm kiểu `cưỡi ngựa xem hoa` phỏng vấn vài người rồi chém gió ra kết luận thì dễ. Nhưng để đăng được báo quốc tế, Định tính nó KHÓ GẤP 10 LẦN Định lượng. Vì em phải có tư duy của một nhà triết học, một nhà ngôn ngữ học và một luật sư cộng lại mới biện luận lại được với Reviewer."\n\nĐể tôi phân tích cho các bạn chọn "vũ khí" cho phù hợp:' }],
-            },
-            {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'Định Lượng (Quantitative): Súng Máy Rải Thảm' }],
+                children: [{ _type: 'span', text: 'Hồi xưa lúc mới tập tọe làm nghiên cứu, Hải cũng ngây thơ lắm. Nhìn đống số liệu ma trận là chóng mặt, nên định bụng chọn Định tính (Qualitative) cho nó nhàn, đỡ phải tính toán đau đầu.' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Là vác bản câu hỏi đi rải thảm 300-500 người. Dữ liệu về ném vào phần mềm (SPSS, SmartPLS, AMOS) cho nó chạy. Nó ra con số: P-value, R-square, Cronbach Alpha...\n\n - Ưu điểm: Có quy trình chuẩn (Step-by-step). SAI là biết ngay sai ở đâu. Dễ sửa. Dễ xuất bản trên các tạp chí Q2, Q3 vì các con số nó khách quan. Rất hợp với mấy ông làm Kinh tế, Quản trị, Marketing.\n - Nhược điểm: Tốn tiền (hoặc tốn quan hệ) đi rải phiếu. Số liệu về mà "xấu" (không có ý nghĩa thống kê) thì khóc tiếng Mán, phải dùng "thủ thuật" (sẽ bàn sau trong bóng tối).' }],
-            },
-            {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'Định Tính (Qualitative): Dao Mổ Phẫu Thuật' }],
+                children: [{ _type: 'span', text: 'Ông thầy nghe xong cười khẩy: "Con nghĩ làm Định tính là đi trà chanh chém gió, ghi âm về chép lại là xong hả? Tư duy thế là hỏng! Chọn phương pháp nào là do con Mồi (Câu hỏi nghiên cứu) nó quyết định, chứ không phải do tính lười biếng của con."' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Là đi cafe với 10-15 ông chuyên gia/CEO, hỏi sâu, đào bới tâm gan người ta. Sau đó về nhà ngồi nghe băng ghi âm, gỡ băng (transcript) muốn gãy tay. Rồi dùng phần mềm (NVivo) hoặc dùng não để mã hóa (Coding) tìm ra các Chủ đề (Theme).\n\n - Ưu điểm: Ra được những cái mới toanh (Novelty cực cao), những cái mà bảng câu hỏi cứng nhắc không đo được. Đăng được báo xịn Q1 nếu viết hay.\n - Nhược điểm: Cực kỳ tốn não. Văn phong phải hay như tiểu thuyết, logic phải chặt chẽ. Reviewer nó rất hay bắt bẻ: "Tại sao ông phỏng vấn ông A mà không phỏng vấn bà B?", "Dựa vào đâu ông kết luận như thế hay ông bịa?". Yếu bóng vía là tẩu hỏa nhập ma ngay.' }],
-            },
-            {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'Vậy chọn cái nào?' }],
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: 'Muốn bắt cá cả đàn, tính xem năm nay biển được mùa hay mất mùa -> Dùng Lưới quét (Định lượng/Positivism).' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Lời khuyên chân thành cho Newbie: Hãy bắt đầu với Định Lượng. Tập bắn súng máy cho quen tay đi đã. Quy trình nó rõ ràng: A -> B -> C. Phần mềm nó hỗ trợ tận răng.\n\nCòn khi nào thành "cáo già" rồi, muốn khám phá những chân trời tri thức mới lạ, thì hãy cầm dao mổ Định tính. Hoặc dân chơi thì chơi cả hai (Mixed Methods) - vừa bắn vừa mổ - bao đậu nhưng bao mệt!' }],
-            }
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: 'Muốn hiểu tại sao đàn cá lại bỏ đi nơi khác, môi trường nước thay đổi thế nào (Cơ chế/Nguyên nhân sâu xa) -> Phải đeo bình khí Lặn xuống (Định tính/Interpretivism).' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Kỹ năng yếu thì rèn. Đừng lấy cái sự "dốt toán" ra để biện minh cho sự lười biếng. Biển học mênh mông không có chỗ cho những kẻ sợ ướt chân!' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '1. Định Lượng (Quant): Quăng Lưới Bắt Cả Đàn' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Là dong thuyền lớn ra khơi, quăng cái lưới to đùng (khảo sát 300-500 mẫu). Kéo lưới lên, đổ cá vào "máy phân loại công nghiệp" (SPSS, SmartPLS, AMOS) để nó đếm.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Sướng: Nhanh, gọn, quy trình rõ ràng như dây chuyền sản xuất. Reviewer nhìn vào các chỉ số (P-value, R-square) đẹp như mơ là gật đầu cái rụp.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Khổ & Bẫy (Lưới thủng): Lưới to nhưng mắt lưới quá thưa (Thiết kế thang đo ẩu) thì cá bé lọt hết. Hoặc phương pháp lấy mẫu quá dễ dãi dẫn đến nhiều sai số, gặp phải đối tượng lấy mẫu "khó nhai" khiến dữ liệu không đại diện được cho cả đàn.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Khổ & Bẫy (Ảo tưởng sức mạnh): Thấy trời mưa thì ếch kêu, không có nghĩa là tiếng ếch làm trời mưa (Bẫy nội sinh - Endogeneity). Cứ thấy hai cái đi cùng nhau là kết luận nhân quả thì có ngày đắm tàu.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: '[CẢNH BÁO ĐẠO ĐỨC - Bơm tạp chất]:\nKéo lưới lên mà toàn cá còi (kết quả không có ý nghĩa), tuyệt đối không được "Bơm thạch" vào cho tôm nó to (P-hacking). Con tôm bơm tạp chất có thể lừa được bà nội trợ, nhưng không lừa được mấy ông "Giám định viên" (Reviewer) sành sỏi đâu. Hãy trung thực! Cá nhỏ cũng là cá, cũng là kết quả khoa học.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '2. Định Tính (Qual): Lặn Sâu Xuống Đáy' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Không quăng lưới nữa, mà đeo bình dưỡng khí lặn xuống sâu. Đối diện với áp suất nước, bóng tối và sự cô đơn. Bạn phải ngồi "tâm sự" với từng con cá, soi từng cái gai của con cầu gai (Phỏng vấn sâu 10-15 chuyên gia).' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Sướng: Tìm ra những "kho báu" (Novelty) nằm sâu dưới đáy mà đám quăng lưới trên mặt nước không bao giờ thấy được.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Thách thức (Credibility - Độ Tín): Ông kể chuyện dưới đáy biển nghe hay đấy, nhưng có khách quan không hay bị bias bởi quan điểm cá nhân? (Cần kiểm chứng chéo - Triangulation).' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Thách thức (Reflexivity - Cái Tâm người thợ lặn): Dưới đáy biển áp suất lớn, mắt ông có bị hoa không? Ông có ghét con cá mập nên ông mô tả nó xấu xí không? Phải khai báo trung thực cái "lăng kính" của mình.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Thách thức (Say độ sâu - Nitrogen Narcosis): Xuống sâu quá dễ bị "ngáo", nhìn cái gì cũng thấy hay, lan man không chốt được vấn đề (Analysis Paralysis).' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '3. Mixed Methods: Hạm Đội Tác Chiến (Sonar + Thợ Lặn)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Nhiều bạn cứ tưởng: Làm 1 cái Định lượng + 1 cái Định tính = Xịn. Nhầm to! Nếu hai cái đấy không nói chuyện với nhau thì chỉ là "Nồi lẩu".' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Phải tích hợp (Integration) như một hạm đội hiện đại:' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: 'Exploratory (Khám phá): Cho Thợ lặn (Qual) xuống thám thính trước xem dưới đó có quái vật gì lạ không -> Lên bờ thiết kế cái Lưới chuyên dụng (Scale Development) để bắt diện rộng (Quant).' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: 'Explanatory (Giải thích): Dùng Máy dò cá Sonar (Quant) quét thấy một chấm đỏ lạ lùng -> Cử Thợ lặn (Qual) nhảy xuống đúng tọa độ đó để xem tại sao nó lại nằm đó (Giải thích cái Why).' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: '[LỜI KẾT]:\nDù chọn Lưới hay Bình lặn, Quăng lưới hay Lặn sâu, hãy nhớ: Công cụ chỉ là phương tiện. Tư duy liêm chính mới là đích đến. Đừng làm nghiên cứu chỉ để "đủ Kg bán lấy tiền" (chạy KPI bài báo). Hãy làm để hiểu về đại dương.' }],
+            },
+            {
+                _type: 'block',
+                style: 'blockquote',
+                children: [{ _type: 'span', text: '"Trong thực tế, không có phương pháp nào cao cấp hơn phương pháp nào. Chỉ có phương pháp PHÙ HỢP hơn với câu hỏi nghiên cứu."' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Bạn đã quyết định chọn "Lưới" (Định lượng)? Nhưng làm sao đan được cái lưới cho chắc, để người ta không "tick bừa"?\n👉 Đón đọc Bài 5: Thiết Kế Bảng Hỏi - Garbage In, Garbage Out.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Ghi chú thuật ngữ (Academic Glossary)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Bão hòa dữ liệu" (Data Saturation) -> Lặn xuống thấy cá quen hết rồi, không thấy con nào mới -> Ngoi lên.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Nội sinh" (Endogeneity) -> Tưởng mình bắt được cá, nhưng thực ra dòng hải lưu (biến ẩn) đã lùa cá vào lưới.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Tam giác hóa" (Triangulation) -> Hỏi ông A, hỏi thêm bà B, check thêm camera C để xem sự thật nằm ở đâu.' }],
+            },
         ]
     },
     {
@@ -350,12 +469,22 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: '3. Test nháp (Pilot Test)' }],
+                children: [{ _type: 'span', text: '3. Test nháp (Pilot Test) & Bẫy CMB' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Trước khi tung link khảo sát cho 500 người, hãy nhờ 30-50 người quen làm thử trước. Chạy thử Cronbach Alpha xem có ổn không. Xem họ có kêu câu nào khó hiểu không. Sửa lỗi chính tả. Chứ tung đi rồi mới phát hiện sai chính tả hay câu hỏi tối nghĩa thì nhục lắm, mà không thu hồi lại được đâu.' }],
+                children: [{ _type: 'span', text: 'Trước khi tung link khảo sát cho 500 người, hãy nhờ 30-50 người quen làm thử trước (Pilot Test). Chạy thử Cronbach Alpha xem có ổn không. \n\n[CẢNH BÁO "CHẾT NGƯỜI" - Common Method Bias (CMB)]:\nNếu bạn hỏi một người (cùng 1 nguồn) về cả Biến độc lập (X) và Biến phụ thuộc (Y) trong cùng một lúc, rất dễ xảy ra hiện tượng "tự biên tự diễn". Họ đang vui thì họ tick toàn 5, họ đang buồn họ tick toàn 1. Kết quả là tương quan giả tạo. \n-> Cách trị: Đảo câu hỏi (Reverse Item), chèn Marker Variable, hoặc tách thời gian hỏi X và Y ra (nếu được).' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Ghi chú thuật ngữ (Academic Glossary)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: '"Khái niệm" (Construct) -> Cái mình muốn đo (VD: Lòng trung thành).\n"Biến quan sát" (Item) -> Câu hỏi cụ thể (VD: Tôi sẽ quay lại mua hàng).\n"Thao tác hóa" (Operationalization) -> Biến cái trừu tượng thành cái đo đếm được.' }],
             }
         ]
     },
@@ -413,7 +542,17 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Nhìn cột P-value để xem mối quan hệ có "Ý nghĩa thống kê" không.\n\n - Nếu P < 0.05: Giả thuyết được chấp nhận (Có mối quan hệ).\n - Nếu P > 0.05: Bác bỏ (Không có mối quan hệ rõ ràng).\n\n[LƯU Ý QUAN TRỌNG]: P-value chỉ cho biết "Có" hay "Không". Nó không cho biết mối quan hệ đó "Mạnh" hay "Yếu".\nMuốn biết mạnh hay yếu, phải nhìn hệ số tác động (Path Coefficient / Beta). Đừng thần thánh hóa P-value quá mức nhé.\n\n(Và đừng quên check các Giả định như Đa cộng tuyến (VIF), Phân phối chuẩn... trước khi kết luận nhé. Cái này nói sau).' }],
+                children: [{ _type: 'span', text: 'Nhìn cột P-value để xem mối quan hệ có "Ý nghĩa thống kê" không.\n\n - Nếu P < 0.05: Giả thuyết được chấp nhận (Duyệt!).\n - Nếu P > 0.05: Bác bỏ (Toang!).\n\n[TƯ DUY ĐÚNG]: Hãy tưởng tượng P-value là cái "Vé gửi xe". Có vé (P < 0.05) thì mới được vào rạp.\nNhưng vào rạp rồi, phim có hay không (Tác động mạnh hay yếu) thì phải nhìn cột Hệ số tác động (Beta / Path Coefficient).\n - Beta = 0.1: Tác động yếu nhớt (vào rạp ngồi ngủ).\n - Beta = 0.5: Tác động cực mạnh (phim bom tấn).\n\nĐừng thần thánh hóa P-value. Nhiều ông P < 0.001 (0.1%) nhưng Beta = 0.05 thì cũng vứt, vì tác động bé như con kiến, chả có ý nghĩa thực tiễn gì.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Ghi chú thuật ngữ (Academic Glossary)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: '"P-hacking" -> Trò bẩn: Chạy thử trăm kiểu model để săn tìm P < 0.05. Đừng làm thế, thất đức lắm.\n"R-square" -> Độ xịn của mô hình (Giải thích được bao nhiêu % thực tế).\n"Effect Size" (f2) -> Kích thước tác động (Nhỏ, Trung bình, Lớn).' }],
             }
         ]
     },
