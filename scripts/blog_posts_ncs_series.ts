@@ -92,10 +92,10 @@ export const ncs_series_post = [
         ]
     },
     {
-        title: 'NCS101 - Bài 3: Kỹ Năng "Đọc Như Kẻ Cắp" (Literature Review) ',
+        title: 'NCS101 - Bài 3: Nghệ Thuật Đứng Trên Vai Người Khổng Lồ (Literature Review)',
         slug: { current: 'ncs-101-bai-3-lit-review' },
         publishedAt: new Date(Date.now() - 172800000).toISOString(),
-        excerpt: 'Viết Lit Review không phải là tóm tắt sách. Đó là nghệ thuật "xào nấu" ý tưởng của người khác để tôn vinh cái mới của mình. Đừng đọc thụ động, hãy đọc như một kẻ cắp thông minh.',
+        excerpt: 'Viết Lit Review không phải là tóm tắt sách. Đó là nghệ thuật tổng hợp ý tưởng của người khác để làm nền tảng cho cái mới của mình. Đừng đọc thụ động, hãy đọc như một nhà chiến lược thông thái.',
         categorySlug: 'academic-corner',
         coverImage: '/blog/research_series_3_lit_review.png',
         featured: false,
@@ -105,7 +105,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Nhiều bạn than với tôi: "Anh ơi em đọc 50 bài báo xong em tẩu hỏa nhập ma, đầu óc quay cuồng, chả nhớ ai nói cái gì, ông A nói gà bà B nói vịt."\n\nĐúng rồi, vì em đọc bài báo khoa học mà như đọc truyện ngôn tình hay đọc "Tony Buổi Sáng". Đọc từ đầu đến cuối, đọc từng chữ. Thôi xin can! Đọc thế thì đến mùa quýt sang năm mới viết xong Chapter 2.\n\nDân chuyên nghiệp người ta không "đọc". Người ta "Scan" (Quét) và "Synthesize" (Tổng hợp).' }],
+                children: [{ _type: 'span', text: 'Nhiều bạn than với tôi: "Anh ơi em đọc 50 bài báo xong em tẩu hỏa nhập ma, đầu óc quay cuồng, chả nhớ ai nói cái gì, ông A nói gà bà B nói vịt."\n\nĐúng rồi, vì em đọc bài báo khoa học mà như đọc truyện ngôn tình. Đọc từ đầu đến cuối, đọc từng chữ. Thôi xin can! Đọc thế thì đến mùa quýt sang năm mới viết xong Chapter 2.\n\nDân chuyên nghiệp người ta không "đọc". Người ta "Scan" (Quét) và "Synthesize" (Tổng hợp).' }],
             },
             {
                 _type: 'block',
@@ -115,7 +115,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Mở ngay file Excel lên. Tạo các cột sau: Tên tác giả | Năm | Lý thuyết sử dụng | Biến độc lập | Biến phụ thuộc | Kết quả chính | Cái gì họ CHƯA làm được (Hạn chế).\n\nMỗi lần đọc 1 bài, chỉ đi tìm đúng các thông tin đó điền vào Excel. Đừng quan tâm ông ấy văn hay chữ tốt thế nào. \n\n Đọc Abstract (Tóm tắt) trước. Thấy không liên quan -> Next.\n Đọc Conclusion (Kết luận). Thấy hay -> Quay lại đọc Model.\n Đọc Future Research (Hướng nghiên cứu tương lai). Đây là mỏ vàng để tìm Gap.\n\nSau khi điền được 50 dòng (50 bài), nhìn vào cái cột "Hạn chế", bạn sẽ thấy ánh sáng chân lý: "À, hóa ra bọn Tây nó toàn nghiên cứu ở nước phát triển, chưa thằng nào làm ở thị trường mới nổi như Việt Nam!" -> Đó chính là chỗ để bạn nhảy vào.' }],
+                children: [{ _type: 'span', text: 'Mở ngay file Excel lên. Tạo các cột sau: \n- Tên tác giả, Năm \n- Lý thuyết sử dụng \n- Biến độc lập, Biến phụ thuộc \n- Kết quả chính \n- Hạn chế (Gap - Cái họ chưa làm được)\n\nMỗi lần đọc 1 bài, chỉ đi tìm đúng các thông tin đó điền vào Excel. Đừng quan tâm ông ấy văn hay chữ tốt thế nào. \n\n Đọc Abstract (Tóm tắt) trước. Thấy không liên quan -> Next.\n Đọc Conclusion (Kết luận). Thấy hay -> Quay lại đọc Model.\n Đọc Future Research (Hướng nghiên cứu tương lai). Đây là mỏ vàng để tìm Gap.\n\nSau khi điền được 50 dòng (50 bài), nhìn vào cái cột "Hạn chế", bạn sẽ thấy ánh sáng chân lý: "À, hóa ra bọn Tây nó toàn nghiên cứu ở nước phát triển, chưa thằng nào làm ở thị trường mới nổi như Việt Nam!" -> Đó chính là chỗ để bạn nhảy vào.' }],
             },
             {
                 _type: 'block',
