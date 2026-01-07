@@ -115,7 +115,13 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Mở ngay file Excel lên. Tạo các cột sau: \n- Tên tác giả, Năm \n- Lý thuyết sử dụng \n- Biến độc lập, Biến phụ thuộc \n- Kết quả chính \n- Hạn chế (Gap - Cái họ chưa làm được)\n\nMỗi lần đọc 1 bài, chỉ đi tìm đúng các thông tin đó điền vào Excel. Đừng quan tâm ông ấy văn hay chữ tốt thế nào. \n\n Đọc Abstract (Tóm tắt) trước. Thấy không liên quan -> Next.\n Đọc Conclusion (Kết luận). Thấy hay -> Quay lại đọc Model.\n Đọc Future Research (Hướng nghiên cứu tương lai). Đây là mỏ vàng để tìm Gap.\n\nSau khi điền được 50 dòng (50 bài), nhìn vào cái cột "Hạn chế", bạn sẽ thấy ánh sáng chân lý: "À, hóa ra bọn Tây nó toàn nghiên cứu ở nước phát triển (Developed), chưa ai kiểm định lại lý thuyết này ở thị trường mới nổi (Emerging Market) như Việt Nam!"\n\n[PRO TIP]: Gap không chỉ là "chưa ai làm". Gap xịn là phải trả lời được: Tại sao làm ở VN lại quan trọng? (Ví dụ: Văn hóa tập thể của VN khác văn hóa cá nhân phương Tây -> Dẫn đến kết quả có thể ngược lại -> Đó là Theoretical Gap).' }],
+                children: [{
+                    _type: 'span', text: 'Mở ngay file Excel lên. Tạo các cột sau: \n- Tên tác giả, Năm \n- Lý thuyết sử dụng \n- Biến độc lập, Biến phụ thuộc \n- Kết quả chính \n- Hạn chế (Gap - Cái họ chưa làm được)\n\nMỗi lần đọc 1 bài, chỉ đi tìm đúng các thông tin đó điền vào Excel. Đừng quan tâm ông ấy văn hay chữ tốt thế nào. \n\n Đọc Abstract (Tóm tắt) trước. Thấy không liên quan -> Next.\n Đọc Conclusion (Kết luận). Thấy hay -> Quay lại đọc Model.\n Đọc Future Research (Hướng nghiên cứu tương lai). Đây là mỏ vàng để tìm Gap.\n\nSau khi điền được 50 dòng (50 bài), nhìn vào cái cột "Hạn chế", bạn sẽ thấy ánh sáng chân lý: "À, hóa ra bọn Tây nó toàn nghiên cứu ở nước phát triển (Developed), chưa ai kiểm định lại lý thuyết này ở thị trường mới nổi (Emerging Market) như Việt Nam!"\n\n[PRO TIP]: Gap không chỉ là "chưa ai làm". Gap "xịn" (Academic Gap) phải thuộc 1 trong 3 loại sau:
+1. Contextual Gap(Khoảng trống bối cảnh): Đã làm ở Phương Tây, chưa làm ở VN.NHƯNG phải giải thích tại sao bối cảnh VN lại đặc biệt?(Ví dụ: Văn hóa tập thể vs Cá nhân).
+2. Theoretical Gap(Khoảng trống lý thuyết): Lý thuyết A giải thích được hiện tượng này, nhưng mâu thuẫn với Lý thuyết B -> Cần một khung lý thuyết mới để hòa giải.
+3. Methodological Gap(Khoảng trống phương pháp): Người trước toàn dùng Định tính(phỏng vấn), kết quả chủ quan.Tôi sẽ dùng Định lượng(Chạy mô hình) để kiểm chứng lại cho khách quan.
+
+Tìm được 1 trong 3 cái này là bài báo có "Soul"(Linh hồn) ngay.' }],
             },
             {
                 _type: 'block',
