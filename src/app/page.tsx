@@ -1,3 +1,4 @@
+import React from 'react';
 import { Header } from "@/components/layout/Header";
 import { Hero } from "@/components/sections/Hero";
 import { Services } from "@/components/sections/Services";
@@ -12,9 +13,9 @@ export default function Home() {
       <Services />
       <About />
       <Mentorship />
-      <LatestInsights />
-
-
+      <React.Suspense fallback={<div className="h-96 w-full animate-pulse bg-slate-100 dark:bg-slate-900" />}>
+        <LatestInsights />
+      </React.Suspense>
     </main>
   );
 }

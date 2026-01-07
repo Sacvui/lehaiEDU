@@ -4,7 +4,7 @@ import "./globals.css";
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"], display: 'swap' });
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://lehai.edu.vn'),
