@@ -1,6 +1,8 @@
 'use client';
 
+
 import React from 'react';
+import NextImage from 'next/image';
 import { Button } from '@/components/ui/button';
 import { Sparkles, Building2, Microscope, ArrowRight, User } from 'lucide-react';
 import { motion } from 'framer-motion';
@@ -120,11 +122,14 @@ export function Hero() {
                             <div className="absolute inset-0 bg-gradient-to-br from-amber-400/20 to-orange-500/20 dark:from-amber-500/10 dark:to-orange-600/10 rounded-3xl rotate-3"></div>
 
                             {/* Portrait Image */}
-                            <div className="relative rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800">
-                                <img
+                            <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800">
+                                <NextImage
                                     src="/uploads/profile-street.jpg"
                                     alt="Le Phuc Hai - PhD Researcher and Speaker"
-                                    className="w-full h-full object-cover"
+                                    fill
+                                    priority
+                                    className="object-cover"
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 />
                             </div>
 
