@@ -95,7 +95,7 @@ export const ncs_series_post = [
         title: 'NCS101 - Bài 3: Nghệ Thuật Đứng Trên Vai Người Khổng Lồ (Literature Review)',
         slug: { current: 'ncs-101-bai-3-lit-review' },
         publishedAt: new Date(Date.now() - 172800000).toISOString(),
-        excerpt: 'Viết Lit Review không phải là tóm tắt sách. Đó là nghệ thuật tổng hợp ý tưởng của người khác để làm nền tảng cho cái mới của mình. Đừng đọc thụ động, hãy đọc như một nhà chiến lược thông thái.',
+        excerpt: 'Viết Lit Review không phải là tóm tắt sách. Đó là nghệ thuật "xào nấu" ý tưởng của người khác để làm nền tảng cho cái mới của mình. Đừng đọc thụ động, hãy đọc như một nhà chiến lược thông thái.',
         categorySlug: 'academic-corner',
         coverImage: '/blog/research_series_3_lit_review.png',
         featured: false,
@@ -136,6 +136,16 @@ export const ncs_series_post = [
                 _type: 'block',
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Thời đại AI rồi, đừng hì hục in giấy ra gạch chân nữa. Tốn mực tốn giấy bảo vệ môi trường đi các bạn.\n\n - Elicit.org: Công cụ thần thánh. Bạn gõ câu hỏi nghiên cứu vào, nó tìm cho 10 bài báo liên quan nhất, thậm chí tóm tắt luôn ý chính cho bạn. (Cẩn thận check lại nguồn kẻo nó bịa).\n - Connected Papers: Bạn có 1 bài báo gốc siêu hay (Seminal Paper). Quăng vào đây, nó sẽ vẽ ra cả một cái mạng nhện các bài báo liên quan, bài nào trích dẫn bài nào. Nhìn phát biết ngay ai là "trùm" trong lĩnh vực này.\n - Mendeley/Zotero: Phần mềm quản lý trích dẫn. Viết xong câu nào, bấm nút một cái nó tự chèn (Nguyen et al., 2024) vào, cuối bài tự động sinh ra danh mục tham khảo chuẩn APA/Harvard. Đừng bao giờ gõ tay Reference nhé, dại lắm!' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Lời Kết: Biến "Lẩu Thập Cẩm" thành "Fine Dining"' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Lit Review là chứng minh bạn đã đọc đủ, hiểu sâu và tìm ra được chỗ đứng cho nghiên cứu của mình. Đừng biến nó thành nồi lẩu thập cẩm ai ném gì vào cũng được. Hãy biến nó thành một bữa tiệc Fine Dining, nơi mỗi món ăn (mỗi bài báo trích dẫn) đều được bạn "xào nấu" tinh tế để tôn vinh món chính (là luận điểm của bạn).\n\nĐã có ý tưởng (Bài 2), đã có lý thuyết nền tảng (Bài 3). Giờ là lúc chọn vũ khí để ra trận thực chiến. Nên dùng Định lượng (Súng máy) hay Định tính (Dao mổ)?\n\n👉 Mời các bạn đón đọc Bài 4: Phương Pháp Nghiên Cứu - Chọn "Súng" Hay Chọn "Dao"?' }],
             }
         ]
     },
