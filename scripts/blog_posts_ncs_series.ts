@@ -116,12 +116,28 @@ export const ncs_series_post = [
                 _type: 'block',
                 style: 'normal',
                 children: [{
-                    _type: 'span', text: 'Mở ngay file Excel lên. Tạo các cột sau: \n- Tên tác giả, Năm \n- Lý thuyết sử dụng \n- Biến độc lập, Biến phụ thuộc \n- Kết quả chính \n- Hạn chế (Gap - Cái họ chưa làm được)\n\nMỗi lần đọc 1 bài, chỉ đi tìm đúng các thông tin đó điền vào Excel. Đừng quan tâm ông ấy văn hay chữ tốt thế nào. \n\n Đọc Abstract (Tóm tắt) trước. Thấy không liên quan -> Next.\n Đọc Conclusion (Kết luận). Thấy hay -> Quay lại đọc Model.\n Đọc Future Research (Hướng nghiên cứu tương lai). Đây là mỏ vàng để tìm Gap.\n\nSau khi điền được 50 dòng (50 bài), nhìn vào cái cột "Hạn chế", bạn sẽ thấy ánh sáng chân lý: "À, hóa ra bọn Tây nó toàn nghiên cứu ở nước phát triển (Developed), chưa ai kiểm định lại lý thuyết này ở thị trường mới nổi (Emerging Market) như Việt Nam!"\n\n[PRO TIP]: Gap không chỉ là "chưa ai làm". Gap "xịn" (Academic Gap) phải thuộc 1 trong 3 loại sau:
-1. Contextual Gap(Khoảng trống bối cảnh): Đã làm ở Phương Tây, chưa làm ở VN.NHƯNG phải giải thích tại sao bối cảnh VN lại đặc biệt?(Ví dụ: Văn hóa tập thể vs Cá nhân).
-2. Theoretical Gap(Khoảng trống lý thuyết): Lý thuyết A giải thích được hiện tượng này, nhưng mâu thuẫn với Lý thuyết B -> Cần một khung lý thuyết mới để hòa giải.
-3. Methodological Gap(Khoảng trống phương pháp): Người trước toàn dùng Định tính(phỏng vấn), kết quả chủ quan.Tôi sẽ dùng Định lượng(Chạy mô hình) để kiểm chứng lại cho khách quan.
+                    _type: 'span', text: `Mở ngay file Excel lên. Tạo các cột sau: 
+- Tên tác giả, Năm 
+- Lý thuyết sử dụng 
+- Biến độc lập, Biến phụ thuộc 
+- Kết quả chính 
+- Hạn chế (Gap - Cái họ chưa làm được)
 
-Tìm được 1 trong 3 cái này là bài báo có "Soul"(Linh hồn) ngay.' }],
+Mỗi lần đọc 1 bài, chỉ đi tìm đúng các thông tin đó điền vào Excel. Đừng quan tâm ông ấy văn hay chữ tốt thế nào. 
+
+ Đọc Abstract (Tóm tắt) trước. Thấy không liên quan -> Next.
+ Đọc Conclusion (Kết luận). Thấy hay -> Quay lại đọc Model.
+ Đọc Future Research (Hướng nghiên cứu tương lai). Đây là mỏ vàng để tìm Gap.
+
+Sau khi điền được 50 dòng (50 bài), nhìn vào cái cột "Hạn chế", bạn sẽ thấy ánh sáng chân lý: "À, hóa ra bọn Tây nó toàn nghiên cứu ở nước phát triển (Developed), chưa ai kiểm định lại lý thuyết này ở thị trường mới nổi (Emerging Market) như Việt Nam!"
+
+[PRO TIP]: Gap không chỉ là "chưa ai làm". Gap "xịn" (Academic Gap) thường rơi vào 4 loại sau:
+1. Contextual Gap (Bối cảnh): Đã làm ở Tây, chưa làm ở VN. (Lưu ý: Phải biện luận tại sao bối cảnh VN lại đặc biệt? Ví dụ: Văn hóa tập thể vs Cá nhân).
+2. Theoretical Gap (Lý thuyết): Mâu thuẫn giữa Lý thuyết A và B -> Cần khung lý thuyết mới để hòa giải.
+3. Methodological Gap (Phương pháp): Người trước đo lường chưa chuẩn hoặc phương pháp cũ (Định tính) không khách quan -> Tôi dùng phương pháp mới (Định lượng/Mixed) để kiểm chứng.
+4. Conceptual Gap (Khái niệm): Các mô hình cũ không còn giải thích đủ hiện tượng mới (Ví dụ: Hành vi mua sắm trên Metaverse) -> Cần khái niệm/mô hình mới.
+
+Tìm được 1 trong 4 cái này là bài báo có "Soul" (Linh hồn) ngay.` }],
             },
             {
                 _type: 'block',
@@ -141,7 +157,7 @@ Tìm được 1 trong 3 cái này là bài báo có "Soul"(Linh hồn) ngay.' }]
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Thời đại AI rồi, đừng hì hục in giấy ra gạch chân nữa. Tốn mực tốn giấy bảo vệ môi trường đi các bạn.\n\n - NotebookLM (Google): Công cụ "chân ái" mới nổi. Bạn ném 20 file PDF vào, nó đọc hiểu hết và cho phép bạn "chat" với đống tài liệu đó. Đặc biệt tính năng "Audio Overview" biến bài báo thành Podcast 2 người nói chuyện với nhau, nghe lúc lái xe cực cuốn.\n - Obsidian / Notion: Đừng chỉ lưu file PDF. Hãy lưu "Ý tưởng". Dùng Obsidian để xây dựng "Bộ não thứ hai" (Second Brain), liên kết các ghi chú lại với nhau. Đừng để kiến thức rơi vãi.\n - Elicit.org: Công cụ thần thánh tìm bài báo và tóm tắt Gap.\n - Connected Papers: Vẽ mạng nhện các bài báo liên quan, tìm ra bài "Gốc" (Seminal Paper).\n - Mendeley/Zotero: Quản lý trích dẫn tự động. Cái này là Basic, bắt buộc phải có.\n\n[LƯU Ý QUAN TRỌNG]: AI chỉ là trợ lý (Assistant) giúp tìm kiếm và gợi ý, KHÔNG thay thế được tư duy phán đoán (Judgment) của con người. Đừng bao giờ copy nguyên văn văn bản do AI viết vào bài (AI-generated text). Reviewer "già rơ" đọc phát biết ngay và sẽ Reject thẳng tay vì thiếu tính xác thực (Authenticity).' }],
+                children: [{ _type: 'span', text: 'Thời đại AI rồi, đừng hì hục in giấy ra gạch chân nữa. Tốn mực tốn giấy bảo vệ môi trường đi các bạn.\n\n - NotebookLM (Google): Công cụ "chân ái" mới nổi. Bạn ném 20 file PDF vào, nó đọc hiểu hết và cho phép bạn "chat" với đống tài liệu đó. Đặc biệt tính năng "Audio Overview" biến bài báo thành Podcast 2 người nói chuyện với nhau, nghe lúc lái xe cực cuốn.\n - Obsidian / Notion: Đừng chỉ lưu file PDF. Hãy lưu "Ý tưởng". Dùng Obsidian để xây dựng "Bộ não thứ hai" (Second Brain), liên kết các ghi chú lại với nhau. Đừng để kiến thức rơi vãi.\n - Elicit.org: Công cụ thần thánh tìm bài báo và tóm tắt Gap.\n - Connected Papers: Vẽ mạng nhện các bài báo liên quan, tìm ra bài "Gốc" (Seminal Paper).\n - Mendeley/Zotero: Quản lý trích dẫn tự động. Cái này là Basic, bắt buộc phải có.\n\n[LƯU Ý QUAN TRỌNG]: \n1. AI chỉ là trợ lý (Assistant) giúp tìm kiếm và gợi ý, KHÔNG thay thế được tư duy làm chủ (Judgment) của con người. Đừng bao giờ copy nguyên văn văn bản do AI viết vào bài (AI-generated text). Reviewer "già rơ" đọc phát biết ngay và sẽ Reject thẳng tay.\n2. BẢO MẬT DỮ LIỆU: Tuyệt đối KHÔNG upload các tài liệu nội bộ, bí mật (Confidential) hoặc dữ liệu thô chưa công bố (Unpublished Raw Data) lên các tool AI công cộng như NotebookLM hay ChatGPT. Dữ liệu của bạn có thể bị dùng để train lại cho AI.' }],
             },
             {
                 _type: 'block',
