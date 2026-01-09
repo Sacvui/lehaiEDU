@@ -15,9 +15,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+
   typescript: {
     ignoreBuildErrors: true,
   },
@@ -52,6 +50,20 @@ const nextConfig: NextConfig = {
           }
         ]
       }
+    ]
+  },
+  async redirects() {
+    return [
+      {
+        source: '/teambook',
+        destination: '/teamwork',
+        permanent: true,
+      },
+      {
+        source: '/forTeam',
+        destination: '/teamwork',
+        permanent: true,
+      },
     ]
   },
 };

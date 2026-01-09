@@ -464,17 +464,72 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đây là cái bẫy chết người mà 99% sinh viên mắc phải: Tự ngồi nhà BỊA ra câu hỏi. \n"Em nghĩ thế là đúng". Em nghĩ kệ em, khoa học không quan tâm em nghĩ gì.\n\nHãy lên Google Scholar, tìm các bài báo quốc tế uy tín. Xem các "cụ" ngày xưa (các giáo sư đầu ngành) họ đo lường khái niệm "Lòng trung thành" bằng bộ câu hỏi nào. Bê nguyên xi về (gọi là Adopt), dịch sang tiếng Việt cho mượt (gọi là Translate/Back-translate). \n\nLàm thế được 2 cái lợi:\n1. Đỡ tốn não: Sẵn ăn rồi.\n2. Độ tin cậy cao: Khi bảo vệ, hội đồng hỏi "Câu hỏi này đâu ra?", bạn dõng dạc: "Dạ em kế thừa thang đo của Giáo sư Zeithaml (1996) ạ". Thế là hội đồng gật gù im re. Chứ bạn bảo "Dạ em tự nghĩ ra" là ăn gạch đủ xây biệt thự đấy.' }],
+                children: [{ _type: 'span', text: 'Đây là cái bẫy chết người mà 99% sinh viên mắc phải: Tự ngồi nhà BỊA ra câu hỏi. "Em nghĩ thế là đúng". Em nghĩ kệ em, khoa học không quan tâm em nghĩ gì.\n\nHãy lên Google Scholar, tìm các bài báo quốc tế uy tín. Xem các "cụ" ngày xưa (các giáo sư đầu ngành) họ đo lường khái niệm "Lòng trung thành" bằng bộ câu hỏi nào. Bê nguyên xi về (gọi là Adopt), dịch sang tiếng Việt (Translate), rồi nhờ một người khác dịch ngược lại sang tiếng Anh (Back-translate) xem nó có khớp bản gốc không. Thế mới gọi là "chuẩn cơm mẹ nấu" (Validated).\n\n[GÓC NHÌN Q1 - Measurement Invariance]:\nTuy nhiên, "Bê" cũng phải tỉnh táo. Thang đo ở Mỹ (Văn hóa Cá nhân) khi về VN (Văn hóa Tập thể) sẽ bị co giãn. Cùng câu "Tôi hài lòng", Tây nó chấm 4/5 là bình thường, nhưng người Việt mình hay "dĩ hòa vi quý" cũng chấm 4/5 dù trong lòng chỉ đáng 3. Cần phải kiểm định xem người Nam/Bắc, Già/Trẻ có hiểu câu hỏi giống nhau không (Measurement Invariance) trước khi so sánh.' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: '3. Test nháp (Pilot Test) & Bẫy CMB' }],
+                children: [{ _type: 'span', text: '3. Quy tắc "Cửa an ninh" & "Hẹn hò" (Funnel Technique)' }],
+            },
+            {
+                _type: 'block',
+                style: 'h4',
+                children: [{ _type: 'span', text: 'Cú lừa mang tên "Screening Questions"' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Trước khi tung link khảo sát cho 500 người, hãy nhờ 30-50 người quen làm thử trước (Pilot Test). Chạy thử Cronbach Alpha xem có ổn không. \n\n[CẢNH BÁO "CHẾT NGƯỜI" - Common Method Bias (CMB)]:\nNếu bạn hỏi một người (cùng 1 nguồn) về cả Biến độc lập (X) và Biến phụ thuộc (Y) trong cùng một lúc, rất dễ xảy ra hiện tượng "tự biên tự diễn". Họ đang vui thì họ tick toàn 5, họ đang buồn họ tick toàn 1. Kết quả là tương quan giả tạo. \n-> Cách trị: Đảo câu hỏi (Reverse Item), chèn Marker Variable, hoặc tách thời gian hỏi X và Y ra (nếu được).' }],
+                children: [{ _type: 'span', text: 'Nhiều bạn cứ vác link đi rải khắp các hội nhóm mà quên mất: Không phải ai cũng là đối tượng của mình. Đừng hỏi về kinh nghiệm dùng iPhone cho một fan cuồng Android. Hãy đảm bảo tính phù hợp của mẫu (Sample Appropriateness).\n\n[PRO TIP]: Hãy đặt câu hỏi loại trừ ngay đầu bảng hỏi.\nVí dụ: "Trong 3 tháng qua bạn có mua sắm trên Shopee không?". Nếu chọn "Không" -> Hệ thống tự động cảm ơn và kết thúc khảo sát luôn. Đừng cố đấm ăn xôi thu về một đống dữ liệu của người "nghe nói" chứ chưa bao giờ "trải nghiệm".' }],
+            },
+            {
+                _type: 'block',
+                style: 'h4',
+                children: [{ _type: 'span', text: 'Nghệ thuật "Hẹn hò" - Thứ tự câu hỏi' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Bảng hỏi cũng giống như một buổi hẹn hò, đừng vào việc ngay lập tức. Đừng hỏi cưới ngay khi vừa chào hỏi.\n\nHãy dùng chiến thuật cái phễu (The Funnel Technique):\n- Mở đầu: Những câu hỏi dễ, làm nóng (Warm-up) để tạo thiện cảm.\n- Phần chính: Các biến nghiên cứu quan trọng nhất nằm ở giữa.\n- Phần cuối: Thông tin cá nhân (Thu nhập, tuổi tác, sđt... những thứ nhạy cảm). Khi họ đã lỡ bỏ 5-10 phút trả lời phần trên rồi, họ sẽ ít bỏ cuộc (Drop-out) ở bước cuối hơn.\n\n[GÓC NHÌN Q1 - Priming Effects]:\nCẩn thận với hiệu ứng "Mồi" (Priming). Nếu bạn hỏi về "Trách nhiệm xã hội" (CSR) ngay trước khi hỏi về "Ý định mua hàng", não người trả lời sẽ bị "mồi" để trở nên đạo đức hơn bình thường -> Kết quả ra tương quan cao nhưng là ẢO. \n-> Giải pháp: Hãy "Xáo trộn ngẫu nhiên" (Randomization) thứ tự các câu hỏi hoặc các khối biến (Block Randomization) để triệt tiêu hiệu ứng tâm lý này. Reviewer cực thích điều này!' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '4. "Thuốc thử" lòng thành (Attention Checks)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Dân mình có thói quen "tick cho xong" để lấy quà hoặc vì nể. Bạn cần những "cái tát" để thức tỉnh họ khỏi cơn mê.\n\n[PRO TIP]: Chèn một câu hỏi ngớ ngẩn vào giữa bảng hỏi dài bất tận.\nVí dụ: "Nếu bạn đang đọc câu này, vui lòng chọn Hoàn toàn đồng ý".\n\nMục tiêu: Khi mang dữ liệu về làm sạch (Data Cleaning), cứ lọc ông nào chọn khác "Hoàn toàn đồng ý" ở câu này -> Xóa thẳng tay. Đây là cách tàn nhẫn nhưng cần thiết để bảo vệ "linh hồn" của dữ liệu trước những "ngư dân" chạy KPI.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '5. Cảnh báo "Khét lẹt": Survey Fatigue' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Đừng biến bảng hỏi thành "sớ Táo Quân". Một bảng hỏi lý tưởng chỉ nên kéo dài 5-7 phút. Quá 10 phút, dữ liệu từ câu thứ 50 trở đi thường là rác vì não người trả lời đã chuyển sang chế độ "Auto-pilot".\n\nHãy tàn nhẫn với các biến số. Cái gì "Nice to have" (có cũng được) -> Cắt. Chỉ giữ lại cái "Must have" (Buộc phải có để chạy mô hình).' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '6. Chạy Roda (Pilot Test) & Căn bệnh "Tự Sướng" (CMB)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Trước khi tung link khảo sát cho 500 người, làm ơn đừng chỉ gửi cho mấy đứa bạn thân. Bạn bè là những kẻ "dối trá đáng yêu", nó thấy sai nó cũng không dám chê đâu.\n\n[GÓC NHÌN Q1 - Content Validity]:\nBạn cần một "Hội đồng chuyên gia" (Expert Panel) gồm 3-5 Tiến sĩ hoặc người trong ngành để soi từng chữ (Content Validity Ratio - CVR). Họ sẽ chỉ ra những câu hỏi "rác" mà bạn không bao giờ thấy được.\nSau đó mới đem đi "Chạy Roda" (Pilot Test) với 30-50 người thường để check Cronbach Alpha.\n\n[CẢNH BÁO "CHẾT NGƯỜI" - Common Method Bias (CMB)]:\nNếu bạn hỏi một người về cả Biến độc lập (X) và Biến phụ thuộc (Y) trong cùng một lúc, rất dễ dính bệnh "Tự Sướng" (Tự biên tự diễn). Họ đang vui thì họ tick toàn 5, họ đang buồn họ tick toàn 1. Kết quả là tương quan giả tạo.\n-> Cách trị (Procedural Remedies): Thượng sách là "Chia uyên rẽ thúy". Sáng hỏi X, chiều hỏi Y (Time lag). Hoặc hỏi Nhân viên về X, hỏi Sếp về Y (Source separation). Đây mới là "Long mạch" để được Accept bài, chứ mấy cái đảo câu hỏi chỉ là mèo mửa thôi.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '7. "Bóng Ma" của người không trả lời (Non-response Bias)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Bạn thu được 500 phiếu và vỗ ngực tự hào? Khoan đã. Reviewer Q1 sẽ hỏi: "Còn 5000 người đã nhìn thấy link mà không thèm trả lời (Non-respondents) thì sao?".\n\nNhững người "rảnh và dễ tính" mới hay làm khảo sát. Những người "bận và khó tính" (thường là sếp, người giàu) thì lờ đi. Nếu hình mẫu của bạn toàn người rảnh -> Dữ liệu bị lệch (Unique Bias).\n\n-> Giải pháp: Hãy so sánh nhóm "Trả lời ngay" (Early responders) và nhóm "Phải nhắc mới làm" (Late responders). Nếu 2 nhóm này trả lời giống nhau -> An tâm. Nếu khác nhau -> Có biến. Hãy trung thực khai báo hạn chế này trong bài báo.' }],
             },
             {
                 _type: 'block',
@@ -484,8 +539,39 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '"Khái niệm" (Construct) -> Cái mình muốn đo (VD: Lòng trung thành).\n"Biến quan sát" (Item) -> Câu hỏi cụ thể (VD: Tôi sẽ quay lại mua hàng).\n"Thao tác hóa" (Operationalization) -> Biến cái trừu tượng thành cái đo đếm được.' }],
-            }
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Câu hỏi sàng lọc" (Screening Questions): Bộ lọc để loại bỏ người không thuộc đối tượng nghiên cứu.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Câu hỏi kiểm tra sự chú ý" (Attention Checkers): Bẫy để phát hiện người trả lời không đọc nội dung.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Sự thiên lệch do mong muốn xã hội" (Social Desirability Bias): Hiện tượng người ta trả lời theo cách "cho sang" chứ không đúng thực tế.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Khái niệm" (Construct) -> Cái mình muốn đo (VD: Lòng trung thành).' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Biến quan sát" (Item) -> Câu hỏi cụ thể (VD: Tôi sẽ quay lại mua hàng).' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Thao tác hóa" (Operationalization) -> Biến cái trừu tượng thành cái đo đếm được.' }],
+            },
         ]
     },
     {
