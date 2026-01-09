@@ -464,7 +464,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Trong nghiên cứu định lượng, tuyệt đối tránh câu hỏi Yes/No như tránh người yêu cũ. Hãy dùng thang đo Likert 5 điểm (hoặc 7 điểm) để máy hiểu được mức độ (Level).\n\nQuan trọng hơn: "Xương gà không được đắp thịt lợn". Bạn cần một Mapping Matrix (Ma trận kết hợp): Câu hỏi nào đo cho biến nào phải có địa chỉ rõ ràng. Đừng hỏi thừa, đừng hỏi thiếu, đừng hỏi kiểu "tiện mồm".' }],
+                children: [{ _type: 'span', text: 'Cuộc đời không phải chỉ có Đen và Trắng, nó còn có 50 sắc thái Xám. \nĐừng ép người ta chọn Yes/No (Có/Không). Hỏi "Bạn có thích tôi không?" (Có/Không) là dại. Hãy hỏi "Bạn thích tôi ở mức độ nào?" (1-5). Máy tính cần sự biến thiên (Variance) để chạy mô hình, chứ không cần những con số 0-1 khô khốc. Hãy dùng Likert 5 điểm hoặc 7 điểm để đo lường "nỗi lòng" của khách hàng một cách tinh tế nhất.\n\nCòn Mapping Matrix? Nó là cái "Bản đồ quy hoạch". Đừng để tình trạng "Râu ông nọ cắm cằm bà kia". Biến tên là "Sự Hài Lòng" thì đừng hỏi những câu về "Giá Rẻ". Mỗi biến cần 3-5 câu hỏi "lính gác" đi kèm, sai một ly là đi một dặm.' }],
             },
             {
                 _type: 'block',
