@@ -431,7 +431,7 @@ export const ncs_series_post = [
         ]
     },
     {
-        title: 'NCS101 - Bài 5: Thiết Kế Bảng Hỏi - Đừng Để Người Ta "Tick Bừa" ',
+        title: 'NCS101 - Bài 5: Thiết Kế Bảng Hỏi - Đừng Hỏi Như "Robot", Hãy Hỏi Như "Chuyên Gia Đọc Vị"',
         slug: { current: 'ncs-101-bai-5-survey-design' },
         publishedAt: new Date(Date.now() - 345600000).toISOString(),
         excerpt: 'Garbage In, Garbage Out. Bảng câu hỏi mà rác thì Dữ liệu cũng là rác. Đừng hỏi những câu ngớ ngẩn kiểu "Bạn có thích tiền không?" hay ép người ta trả lời những thứ họ không biết.',
@@ -454,7 +454,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đừng dùng "thước chun" để đo vải. Hãy dùng thước chuẩn.' }],
+                children: [{ _type: 'span', text: 'Đừng dùng "thước chun" để đo vải. Hãy dùng thước chuẩn, nhưng coi chừng thước Tây nó khác thước Ta.' }],
             },
             {
                 _type: 'block',
@@ -464,7 +464,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Trong nghiên cứu định lượng, tuyệt đối hạn chế câu hỏi Yes/No. Hãy dùng thang đo Likert 5 điểm (hoặc 7 điểm) để máy hiểu được mức độ (Level).\n\nQuan trọng hơn: "Xương gà không được đắp thịt lợn". Bạn cần một Mapping Matrix (Ma trận kết hợp): Câu hỏi nào đo cho biến nào phải có địa chỉ rõ ràng trong Khung khái niệm (Framework). Đừng hỏi thừa, đừng hỏi thiếu.' }],
+                children: [{ _type: 'span', text: 'Trong nghiên cứu định lượng, tuyệt đối tránh câu hỏi Yes/No như tránh người yêu cũ. Hãy dùng thang đo Likert 5 điểm (hoặc 7 điểm) để máy hiểu được mức độ (Level).\n\nQuan trọng hơn: "Xương gà không được đắp thịt lợn". Bạn cần một Mapping Matrix (Ma trận kết hợp): Câu hỏi nào đo cho biến nào phải có địa chỉ rõ ràng. Đừng hỏi thừa, đừng hỏi thiếu, đừng hỏi kiểu "tiện mồm".' }],
             },
             {
                 _type: 'block',
@@ -474,7 +474,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đừng tự bịa câu hỏi ("Em nghĩ thế là đúng"). Khoa học không quan tâm em nghĩ gì. Hãy lên Google Scholar, tìm thang đo của các "cụ" (Giáo sư đầu ngành), bê về (Adopt), dịch sang tiếng Việt (Translate) và dịch ngược lại (Back-translate).\n\n[LƯU Ý QUAN TRỌNG]: Thang đo ở Mỹ (Văn hóa Cá nhân) khi về VN (Văn hóa Tập thể) sẽ bị dãn. Cùng là "Tôi hài lòng", Tây chấm 4/5 là bình thường, ta chấm 4/5 có khi vì "dĩ hòa vi quý". Hãy kiểm tra Measurement Invariance (Sự bất biến của thang đo) giữa các nhóm (Nam/Nữ, Già/Trẻ) để đảm bảo thước đo của bạn không bị "cong" khi đổi đối tượng.' }],
+                children: [{ _type: 'span', text: 'Đừng tự bịa câu hỏi ("Em nghĩ thế là đúng"). Em nghĩ kệ em, khoa học không quan tâm em nghĩ gì. Hãy lên Google Scholar, tìm thang đo của các "cụ", bê về (Adopt), dịch sang tiếng Việt (Translate) và dịch ngược lại (Back-translate).\n\n[LƯU Ý QUAN TRỌNG]: Đừng tưởng bở. Thang đo ở Mỹ (Văn hóa Cá nhân) khi về VN (Văn hóa Tập thể) nó như cái dây thun. Cùng là "Tôi hài lòng", Tây nó thẳng tính chấm 4/5, còn người Việt mình cả nể "dĩ hòa vi quý" cũng chấm 4/5 dù trong lòng chửi thầm. Cái này gọi là Measurement Invariance (Bất biến thang đo). Nhớ check kỹ xem thước đo có bị "cong" khi đổi từ Tây sang Ta không nhé.' }],
             },
             {
                 _type: 'block',
@@ -484,7 +484,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Bảng hỏi là một cuộc hội thoại tinh tế, không phải là bản tra tấn.' }],
+                children: [{ _type: 'span', text: 'Bảng hỏi là một cuộc đấu trí, đừng để Respondent (người trả lời) xỏ mũi bạn.' }],
             },
             {
                 _type: 'block',
@@ -494,7 +494,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Tuyệt đối tránh câu hỏi gộp: "Bạn có thấy dịch vụ NHANH và RẺ không?".\nKhách thấy Nhanh nhưng Đắt thì trả lời sao? Tích 3 điểm à? Sai! Đây là lỗi "giết người không dao", nó triệt tiêu sự biến thiên (Variance) và làm "toang" mô hình SEM của bạn sau này. Tách nó ra làm 2 câu riêng biệt ngay!' }],
+                children: [{ _type: 'span', text: 'Tuyệt đối tránh câu hỏi gộp: "Bạn có thấy dịch vụ NHANH và RẺ không?".\nKhách thấy Nhanh nhưng Đắt thì trả lời sao? Tích 3 điểm à? Sai! Đây là lỗi "giết người không dao", nó làm triệt tiêu sự biến thiên (Variance). Kết quả là mô hình SEM của bạn sẽ nát như tương bần.' }],
             },
             {
                 _type: 'block',
@@ -504,7 +504,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Con người luôn muốn mình tốt đẹp (Social Desirability Bias). Nếu bạn hỏi trực diện "Anh có hay trốn thuế không?", 100% sẽ nói Không.\nHãy dùng kỹ thuật hỏi gián tiếp (Third-person technique): "Theo anh, doanh nghiệp trong ngành này có thường trốn thuế không?". Lúc này họ mới nói thật.\n\nNgoài ra, đừng để thứ tự câu hỏi "mồi" (Prime) não người trả lời. Hãy dùng Block Randomization (Xáo trộn ngẫu nhiên) các khối câu hỏi để triệt tiêu hiệu ứng này.' }],
+                children: [{ _type: 'span', text: 'Con người ai cũng mắc bệnh "Hoa hậu thân thiện" (Social Desirability Bias). Hỏi "Anh có trốn thuế không?" thì 100% thánh thần cũng bảo Không.\nHãy dùng đòn tâm lý (Third-person technique): "Theo anh, doanh nghiệp khác có thường trốn thuế không?". Lúc này họ mới hiện nguyên hình.\n\nNgoài ra, đừng để thứ tự câu hỏi "mồi chài" (Prime) não người trả lời. Hãy dùng Block Randomization (Xáo trộn ngẫu nhiên) để họ chóng mặt, không kịp "diễn".' }],
             },
             {
                 _type: 'block',
@@ -514,7 +514,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đừng biến bảng hỏi thành "sớ Táo Quân". Quá 10 phút là não người trả lời chuyển sang chế độ "Zombie" (đánh bừa). Chỉ giữ lại những biến "Must have".' }],
+                children: [{ _type: 'span', text: 'Đừng biến bảng hỏi thành "sớ Táo Quân". Quá 10 phút là não người trả lời chuyển sang chế độ "Zombie" (đánh bừa). Hỏi ngắn thôi, đời người ngắn lắm.' }],
             },
             {
                 _type: 'block',
@@ -524,7 +524,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Dữ liệu rác hạng sang vẫn là rác. Hãy lọc nó ngay từ nguồn.' }],
+                children: [{ _type: 'span', text: 'Dữ liệu rác hạng sang (Data Ma) vẫn là rác. Hãy lọc nó ngay từ nguồn.' }],
             },
             {
                 _type: 'block',
@@ -534,7 +534,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đừng chỉ gửi cho bạn bè (những kẻ "dối trá đáng yêu"). Hãy lập một Expert Panel (Hội đồng chuyên gia) gồm 3-5 người trong ngành để soi từng chữ (Content Validity). Sau đó mới mang đi Chạy Roda (Pilot Test).\n\n[Cự Giải thích]: Nhất quán (Alpha cao) chưa chắc đã Đúng (Validity). Cái cân bị lệch 1kg thì cân 100 lần vẫn ra cùng một số (Nhất quán), nhưng đó là số SAI. Expert Panel giúp bạn chỉnh lại cái cân đó.' }],
+                children: [{ _type: 'span', text: 'Đừng chỉ gửi cho bạn bè (lũ "dối trá đáng yêu"). Nó thấy sai nó cũng khen cho bạn vui đấy.\nHãy lập một Expert Panel (Hội đồng chuyên gia) gồm mấy ông Tiến sĩ khó tính để soi từng chữ. Sau đó mới mang đi Chạy Roda (Pilot Test).\n\n[Cực Giải thích]: Nhất quán (Alpha cao) chưa chắc đã Đúng (Validity). Cái cân bị lệch 1kg thì cân 100 lần vẫn ra cùng một số (Nhất quán), nhưng đó là số SAI. Chỉ có Chuyên gia mới biết cái cân của bạn có bị lệch hay không.' }],
             },
             {
                 _type: 'block',
@@ -544,7 +544,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Để bài báo được Accept ở tạp chí Q1, bạn cần xử lý Common Method Bias (CMB) bằng quy trình (Procedural Remedies) chứ không chỉ bằng số liệu. Thượng sách là Tách biệt thời gian (Time lag - Sáng hỏi X, chiều hỏi Y) hoặc Tách biệt nguồn (Source separation - Nhân viên trả lời X, Sếp trả lời Y).\n\nCuối cùng, đừng quên "Bóng ma" của những người không trả lời (Non-response Bias). Hãy so sánh nhóm Trả lời sớm và Trả lời muộn để chứng minh dữ liệu của bạn không bị lệch.' }],
+                children: [{ _type: 'span', text: 'Muốn bài báo được Accept ở tạp chí xịn, phải có "bùa chú" trị Common Method Bias (CMB). Thượng sách là "Chia uyên rẽ thúy" (Time lag - Sáng hỏi X, chiều hỏi Y) hoặc "Ly gián" (Source separation - Nhân viên trả lời X, Sếp trả lời Y).\n\nCuối cùng, coi chừng "Bóng ma" Non-response Bias. Những người im lặng (không trả lời) thường là người giàu hoặc người ghét bạn. Dữ liệu mà thiếu họ là coi như mất một nửa sự thật.' }],
             },
             {
                 _type: 'block',
@@ -554,7 +554,17 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Trước khi rải link, hãy tự hỏi:\n✅ Đã có Expert Panel check Content Validity chưa?\n✅ Đã loại bỏ hết câu hỏi "hai nòng" (Double-barreled) chưa?\n✅ Đã có Screening Questions để chặn người "đi lạc" chưa?\n✅ Đã cài Attention Check để bắt "Zombie" chưa?\n✅ Đã có chiến lược Time Lag hoặc Source Separation để trị CMB chưa?\n\nNếu rồi, chúc mừng bạn. Bạn đã sẵn sàng để trở thành một "Nhà Hải Dương Học" thực thụ!' }],
+                children: [{ _type: 'span', text: 'Trước khi rải link, check ngay kẻo hối không kịp:\n✅ Đã có Expert Panel (Hội đồng khó tính) soi chưa?\n✅ Đã diệt hết "Quái vật hai đầu" (Double-barreled) chưa?\n✅ Đã có Screening Questions chặn người "đi lạc" chưa?\n✅ Đã cài Attention Check bắt "Zombie" chưa?\n✅ Đã có bùa "Chia uyên rẽ thúy" (Time lag) trị CMB chưa?\n\nNếu rồi thì triển thôi! Chúc bạn thu được data sạch như nước cất!' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Coming Soon: Bài 6 - "Dọn Rác" Dữ Liệu' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Có Data xịn rồi thì khoan vội mừng. Data thô cũng như con cá mới đánh bắt lên, còn đầy vảy và nặng mùi tanh.\n\nĐừng dại dột ném ngay vào nồi (SPSS/SmartPLS/AMOS) khi chưa sơ chế. Tào Tháo sẽ rượt bạn chạy không kịp đâu!\n\nHẹn gặp lại ở Bài 6: Nghệ Thuật Làm Sạch Dữ Liệu (Data Cleaning) - Đừng Để "Rác" Làm Bẩn Nồi Lẩu Của Bạn.' }],
             },
             {
                 _type: 'block',
