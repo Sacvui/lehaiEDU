@@ -608,6 +608,18 @@ export const ncs_series_post = [
                 listItem: 'bullet',
                 children: [{ _type: 'span', text: '"Thao tác hóa" (Operationalization) -> Biến cái trừu tượng thành cái đo đếm được.' }],
             },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Bất biến thang đo" (Measurement Invariance): Đảm bảo thang đo vẫn đo đúng cái cần đo khi áp dụng cho các nhóm khác nhau (VD: Tây vs Ta).' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Thiên lệch do không trả lời" (Non-response Bias): Sai lệch xảy ra khi nhóm người không trả lời khảo sát có đặc điểm khác biệt đáng kể so với nhóm trả lời.' }],
+            },
         ]
     },
     {
