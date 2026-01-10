@@ -72,7 +72,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đừng nhầm lẫn giữa "Nỗi đau thực tế" (Practical Problem) và "Vấn đề nghiên cứu" (Research Problem).\n - Sếp kêu: "Doanh thu tháng này thấp quá!" -> Đây là Practical Problem.\n - Scholar hỏi: "Tại sao thấp? Có lý thuyết nào giải thích hiện tượng này chưa? Hay là lý thuyết cũ không còn đúng trong bối cảnh mới?" -> Đây mới là Research Problem.\n\nHãy làm như bác sĩ: Thấy bệnh nhân đau bụng (Thực tế), đừng đè ra mổ ngay. Hãy soi chiếu vào y văn (Lý thuyết) xem triệu chứng này khớp với bệnh gì. Nếu y văn bó tay -> Chúc mừng, bạn đã tìm ra Gap (Khoảng trống) để nghiên cứu!' }],
+                children: [{ _type: 'span', text: 'Đừng nhầm lẫn giữa "Nỗi đau thực tế" (Practical Problem) và "Vấn đề nghiên cứu" (Research Problem).\n\nVí dụ 1 (Dân Marketing): Bạn lướt TikTok thấy bọn trẻ con review mỹ phẩm ảo tung chảo, filters cà nát mặt mà vẫn ối người tin. Vô lý vãi chưởng! (Practical Problem). Tại sao người ta lại tin một đứa "ảo"?\n-> BÙM! Research Problem: "Tác động của sự xác thực (Authenticity) của Influencer ảo đến ý định mua hàng của Gen Z".\n\nVí dụ 2 (Dân HR): Công ty bạn sếp thưởng tiền rất nhiều, bánh vẽ rất to nhưng nhân viên vẫn nghỉ việc ầm ầm (Practical Problem). Tại sao tiền nhiều mà vẫn dứt áo ra đi?\n-> BÙM! Research Problem: "Mối quan hệ phi tuyến tính giữa Thưởng tài chính và Gắn kết nhân viên: Khi tiền bạc trở thành "bẫy thu nhập" (Hygiene Factor)".\n\nHãy làm như bác sĩ: Thấy bệnh nhân đau bụng (Thực tế), đừng đè ra mổ ngay. Hãy soi chiếu vào y văn (Lý thuyết) xem triệu chứng này khớp với bệnh gì.' }],
             },
             {
                 _type: 'block',
