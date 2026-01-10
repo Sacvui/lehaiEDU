@@ -189,11 +189,18 @@ const authors = [
     }
 ]
 
+import { book_chapter_1 } from './book_content/chapter_1_mindset.ts'
+import { book_chapter_2 } from './book_content/chapter_2_skillset.ts'
+import { book_chapter_3 } from './book_content/chapter_3_strategy.ts'
+
 const posts = [
     ...batch1, ...batch2, ...batch3, ...batch4, ...batch5, ...batch6,
     ...series_a_1, ...series_a_2,
     ...series_c_1, ...series_c_2,
     ...book_intro,
+    ...book_chapter_1, // [NEW]
+    ...book_chapter_2, // [NEW]
+    ...book_chapter_3, // [NEW]
     ...bi_ai_post,
     ...ncs_series_post,
     ...dms_post,
