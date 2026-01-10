@@ -474,7 +474,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đừng tự bịa câu hỏi ("Em nghĩ thế là đúng"). Em nghĩ kệ em, khoa học không quan tâm em nghĩ gì. Hãy lên Google Scholar, tìm thang đo của các "cụ", bê về (Adopt), dịch sang tiếng Việt (Translate) và dịch ngược lại (Back-translate).\n\n[LƯU Ý QUAN TRỌNG]: Đừng tưởng bở. Thang đo ở Mỹ (Văn hóa Cá nhân) khi về VN (Văn hóa Tập thể) nó như cái dây thun. Cùng là "Tôi hài lòng", Tây nó thẳng tính chấm 4/5, còn người Việt mình cả nể "dĩ hòa vi quý" cũng chấm 4/5 dù trong lòng chửi thầm. Cái này gọi là Measurement Invariance (Bất biến thang đo). Nhớ check kỹ xem thước đo có bị "cong" khi đổi từ Tây sang Ta không nhé.' }],
+                children: [{ _type: 'span', text: 'Đừng tự bịa câu hỏi ("Em nghĩ thế là đúng"). Em nghĩ kệ em, khoa học không quan tâm em nghĩ gì. Hãy lên Google Scholar, tìm thang đo của các "cụ", bê về (Adopt), dịch sang tiếng Việt (Translate) và dịch ngược lại (Back-translate).\n\n[MẸO]: Thời này ai dùng Google Translate nữa? Hãy dùng ChatGPT/Claude để dịch, văn phong mượt hơn nhiều. Nhưng nhớ nhờ 2 người (1 Anh-Việt, 1 Việt-Anh) check chéo nhau. Đừng tin AI 100%.\n\n[LƯU Ý QUAN TRỌNG]: Đừng tưởng bở. Thang đo ở Mỹ (Văn hóa Cá nhân) khi về VN (Văn hóa Tập thể) nó như cái dây thun. Cùng là "Tôi hài lòng", Tây nó thẳng tính chấm 4/5, còn người Việt mình cả nể "dĩ hòa vi quý" cũng chấm 4/5 dù trong lòng chửi thầm. Cái này gọi là Measurement Invariance (Bất biến thang đo). Nhớ check kỹ xem thước đo có bị "cong" khi đổi từ Tây sang Ta không nhé.' }],
             },
             {
                 _type: 'block',
@@ -534,7 +534,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đừng chỉ gửi cho bạn bè (lũ "dối trá đáng yêu"). Nó thấy sai nó cũng khen cho bạn vui đấy.\nHãy lập một Expert Panel (Hội đồng chuyên gia) gồm mấy ông Tiến sĩ khó tính để soi từng chữ. Sau đó mới mang đi Chạy Roda (Pilot Test).\n\n[Cực Giải thích]: Nhất quán (Alpha cao) chưa chắc đã Đúng (Validity). Cái cân bị lệch 1kg thì cân 100 lần vẫn ra cùng một số (Nhất quán), nhưng đó là số SAI. Chỉ có Chuyên gia mới biết cái cân của bạn có bị lệch hay không.' }],
+                children: [{ _type: 'span', text: 'Đừng chỉ gửi cho bạn bè (lũ "dối trá đáng yêu"). Nó thấy sai nó cũng khen cho bạn vui đấy.\nHãy lập một Expert Panel (Hội đồng chuyên gia) gồm mấy ông Tiến sĩ khó tính để soi từng chữ. Sau đó mới mang đi Chạy Roda (Pilot Test).\n\n[CẢNH BÁO KHÉT LẸT]: Nhất quán (Alpha cao) chưa chắc đã Đúng (Validity). Cái cân bị lệch 1kg thì cân 100 lần vẫn ra cùng một số (Nhất quán), nhưng đó là số SAI. Chỉ có Chuyên gia mới biết cái thước đo của bạn có bị "lệch" ngay từ đầu hay không.' }],
             },
             {
                 _type: 'block',
@@ -544,12 +544,12 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Muốn bài báo được Accept ở tạp chí xịn, phải có "bùa chú" trị Common Method Bias (CMB). Thượng sách là "Chia uyên rẽ thúy" (Time lag - Sáng hỏi X, chiều hỏi Y) hoặc "Ly gián" (Source separation - Nhân viên trả lời X, Sếp trả lời Y).\n\nCuối cùng, coi chừng "Bóng ma" Non-response Bias. Những người im lặng (không trả lời) thường là người giàu hoặc người ghét bạn. Dữ liệu mà thiếu họ là coi như mất một nửa sự thật.' }],
+                children: [{ _type: 'span', text: 'Muốn bài báo được Accept ở tạp chí xịn, phải có "bùa chú" trị Common Method Bias (CMB). Thượng sách là "Chia uyên rẽ thúy" (Time lag - Sáng hỏi X, chiều hỏi Y) hoặc "Ly gián" (Source separation - Nhân viên trả lời X, Sếp trả lời Y).\n\nCuối cùng, coi chừng "Bóng ma" Non-response Bias. Những người im lặng (không trả lời) thường là người giàu hoặc người ghét bạn. Dữ liệu mà thiếu họ là coi như mất một nửa sự thật.\n\n[Chiêu độc]: Hãy so sánh nhóm trả lời ngay (Early) và nhóm phải nhắc (Late). Tại sao? Vì giả định rằng mấy ông "lầy lội" phải nhắc mới làm thường có tâm lý giống với mấy ông "bùng" luôn. Nếu 2 nhóm này trả lời na ná nhau -> An tâm là dữ liệu không bị lệch.' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: '[CHECK-LIST CHO "THỢ SĂN Q1"]' }],
+                children: [{ _type: 'span', text: '[HÀNH ĐỘNG NGAY] - Check-list Cho "Thợ Săn Q1"' }],
             },
             {
                 _type: 'block',
@@ -565,7 +565,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Có Data xịn rồi thì khoan vội mừng. Data thô cũng như con cá mới đánh bắt lên, còn đầy vảy và nặng mùi tanh.\n\nĐừng dại dột ném ngay vào nồi (SPSS/SmartPLS/AMOS) khi chưa sơ chế. Tào Tháo sẽ rượt bạn chạy không kịp đâu!\n\nHẹn gặp lại ở Bài 6: Nghệ Thuật Làm Sạch Dữ Liệu (Data Cleaning) - Đừng Để "Rác" Làm Bẩn Nồi Lẩu Của Bạn.' }],
+                children: [{ _type: 'span', text: 'Có Data xịn rồi thì khoan vội mừng. Data thô cũng như con cá mới đánh bắt lên, còn đầy vảy, bùn và mùi tanh.\n\nĐừng dại dột ném ngay vào nồi (SPSS/SmartPLS/AMOS) khi chưa sơ chế. Nếu không, Tào Tháo (Reviewer) sẽ rượt bạn chạy không kịp đâu!\n\nHẹn gặp lại ở Bài 6: Nghệ Thuật Làm Sạch Dữ Liệu - Đừng Để "Rác" Làm Bẩn Nồi Lẩu Của Bạn.\n\nHải chào thân ái và quyết thắng!' }],
             },
             {
                 _type: 'block',
