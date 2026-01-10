@@ -434,7 +434,7 @@ export const ncs_series_post = [
         title: 'NCS101 - Bài 5: Thiết Kế Bảng Hỏi - Đừng Hỏi Như "Robot", Hãy Hỏi Như "Chuyên Gia Đọc Vị"',
         slug: { current: 'ncs-101-bai-5-survey-design' },
         publishedAt: new Date(Date.now() - 345600000).toISOString(),
-        excerpt: 'Garbage In, Garbage Out. Bảng câu hỏi mà rác thì Dữ liệu cũng là rác. Đừng hỏi những câu ngớ ngẩn kiểu "Bạn có thích tiền không?" hay ép người ta trả lời những thứ họ không biết.',
+        excerpt: 'Garbage In, Garbage Out. Bảng câu hỏi mà rác thì Dữ liệu cũng là rác. Đừng hỏi những câu ngớ ngẩn kiểu "Bạn có thích tiền không?" hay ép người ta trả lời những thứ họ không biết. Bảng hỏi lởm thì dữ liệu chỉ có nước vứt sọt rác, thánh SPSS cũng không độ được.',
         categorySlug: 'academic-corner',
         coverImage: '/blog/research_series_5_survey.png',
         featured: false,
