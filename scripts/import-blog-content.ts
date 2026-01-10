@@ -120,6 +120,13 @@ const categories = [
         description: 'Dự án sách 300 Bài Hát Thiếu Nhi: From Intern to CEO',
         color: '#f59e0b',
     },
+    {
+        _type: 'category',
+        title: 'Book: Re-Research',
+        slug: { current: 'book-re-research' },
+        description: 'Dự án sách Re-Research: Cẩm nang định vị lại bản sắc Học thuật',
+        color: '#1e3a8a', // Navy Blue
+    },
 ]
 
 // Authors
@@ -227,6 +234,24 @@ async function importData() {
             const slug = slugArg.split('=')[1];
             postsToImport = posts.filter(p => p.slug.current === slug);
             console.log(`🎯 Filtering: Only importing post with slug "${slug}"`);
+        }
+
+        // [NEW] Upload Categories First
+        console.log('📂 Importing ' + categories.length + ' categories...')
+        for (const cat of categories) {
+            const docId = `category-${cat.slug.current}`
+            const catWithId = { ...cat, _id: docId }
+            await client.createOrReplace(catWithId)
+            //  console.log(`   Created category: ${cat.title}`)
+        }
+
+        // [NEW] Upload Authors
+        console.log('👤 Importing ' + authors.length + ' authors...')
+        for (const auth of authors) {
+            const docId = `author-${auth.slug.current}`
+            const authWithId = { ...auth, _id: docId }
+            await client.createOrReplace(authWithId)
+            //  console.log(`   Created author: ${auth.name}`)
         }
 
         console.log('📝 Importing ' + postsToImport.length + ' blog posts...')
