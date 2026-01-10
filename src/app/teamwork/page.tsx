@@ -58,119 +58,112 @@ export default async function ForTeamPage() {
         return keywords.map(k => find(k)).filter(Boolean); // Remove undefined/not found
     };
 
-    // --- MANUAL INTRO CONTENT (Hai Morning Style: Punchy & Persuasive) ---
+    // --- MANUAL INTRO CONTENT (Authentic & Raw) ---
     const introPosts = [
         {
             _id: 'manual-foreword',
-            title: 'Lời Tựa: Đừng đọc cuốn này nếu bạn muốn nhàn',
+            title: 'Lời Tựa: Tại sao tôi viết cuốn sách này?',
             slug: { current: 'loi-noi-dau' },
             readingTime: 3,
             body: [
                 {
                     _type: 'block',
                     style: 'h3',
-                    children: [{ _type: 'span', text: 'Chào buổi sáng. Cà phê chưa?' }]
+                    children: [{ _type: 'span', text: 'Thú thật đi, bạn có đang thấy lạc lõng không?' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Nếu bạn đang tìm một cuốn giáo trình ru ngủ để lấy bằng Tiến sĩ giấy, hãy gấp trang web này lại. Nghiêm túc đấy. Cuốn sách này không dành cho bạn.' }]
+                    children: [{ _type: 'span', text: 'Chào bạn. Nếu bạn tìm đến cuốn sách này, tôi đoán bạn đang gặp rắc rối. Có thể là áp lực phải có bài đăng tạp chí Q1/Q2 để bảo vệ luận án. Có thể là cảm giác "ngợp" trước hàng núi kiến thức phương pháp nghiên cứu khô khan. Hoặc tệ hơn, bạn bắt đầu tự hỏi: "Mình học cái này để làm gì?"' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: '15 năm trước, tôi là một gã Intern "chạy bằng cơm", chỉ biết copy-paste Excel 10.000 dòng trong vô vọng. Sếp ném cái báo cáo 3D xanh đỏ vào mặt tôi: "Mày vẽ tranh cho trẻ con xem à? Insight đâu? Tiền nằm ở đâu?".' }]
+                    children: [{ _type: 'span', text: 'Tôi hiểu. Vì tôi đã từng ở đó. 10 năm trước, tôi cũng là một nghiên cứu sinh (NCS) đầy hoang mang. Tôi vật lộn với những con số vô hồn, những lời nhận xét lạnh lùng của Reviewer, và sự cô đơn trong chính hành trình tri thức của mình.' }]
                 },
                 {
                     _type: 'block',
                     style: 'blockquote',
-                    children: [{ _type: 'span', text: 'Cú "tát" đó làm tôi tỉnh ngộ. Hóa ra, tôi chẳng biết gì cả.' }]
+                    children: [{ _type: 'span', text: 'Cuốn sách này không dạy bạn cách trở thành Giáo sư. Nó dạy bạn cách "sống sót" và tìm lại niềm vui trong nghiên cứu.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Cuốn sách này là tập hợp những "vết sẹo" của tôi. Từ một gã thợ gõ phím trở thành một Data Strategist (Người hoạch định chiến lược dựa trên dữ liệu). Tôi viết nó để bạn KHÔNG PHẢI đi vào vết xe đổ đó nữa.' }]
-                },
-                {
-                    _type: 'block',
-                    style: 'h4',
-                    children: [{ _type: 'span', text: 'Bạn sẽ nhận được gì?' }]
+                    children: [{ _type: 'span', text: 'Tôi gọi nó là "Re-Research" - Tái định nghĩa Nghiên cứu. Không phải là những lý thuyết sáo rỗng trên tháp ngà. Đây là những kỹ chiến thuật thực dụng nhất (Pragmatic Strategies) được đúc kết từ máu và nước mắt, để giúp bạn đi từ con số 0 đến bài báo công bố quốc tế đầu tiên.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Không lý thuyết suông. Không thuật ngữ đánh đố. Chỉ có Chiến lược thực chiến (Battle-tested Strategies). Cầm sách lên là phải dùng được ngay vào luận án, vào công việc.' }]
+                    children: [{ _type: 'span', text: 'Hãy coi đây là cuốn nhật ký chiến đấu của một người đi trước. Tôi đã ngã, và tôi muốn chỉ cho bạn chỗ để tránh.' }]
                 }
             ]
         }
     ];
 
     // --- BRIDGE CONTENT: CHAPTER INTROS ---
-    // Editorial Note: Applying Storytelling/Anecdotal hooks
 
     const chap1_intro = {
         _id: 'chap1-intro',
-        title: 'Chương 1: Những cú lừa của Tư duy',
+        title: 'Chương 1: Xây dựng lại "Cái Đầu" (Mindset)',
         slug: { current: 'chap1-intro' },
         readingTime: 4,
         body: [
-            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Cái bẫy của sự nhiệt tình' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Nhiệt tình + Ngu dốt = Phá hoại. Câu này hơi phũ nhưng đúng trong ngành dữ liệu. Đừng vội lao vào làm khi chưa biết mình đang giải quyết bài toán gì.' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Trong chương này, tôi sẽ kể cho bạn nghe về những lần tôi "tưởng bở". Tưởng khách hàng thích rẻ (hóa ra họ thích sang). Tưởng quảng cáo nhiều là tốt (hóa ra là spam). Tư duy sai thì có chạy code bằng trời cũng chỉ ra rác (Garbage In, Garbage Out).' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Hãy học cách "nghi ngờ" mọi thứ, kể cả cảm nhận của chính mình.' }] }
+            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Tư duy sai, làm gì cũng sai' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Đa số NCS thất bại không phải vì dốt, mà vì ảo tưởng. Ảo tưởng mình phải giải cứu thế giới, ảo tưởng mình phải tìm ra chân lý vĩ đại. Tỉnh lại đi. Nghiên cứu là một nghề (Profession), và bài báo là sản phẩm (Product).' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Chương này sẽ đập tan những ảo mộng đó. Chúng ta sẽ cùng nhau xây dựng lại một hệ tư duy mới: Thực tế hơn, khiêm tốn hơn, nhưng sắc bén hơn.' }] }
         ]
     };
 
     const chap2_intro = {
         _id: 'chap2-intro',
-        title: 'Chương 2: Đừng dùng dao mổ trâu giết gà',
+        title: 'Chương 2: Mài giũa "Vũ Khí" (Skillset)',
         slug: { current: 'chap2-intro' },
         readingTime: 4,
         body: [
-            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Nỗi đau mang tên "Excel has stopped working"' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Bạn đã bao giờ ngồi chờ cái file Excel xoay vòng vòng 15 phút rồi... văng luôn chưa? Tôi bị rồi. Mất trắng báo cáo lúc 5 giờ chiều thứ Sáu.' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Lúc đó tôi mới chịu học Code. Không phải để làm lập trình viên, mà để thoát khổ. 3 dòng code Python chạy xong việc của 3 tiếng hì hục click chuột. Chương này là bộ "đồ nghề" sinh tồn. Học đi, nhàn cái thân.' }] }
+            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Từ Excel đến Python/R' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Bạn có thể đào đất bằng tay không? Được, nhưng bao giờ xong? Công cụ (Tools) sinh ra là để giải phóng con người. Đừng tự hào vì mình "cần cù" làm thủ công. Hãy tự hào vì mình biết dùng máy múc.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Tôi sẽ không dạy bạn trở thành Lập trình viên. Tôi chỉ đưa cho bạn những "đoạn mã thần thánh" (Snippets) để bạn copy-paste và giải quyết việc của mình trong 5 phút thay vì 5 ngày.' }] }
         ]
     };
 
     const chap3_intro = {
         _id: 'chap3-intro',
-        title: 'Chương 3: Tiền nằm ở đâu?',
+        title: 'Chương 3: Chiến lược "Săn" Q1 (Strategy)',
         slug: { current: 'chap3-intro' },
         readingTime: 4,
         body: [
-            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Biến số thành Dollar' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Sếp không quan tâm R-squared hay P-value là cái quái gì đâu. Sếp chỉ quan tâm: "Làm thế nào để tăng doanh số?".' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Chương này tôi sẽ chỉ cách bạn "dịch" những con số khô khan thành chiến lược sặc mùi tiền. Hồi quy để dự báo doanh số. Phân cụm để "bắt" đúng khách giàu. Đây là lúc bạn tỏa sáng.' }] }
+            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Viết hay không bằng "Bán" giỏi' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Một bài nghiên cứu tốt nằm trong ngăn kéo là một bài nghiên cứu chết. Giá trị của bạn được đo bằng Impact Factor (Hệ số ảnh hưởng).' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Làm sao để vượt qua vòng gửi xe (Desk Reject)? Làm sao để đối phó với Reviewer khó tính? Chương này là nghệ thuật "bán mình" và thương thuyết với những người gác cổng tri thức.' }] }
         ]
     };
 
     const chap4_intro = {
         _id: 'chap4-intro',
-        title: 'Chương 4: Ai rồi cũng phải làm Sếp',
+        title: 'Chương 4: Tương lai của Nghiên cứu (Future)',
         slug: { current: 'chap4-intro' },
         readingTime: 4,
         body: [
-            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'Thoát khỏi cái giếng' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Làm chuyên môn mãi cũng chán. Đến một lúc, bạn sẽ phải đứng mũi chịu sào. Lúc này, kỹ năng không còn là code nữa, mà là tầm nhìn. Là AI, là xu hướng, là quản trị con người.' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Đừng để mình là "thợ", hãy là "thầy". Chương cuối này là hành trang cho những ngày bạn không còn ngồi gõ phím nữa.' }] }
+            { _type: 'block', style: 'h3', children: [{ _type: 'span', text: 'AI sẽ thay thế chúng ta?' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Câu trả lời là CÓ, nếu bạn chỉ là một "Thợ viết báo". Nhưng là KHÔNG, nếu bạn là một "Kiến trúc sư tri thức".' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Hãy cùng nhìn về tương lai, nơi AI là cộng sự (Co-pilot), còn bạn là người cầm lái.' }] }
         ]
     };
 
-    // --- EXPANDED AUTHOR BIO (Short & Punchy) ---
+    // --- EXPANDED AUTHOR BIO (Authentic) ---
     const detailedAuthors = {
         _id: 'manual-authors',
-        title: 'Người kể chuyện & Kẻ kìm cương',
+        title: 'Về Tác giả',
         slug: { current: 'gioi-thieu-tac-gia' },
         readingTime: 3,
         body: [
-            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: 'Hải Rong Chơi - Kẻ Ngoại Đạo' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Tôi không phải Giáo sư đầu ngành. Tôi là dân làm ăn (Business) đi lạc vào chốn học thuật. Tôi ghét lý thuyết suông. Với tôi, Nghiên cứu mà không "ra tiền" hoặc "ra chiến lược" là Nghiên cứu chết.' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Tôi viết cuốn sách này để "trả nợ". Trả nợ những người thầy đã mắng tôi, và trả nợ chính tuổi trẻ ngông cuồng của mình.' }] },
+            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: 'Hải "Sidewalk" - Người dẫn đường' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Tôi tự gọi mình là "Giáo sư vỉa hè" (Sidewalk Professor). Không phải vì tôi dạy ở vỉa hè, mà vì tôi thích mang những kiến thức hàn lâm từ tháp ngà xuống mặt đất. Tôi tin rằng lý thuyết hay nhất là lý thuyết dùng được.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Tôi không hứa giúp bạn thành thiên tài. Tôi chỉ hứa giúp bạn bớt khổ.' }] },
 
-            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: 'TS. Carmen Châu - Kẻ Kìm Cương' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Nếu tôi là gã đầu đường xó chợ thích bay nhảy, thì Carmen Châu (PhD) là người giữ tôi lại trên mặt đất.' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Sự chỉn chu, khắt khe và nền tảng học thuật vững chắc của cô ấy chính là thứ khiến cuốn sách này trở nên "nghiêm túc" (như cái tên của nó). Sự kết hợp giữa "Data lạnh lùng" và "Trái tim nóng" chính là linh hồn của Re-Research.' }] }
+            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: 'TS. Carmen Châu - Người giữ lửa' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Là một nhà nghiên cứu chính thống được đào tạo bài bản tại New Zealand, cô ấy là chốt chặn cuối cùng về mặt học thuật cho cuốn sách này. Cô ấy đảm bảo rằng những chiến thuật "đường phố" của tôi vẫn tuân thủ những chuẩn mực khắt khe nhất của khoa học.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Cảm ơn bạn đã tin tưởng chọn chúng tôi làm người đồng hành.' }] }
         ]
     };
 
@@ -197,27 +190,27 @@ export default async function ForTeamPage() {
     const chapters = [
         {
             id: 'intro',
-            title: 'PHẦN MỞ ĐẦU',
+            title: 'LỜI TỰA',
             posts: [introPosts[0], detailedAuthors] // Use expanded authors
         },
         {
             id: 'chap1',
-            title: 'CHƯƠNG 1: TƯ DUY NỀN TẢNG (THE MINDSET)',
+            title: 'CHƯƠNG 1: THE MINDSET (TƯ DUY)',
             posts: [chap1_intro, ...chap1_mindset] // Inject Bridge Post
         },
         {
             id: 'chap2',
-            title: 'CHƯƠNG 2: XÂY DỰNG VŨ KHÍ (THE SKILLSET)',
+            title: 'CHƯƠNG 2: THE SKILLSET (CÔNG CỤ)',
             posts: [chap2_intro, ...chap2_tools] // Inject Bridge Post
         },
         {
             id: 'chap3',
-            title: 'CHƯƠNG 3: PHÂN TÍCH & CHIẾN LƯỢC (THE STRATEGY)',
+            title: 'CHƯƠNG 3: THE STRATEGY (CHIẾN LƯỢC)',
             posts: [chap3_intro, ...chap3_strategy] // Inject Bridge Post
         },
         {
             id: 'chap4',
-            title: 'CHƯƠNG 4: TẦM NHÌN C-LEVEL (THE FUTURE)',
+            title: 'CHƯƠNG 4: THE FUTURE (TƯƠNG LAI)',
             posts: [chap4_intro, ...chap4_future] // Inject Bridge Post
         }
     ];
