@@ -684,7 +684,17 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Tôi từng thấy nhiều bạn NCS chạy mô hình xong, mặt hớn hở khoe: "Anh ơi P-value của em xanh lét (< 0.05) rồi nè, ngon chưa?".\n\nTôi hỏi lại: "Thế Effect Size (f2) bao nhiêu? Predictive Relevance (Q2) thế nào? Outer Loadings có cái nào rác không?".\n\nBạn ấy ngớ người: "Ủa mấy cái đó là cái gì hả anh? Em tưởng P < 0.05 là chân ái rồi?".\n\nSai bét! Đây là hệ quả của tư duy "bấm nút" (Button Pusher). Trong thế giới Q1, P-value chỉ là cái "Vé gửi xe". Có vé thì được vào rạp, nhưng phim có hay không (Kết quả có ý nghĩa thực tiễn không) thì P-value câm nín. Hôm nay tôi sẽ dắt các bạn đi qua "3 Vòng Kiểm Tra An Ninh" để xem mô hình của bạn là "Siêu xe" hay là "Xe đồng nát sơn lại".' }],
+                children: [{ _type: 'span', text: 'Thú thật với các bạn, hồi cấp 3 tôi dốt Toán lắm (đủ điểm qua môn thôi). Nhưng giờ tôi vẫn chạy mô hình SEM ầm ầm. Vì sao? Vì phần mềm (SmartPLS/SPSS) nó làm hộ hết phép tính rồi. Việc của mình là: Bấm nút và Đọc kết quả.\n\nNhưng đợi đã! Trước khi bấm nút "Analyze", bạn đã làm sạch "con cá" dữ liệu chưa? Ở bài trước tôi đã hứa nói về "Nghệ thuật làm sạch dữ liệu". Đừng có dại dột mà ném nguyên con cá còn đầy vảy, bùn đất (dữ liệu thô) vào nồi lẩu (phần mềm). Nó sẽ tanh ngòm và không ai nuốt nổi đâu.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Giai đoạn 0: Sơ chế "Con Cá" (Data Cleaning)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Đừng tin ai cả, hãy tự tay làm sạch:\n1. Check Missing Data: Có ô trống nào không? Nếu < 5% thì dùng Mean Replacement (lấp liếm bằng giá trị trung bình). Nếu > 15% thì xóa luôn dòng đó.\n2. Check Outliers (Dị biệt): Có ông nào đánh toàn số 1 hoặc toàn số 5 không? Có ông nào trả lời bảng hỏi dài 50 câu trong vòng 30 giây không? (Siêu nhân à?). Xóa ngay những dòng rác đó.\n3. Check Normality (Phân phối chuẩn): Dữ liệu có hình cái chuông hay méo xẹo? (SmartPLS thì không cần quá khắt khe cái này, nhưng SPSS thì cần).' }],
             },
             {
                 _type: 'block',
@@ -694,7 +704,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đừng vội nhìn Alpha. Móng mà lún thì nhà sập, dù bạn có sơn Alpha màu xanh lét thì nó vẫn là đống gạch vụn.' }],
+                children: [{ _type: 'span', text: 'Sau khi cá sạch rồi mới cho vào nồi. Nhưng khoan ăn vội, phải soi xem móng nhà có chắc không đã. Đừng vội nhìn Alpha. Móng mà lún thì nhà sập, dù bạn có sơn Alpha màu xanh lét thì nó vẫn là đống gạch vụn.' }],
             },
             {
                 _type: 'block',
@@ -764,12 +774,22 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: '[CẢNH BÁO TỬ THẦN]: Trò mèo HARKing' }],
+                children: [{ _type: 'span', text: '[LỜI KHUYÊN GAM MÀU TỐI]: Khi Kết Quả "Xấu"' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Nhiều ông thấy kết quả không như ý là lén lút sửa lại giả thuyết cho khớp. \nĐó gọi là HARKing (Hypothesizing After Results are Known) - "Vẽ bùa cho ma đọc". \nĐừng nghĩ Reviewer ngu. Họ nhìn Logic gượng gạo là biết ngay bạn đang "nấu số liệu". Thà kết quả xấu mà thật ("Không có ý nghĩa thống kê"), còn hơn là Vẽ ra một sự thật giả dối.' }],
+                children: [{ _type: 'span', text: 'NCS sợ nhất là P-value > 0.05 (màu đỏ - bác bỏ giả thuyết).\nĐừng sợ! Trong khoa học, việc chứng minh "Lý thuyết cũ không còn đúng" đôi khi còn giá trị hơn việc "vuốt đuôi" lý thuyết cũ (Confirmation Bias). \nCái bạn cần là giải thích ĐÚNG (Tại sao nó không tác động? Do bối cảnh VN khác? Do khủng hoảng kinh tế?), chứ không phải cố đấm ăn xôi P-Hacking để giải thích cho ĐẸP.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '[CẢNH BÁO THẨM MỸ]: Đừng "Ném" Bảng Thô Vào Mặt Reviewer' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Reviewer cực ghét việc NCS copy-paste nguyên cái bảng Output loằng ngoằng từ SmartPLS vào bài báo. Nhìn phèn không chịu được.\nBảng biểu từ phần mềm chỉ là "nguyên liệu thô". Muốn lên Q1, bạn phải "xào nấu" lại theo chuẩn APA 7th (kẻ bảng 3 dòng, font chữ, alignment chuẩn chỉ). Đừng để Reviewer nhìn bảng mà thấy bạn lười biếng, thiếu tôn trọng người đọc.' }],
             },
             {
                 _type: 'block',
@@ -786,19 +806,13 @@ export const ncs_series_post = [
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: '"Validity" -> Đo đúng (khác với Reliability là Đo chính xác).' }],
+                children: [{ _type: 'span', text: '"HTMT" -> Kính chiếu yêu (Biến trùng lặp).' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: '"HTMT" -> Kính chiếu yêu (Phát hiện biến trùng lặp).' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'bullet',
-                children: [{ _type: 'span', text: '"f2" -> Độ "Phê" của tác động.' }],
+                children: [{ _type: 'span', text: '"APA 7th" -> Chuẩn mực cái đẹp trong trình bày bảng biểu.' }],
             },
             {
                 _type: 'block',
@@ -808,7 +822,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Trước khi nộp bài, tự hỏi:\n✅ Loadings < 0.7 đã xử lý chưa?\n✅ HTMT có < 0.85 không hay đang "anh em sinh đôi"?\n✅ VIF có < 3.3 không hay là đang "dẫm chân nhau"?\n✅ f2 có cái nào to to để chém gió không?\n\nNếu OK hết -> Chúc mừng, bạn đã thoát kiếp "Thợ bấm nút"!' }],
+                children: [{ _type: 'span', text: 'Trước khi nộp bài, tự hỏi:\n✅ Đã làm sạch data chưa (Missing, Outliers)?\n✅ Loadings < 0.7 đã xử lý chưa? HTMT có < 0.85 không?\n✅ VIF, f2, Q2 ổn chưa?\n✅ Bảng biểu đã format chuẩn APA 7th chưa?\n\nNếu OK hết -> Chúc mừng, bạn đã là một Data Strategist thực thụ!' }],
             }
         ]
     },
