@@ -91,7 +91,7 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                     <div className="relative aspect-[2/3] md:h-[600px] w-full md:w-auto mx-auto shadow-2xl rounded-r-lg rounded-l-sm overflow-hidden border-r-4 border-slate-800 rotate-1 hover:rotate-0 transition-transform duration-500 bg-slate-900">
                         {/* Placeholder for actual cover if mainImage fails, or hardcoded specific cover */}
                         <Image
-                            src="/blog/book_cover_intern_to_c_level.png"
+                            src="/blog/re_research_cover_v6_final_badge_1768056318088.png"
                             alt="Book Cover"
                             fill
                             className="object-cover"
@@ -107,11 +107,11 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                         <div>
                             <p className="text-amber-700 font-sans tracking-[0.2em] text-sm font-bold uppercase mb-4">The Official Handbook</p>
                             <h1 className="text-5xl md:text-7xl font-bold leading-tight text-slate-900 mb-4 ">
-                                Intern to <br />
-                                <span className="italic font-light text-slate-600">Researcher</span>
+                                Re- <br />
+                                <span className="italic font-light text-slate-600">Research</span>
                             </h1>
                             <p className="text-xl md:text-2xl text-slate-500 font-light italic">
-                                "Hành trình từ Trang giấy trắng đến Tư duy Học thuật"
+                                "Nghiên cứu khoa học: Một cuộc dạo chơi nghiêm túc"
                             </p>
                         </div>
 
