@@ -182,22 +182,22 @@ export default async function ForTeamPage() {
 
     // --- CHAPTER 1: MINDSET (TƯ DUY) ---
     const chap1_mindset = findMany([
-        'NCS101 - Bài 1', 'NCS101 - Bài 2', 'NCS101 - Bài 3', 'NCS101 - Bài 10',
+        'book-chapter-1-mindset',
     ]);
 
     // --- CHAPTER 2: SKILLSET (CÔNG CỤ) ---
     const chap2_tools = findMany([
-        'R101 - Bài 1', 'Python101 - Bài 1', 'R101 - Bài 2', 'R101 - Bài 3', 'R101 - Bài 8',
+        'book-chapter-2-skillset',
     ]);
 
     // --- CHAPTER 3: STRATEGY (CHIẾN LƯỢC) ---
     const chap3_strategy = findMany([
-        'NCS101 - Bài 6', 'Python101 - Bài 5', 'R101 - Bài 6', 'Python101 - Bài 6',
+        'book-chapter-3-strategy',
     ]);
 
     // --- CHAPTER 4: LEADERSHIP (LÃNH ĐẠO) ---
     const chap4_future = findMany([
-        'BI vs AI', 'Project Next',
+        'book-chapter-intro', // Placeholder if needed or keep empty for now
     ]);
 
     const chapters = [

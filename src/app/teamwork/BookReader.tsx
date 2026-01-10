@@ -77,63 +77,68 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
     // COVER PAGE VIEW
     if (!isReading) {
         return (
-            <div className="min-h-screen bg-[#fdfbf7] text-slate-900 font-serif relative overflow-hidden flex flex-col items-center justify-center p-4">
-                {/* Background Decor */}
-                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-50 mix-blend-multiply pointer-events-none"></div>
+            <div className={cn("min-h-screen bg-[#1a1a2e] text-slate-100 font-serif relative overflow-hidden flex flex-col items-center justify-center p-8", fontClass)}>
+                {/* Background Decor - Dark Academia Theme */}
+                <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 pointer-events-none"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-[#1a1a2e] to-slate-900 opacity-90 z-0"></div>
 
                 <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
                     transition={{ duration: 0.8 }}
-                    className="max-w-5xl w-full grid md:grid-cols-2 gap-12 items-center z-10"
+                    className="max-w-6xl w-full grid md:grid-cols-2 gap-16 items-center z-10 relative"
                 >
-                    {/* Cover Image */}
-                    <div className="relative aspect-[2/3] md:h-[600px] w-full md:w-auto mx-auto shadow-2xl rounded-r-lg rounded-l-sm overflow-hidden border-r-4 border-slate-800 rotate-1 hover:rotate-0 transition-transform duration-500 bg-slate-900">
-                        {/* Placeholder for actual cover if mainImage fails, or hardcoded specific cover */}
-                        <Image
-                            src="/blog/re_research_cover_v6_final_badge_1768056318088.png"
-                            alt="Book Cover"
-                            fill
-                            className="object-cover"
-                            priority
-                        />
-                        {/* Shine effect */}
-                        <div className="absolute inset-0 bg-gradient-to-tr from-white/10 to-transparent pointer-events-none"></div>
-                        <div className="absolute left-0 top-0 bottom-0 w-2 bg-gradient-to-r from-black/40 to-transparent"></div>
+                    {/* Cover Image - Full View (No Crop) */}
+                    <div className="relative w-full h-[500px] md:h-[650px] flex items-center justify-center">
+                        {/* Glow Effect */}
+                        <div className="absolute inset-0 bg-amber-500/20 blur-[100px] rounded-full pointer-events-none"></div>
+
+                        <div className="relative h-full w-full drop-shadow-2xl hover:scale-[1.02] transition-transform duration-500 ease-out">
+                            <Image
+                                src="/blog/re_research_cover_v6_final_badge_1768056318088.png"
+                                alt="Re-Research Book Cover"
+                                fill
+                                className="object-contain"
+                                priority
+                            />
+                        </div>
                     </div>
 
-                    {/* Intro Text */}
-                    <div className="space-y-8 text-center md:text-left">
+                    {/* Intro Text - Left Align on Desktop */}
+                    <div className="space-y-8 text-center md:text-left text-slate-200">
                         <div>
-                            <p className="text-amber-700 font-sans tracking-[0.2em] text-sm font-bold uppercase mb-4">The Official Handbook</p>
-                            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-slate-900 mb-4 ">
+                            <p className="text-amber-400 font-sans tracking-[0.3em] text-xs md:text-sm font-bold uppercase mb-6 flex items-center justify-center md:justify-start gap-3">
+                                <span className="w-8 h-[1px] bg-amber-400"></span>
+                                The Official Handbook
+                            </p>
+                            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white mb-6 drop-shadow-lg">
                                 Re- <br />
-                                <span className="italic font-light text-slate-600">Research</span>
+                                <span className="italic font-light text-amber-100/90 font-serif">Research</span>
                             </h1>
-                            <p className="text-xl md:text-2xl text-slate-500 font-light italic">
-                                "Nghiên cứu khoa học: Một cuộc dạo chơi nghiêm túc"
+                            <p className="text-xl md:text-2xl text-slate-300 font-light italic leading-relaxed">
+                                "Nghiên cứu khoa học: <br /> Một cuộc dạo chơi nghiêm túc"
                             </p>
                         </div>
 
-                        <div className="w-24 h-1 bg-amber-600 mx-auto md:mx-0"></div>
+                        <div className="w-24 h-1 bg-amber-500 mx-auto md:mx-0 shadow-[0_0_20px_rgba(245,158,11,0.5)]"></div>
 
-                        <p className="text-lg leading-relaxed text-slate-800 max-w-lg font-serif">
-                            Một lộ trình được biên tập bài bản, dẫn dắt bạn đi từ việc xây dựng <strong>Tư duy cốt lõi</strong> (Mindset), trang bị <strong>Công cụ phân tích</strong> (Toolset) đến khả năng <strong>Hoạch định chiến lược</strong> (Skillset).
-                            <br /><br />
-                            Đây không chỉ là sách, đây là tấm bản đồ cho sự nghiệp nghiên cứu của bạn.
+                        <p className="text-lg leading-relaxed text-slate-300 max-w-lg font-serif opacity-90">
+                            Một lộ trình được biên tập bài bản, dẫn dắt bạn đi từ <strong>Tư duy cốt lõi</strong> (Mindset), trang bị <strong>Công cụ phân tích</strong> (Skillset) đến <strong>Chiến lược xuất bản</strong> (Strategy).
                         </p>
 
-                        <button
-                            onClick={handleStartReading}
-                            className="group relative px-8 py-4 bg-slate-900 text-white font-sans font-bold tracking-wider hover:bg-amber-700 transition-all rounded-sm shadow-xl hover:shadow-2xl hover:-translate-y-1 overflow-hidden"
-                        >
-                            <span className="relative z-10 flex items-center gap-2">
-                                BẮT ĐẦU ĐỌC <BookOpen className="w-5 h-5" />
-                            </span>
-                        </button>
+                        <div className="pt-4 flex flex-col md:flex-row gap-4 justify-center md:justify-start">
+                            <button
+                                onClick={handleStartReading}
+                                className="group relative px-10 py-4 bg-amber-600/90 hover:bg-amber-500 text-white font-sans font-bold tracking-wider transition-all rounded-sm shadow-xl hover:shadow-2xl hover:-translate-y-1 overflow-hidden"
+                            >
+                                <span className="relative z-10 flex items-center gap-3">
+                                    ĐỌC SÁCH NGAY <BookOpen className="w-5 h-5 group-hover:animate-pulse" />
+                                </span>
+                            </button>
+                        </div>
 
-                        <p className="text-xs text-slate-400 font-sans uppercase tracking-widest mt-12">
-                            Lehai Education • Academic Edition 2026
+                        <p className="text-xs text-slate-500 font-sans uppercase tracking-widest mt-12">
+                            Lehai Education • Verifed by NCSKIT.ORG
                         </p>
                     </div>
                 </motion.div>
