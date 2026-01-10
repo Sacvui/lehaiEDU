@@ -82,7 +82,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Thời đại này mà ngồi cắn bút nghĩ đề tài thì quê độ lắm. Hãy dùng "hỏa lực" công nghệ để soi Gap:\n\n - **Bibliometrics (VOSviewer / Biblioshiny):** Vẽ bản đồ tri thức (Science Mapping). Nhìn vào đó biết ngay cụm chủ đề nào đã "đỏ sàn" (Red Ocean - quá nhiều người làm) và cụm nào còn thưa thớt (Blue Ocean - cơ hội của bạn).\n - **PRISMA:** Quy trình lọc bài báo chuẩn ISO. Sàng lọc từ 1000 bài -> 50 bài cốt lõi. Reviewer nhìn sơ đồ PRISMA là gật đầu ngay vì tính minh bạch.\n - **Thematic Coding:** Dùng NVivo hoặc Atlas.ti mã hóa các ý tưởng của người đi trước, tìm ra "Keywords" đắt giá mà họ hay nhắc đến nhưng chưa giải quyết triệt để.' }],
+                children: [{ _type: 'span', text: 'Thời đại này mà ngồi cắn bút nghĩ đề tài thì quê độ lắm. Hãy dùng "hỏa lực" công nghệ để soi Gap:\n\n - Bibliometrics (VOSviewer / Biblioshiny): Vẽ bản đồ tri thức (Science Mapping). Nhìn vào đó biết ngay cụm chủ đề nào đã "đỏ sàn" (Red Ocean - quá nhiều người làm) và cụm nào còn thưa thớt (Blue Ocean - cơ hội của bạn).\n - PRISMA: Quy trình lọc bài báo chuẩn ISO. Sàng lọc từ 1000 bài -> 50 bài cốt lõi. Reviewer nhìn sơ đồ PRISMA là gật đầu ngay vì tính minh bạch.\n - Thematic Coding: Dùng NVivo hoặc Atlas.ti mã hóa các ý tưởng của người đi trước, tìm ra "Keywords" đắt giá mà họ hay nhắc đến nhưng chưa giải quyết triệt để.' }],
             },
             {
                 _type: 'block',
