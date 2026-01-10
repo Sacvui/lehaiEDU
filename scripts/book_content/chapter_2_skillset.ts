@@ -15,12 +15,12 @@ export const book_chapter_2 = [
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Hai Morning: Đừng làm "Nô lệ" cho Công cụ' }],
+                children: [{ _type: 'span', text: 'Hai Morning: Đừng dùng dao mổ trâu giết gà' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Chào buổi sáng. \n\nTôi từng thấy nhiều bạn NCS "nghiện" chạy mô hình. Gặp dữ liệu nào cũng ném vào chạy, ra kết quả xanh đỏ tím vàng rồi vỗ tay khen hay, dù chẳng hiểu bản chất nó là gì. Đó là hội chứng "Button Pusher" - Thợ bấm nút.\n\nTrong chương này, tôi sẽ giới thiệu với bạn những món vũ khí hạng nặng: R, Python, SmartPLS. Nhưng xin hãy nhớ: Vũ khí dù sắc bén đến đâu cũng chỉ là cục sắt vô tri nếu người cầm nó không có tư duy chiến lược. Hãy học công cụ để làm Chủ nó, chứ đừng để nó dắt mũi mình.\n\nHãy coi R hay Python là những "người giúp việc" tận tụy. Còn bạn, bạn là Kiến trúc sư.' }],
+                children: [{ _type: 'span', text: 'Chào buổi sáng. \n\nTôi thấy nhiều bạn sắm Macbook 50 triệu về chỉ để... gõ Word. Phí của giời. \nLàm nghiên cứu cũng vậy. Các bạn có trong tay những con quái vật (R, Python) nhưng lại chỉ dùng Excel để cộng trừ nhân chia. \n\nChương này tôi không dạy Code (lên Youtube mà học). Tôi dạy bạn cách tư duy: Khi nào thì dùng dao gọt hoa quả (Excel), khi nào thì vác đại bác (Python) ra bắn.' }],
             },
             {
                 _type: 'block',
@@ -28,118 +28,118 @@ export const book_chapter_2 = [
                 children: [{ _type: 'span', text: '---\n' }],
             },
 
-            // --- PHẦN 1: SMARTPLS - CỖ MÁY CHIẾN ĐẤU (THE ENGINE) ---
+            // --- PHẦN 1: SMARTPLS - CỖ MÁY KIẾM CƠM (THE CASH COW) ---
             {
                 _type: 'block',
                 style: 'h1',
-                children: [{ _type: 'span', text: 'Phần 1: SmartPLS - "Cỗ xe tăng" của Nghiên cứu sinh' }],
+                children: [{ _type: 'span', text: 'Phần 1: SmartPLS - Cỗ máy in bằng' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Nếu bạn làm nghiên cứu hành vi (Marketing, HR, Quản trị), 90% khả năng bạn sẽ dùng mô hình SEM (Structural Equation Modeling). Và SmartPLS chính là cỗ xe tăng lầm lũi nhưng hiệu quả nhất hiện nay.\n\nKhác với AMOS đỏng đảnh (cần dữ liệu phân phối chuẩn, mẫu lớn), SmartPLS "ăn tạp" hơn nhiều. Dữ liệu hơi méo? Mẫu hơi bé? Nó xử được tuốt. Nhưng chính vì dễ dãi nên nó cũng dễ sinh ra ảo tưởng.' }],
+                children: [{ _type: 'span', text: 'Nói thẳng luôn: Muốn ra trường sớm thì học SmartPLS. \nTại sao? Vì nó dễ. Kéo thả như chơi Lego. Dữ liệu méo mó, ít ỏi nó cũng nuốt trôi hết. Nó là cứu cánh cho những bộ dữ liệu "nát".' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: '1. Quy trình "Nấu Lẩu" 3 bước' }],
+                children: [{ _type: 'span', text: '1. Quy trình 3 bước (Dễ như ăn kẹo)' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Hãy tưởng tượng chạy mô hình như nấu một nồi lẩu:\n\n- Bước 0: Sơ chế (Data Cleaning): Cá phải tươi. Missing Data (dữ liệu khuyết) và Outliers (dị biệt) phải bị loại bỏ thẳng tay.\n- Bước 1: Nếm nước dùng (Measurement Model): Thang đo có chuẩn không? \n   + Cronbach Alpha & CR > 0.7 (Độ tin cậy).\n   + AVE > 0.5 (Độ hội tụ).\n   + HTMT < 0.85 (Giá trị phân biệt - Hai khái niệm phải khác nhau, đừng để "tình yêu" và "thích" là một).\n- Bước 2: Thưởng thức (Structural Model): Giờ mới xem X có tác động đến Y không (P-value < 0.05). Và quan trọng hơn: Tác động mạnh hay yếu (f2)?' }],
+                children: [{ _type: 'span', text: '- **Bước 1: Check hàng (Measurement Model):** Thang đo có xịn không? \n   + Cronbach Alpha > 0.7: Đủ tin cậy.\n   + AVE > 0.5: Đủ chất lượng.\n   + HTMT < 0.85: Không bị trùng lặp.\n- **Bước 2: Check giá (Structural Model):** Giả thuyết có được chấp nhận không? (P-value < 0.05). \n- **Bước 3: Check lãi (R-square):** Mô hình giải thích được bao nhiêu % hiện tượng? Càng cao càng oai.' }],
             },
             {
                 _type: 'block',
                 style: 'blockquote',
-                children: [{ _type: 'span', text: '💡 [MẸO NHÀ NGHỀ]: Đừng chỉ nhìn P-value. Một nghiên cứu "sexy" là nghiên cứu tìm ra những tác động MẠNH (f2 lớn) hoặc những biến Điều tiết (Moderator) bất ngờ. Ví dụ: "Tiền làm tăng hạnh phúc" (Thường thôi). Nhưng "Tiền chỉ làm tăng hạnh phúc khi bạn... nghèo" (Đây là Biến điều tiết -> Hay hơn nhiều!).' }],
+                children: [{ _type: 'span', text: '💡 [LỜI KHUYÊN]: Khi chạy ra kết quả xấu, đừng vội xóa dữ liệu. Hãy xem lại lý thuyết. Đôi khi kết quả "fail" lại là một phát hiện chấn động đấy.' }],
             },
 
             // --- BRIDGE 1 -> 2 ---
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '\nChạy mô hình xong rồi, có kết quả rồi. Nhưng chẳng lẽ copy cái bảng kết quả xấu xí của phần mềm vào luận án? Không! Chúng ta cần trang điểm cho nó. Và R chính là chuyên gia trang điểm đại tài.\n' }],
+                children: [{ _type: 'span', text: '\nSmartPLS cho ra kết quả, nhưng hình vẽ của nó thì xấu đau đớn. Muốn bài đăng Q1, hình phải đẹp như tác phẩm nghệ thuật. Đó là lúc bạn cần gọi tên "R".\n' }],
             },
 
-            // --- PHẦN 2: R - NGHỆ THUẬT VISUAL (THE ARTIST) ---
+            // --- PHẦN 2: R - HỌA SĨ TÀI BA (THE ARTIST) ---
             {
                 _type: 'block',
                 style: 'h1',
-                children: [{ _type: 'span', text: 'Phần 2: R & ggplot2 - Khi Số Liệu Biết Múa' }],
+                children: [{ _type: 'span', text: 'Phần 2: R - Vẽ hình để "Lòe" thiên hạ' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Excel vẽ hình không xấu, nhưng nó... quê. Trong giới học thuật đỉnh cao (Q1), người ta nhìn vào biểu đồ là biết ngay đẳng cấp. `ggplot2` của R chính là chuẩn mực của vẻ đẹp học thuật (Academic Aesthetic).' }],
+                children: [{ _type: 'span', text: 'Excel vẽ hình nhìn rất... văn phòng. R vẽ hình nhìn rất... bác học.\nChỉ một dòng code `ggplot`, bạn có thể vẽ ra những biểu đồ long lanh, phức tạp mà Excel khóc thét.' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: '1. Vì sao R lại "thần thánh"?' }],
+                children: [{ _type: 'span', text: '1. Tại sao phải khổ sở học code?' }],
             },
             {
                 _type: 'normal', // Typo fix: style: 'normal'
                 style: 'normal',
-                children: [{ _type: 'span', text: '- Tái lập (Reproducible): Bạn viết code 1 lần. Tháng sau có dữ liệu mới, bấm nút "Run" là xong. Excel thì phải ngồi vẽ lại từ đầu.\n- Miễn phí: SPSS/AMOS giá cả ngàn đô. R miễn phí trọn đời.\n- Cộng đồng: Hàng triệu nhà khoa học dùng R. Bạn gặp lỗi gì, Google cái là ra ngay.' }],
+                children: [{ _type: 'span', text: 'Vì nó Tái sử dụng (Reusable). \nBạn hì hục click chuột 3 tiếng vẽ xong cái bieur đồ trong Excel. Sếp bảo: "Đổi màu đỏ thành xanh nhé". Bạn lại hì hục click lại từ đầu.\nVới R? Sửa chữ "red" thành "blue". Bấm Run. Xong trong 1 giây. Đẳng cấp là ở chỗ đó.' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: '2. Tư duy "Xếp hình" (Layers)' }],
+                children: [{ _type: 'span', text: '2. Tư duy "Bóc tách" (Layers)' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'R không vẽ hình kiểu "Mì ăn liền" chọn mẫu có sẵn. R vẽ theo tư duy lớp (Layer):\n- Lớp 1: Dữ liệu (Data)\n- Lớp 2: Trục tọa độ (Aesthetics)\n- Lớp 3: Hình học (Geometries - Cột, Đường, Tròn...)\n- Lớp 4: Trang trí (Theme, Color)\n\nChính vì thế nó cực kỳ linh hoạt. Bạn muốn vẽ gì cũng được, miễn là bạn tưởng tượng ra.' }],
+                children: [{ _type: 'span', text: 'R dạy bạn tư duy tách bạch: Dữ liệu là dữ liệu, Hình thức là hình thức. \nBạn có thể khoác lên bộ dữ liệu cũ những "bộ cánh" mới toanh. Hôm nay vẽ biểu đồ cột, mai chán vẽ biểu đồ nhiệt (Heatmap). Quyền lực nằm trong tay bạn.' }],
             },
 
             // --- BRIDGE 2 -> 3 ---
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '\nR vẽ hình đẹp, nhưng xử lý dữ liệu lớn (Big Data) thì hơi... chậm. Nếu bạn phải xử lý hàng triệu dòng dữ liệu từ sàn thương mại điện tử hay mạng xã hội, bạn cần một con quái vật khác: Python.\n' }],
+                children: [{ _type: 'span', text: '\nR rất tuyệt để vẽ và chạy thống kê. Nhưng nếu sếp vứt cho bạn 1 triệu dòng dữ liệu từ Shopee và bảo: "Tìm xem đứa nào đang chửi công ty mình?". Lúc đó R sẽ thở dốc. Đã đến lúc gọi bố già Python.\n' }],
             },
 
-            // --- PHẦN 3: PYTHON - CON DAO THỤY SỸ (THE AUTOMATOR) ---
+            // --- PHẦN 3: PYTHON - ÔNG TRÙM DỮ LIỆU (THE BOSS) ---
             {
                 _type: 'block',
                 style: 'h1',
-                children: [{ _type: 'span', text: 'Phần 3: Python - Tự Động Hóa Nỗi Đau' }],
+                children: [{ _type: 'span', text: 'Phần 3: Python - Nuốt trọn Big Data' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Nỗi đau lớn nhất của việc làm nghiên cứu là gì? Là Dọn rác dữ liệu (Data Cleaning). File excel khách hàng thì lộn xộn, tên cột thì sai, vietnamese thi khong dau. Làm tay thì đến tết Congo.\n\nPython với thư viện `Pandas` sinh ra để dọn rác. Nó có thể xử lý file Excel 10 triệu dòng trong tích tắc.' }],
+                children: [{ _type: 'span', text: 'Python không phải là con rắn. Nó là con quái vật. \nNó có thể cạo (Scrape) toàn bộ dữ liệu trên web về máy bạn trong lúc bạn đang ngủ. Nó có thể đọc (NLP) hàng ngàn comment khách hàng để biết họ vui hay buồn.' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: '1. Pandas - Excel phiên bản Tiên hiệp' }],
+                children: [{ _type: 'span', text: '1. Tự động hóa sự lười biếng' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Hãy quên VLOOKUP đi. Trong Python, lệnh `merge` mạnh gấp 10 lần. Bạn có thể gộp 100 file excel từ 100 chi nhánh lại thành 1 file tổng chỉ với... 3 dòng code. \n\nVí dụ Case Study: Bạn cần phân tích sentiment (cảm xúc) của 10.000 bình luận trên Shopee về sản phẩm của bạn. Đọc bằng mắt à? Không. Python dùng thư viện xử lý ngôn ngữ tự nhiên (NLP) để đọc hộ bạn, và chấm điểm xem khách đang khen hay chửi.' }],
+                children: [{ _type: 'span', text: 'Tôi từng mất 2 ngày cuối tuần để gộp 50 file báo cáo doanh số. \nSau khi biết Python, tôi viết 5 dòng code. Bấm Enter. Đi pha cafe. Quay lại xong rồi. \nĐừng làm việc chăm chỉ. Hãy làm việc thông minh.' }],
             },
 
-            // --- PHẦN 4: AI COPILOT - VŨ KHÍ BÍ MẬT (NEW) ---
+            // --- PHẦN 4: AI COPILOT - NGƯỜI CỘNG SỰ (THE PARTNER) ---
             {
                 _type: 'block',
                 style: 'h1',
-                children: [{ _type: 'span', text: 'Phần 4: AI Copilot - "Bộ xương trợ lực" (Exoskeleton)' }],
+                children: [{ _type: 'span', text: 'Phần 4: AI Copilot - Code bằng mồm' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đừng sợ code! Ngày xưa muốn dùng R/Python phải học code hộc máu mồm. Ngày nay, bạn có AI (ChatGPT, Claude, Cursor).\n\nBạn không cần nhớ cú pháp `ggplot(df, aes(x=...))`. Bạn chỉ cần bảo AI:\n> "Hãy viết code R vẽ biểu đồ tương quan giữa Lương và Hài Lòng, đẹp chuẩn APA, màu xanh navy."\n\nNó sẽ viết code cho bạn. Việc của bạn là copy-paste và chạy.\n\nĐây chính là tư duy "Re-Research": Chúng ta không học cách làm thợ (viết từng dòng code). Chúng ta học cách làm Kiến trúc sư (Ra đề bài cho AI). AI là đôi tay, còn bạn là bộ não.' }],
+                children: [{ _type: 'span', text: 'Tin vui: Bạn KHÔNG CẦN phải nhớ cú pháp code nữa. \nChatGPT, Claude, Cursor ra đời để làm nô lệ cho bạn. \nBạn chỉ cần ra lệnh: "Viết cho tao code Python để cào dữ liệu giá Iphone trên Tiki". Nó sẽ viết. \n\nKỹ năng quan trọng nhất bây giờ không phải là Code, mà là Prompt Engineering (Kỹ năng ra lệnh). Biết hỏi đúng, AI sẽ cho câu trả lời đúng.' }],
             },
 
             // --- LỜI KẾT CHƯƠNG ---
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '---\n\nKhép lại Chương 2, bạn đã thấy "tủ đồ nghề" của mình đầy đặn hơn chưa? Đừng cố học hết tất cả cùng lúc. Hãy bắt đầu từ SmartPLS (để xong luận án), sau đó dùng AI để học thêm chút R vẽ hình cho đẹp. \n\nCó Mindset rồi, có Skillset rồi. Nhưng làm sao để dùng nó chiến thắng trong cuộc đua công bố quốc tế? Hẹn gặp lại ở **Chương 3: The Strategy** - Nơi những "Lão hồ ly" bàn chuyện chiến lược.' }],
+                children: [{ _type: 'span', text: '---\n\nXong nhé. Giờ bạn đã có súng (SmartPLS), có gươm (R) và có cả xe tăng (Python). Nhưng mang đống vũ khí này ra trận mà không có Chiến thuật thì cũng chỉ làm bia đỡ đạn thôi. \n\nChương sau: **The Strategy**. Tôi sẽ chia sẻ bí kíp sinh tồn giữa bầy sói (Reviewer) và cách để bài báo của bạn "sống sót" qua vòng gửi xe.' }],
             },
         ]
     }

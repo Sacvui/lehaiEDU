@@ -147,40 +147,53 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
 
     // READER VIEW
     return (
-        <div className={cn("min-h-screen bg-[#fdfbf7] flex relative", fontClass)}>
+        <div className={cn("min-h-screen bg-[#fdfbf7] flex relative selection:bg-amber-200 selection:text-amber-900", fontClass)}>
+            {/* Reading Progress Bar (Sticky Top) */}
+            <div className="fixed top-0 left-0 right-0 h-1 bg-slate-200 z-[60]">
+                <motion.div
+                    className="h-full bg-amber-600"
+                    initial={{ width: "0%" }}
+                    animate={{ width: `${((activePostIndex + 1) / allPosts.length) * 100}%` }}
+                    transition={{ duration: 0.3 }}
+                />
+            </div>
+
             {/* Mobile Sidebar Toggle */}
             <button
                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                className="fixed top-4 left-4 z-50 p-2 bg-slate-900 text-white rounded-md md:hidden shadow-lg"
+                className="fixed top-4 left-4 z-50 p-3 bg-white/90 backdrop-blur border border-slate-200 text-slate-800 rounded-full md:hidden shadow-lg hover:bg-amber-50 active:scale-95 transition-all"
             >
                 {isSidebarOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
 
             {/* Sidebar (TOC) */}
             <aside className={cn(
-                "fixed inset-y-0 left-0 w-80 bg-[#f5f2eb] border-r border-[#e5e0d5] z-40 transform transition-transform duration-300 md:translate-x-0 overflow-hidden flex flex-col",
+                "fixed inset-y-0 left-0 w-80 bg-[#f5f2eb] border-r border-[#e5e0d5] z-40 transform transition-transform duration-300 md:translate-x-0 overflow-hidden flex flex-col shadow-2xl md:shadow-none",
                 isSidebarOpen ? "translate-x-0" : "-translate-x-full"
             )}>
                 <div className="p-6 border-b border-[#e5e0d5] bg-[#ece8df]">
-                    <h2 className="font-bold text-slate-900 uppercase tracking-widest text-sm flex items-center gap-2">
-                        <BookOpen size={16} /> Mục lục
+                    <h2 className="font-bold text-slate-900 uppercase tracking-widest text-xs flex items-center gap-2">
+                        <BookOpen size={14} className="text-amber-700" /> Mục lục
                     </h2>
-                    <p className="text-xs text-slate-500 mt-1">70+ Bài viết • 4 Phần</p>
+                    <p className="text-xs text-slate-500 mt-2 font-serif italic">Phiên bản "Đại Phẫu"</p>
                 </div>
 
-                <div className="flex-1 overflow-y-auto p-4 space-y-6 scrollbar-thin scrollbar-thumb-slate-300">
+                <div className="flex-1 overflow-y-auto p-4 space-y-4 scrollbar-thin scrollbar-thumb-slate-300 scrollbar-track-transparent">
                     {chapters.map((chapter) => (
-                        <div key={chapter.id}>
+                        <div key={chapter.id} className="pb-2 border-b border-slate-200/50 last:border-0">
                             <div
                                 onClick={() => setActiveChapterId(chapter.id === activeChapterId ? '' : chapter.id)}
-                                className="flex items-center justify-between cursor-pointer group mb-2"
+                                className="flex items-center justify-between cursor-pointer group py-2 select-none"
                             >
-                                <h3 className="font-bold text-slate-800 text-lg group-hover:text-amber-700 transition-colors">
+                                <h3 className={cn(
+                                    "font-bold text-sm md:text-base transition-colors",
+                                    activeChapterId === chapter.id ? "text-amber-900" : "text-slate-700 group-hover:text-amber-700"
+                                )}>
                                     {chapter.title}
                                 </h3>
                                 <ChevronDown
                                     size={16}
-                                    className={cn("transition-transform text-slate-400", activeChapterId === chapter.id && "rotate-180")}
+                                    className={cn("transition-transform text-slate-400", activeChapterId === chapter.id && "rotate-180 text-amber-600")}
                                 />
                             </div>
 
@@ -190,7 +203,7 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                                         initial={{ height: 0, opacity: 0 }}
                                         animate={{ height: 'auto', opacity: 1 }}
                                         exit={{ height: 0, opacity: 0 }}
-                                        className="space-y-1 pl-4 border-l-2 border-slate-200"
+                                        className="space-y-1 pl-4 border-l-[1.5px] border-slate-300 ml-1"
                                     >
                                         {chapter.posts.map((post, idx) => (
                                             <li key={post._id}>
@@ -201,13 +214,13 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                                                         window.scrollTo({ top: 0, behavior: 'smooth' });
                                                     }}
                                                     className={cn(
-                                                        "text-left w-full text-sm py-1.5 px-2 rounded-md transition-all line-clamp-1",
+                                                        "text-left w-full text-sm py-2 px-3 rounded-md transition-all line-clamp-2 leading-snug",
                                                         activePostId === post._id
-                                                            ? "bg-amber-100 text-amber-900 font-semibold text-base"
-                                                            : "text-slate-800 font-medium hover:text-black hover:bg-white/50"
+                                                            ? "bg-amber-100/80 text-amber-900 font-bold shadow-sm"
+                                                            : "text-slate-600 hover:text-slate-900 hover:bg-black/5"
                                                     )}
                                                 >
-                                                    {post.title}
+                                                    {idx + 1}. {post.title}
                                                 </button>
                                             </li>
                                         ))}
@@ -219,7 +232,7 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                 </div>
 
                 <div className="p-4 border-t border-[#e5e0d5] bg-[#ece8df]">
-                    <button onClick={() => setIsReading(false)} className="flex items-center gap-2 text-sm text-slate-800 hover:text-amber-700 font-sans font-bold uppercase tracking-wider">
+                    <button onClick={() => setIsReading(false)} className="flex items-center gap-2 text-xs md:text-sm text-slate-700 hover:text-amber-700 font-sans font-bold uppercase tracking-wider w-full justify-center transition-colors">
                         <ArrowLeft size={16} /> Quay lại trang bìa
                     </button>
                 </div>
@@ -231,26 +244,31 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                 "md:ml-80" // Offset for sidebar
             )}>
                 {activePost ? (
-                    <article className="max-w-3xl mx-auto px-5 py-20 md:py-24">
-                        {/* Paper Texture Overlay */}
-                        <div className="fixed inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-20 pointer-events-none mix-blend-multiply"></div>
+                    <article className="max-w-3xl mx-auto px-6 md:px-12 py-20 md:py-28 relative">
+                        {/* Page Number Indicator (Floating Top Right) */}
+                        <div className="absolute top-8 right-8 md:right-12 text-slate-400 font-sans text-xs font-bold uppercase tracking-widest select-none">
+                            Trang {activePostIndex + 1} / {allPosts.length}
+                        </div>
 
-                        <div className="mb-10 text-center">
-                            <span className="text-amber-700 font-sans text-xs font-bold tracking-[0.2em] uppercase mb-4 block">
+                        {/* Paper Texture Overlay */}
+                        <div className="fixed inset-0 bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')] opacity-40 pointer-events-none mix-blend-multiply"></div>
+
+                        <div className="mb-12 text-center">
+                            <span className="text-amber-600 font-sans text-[10px] md:text-xs font-bold tracking-[0.3em] uppercase mb-6 block">
                                 {chapters.find(c => c.id === activeChapterId)?.title}
                             </span>
-                            <h1 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight mb-6 font-serif">
+                            <h1 className="text-3xl md:text-5xl font-bold text-slate-900 leading-tight mb-6 font-serif tracking-tight">
                                 {activePost.title}
                             </h1>
-                            <div className="flex items-center justify-center gap-4 text-slate-700 italic text-sm font-serif font-medium">
-                                <span>{Math.ceil(activePost.readingTime || 5)} phút đọc</span>
+                            <div className="flex items-center justify-center gap-4 text-slate-500 italic text-sm font-serif font-medium">
+                                <span className="flex items-center gap-1"><BookOpen size={14} /> {Math.ceil(activePost.readingTime || 5)} phút đọc</span>
                                 <span>•</span>
-                                <span>Hải Rong Chơi</span>
+                                <span className="text-amber-700 font-bold">Sidewalk Professor</span>
                             </div>
                         </div>
 
                         {activePost.mainImage && (
-                            <div className="relative w-full aspect-video mb-10 rounded-sm overflow-hidden shadow-md grayscale-[10%]">
+                            <div className="relative w-full aspect-[21/9] mb-12 rounded-sm overflow-hidden shadow-lg grayscale-[20%] sepia-[10%]">
                                 <Image
                                     src={urlForImage(activePost.mainImage).url()}
                                     alt={activePost.title}
@@ -260,78 +278,87 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                             </div>
                         )}
 
-                        <div className="book-content max-w-none mx-auto">
+                        <div className="book-content max-w-none mx-auto relative z-10">
                             <style jsx global>{`
                                 .book-content p, 
-                                .book-content li, 
-                                .book-content span {
-                                    color: #000000 !important;
-                                    font-weight: 500 !important;
-                                    line-height: 1.8 !important;
-                                    opacity: 1 !important;
+                                .book-content li {
+                                    font-family: 'Merriweather', serif; /* Ensure Serif */
+                                    color: #1a1a1a !important; /* Almost black */
+                                    font-size: 1.15rem !important; /* 18px */
+                                    line-height: 1.9 !important; /* Comfortable spacing */
+                                    margin-bottom: 1.5rem !important;
                                 }
                                 .book-content h1, 
                                 .book-content h2, 
-                                .book-content h3, 
-                                .book-content h4, 
-                                .book-content strong {
-                                    color: #000000 !important;
+                                .book-content h3 {
+                                    font-family: 'Inter', sans-serif; /* Headings are Sans */
+                                    color: #0f172a !important; /* Slate 900 */
                                     font-weight: 800 !important;
+                                    letter-spacing: -0.02em !important;
+                                }
+                                .book-content strong {
+                                    font-weight: 700 !important;
+                                    color: #000000 !important;
+                                }
+                                .book-content blockquote {
+                                    border-left: 4px solid #f59e0b !important; /* Amber border */
+                                    padding-left: 1.5rem !important;
+                                    font-style: italic !important;
+                                    color: #475569 !important; /* Slate 600 */
+                                    background: #fffbeb !important; /* Amber 50 */
+                                    padding: 1.5rem !important;
+                                    border-radius: 0 0.5rem 0.5rem 0;
+                                    margin: 2rem 0 !important;
                                 }
                                 .book-content a {
-                                    color: #b45309 !important; /* Amber-700 */
+                                    color: #d97706 !important; /* Amber-600 */
                                     text-decoration: underline;
+                                    text-underline-offset: 4px;
                                 }
                             `}</style>
                             <PortableText
                                 value={activePost.body}
-                                components={{
-                                    ...portableTextComponents,
-                                    block: {
-                                        // @ts-ignore - Spreading optional block types
-                                        ...(portableTextComponents.block || {}),
-                                        normal: ({ children }: any) => (
-                                            <p className="text-xl mb-6 font-serif text-black font-medium leading-relaxed">
-                                                {children}
-                                            </p>
-                                        ),
-                                        h1: ({ children }: any) => <h1 className="text-4xl mt-12 mb-6 font-sans font-extrabold text-black">{children}</h1>,
-                                        h2: ({ children }: any) => <h2 className="text-3xl mt-10 mb-5 font-sans font-bold text-black">{children}</h2>,
-                                        h3: ({ children }: any) => <h3 className="text-2xl mt-8 mb-4 font-sans font-bold text-black">{children}</h3>,
-                                        h4: ({ children }: any) => <h4 className="text-xl mt-6 mb-3 font-sans font-bold text-black">{children}</h4>,
-                                    },
-                                    list: {
-                                        bullet: ({ children }: any) => <ul className="list-disc list-inside space-y-2 mb-6 text-xl text-black font-medium">{children}</ul>,
-                                        number: ({ children }: any) => <ol className="list-decimal list-inside space-y-2 mb-6 text-xl text-black font-medium">{children}</ol>,
-                                    },
-                                    listItem: {
-                                        bullet: ({ children }: any) => <li className="ml-4 marker:text-black">{children}</li>,
-                                        number: ({ children }: any) => <li className="ml-4 marker:text-black">{children}</li>,
-                                    },
-                                } as any}
+                                components={portableTextComponents as any}
                             />
                         </div>
 
-                        {/* Navigation Footer */}
-                        <div className="mt-20 pt-12 border-t border-[#e5e0d5] flex justify-between items-center font-sans">
+                        {/* Navigation Footer - BIG PAGE NUMBERS */}
+                        <div className="mt-24 pt-12 border-t-2 border-slate-100 flex flex-col md:flex-row justify-between items-center gap-6 font-sans">
                             <button
                                 onClick={handlePrevPage}
                                 disabled={activePostIndex === 0}
-                                className="flex items-center gap-2 text-slate-500 hover:text-slate-900 disabled:opacity-30 disabled:cursor-not-allowed transition-colors"
+                                className="group flex items-center gap-3 text-slate-500 hover:text-slate-900 disabled:opacity-30 disabled:cursor-not-allowed transition-colors order-2 md:order-1"
                             >
-                                <ArrowLeft size={16} /> Previous
+                                <div className="w-10 h-10 rounded-full border border-slate-200 flex items-center justify-center group-hover:bg-slate-100 transition-colors">
+                                    <ArrowLeft size={16} />
+                                </div>
+                                <span className="font-bold text-sm uppercase tracking-wider hidden md:inline">Trang trước</span>
                             </button>
 
-                            <span className="text-xs tracking-widest text-[#d4d4d4] uppercase">Page {activePostIndex + 1} of {allPosts.length}</span>
+                            {/* CENTER BIG PAGE NUMBER */}
+                            <div className="flex flex-col items-center order-1 md:order-2">
+                                <span className="text-4xl font-black text-slate-200 select-none">
+                                    {activePostIndex + 1}
+                                </span>
+                                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-400">
+                                    / {allPosts.length}
+                                </span>
+                            </div>
 
                             <button
                                 onClick={handleNextPage}
                                 disabled={activePostIndex === allPosts.length - 1}
-                                className="flex items-center gap-2 text-slate-900 font-bold hover:text-amber-700 transition-colors"
+                                className="group flex items-center gap-3 text-slate-900 hover:text-black font-bold disabled:opacity-30 disabled:cursor-not-allowed transition-colors order-3"
                             >
-                                Next Chapter <ChevronRight size={16} />
+                                <span className="font-bold text-sm uppercase tracking-wider hidden md:inline">Trang sau</span>
+                                <div className="w-10 h-10 rounded-full bg-amber-500 text-white flex items-center justify-center shadow-lg group-hover:bg-amber-600 group-hover:scale-110 transition-all">
+                                    <ChevronRight size={18} />
+                                </div>
                             </button>
                         </div>
+
+                        {/* BOTTOM PADDING */}
+                        <div className="h-20"></div>
 
                     </article>
                 ) : (
