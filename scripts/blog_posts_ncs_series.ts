@@ -684,42 +684,42 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Tôi từng thấy nhiều bạn NCS chạy mô hình xong, mặt hớn hở khoe: "Anh ơi P-value của em xanh lét (< 0.05) rồi nè, ngon chưa?".\n\nTôi hỏi lại: "Thế Effect Size (f2) bao nhiêu? Predictive Relevance (Q2) thế nào? Có bị Collinearity (VIF) không?".\n\nBạn ấy ngớ người: "Ủa mấy cái đó là cái gì hả anh? Em tưởng P < 0.05 là chân ái rồi?".\n\nSai lầm chết người! Trong thế giới học thuật đỉnh cao (báo Q1), P-value chỉ là cái "Vé gửi xe". Có vé thì được vào rạp, nhưng phim có hay không (Kết quả có ý nghĩa thực tiễn không) thì P-value không nói lên được. Đừng làm một "Thợ bấm nút" (Button Pusher) chỉ biết click Analyze rồi copy số. Hãy làm một "Nhà chiến lược dữ liệu" (Data Strategist) biết đọc vị từng con số.' }],
+                children: [{ _type: 'span', text: 'Tôi từng thấy nhiều bạn NCS chạy mô hình xong, mặt hớn hở khoe: "Anh ơi P-value của em xanh lét (< 0.05) rồi nè, ngon chưa?".\n\nTôi hỏi lại: "Thế Effect Size (f2) bao nhiêu? Predictive Relevance (Q2) thế nào? Outer Loadings có cái nào rác không?".\n\nBạn ấy ngớ người: "Ủa mấy cái đó là cái gì hả anh? Em tưởng P < 0.05 là chân ái rồi?".\n\nSai bét! Đây là hệ quả của tư duy "bấm nút" (Button Pusher). Trong thế giới Q1, P-value chỉ là cái "Vé gửi xe". Có vé thì được vào rạp, nhưng phim có hay không (Kết quả có ý nghĩa thực tiễn không) thì P-value câm nín. Hôm nay tôi sẽ dắt các bạn đi qua "3 Vòng Kiểm Tra An Ninh" để xem mô hình của bạn là "Siêu xe" hay là "Xe đồng nát sơn lại".' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'I. Giai đoạn 1: Đo lường (Measurement Model) - Soi "Móng Nhà"' }],
+                children: [{ _type: 'span', text: 'Vòng 1: Soi "Móng Nhà" (Measurement Model)' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Trước khi xây nhà (chạy mô hình), phải xem cái móng có chắc không đã. Đừng chỉ nhìn mỗi Cronbach\'s Alpha (cái này xưa lắm rồi).' }],
+                children: [{ _type: 'span', text: 'Đừng vội nhìn Alpha. Móng mà lún thì nhà sập, dù bạn có sơn Alpha màu xanh lét thì nó vẫn là đống gạch vụn.' }],
             },
             {
                 _type: 'block',
                 style: 'h4',
-                children: [{ _type: 'span', text: '1. Outer Loadings: Nồng độ tinh khiết' }],
+                children: [{ _type: 'span', text: '1. Outer Loadings: Lọc mem "rác"' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đây là chỉ số cho biết mỗi câu hỏi đóng góp bao nhiêu "công lực" vào biến mẹ.\n - Loadings > 0.7: Hàng hiệu (Tuyệt vời).\n - Loadings 0.4 - 0.7: Hàng chợ (Cân nhắc). Nếu xóa đi mà làm Alpha tăng vọt thì xóa, còn không cứ để đó.\n - Loadings < 0.4: Hàng phế thải -> Xóa ngay lập tức.\n\n[Góc nhìn Q1]: Reviewer tinh mắt lắm. Họ sẽ soi xem bạn có đang "cố đấm ăn xôi" giữ lại đống rác (< 0.4) chỉ để đủ số lượng câu hỏi hay không.' }],
+                children: [{ _type: 'span', text: 'Loadings < 0.7 nghĩa là móng nhà bị rỗng. Đặc biệt nếu < 0.4 thì xóa ngay không thương tiếc. Đừng cố "đấm ăn xôi" giữ lại những câu hỏi rác chỉ để cứu Alpha. Reviewer tinh mắt lắm, họ nhìn bảng Loadings mà thấy lởm khởm là họ đánh trượt ngay vì tội "xây lầu trên cát".' }],
             },
             {
                 _type: 'block',
                 style: 'h4',
-                children: [{ _type: 'span', text: '2. HTMT: Tiêu chuẩn vàng thay thế Fornell-Larcker' }],
+                children: [{ _type: 'span', text: '2. Kiểm tra "Vàng thật hay Vàng giả" (Validity)' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Ngày xưa các cụ hay dùng Fornell-Larcker để chứng minh hai biến khác nhau (Discriminant Validity). Nhưng giờ các tạp chí xịn chuộng HTMT (Heterotrait-Monotrait Ratio) hơn.\nQuy tắc: HTMT phải < 0.85 (ngặt nghèo) hoặc < 0.90 (thoáng). Nếu HTMT > 0.9, nghĩa là Biến A và Biến B y hệt nhau (Anh em sinh đôi), tách ra nghiên cứu riêng làm gì cho mệt?' }],
+                children: [{ _type: 'span', text: 'Tưởng tượng bạn dùng một cái cân bị lệch 1kg. Cân 100 lần nó đều ra kết quả giống nhau (Reliability/Alpha cực cao), nhưng kết quả đó SAI bét (Validity bằng không).\n\nỞ tạp chí Q1, họ dùng HTMT để soi Discriminant Validity (Giá trị phân biệt). \nNếu HTMT > 0.85, nghĩa là Biến A và Biến B là "anh em sinh đôi" mặc áo khác màu. Bạn đang tự lừa mình dối người, đo 2 thứ thực chất là 1. Reviewer sẽ vỗ mặt: "Em tách ra làm gì cho chật đất?".' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'II. Giai đoạn 2: Cấu trúc (Structural Model) - Cuộc Chiến Giả Thuyết' }],
+                children: [{ _type: 'span', text: 'Vòng 2: Soi "Động Cơ" (Structural Model)' }],
             },
             {
                 _type: 'block',
@@ -729,17 +729,17 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đa cộng tuyến (Multicollinearity). Tưởng tượng bạn thuê 2 nhân viên có kỹ năng y hệt nhau (VIF cao > 3.3). Họ sẽ dẫm chân lên nhau, tranh giành công trạng, cuối cùng bạn chả biết ai là người làm được việc. Mô hình thống kê cũng thế, VIF mà cao thì các hệ số Beta sẽ bị méo mó, không tin được nữa.' }],
+                children: [{ _type: 'span', text: 'Đa cộng tuyến (Multicollinearity). Nếu các biến độc lập "yêu nhau" (VIF > 3.3), chúng sẽ dẫm chân lên nhau. Mô hình sẽ bị "nghẹt thở", Beta bị méo mó. Đừng để tình trạng "Loạn luân" biến số xảy ra trong mô hình của bạn.' }],
             },
             {
                 _type: 'block',
                 style: 'h4',
-                children: [{ _type: 'span', text: '4. f2 (Effect Size): Khách VIP hay Khách Vỉa Hè?' }],
+                children: [{ _type: 'span', text: '4. f2 (Effect Size): Nồng độ cồn' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'P-value < 0.05 chỉ bảo là "Có tác động". Nhưng tác động bé tí tẹo (f2 < 0.02) thì cũng vứt. \nReviewer muốn thấy f2 > 0.15 (Trung bình) hoặc > 0.35 (Mạnh). Đây mới là chỗ "ăn tiền" để bạn chém gió trong phần Thảo luận (Discussion). "Yếu tố X tác động cực mạnh tới Y, gấp đôi yếu tố Z..." nghe nó uy tín hơn hẳn.' }],
+                children: [{ _type: 'span', text: 'P-value < 0.05 chỉ là cái vé vào cửa. Nhưng f2 mới là nồng độ cồn.\nf2 bé tí (0.02) nghĩa là bạn chỉ đang "gãi ngứa" cho biến phụ thuộc thôi. Đừng vỗ ngực xưng tên là có đóng góp thực tiễn! Muốn Discussion hay, phải tìm được những thằng f2 > 0.15 (Tác động trung bình) hoặc > 0.35 (Tác động mạnh).' }],
             },
             {
                 _type: 'block',
@@ -749,45 +749,27 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đây là đặc sản của SmartPLS. R-square chỉ cho biết mô hình giải thích được dữ liệu CŨ. Còn Q2 (dùng thuật toán Blindfolding hoặc PLSpredict) cho biết mô hình có dự đoán chính xác dữ liệu MỚI hay không. Thầy bói mà chỉ nói đúng chuyện quá khứ thì xoàng, nói đúng tương lai mới là thầy xịn.' }],
+                children: [{ _type: 'span', text: 'Mô hình của bạn có giải thích được dữ liệu CŨ (R2) không? Quá thường. \nNó có tiên đoán được dữ liệu MỚI (Q2) không? Đó mới là đẳng cấp của PhD. Đừng để mô hình của bạn chỉ giỏi "vuốt đuôi" quá khứ.' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'III. Giai đoạn 3: "Vũ Khí Hủy Diệt" (God Tier Analysis)' }],
+                children: [{ _type: 'span', text: 'Vòng 3: Vũ Khí "Hủy Diệt" (God Tier)' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Muốn bài đăng Q1? Đừng dừng lại ở giả thuyết X -> Y. Hãy đào sâu hơn:' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'bullet',
-                children: [{ _type: 'span', text: 'Mediation (Trung gian): Mổ xẻ "Hộp đen". X tác động lên Y thông qua con đường nào (Biến M)? Tại sao?' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'bullet',
-                children: [{ _type: 'span', text: 'Moderation (Điều tiết): Trả lời câu hỏi "Khi nào?" (When). Tác động này mạnh với ai (Nam/Nữ), yếu với ai (Giàu/Nghèo)?' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                listItem: 'bullet',
-                children: [{ _type: 'span', text: 'MGA (Multi-Group Analysis) & MICOM: So sánh nhóm. Lưu ý: Phải chạy MICOM trước để đảm bảo "Thước đo không bị cong" giữa các nhóm. Không làm MICOM mà so sánh luôn là mắc lỗi sơ đẳng (Measurement Invariance).' }],
+                children: [{ _type: 'span', text: 'Muốn "cà khịa" Reviewer 2, hãy chơi hệ nâng cao:\n- **Mediation:** Mổ xẻ "Hộp đen".\n- **Moderation:** Trả lời câu hỏi "Khi nào?".\n- **MGA/MICOM:** So sánh Tây/Ta chuẩn chỉ. Không chạy MICOM mà so sánh là "so sánh cam với táo".' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: '[CẢNH BÁO TỬ THẦN]: P-Hacking & HARKing' }],
+                children: [{ _type: 'span', text: '[CẢNH BÁO TỬ THẦN]: Trò mèo HARKing' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '☠️ P-Hacking: Tra tấn dữ liệu, xóa bớt dòng, sửa số liệu... cốt để P-value hiện ra màu xanh. Đừng làm thế, biểu đồ phân phối sẽ tố cáo bạn ngay.\n☠️ HARKing (Hypothesizing After Results are Known): Chạy ra kết quả rồi mới quay lại sửa giả thuyết ban đầu. Đây là trò "bắn tên rồi mới vẽ bia". Reviewer già dơ đọc cái Logic gượng gạo là họ biết ngay.' }],
+                children: [{ _type: 'span', text: 'Nhiều ông thấy kết quả không như ý là lén lút sửa lại giả thuyết cho khớp. \nĐó gọi là HARKing (Hypothesizing After Results are Known) - "Vẽ bùa cho ma đọc". \nĐừng nghĩ Reviewer ngu. Họ nhìn Logic gượng gạo là biết ngay bạn đang "nấu số liệu". Thà kết quả xấu mà thật ("Không có ý nghĩa thống kê"), còn hơn là Vẽ ra một sự thật giả dối.' }],
             },
             {
                 _type: 'block',
@@ -804,19 +786,19 @@ export const ncs_series_post = [
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: '"VIF" -> Chỉ số "Chen lấn xô đẩy" (Đa cộng tuyến).' }],
+                children: [{ _type: 'span', text: '"Validity" -> Đo đúng (khác với Reliability là Đo chính xác).' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: '"f2" -> Độ "Phê" của tác động (Effect Size).' }],
+                children: [{ _type: 'span', text: '"HTMT" -> Kính chiếu yêu (Phát hiện biến trùng lặp).' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: '"Q2" -> Tài "Tiên tri" của mô hình.' }],
+                children: [{ _type: 'span', text: '"f2" -> Độ "Phê" của tác động.' }],
             },
             {
                 _type: 'block',
@@ -826,7 +808,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Trước khi nộp bài, tự hỏi:\n✅ Loadings có > 0.7 hết chưa? Có câu rác nào < 0.4 không?\n✅ VIF có < 3.3 không hay là đang "dẫm chân nhau"?\n✅ f2 có ngon không hay toàn tác động "muỗi đốt inox"?\n✅ Q2 > 0 chưa?\n\nNếu OK hết -> Chúc mừng, bạn đã là một Data Strategist thực thụ!' }],
+                children: [{ _type: 'span', text: 'Trước khi nộp bài, tự hỏi:\n✅ Loadings < 0.7 đã xử lý chưa?\n✅ HTMT có < 0.85 không hay đang "anh em sinh đôi"?\n✅ VIF có < 3.3 không hay là đang "dẫm chân nhau"?\n✅ f2 có cái nào to to để chém gió không?\n\nNếu OK hết -> Chúc mừng, bạn đã thoát kiếp "Thợ bấm nút"!' }],
             }
         ]
     },
