@@ -707,6 +707,17 @@ export const ncs_series_post = [
                 children: [{ _type: 'span', text: 'Cá sạch rồi, ném vào nồi rồi. Nhưng đừng vội "nổi lửa"! Trước khi đợi lẩu chín, phải check lại cái "nước dùng" (Measurement Model) xem nó có đậm đặc, chuẩn vị không. Nước dùng mà lèo tèo thì cá có tươi mấy ăn cũng như đấm vào mồm. Đừng để tình trạng sơn Alpha xanh lét trên một nồi nước dùng pha toàn muối với nước lọc.' }],
             },
             {
+                _type: 'code',
+                language: 'mermaid',
+                code: 'graph TD\n    A[Đáy Nồi: Data Cleaning] -->|Sạch sẽ| B(Nước Dùng: Measurement Model)\n    B -->|Đậm đà| C(Topping: Structural Model)\n    C -->|Thơm lừng| D{Kết Quả: Significance}',
+                filename: 'mermaid-diagram-hotpot'
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: '*Hình 1: Mô hình "Nồi Lẩu" 3 lớp trong SEM*' }],
+            },
+            {
                 _type: 'block',
                 style: 'h4',
                 children: [{ _type: 'span', text: '1. Outer Loadings (Hệ số tải ngoài): "Độ ngọt" của thịt cá' }],
@@ -715,6 +726,11 @@ export const ncs_series_post = [
                 _type: 'block',
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Outer Loadings là "nồng độ chất" của câu hỏi đóng góp vào biến. Loadings < 0.7 nghĩa là thịt cá bị bở, không có chất. Đặc biệt nếu < 0.4 thì vứt ngay miếng cá đó đi. Đừng cố "đấm ăn xôi" giữ lại những câu hỏi rác chỉ để cứu Alpha. Reviewer sành sỏi nhìn bảng Loadings mà thấy lởm khởm là họ đánh trượt ngay vì tội "nấu lẩu bằng cá ươn".' }],
+            },
+            {
+                _type: 'block',
+                style: 'blockquote',
+                children: [{ _type: 'span', text: '⚠️ [LƯU Ý CHẾT NGƯỜI]: Nước dùng ngon nhưng có bị nhiễm chì không? (CMB - Common Method Bias).\nNếu người trả lời cứ đánh lung tung theo quán tính (kiểu "gì cũng đồng ý"), thì toàn bộ kết quả là "ảo". Hãy dùng VIF (Full Collinearity test) để check xem có vi khuẩn CMB không (~ VIF < 3.3). Reviewer Q1 cực kỳ soi cái này!' }],
             },
             {
                 _type: 'block',
@@ -778,6 +794,11 @@ export const ncs_series_post = [
             },
             {
                 _type: 'block',
+                style: 'blockquote',
+                children: [{ _type: 'span', text: '🛠️ [GÓC KỸ THUẬT]: AMOS vs SmartPLS - Ai hơn ai?\n- **AMOS (CB-SEM):** Như dao mổ trâu. Cần dữ liệu chuẩn (Normal Distribution), mẫu lớn. Phải cực khắt khe về Model Fit (CFI > 0.9, RMSEA < 0.08).\n- **SmartPLS (PLS-SEM):** Như dao gọt hoa quả đa năng. "Ăn tạp" hơn, không cần dữ liệu chuẩn, mẫu nhỏ chơi được hết. Nhưng bù lại, Model Fit của nó không "thần thánh" như AMOS.\n-> Biết mình đang cầm dao gì để dùng cho đúng! Đừng mang dao gọt hoa quả đi mổ trâu.' }],
+            },
+            {
+                _type: 'block',
                 style: 'h2',
                 children: [{ _type: 'span', text: '[LỜI KHUYÊN GAM MÀU TỐI]: Khi Kết Quả "Xấu"' }],
             },
@@ -821,13 +842,19 @@ export const ncs_series_post = [
             },
             {
                 _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '**CMB (Common Method Bias):** Sai lệch do phương pháp đo lường chung.' }],
+            },
+            {
+                _type: 'block',
                 style: 'h2',
                 children: [{ _type: 'span', text: '[CHECK-LIST SINH TỒN]' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Trước khi nộp bài, tự hỏi 4 câu:\n✅ Đã làm sạch data chưa (Missing, Outliers)?\n✅ "Nước dùng" (Loadings > 0.7 và HTMT < 0.85) ổn định chưa?\n✅ "Vị lẩu" (VIF, f2, Q2) có đủ mạnh để chém gió về ý nghĩa thực tiễn không?\n✅ Bảng biểu đã format chuẩn APA 7th chưa?\n\nNếu OK hết -> Chúc mừng, bạn đã thoát kiếp "Thợ bấm nút" để trở thành một Data Strategist thực thụ!' }],
+                children: [{ _type: 'span', text: 'Trước khi nộp bài, tự hỏi 4 câu:\n✅ Đã làm sạch data chưa (Missing, Outliers)?\n✅ "Nước dùng" (Loadings > 0.7 và HTMT < 0.85) ổn định chưa? Có bị nhiễm chì CMB không?\n✅ "Vị lẩu" (VIF, f2, Q2) có đủ mạnh để chém gió về ý nghĩa thực tiễn không?\n✅ Bảng biểu đã format chuẩn APA 7th chưa?\n\nNếu OK hết -> Chúc mừng, bạn đã thoát kiếp "Thợ bấm nút" để trở thành một Data Strategist thực thụ!' }],
             },
             {
                 _type: 'block',
