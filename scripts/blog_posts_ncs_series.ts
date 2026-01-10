@@ -674,17 +674,17 @@ export const ncs_series_post = [
         title: 'NCS101 - Bài 6: Data Analysis - Đừng Để Con Số "Dắt Mũi", Hãy "Đọc Vị" Mô Hình',
         slug: { current: 'ncs-101-bai-6-data-analysis' },
         publishedAt: new Date(Date.now() - 432000000).toISOString(),
-        excerpt: 'Dữ liệu không biết nói dối, chỉ có người làm dữ liệu hay "vẽ" ra sự thật. Đừng biến mình thành cái máy bấm nút (Button Pusher). Hãy học cách tư duy của một Nhà chiến lược dữ liệu (Data Strategist) để thuần phục con quái vật SmartPLS.',
+        excerpt: 'Dữ liệu không biết nói dối, chỉ có người làm dữ liệu hay "vẽ" ra sự thật. Đừng biến mình thành cái máy bấm nút (Button Pusher). Hãy học cách tư duy của một Nhà chiến lược dữ liệu (Data Strategist) để thuần phục con quái vật SmartPLS/SPSS.',
         categorySlug: 'academic-corner',
         coverImage: '/blog/research_series_6_data.png',
         featured: false,
         readingTime: 15,
-        tags: ['NCS101', 'SmartPLS', 'Data Analysis', 'Effect Size', 'Mediation', 'Moderation'],
+        tags: ['NCS101', 'SmartPLS', 'Data Analysis', 'Effect Size', 'IMRaD'],
         body: [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Thú thật với các bạn, hồi cấp 3 tôi dốt Toán lắm (đủ điểm qua môn thôi). Nhưng giờ tôi vẫn chạy mô hình SEM ầm ầm. Vì sao? Vì phần mềm (SmartPLS/SPSS) nó làm hộ hết phép tính rồi. Việc của mình là: Bấm nút và Đọc kết quả.\n\nNhưng đợi đã! Trước khi bấm nút "Analyze", bạn đã làm sạch "con cá" dữ liệu chưa? Ở bài trước tôi đã hứa nói về "Nghệ thuật làm sạch dữ liệu". Đừng có dại dột mà ném nguyên con cá còn đầy vảy, bùn đất (dữ liệu thô) vào nồi lẩu (phần mềm). Nó sẽ tanh ngòm và không ai nuốt nổi đâu.' }],
+                children: [{ _type: 'span', text: 'Thú thật với các bạn, hồi cấp 3 Hải dốt Toán lắm (đủ điểm qua môn thôi). Nhưng giờ Hải vẫn chạy mô hình SEM (Structural Equation Modeling) ầm ầm, dạy cả sinh viên.\n\nVì sao? Vì chúng ta là nhà nghiên cứu ứng dụng, không phải nhà toán học. Phần mềm (SmartPLS/SPSS) nó làm hộ hết phép tính phức tạp rồi. Việc của mình là: Bấm nút và Đọc vị kết quả.\n\nNhưng đợi đã! Trước khi bấm nút "Analyze", bạn đã làm sạch "con cá" dữ liệu chưa? Hải đã hứa sẽ nói về Nghệ thuật làm sạch dữ liệu. Đừng có dại dột mà ném nguyên con cá còn đầy vảy, bùn đất (dữ liệu thô) vào nồi lẩu (phần mềm). Nó sẽ tanh ngòm và không ai nuốt nổi đâu!' }],
             },
             {
                 _type: 'block',
@@ -694,82 +694,87 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đừng tin ai cả, hãy tự tay làm sạch:\n1. Check Missing Data: Có ô trống nào không? Nếu < 5% thì dùng Mean Replacement (lấp liếm bằng giá trị trung bình). Nếu > 15% thì xóa luôn dòng đó.\n2. Check Outliers (Dị biệt): Có ông nào đánh toàn số 1 hoặc toàn số 5 không? Có ông nào trả lời bảng hỏi dài 50 câu trong vòng 30 giây không? (Siêu nhân à?). Xóa ngay những dòng rác đó.\n3. Check Normality (Phân phối chuẩn): Dữ liệu có hình cái chuông hay méo xẹo? (SmartPLS thì không cần quá khắt khe cái này, nhưng SPSS thì cần).' }],
+                children: [{ _type: 'span', text: 'Đừng tin ai cả, hãy tự tay "mổ cá" để loại bỏ rác rưởi trước khi nấu:\n- **Check Missing Data (Dữ liệu khuyết):** Có ô trống nào không? Nếu < 5% thì dùng Mean Replacement (lấp liếm bằng giá trị trung bình). Nếu > 15% ở một dòng? Xóa thẳng tay không hối tiếc!\n- **Check Outliers (Dị biệt):** Có ông nào đánh toàn số 1 hoặc toàn số 5 từ đầu đến cuối không? Có ông nào trả lời bảng hỏi dài 50 câu trong vòng 30 giây không? (Siêu nhân à?). Xóa ngay những dòng rác đó, họ đang "troll" nghiên cứu của bạn đấy.\n- **Check Normality (Phân phối chuẩn):** Dữ liệu hình cái chuông hay méo xẹo? Với SmartPLS thì không cần quá khắt khe, nhưng với SPSS thì đây là "lệnh bài" để được phép chạy các bước tiếp theo.' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Vòng 1: Soi "Móng Nhà" (Measurement Model)' }],
+                children: [{ _type: 'span', text: 'Vòng 1: Soi "Nước Dùng" (Measurement Model)' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Sau khi cá sạch rồi mới cho vào nồi. Nhưng khoan ăn vội, phải soi xem móng nhà có chắc không đã. Đừng vội nhìn Alpha. Móng mà lún thì nhà sập, dù bạn có sơn Alpha màu xanh lét thì nó vẫn là đống gạch vụn.' }],
+                children: [{ _type: 'span', text: 'Cá sạch rồi, ném vào nồi rồi. Nhưng đừng vội "nổi lửa"! Trước khi đợi lẩu chín, phải check lại cái "nước dùng" (Measurement Model) xem nó có đậm đặc, chuẩn vị không. Nước dùng mà lèo tèo thì cá có tươi mấy ăn cũng như đấm vào mồm. Đừng để tình trạng sơn Alpha xanh lét trên một nồi nước dùng pha toàn muối với nước lọc.' }],
             },
             {
                 _type: 'block',
                 style: 'h4',
-                children: [{ _type: 'span', text: '1. Outer Loadings: Lọc mem "rác"' }],
+                children: [{ _type: 'span', text: '1. Outer Loadings (Hệ số tải ngoài): "Độ ngọt" của thịt cá' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Loadings < 0.7 nghĩa là móng nhà bị rỗng. Đặc biệt nếu < 0.4 thì xóa ngay không thương tiếc. Đừng cố "đấm ăn xôi" giữ lại những câu hỏi rác chỉ để cứu Alpha. Reviewer tinh mắt lắm, họ nhìn bảng Loadings mà thấy lởm khởm là họ đánh trượt ngay vì tội "xây lầu trên cát".' }],
+                children: [{ _type: 'span', text: 'Outer Loadings là "nồng độ chất" của câu hỏi đóng góp vào biến. Loadings < 0.7 nghĩa là thịt cá bị bở, không có chất. Đặc biệt nếu < 0.4 thì vứt ngay miếng cá đó đi. Đừng cố "đấm ăn xôi" giữ lại những câu hỏi rác chỉ để cứu Alpha. Reviewer sành sỏi nhìn bảng Loadings mà thấy lởm khởm là họ đánh trượt ngay vì tội "nấu lẩu bằng cá ươn".' }],
             },
             {
                 _type: 'block',
                 style: 'h4',
-                children: [{ _type: 'span', text: '2. Kiểm tra "Vàng thật hay Vàng giả" (Validity)' }],
+                children: [{ _type: 'span', text: '2. "Kính chiếu yêu" HTMT (Validity): Cá thật hay Cá giả?' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Tưởng tượng bạn dùng một cái cân bị lệch 1kg. Cân 100 lần nó đều ra kết quả giống nhau (Reliability/Alpha cực cao), nhưng kết quả đó SAI bét (Validity bằng không).\n\nỞ tạp chí Q1, họ dùng HTMT để soi Discriminant Validity (Giá trị phân biệt). \nNếu HTMT > 0.85, nghĩa là Biến A và Biến B là "anh em sinh đôi" mặc áo khác màu. Bạn đang tự lừa mình dối người, đo 2 thứ thực chất là 1. Reviewer sẽ vỗ mặt: "Em tách ra làm gì cho chật đất?".' }],
+                children: [{ _type: 'span', text: 'Tưởng tượng bạn dùng một cái cân bị lệch 1kg. Cân 100 lần nó đều ra kết quả giống nhau (Reliability cực cao), nhưng kết quả đó SAI bét (Validity bằng không).\n\nỞ tạp chí Q1, họ dùng HTMT để soi Discriminant Validity (Giá trị phân biệt). Nếu HTMT > 0.85, nghĩa là Biến A và Biến B là "anh em sinh đôi" mặc áo khác màu. Bạn đang tự lừa mình dối người. Reviewer sẽ vỗ mặt: "Em tách ra làm hai biến làm gì cho chật nồi?".' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Vòng 2: Soi "Động Cơ" (Structural Model)' }],
-            },
-            {
-                _type: 'block',
-                style: 'h4',
-                children: [{ _type: 'span', text: '3. VIF: Căn bệnh "Yêu nhau quá mức"' }],
+                children: [{ _type: 'span', text: 'Vòng 2: Thử "Vị Lẩu" (Structural Model)' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Đa cộng tuyến (Multicollinearity). Nếu các biến độc lập "yêu nhau" (VIF > 3.3), chúng sẽ dẫm chân lên nhau. Mô hình sẽ bị "nghẹt thở", Beta bị méo mó. Đừng để tình trạng "Loạn luân" biến số xảy ra trong mô hình của bạn.' }],
+                children: [{ _type: 'span', text: 'Nước dùng ngon rồi, giờ là lúc xem các nguyên liệu kết hợp với nhau ra sao.' }],
             },
             {
                 _type: 'block',
                 style: 'h4',
-                children: [{ _type: 'span', text: '4. f2 (Effect Size): Nồng độ cồn' }],
+                children: [{ _type: 'span', text: '3. VIF: Căn bệnh "Các vị át mùi nhau"' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'P-value < 0.05 chỉ là cái vé vào cửa. Nhưng f2 mới là nồng độ cồn.\nf2 bé tí (0.02) nghĩa là bạn chỉ đang "gãi ngứa" cho biến phụ thuộc thôi. Đừng vỗ ngực xưng tên là có đóng góp thực tiễn! Muốn Discussion hay, phải tìm được những thằng f2 > 0.15 (Tác động trung bình) hoặc > 0.35 (Tác động mạnh).' }],
+                children: [{ _type: 'span', text: 'Đa cộng tuyến (Multicollinearity). Nếu các biến độc lập "yêu nhau" (VIF > 3.3), chúng sẽ dẫm chân lên nhau. Giống như cho quá nhiều gừng nó sẽ át hết mùi sả, bạn không biết vị nào thực sự làm nên nồi lẩu. VIF cao làm hệ số Beta bị méo mó, mất giá trị tiên đoán.' }],
             },
             {
                 _type: 'block',
                 style: 'h4',
-                children: [{ _type: 'span', text: '5. Q2 (Predictive Relevance): Khả năng "Tiên tri"' }],
+                children: [{ _type: 'span', text: '4. f2 (Effect Size): Nồng độ cồn trong rượu nhắm' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Mô hình của bạn có giải thích được dữ liệu CŨ (R2) không? Quá thường. \nNó có tiên đoán được dữ liệu MỚI (Q2) không? Đó mới là đẳng cấp của PhD. Đừng để mô hình của bạn chỉ giỏi "vuốt đuôi" quá khứ.' }],
+                children: [{ _type: 'span', text: 'P-value < 0.05 chỉ là cái vé vào cửa. Nhưng f2 mới là nồng độ cồn. f2 bé tí (0.02) nghĩa là bạn chỉ đang "gãi ngứa" cho biến phụ thuộc thôi. Đừng vỗ ngực xưng tên là có đóng góp thực tiễn! Muốn phần Thảo luận (Discussion) hay, phải tìm được những thằng f2 > 0.15 (Tác động trung bình) hoặc > 0.35 (Tác động mạnh).' }],
+            },
+            {
+                _type: 'block',
+                style: 'h4',
+                children: [{ _type: 'span', text: '5. Q2 (Predictive Relevance): Khả năng "Gây nghiện"' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Mô hình của bạn có giải thích được dữ liệu CŨ (R-square) không? Quá thường. Nó có tiên đoán được dữ liệu MỚI (Q-square) không? Đó mới là đẳng cấp của PhD. Đừng để mô hình của bạn chỉ giỏi "vuốt đuôi" quá khứ.' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Vòng 3: Vũ Khí "Hủy Diệt" (God Tier)' }],
+                children: [{ _type: 'span', text: 'Vòng 3: Gia Vị "Hủy Diệt" (God Tier)' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Muốn "cà khịa" Reviewer 2, hãy chơi hệ nâng cao:\n- **Mediation:** Mổ xẻ "Hộp đen".\n- **Moderation:** Trả lời câu hỏi "Khi nào?".\n- **MGA/MICOM:** So sánh Tây/Ta chuẩn chỉ. Không chạy MICOM mà so sánh là "so sánh cam với táo".' }],
+                children: [{ _type: 'span', text: 'Muốn nồi lẩu đạt tầm Michelin, hãy chơi hệ nâng cao:\n- **Mediation (Biến trung gian):** Mổ xẻ cơ chế tác động bên trong.\n- **Moderation (Biến điều tiết):** Trả lời câu hỏi "Khi nào?" lẩu mới ngon (ví dụ: ăn lúc nóng).\n- **MGA/MICOM:** So sánh các nhóm (Tây/Ta, Nam/Nữ) chuẩn chỉ. Không chạy MICOM mà đi so sánh là "so sánh cam với táo".' }],
             },
             {
                 _type: 'block',
@@ -779,7 +784,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'NCS sợ nhất là P-value > 0.05 (màu đỏ - bác bỏ giả thuyết).\nĐừng sợ! Trong khoa học, việc chứng minh "Lý thuyết cũ không còn đúng" đôi khi còn giá trị hơn việc "vuốt đuôi" lý thuyết cũ (Confirmation Bias). \nCái bạn cần là giải thích ĐÚNG (Tại sao nó không tác động? Do bối cảnh VN khác? Do khủng hoảng kinh tế?), chứ không phải cố đấm ăn xôi P-Hacking để giải thích cho ĐẸP.' }],
+                children: [{ _type: 'span', text: 'NCS sợ nhất là P-value > 0.05 (màu đỏ - bác bỏ giả thuyết). Đừng sợ! Trong khoa học, việc chứng minh "Lý thuyết cũ không còn đúng" đôi khi còn giá trị hơn việc "vuốt đuôi" lý thuyết cũ (Confirmation Bias). Cái bạn cần là giải thích ĐÚNG, chứ không phải cố đấm ăn xôi P-Hacking (xào nấu số liệu) để giải thích cho ĐẸP.' }],
             },
             {
                 _type: 'block',
@@ -789,7 +794,7 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Reviewer cực ghét việc NCS copy-paste nguyên cái bảng Output loằng ngoằng từ SmartPLS vào bài báo. Nhìn phèn không chịu được.\nBảng biểu từ phần mềm chỉ là "nguyên liệu thô". Muốn lên Q1, bạn phải "xào nấu" lại theo chuẩn APA 7th (kẻ bảng 3 dòng, font chữ, alignment chuẩn chỉ). Đừng để Reviewer nhìn bảng mà thấy bạn lười biếng, thiếu tôn trọng người đọc.' }],
+                children: [{ _type: 'span', text: 'Reviewer cực ghét việc NCS copy-paste nguyên cái bảng Output loằng ngoằng, phông nền xám xịt từ phần mềm vào bài báo. Nhìn cực kỳ "Phèn". Bảng biểu từ phần mềm chỉ là "nguyên liệu thô". Muốn lên Q1, bạn phải trình bày lại theo chuẩn APA 7th (kẻ bảng 3 dòng, font chữ chuẩn chỉ). Đừng để người ta nhìn bảng mà thấy bạn lười biếng.' }],
             },
             {
                 _type: 'block',
@@ -800,19 +805,19 @@ export const ncs_series_post = [
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: '"Outer Loadings" -> Nồng độ chất (Đóng góp của câu hỏi vào biến).' }],
+                children: [{ _type: 'span', text: '**Outer Loadings:** Nồng độ đóng góp của từng câu hỏi vào biến.' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: '"HTMT" -> Kính chiếu yêu (Biến trùng lặp).' }],
+                children: [{ _type: 'span', text: '**HTMT:** Kính chiếu yêu phát hiện các biến trùng lặp (Discriminant Validity).' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
                 listItem: 'bullet',
-                children: [{ _type: 'span', text: '"APA 7th" -> Chuẩn mực cái đẹp trong trình bày bảng biểu.' }],
+                children: [{ _type: 'span', text: '**APA 7th:** "Sách trắng" về cái đẹp và quy chuẩn trình bày học thuật.' }],
             },
             {
                 _type: 'block',
@@ -822,7 +827,17 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Trước khi nộp bài, tự hỏi:\n✅ Đã làm sạch data chưa (Missing, Outliers)?\n✅ Loadings < 0.7 đã xử lý chưa? HTMT có < 0.85 không?\n✅ VIF, f2, Q2 ổn chưa?\n✅ Bảng biểu đã format chuẩn APA 7th chưa?\n\nNếu OK hết -> Chúc mừng, bạn đã là một Data Strategist thực thụ!' }],
+                children: [{ _type: 'span', text: 'Trước khi nộp bài, tự hỏi 4 câu:\n✅ Đã làm sạch data chưa (Missing, Outliers)?\n✅ "Nước dùng" (Loadings > 0.7 và HTMT < 0.85) ổn định chưa?\n✅ "Vị lẩu" (VIF, f2, Q2) có đủ mạnh để chém gió về ý nghĩa thực tiễn không?\n✅ Bảng biểu đã format chuẩn APA 7th chưa?\n\nNếu OK hết -> Chúc mừng, bạn đã thoát kiếp "Thợ bấm nút" để trở thành một Data Strategist thực thụ!' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Lời Kết' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Có kết quả đẹp rồi, số liệu "nước cất" rồi. Giờ làm sao để biến đống bảng biểu này thành một bài báo "sexy" khiến Reviewer phải gật đầu cái rụp?\n👉 Mời các bạn đón đọc **Bài 7: Cấu Trúc IMRaD - Công Thức Viết Bài Báo Quốc Tế "Bao Đậu"**.\n\nHải chào thân ái và quyết thắng!' }],
             }
         ]
     },
