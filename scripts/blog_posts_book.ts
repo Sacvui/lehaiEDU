@@ -6,7 +6,7 @@ export const book_intro = [
         publishedAt: new Date().toISOString(),
         excerpt: 'Dành cho những NCS, Tiến sĩ đang cảm thấy lạc lối. Cuốn sách là hành trình tìm lại ngọn lửa đam mê nghiên cứu và tái định vị bản thân trong kỷ nguyên AI.',
         categorySlug: 'book-re-research',
-        coverImage: '/blog/re_research_cover_sidewalk_prof_1768054499766.png',
+        coverImage: '/blog/re_research_cover_v6_final_badge_1768056318088.png',
         featured: true,
         readingTime: 7,
         tags: ['Book Project', 'Academic Survival', 'Research Identity', 'AI in Research'],
