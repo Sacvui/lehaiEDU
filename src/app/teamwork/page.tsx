@@ -58,53 +58,48 @@ export default async function ForTeamPage() {
         return keywords.map(k => find(k)).filter(Boolean); // Remove undefined/not found
     };
 
-    // --- MANUAL INTRO CONTENT ---
+    // --- MANUAL INTRO CONTENT (Hai Morning Style: Punchy & Persuasive) ---
     const introPosts = [
         {
             _id: 'manual-foreword',
             title: 'Lời Tựa: Đừng đọc cuốn này nếu bạn muốn nhàn',
             slug: { current: 'loi-noi-dau' },
-            readingTime: 5,
+            readingTime: 3,
             body: [
                 {
                     _type: 'block',
                     style: 'h3',
-                    children: [{ _type: 'span', text: '15 năm trước, tôi là một gã Intern "ngáo ngơ".' }]
+                    children: [{ _type: 'span', text: 'Chào buổi sáng. Cà phê chưa?' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Ngày đầu đi làm, sếp quăng cho một file Excel 10.000 dòng. Tôi hì hục copy-paste cả buổi chiều, vẽ ra mấy cái biểu đồ 3D xanh đỏ tím vàng nhìn rất "nguy hiểm". Hí hửng đem lên trình, sếp nhìn đúng 3 giây rồi hỏi một câu rụng rời tay chân:' }]
+                    children: [{ _type: 'span', text: 'Nếu bạn đang tìm một cuốn giáo trình ru ngủ để lấy bằng Tiến sĩ giấy, hãy gấp trang web này lại. Nghiêm túc đấy. Cuốn sách này không dành cho bạn.' }]
+                },
+                {
+                    _type: 'block',
+                    style: 'normal',
+                    children: [{ _type: 'span', text: '15 năm trước, tôi là một gã Intern "chạy bằng cơm", chỉ biết copy-paste Excel 10.000 dòng trong vô vọng. Sếp ném cái báo cáo 3D xanh đỏ vào mặt tôi: "Mày vẽ tranh cho trẻ con xem à? Insight đâu? Tiền nằm ở đâu?".' }]
                 },
                 {
                     _type: 'block',
                     style: 'blockquote',
-                    children: [{ _type: 'span', text: '"Mày vẽ cái này để lòe thiên hạ à? Insight đâu? Tao cần biết tại sao doanh số tụt, chứ không cần mày tô màu cho báo cáo!"' }]
+                    children: [{ _type: 'span', text: 'Cú "tát" đó làm tôi tỉnh ngộ. Hóa ra, tôi chẳng biết gì cả.' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Lúc đó tôi mới "ngớ" người ra. Hóa ra, tôi chẳng biết gì cả. Tôi tưởng mình biết Excel, biết vẽ chart là oai. Nhưng thực ra, tôi chỉ là một cái máy gõ phím chạy bằng cơm.' }]
-                },
-                {
-                    _type: 'block',
-                    style: 'normal',
-                    children: [{ _type: 'span', text: 'Cuốn sách này không phải giáo trình đại học. Nó là tập hợp những cú "tát" của cuộc đời để tôi tỉnh ra. Từ một gã làm việc chân tay (Intern) thành một người biết dùng cái đầu để tư duy (Researcher/Leader).' }]
+                    children: [{ _type: 'span', text: 'Cuốn sách này là tập hợp những "vết sẹo" của tôi. Từ một gã thợ gõ phím trở thành một Data Strategist (Người hoạch định chiến lược dựa trên dữ liệu). Tôi viết nó để bạn KHÔNG PHẢI đi vào vết xe đổ đó nữa.' }]
                 },
                 {
                     _type: 'block',
                     style: 'h4',
-                    children: [{ _type: 'span', text: 'Tại sao lại là "Researcher"?' }]
+                    children: [{ _type: 'span', text: 'Bạn sẽ nhận được gì?' }]
                 },
                 {
                     _type: 'block',
                     style: 'normal',
-                    children: [{ _type: 'span', text: 'Ở Việt Nam, người ta hay nghĩ Researcher là mấy ông đầu to mắt cận ngồi trong phòng thí nghiệm. SAII LẦM! Trong kinh doanh, Researcher là những "Spec Ops" (Lực lượng đặc nhiệm). Họ không đoán mò. Họ dùng dữ liệu để chỉ cho sếp biết tiền đang rơi ở đâu.' }]
-                },
-                {
-                    _type: 'block',
-                    style: 'normal',
-                    children: [{ _type: 'span', text: 'Nếu bạn chán cảnh làm việc cảm tính, chán cảnh bị sếp "xoay" như chong chóng vì không có số liệu bảo vệ quan điểm... thì xin chúc mừng. Bạn tìm đúng chỗ rồi.' }]
+                    children: [{ _type: 'span', text: 'Không lý thuyết suông. Không thuật ngữ đánh đố. Chỉ có Chiến lược thực chiến (Battle-tested Strategies). Cầm sách lên là phải dùng được ngay vào luận án, vào công việc.' }]
                 }
             ]
         }
@@ -162,23 +157,20 @@ export default async function ForTeamPage() {
         ]
     };
 
-    // --- EXPANDED AUTHOR BIO ---
+    // --- EXPANDED AUTHOR BIO (Short & Punchy) ---
     const detailedAuthors = {
         _id: 'manual-authors',
-        title: 'Lời kết & Đội ngũ biên tập',
+        title: 'Người kể chuyện & Kẻ kìm cương',
         slug: { current: 'gioi-thieu-tac-gia' },
-        readingTime: 6,
+        readingTime: 3,
         body: [
-            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: 'Người kể chuyện: Hải Rong Chơi' }] },
-            { _type: 'block', style: 'blockquote', children: [{ _type: 'span', text: '"Tôi viết cuốn sách này không phải để dạy ai cả. Tôi viết để trả nợ. Trả nợ những người thầy đã mắng tôi, những người sếp đã ép tôi vào chân tường, và những bài học xương máu mà tôi đã phải đánh đổi bằng cả thanh xuân."' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Hải không thích gọi mình là chuyên gia hay thầy bà. Hải chỉ là một người đi trước, đã từng vấp ngã rất đau và may mắn đứng dậy được. Trên hành trình từ một cậu sinh viên thực tập ngáo ngơ đến vị trí Giám đốc Phát triển Quốc gia, Hải nhận ra rằng:' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Khoảng cách giữa "Thợ" và "Thầy" không nằm ở kỹ năng (Skillset), mà nằm ở Tư duy (Mindset) và Tầm nhìn (Vision). Cuốn sách này là toàn bộ những gì Hải chắt lọc được sau 15 năm "lăn lộn", hy vọng nó sẽ giúp các bạn bớt đi vài vết sẹo trên hành trình của mình.' }] },
+            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: 'Hải Rong Chơi - Kẻ Ngoại Đạo' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Tôi không phải Giáo sư đầu ngành. Tôi là dân làm ăn (Business) đi lạc vào chốn học thuật. Tôi ghét lý thuyết suông. Với tôi, Nghiên cứu mà không "ra tiền" hoặc "ra chiến lược" là Nghiên cứu chết.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Tôi viết cuốn sách này để "trả nợ". Trả nợ những người thầy đã mắng tôi, và trả nợ chính tuổi trẻ ngông cuồng của mình.' }] },
 
-            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: 'Cố vấn Chuyên môn: TS. Carmen Châu' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: '**Tiến sĩ (PhD) Tâm lý học Tổ chức & Nhân sự.**' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Nếu Hải đại diện cho sự thực chiến, xông xáo và đôi khi hơi "bụi bặm" của thương trường, thì Cô Châu là hiện thân của sự sâu sắc, chuẩn mực và thấu hiểu con người.' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Với nền tảng học thuật vững chắc về Tâm lý học và Quản trị Nhân sự, Cô Châu giúp cân bằng lại những góc nhìn trong cuốn sách. Cô nhắc nhở chúng ta rằng: Dữ liệu (Data) dù có lạnh lùng đến đâu, thì đích đến cuối cùng vẫn là phục vụ Con người (Human). Chiến lược nào mà bỏ quên yếu tố con người, chiến lược đó chắc chắn thất bại.' }] },
-            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Sự kết hợp giữa "Data lạnh" và "Trái tim nóng" chính là linh hồn của cuốn sách này.' }] }
+            { _type: 'block', style: 'h2', children: [{ _type: 'span', text: 'TS. Carmen Châu - Kẻ Kìm Cương' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Nếu tôi là gã đầu đường xó chợ thích bay nhảy, thì Carmen Châu (PhD) là người giữ tôi lại trên mặt đất.' }] },
+            { _type: 'block', style: 'normal', children: [{ _type: 'span', text: 'Sự chỉn chu, khắt khe và nền tảng học thuật vững chắc của cô ấy chính là thứ khiến cuốn sách này trở nên "nghiêm túc" (như cái tên của nó). Sự kết hợp giữa "Data lạnh lùng" và "Trái tim nóng" chính là linh hồn của Re-Research.' }] }
         ]
     };
 
