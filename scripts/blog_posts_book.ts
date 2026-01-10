@@ -6,7 +6,7 @@ export const book_intro = [
         publishedAt: new Date().toISOString(),
         excerpt: 'Dành cho những NCS, Tiến sĩ đang cảm thấy lạc lối. Cuốn sách là hành trình tìm lại ngọn lửa đam mê nghiên cứu và tái định vị bản thân trong kỷ nguyên AI.',
         categorySlug: 'book-re-research',
-        coverImage: '/blog/book_cover_re_research.png', // Placeholder for new cover
+        coverImage: '/blog/re_research_cover_sidewalk_prof_1768054499766.png',
         featured: true,
         readingTime: 7,
         tags: ['Book Project', 'Academic Survival', 'Research Identity', 'AI in Research'],
@@ -33,14 +33,14 @@ export const book_intro = [
             },
             {
                 _type: 'image',
-                localPath: '/blog/book_mockup_re_research.png',
+                localPath: '/blog/re_research_cover_sidewalk_prof_1768054499766.png',
                 alt: 'Book Mockup',
                 caption: 'Phiên bản chính thức: "Re-Research" - Phát hành bởi Lehai Education'
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: '---\n\nĐội ngũ biên tập:\n Tác giả: Lê Phúc Hải (PhD Candidate)\n Cố vấn Học thuật: TS. Carmen Châu\n\nCuốn sách này là một "Living Document". Các chương sẽ được cập nhật liên tục dựa trên thảo luận của cộng đồng học thuật.' }],
+                children: [{ _type: 'span', text: '---\n\nĐội ngũ biên tập:\n Tác giả: Sidewalk Professor Hải Rong Chơi\n Cố vấn Học thuật: TS. Carmen Châu\n\nCuốn sách này là một "Living Document". Các chương sẽ được cập nhật liên tục dựa trên thảo luận của cộng đồng học thuật.' }],
             }
         ]
     }
