@@ -556,41 +556,7 @@ export const ncs_series_post = [
                 style: 'normal',
                 children: [{ _type: 'span', text: 'Trước khi rải link, check ngay kẻo hối không kịp:\n✅ Đã có Expert Panel (Hội đồng khó tính) soi chưa?\n✅ Đã diệt hết "Quái vật hai đầu" (Double-barreled) chưa?\n✅ Đã có Screening Questions chặn người "đi lạc" chưa?\n✅ Đã cài Attention Check bắt "Zombie" chưa?\n✅ Đã có bùa "Chia uyên rẽ thúy" (Time lag) trị CMB chưa?\n\nNếu rồi thì triển thôi! Chúc bạn thu được data sạch như nước cất!' }],
             },
-            {
-                _type: 'block',
-                style: 'h2',
-                children: [{ _type: 'span', text: 'Góc Nhìn Đa Chiều: Tấm Chiếu Mới vs. Lão Làng' }],
-            },
-            {
-                _type: 'block',
-                style: 'h4',
-                children: [{ _type: 'span', text: 'Góc nhìn 1: Nghiên cứu sinh (NCS) / "Tấm chiếu mới"' }],
-            },
-            {
-                _type: 'block',
-                style: 'blockquote',
-                children: [{ _type: 'span', text: '"Bản thiết kế vĩ đại cho những tâm hồn sắp đi rải link"' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                children: [{ _type: 'span', text: '💡 Tính "Vỡ lẽ" (Aha Moment) cực cao: Thay vì chỉ dạy "Likert là gì", bài viết đã chỉ ra bản chất tại sao máy tính cần nó: Sự biến thiên (Variance). Đây là cái gạch nối quan trọng giúp NCS hiểu rằng: Dữ liệu không biến thiên thì mô hình SEM chỉ là con số chết.\n💡 Chiến thuật "Thẩm vấn tâm lý": Cách dùng thuật ngữ "Third-person technique" để trị bệnh "Hoa hậu thân thiện" là một insight cực kỳ đắt giá. Nó biến việc thu data từ "đi xin" thành "đọc vị".\n💡 Check-list sinh tồn: Phần check-list ở cuối là "phao cứu sinh". Với NCS, nỗi sợ lớn nhất là làm xong 500 mẫu mới biết mình sai ở bước thiết kế. Check-list này giúp họ ngủ ngon hơn trước khi nhấn nút "Publish" khảo sát.' }],
-            },
-            {
-                _type: 'block',
-                style: 'h4',
-                children: [{ _type: 'span', text: 'Góc nhìn 2: Giáo sư 20 năm hướng dẫn (Reviewer 2)' }],
-            },
-            {
-                _type: 'block',
-                style: 'blockquote',
-                children: [{ _type: 'span', text: '"Một bài giảng về Sai số hệ thống (Systematic Error) đội lốt blog trào phúng"' }],
-            },
-            {
-                _type: 'block',
-                style: 'normal',
-                children: [{ _type: 'span', text: '🎓 Hàm lượng hàn lâm "hiểm": Việc lồng ghép Measurement Invariance (Bất biến thang đo) vào ngữ cảnh văn hóa Việt Nam (dĩ hòa vi quý) là một điểm 10 về học thuật. Đây là lỗi mà ngay cả nhiều Tiến sĩ cũng mắc phải.\n🎓 Trị "bệnh thành tích" trong số liệu: Phân biệt Reliability (Nhất quán) và Validity (Đúng đắn) qua ẩn dụ "Cái cân lệch" đánh thẳng vào tư duy "chỉ cần Cronbach\'s Alpha cao là bài xịn" – một sự ngây thơ tai hại.\n🎓 Logic Procedural Remedies: Việc nhắc đến Time lag và Source separation để trị CMB là cách tiếp cận chuẩn Q1. Thay vì dùng toán học để sửa lỗi, bài viết dạy cách "diệt mầm bệnh" ngay từ quy trình.' }],
-            },
+
             {
                 _type: 'block',
                 style: 'h2',
