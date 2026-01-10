@@ -67,27 +67,75 @@ export const ncs_series_post = [
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Chiến thuật "Ngứa mắt": Tìm Gap từ nỗi đau' }],
+                children: [{ _type: 'span', text: '1. "Bắt mạch" Sự Thật: Practical Problem vs. Research Problem' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Hãy nhìn xung quanh xem cái gì làm bạn khó chịu. Cái sự "khó chịu" đó chính là Research Gap (Khoảng trống nghiên cứu). Đừng tìm đâu xa.\n\n Ví dụ 1 (Dân Marketing): Bạn lướt TikTok thấy bọn trẻ con review mỹ phẩm ảo tung chảo, filters cà nát mặt mà vẫn ối người tin sái cổ mua theo. Bạn thấy vô lý không? Vô lý vãi chưởng! Tại sao người ta lại tin một đứa "ảo" hơn là tin chuyên gia?\n -> BÙM! Đề tài: "Tác động của sự xác thực (Authenticity) của Influencer ảo đến ý định mua hàng của Gen Z: Vai trò trung gian của Niềm tin và Sự ghen tị lành mạnh".\n\n Ví dụ 2 (Dân HR): Công ty bạn sếp thưởng tiền rất nhiều, bánh vẽ rất to, team building đi resort 5 sao liên tục nhưng nhân viên vẫn nộp đơn nghỉ việc ầm ầm. Ngứa mắt không? \n -> BÙM! Đề tài: "Mối quan hệ phi tuyến tính giữa Thưởng tài chính và Gắn kết nhân viên: Khi tiền bạc trở thành "bẫy thu nhập" (Hygiene Factor - Yếu tố duy trì: Có thì bình thường, thiếu thì bất mãn) trong môi trường văn hóa độc hại".\n\nThấy chưa? Đề tài nó nằm ngay trên bàn làm việc, ngay trong cái điện thoại của bạn, ngay trong những lần bạn chửi thầm sếp, chứ đâu phải trên cung trăng.' }],
+                children: [{ _type: 'span', text: 'Đừng nhầm lẫn giữa "Nỗi đau thực tế" (Practical Problem) và "Vấn đề nghiên cứu" (Research Problem).\n - Sếp kêu: "Doanh thu tháng này thấp quá!" -> Đây là Practical Problem.\n - Scholar hỏi: "Tại sao thấp? Có lý thuyết nào giải thích hiện tượng này chưa? Hay là lý thuyết cũ không còn đúng trong bối cảnh mới?" -> Đây mới là Research Problem.\n\nHãy làm như bác sĩ: Thấy bệnh nhân đau bụng (Thực tế), đừng đè ra mổ ngay. Hãy soi chiếu vào y văn (Lý thuyết) xem triệu chứng này khớp với bệnh gì. Nếu y văn bó tay -> Chúc mừng, bạn đã tìm ra Gap (Khoảng trống) để nghiên cứu!' }],
             },
             {
                 _type: 'block',
                 style: 'h2',
-                children: [{ _type: 'span', text: 'Công thức vàng: Hẹp + Mới + Có Số Liệu' }],
+                children: [{ _type: 'span', text: '2. Vũ khí hạng nặng: Đừng mò kim đáy bể' }],
             },
             {
                 _type: 'block',
                 style: 'normal',
-                children: [{ _type: 'span', text: 'Để chọn một đề tài "bao đậu", hãy nhớ tam giác vàng này:\n\n1. Hẹp (Narrow): Đừng nghiên cứu "Khách hàng Việt Nam". Hãy nghiên cứu "Gen Z tại TP.HCM". Đừng nghiên cứu "Ngành ngân hàng". Hãy nghiên cứu "Dịch vụ Mobile Banking của ngân hàng thương mại cổ phần". Càng cụ thể, càng dễ kiểm soát.\n2. Mới (Novelty): Đừng nghiên cứu lại mấy cái ông bà ta làm nát rồi (như "Sự hài lòng ảnh hưởng đến Lòng trung thành" - xưa như Diễm). Hãy gắn nó vào bối cảnh mới: AI, ChatGPT, Blockchain, Work from Home, Quiet Quitting...\n3. Có Số Liệu (Feasible): Đây là cái quan trọng nhất. Có ý tưởng hay như giải Nobel mà không thu được data thì cũng vứt. Trước khi chốt đề tài, hãy tự hỏi: "Mình có quen ai để rải 300 phiếu khảo sát không?", "Mình có xin được bộ số liệu tài chính này không?". Nếu câu trả lời là "Không/Hên xui", thì DỪNG NGAY LẬP TỨC. Quay xe còn kịp.' }],
+                children: [{ _type: 'span', text: 'Thời đại này mà ngồi cắn bút nghĩ đề tài thì quê độ lắm. Hãy dùng "hỏa lực" công nghệ để soi Gap:\n\n - **Bibliometrics (VOSviewer / Biblioshiny):** Vẽ bản đồ tri thức (Science Mapping). Nhìn vào đó biết ngay cụm chủ đề nào đã "đỏ sàn" (Red Ocean - quá nhiều người làm) và cụm nào còn thưa thớt (Blue Ocean - cơ hội của bạn).\n - **PRISMA:** Quy trình lọc bài báo chuẩn ISO. Sàng lọc từ 1000 bài -> 50 bài cốt lõi. Reviewer nhìn sơ đồ PRISMA là gật đầu ngay vì tính minh bạch.\n - **Thematic Coding:** Dùng NVivo hoặc Atlas.ti mã hóa các ý tưởng của người đi trước, tìm ra "Keywords" đắt giá mà họ hay nhắc đến nhưng chưa giải quyết triệt để.' }],
             },
             {
                 _type: 'block',
-                style: 'blockquote',
-                children: [{ _type: 'span', text: 'Lời khuyên cuối: Đề tài hay là đề tài... làm xong được. Chứ đề tài vĩ đại mà treo đấy 10 năm không bảo vệ được thì cũng chỉ là đống giấy vụn.' }],
+                style: 'h2',
+                children: [{ _type: 'span', text: '3. Tam Giác Vàng: Hẹp + Mới + Có Số Liệu' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Để chọn một đề tài "bao đậu", hãy nhớ tam giác vàng này:\n\n1. Hẹp (Narrow): Đừng nghiên cứu "Khách hàng Việt Nam". Hãy nghiên cứu "Gen Z tại TP.HCM". Càng cụ thể, càng dễ kiểm soát biến ngoại lai.\n2. Mới (Novelty): Đừng nhai lại "Sự hài lòng -> Lòng trung thành" (xưa như Diễm). Hãy gắn nó vào bối cảnh mới: AI, ChatGPT, Blockchain, Quiet Quitting...\n3. Có Số Liệu (Feasible): Đây là cái quan trọng nhất. Có ý tưởng hay như giải Nobel mà không thu được data thì cũng vứt. Trước khi chốt đề tài, hãy tự hỏi: "Mình có quen ai để rải 300 phiếu khảo sát không?", "Dữ liệu này có xin được không?". Nếu câu trả lời là "Hên xui" -> STOP.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '[CẢNH BÁO TỬ THẦN - Traps]' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: '☠️ Bẫy "Quá mới": Chọn chủ đề mới toanh chưa ai làm (VD: Tâm lý học của người Sao Hỏa). Nghe thì oách, nhưng đến lúc tìm Thang đo (Measurement Scale) thì không có. Tự bịa thang đo? Reviewer sẽ đánh trượt ngay lập tức vì thiếu Validity.\n☠️ Bẫy "Đao to búa lớn": Muốn giải quyết đói nghèo, hòa bình thế giới. Xin thưa, giữ cái đầu lạnh giùm em. Luận án Tiến sĩ chỉ là một bài tập lớn để chứng minh bạn biết cách nghiên cứu, chứ không phải đi cứu thế giới.' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: 'Ghi chú thuật ngữ (Academic Glossary)' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Khoảng trống nghiên cứu" (Research Gap): Cái mà người đi trước chưa làm, làm chưa xong, hoặc làm sai.' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Đóng góp về lý thuyết" (Theoretical Contribution): Bổ sung gì cho kho tàng tri thức nhân loại?' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                listItem: 'bullet',
+                children: [{ _type: 'span', text: '"Đóng góp về thực tiễn" (Managerial Implication): Giúp ích gì cho doanh nghiệp/xã hội?' }],
+            },
+            {
+                _type: 'block',
+                style: 'h2',
+                children: [{ _type: 'span', text: '[CHECK-LIST SINH TỒN]' }],
+            },
+            {
+                _type: 'block',
+                style: 'normal',
+                children: [{ _type: 'span', text: 'Trước khi chốt deal đề tài với thầy hướng dẫn, tự hỏi 3 câu:\n✅ Đề tài này có "Gap" thực sự hay chỉ là do mình lười đọc?\n✅ Có thang đo (Scale) sẵn chưa hay phải đi bịa?\n✅ Có khả năng lấy được 300 mẫu trong 3 tháng không?\n\nNếu cả 3 là YES -> Triển!' }],
             }
         ]
     },
