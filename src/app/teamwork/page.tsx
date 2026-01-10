@@ -39,9 +39,11 @@ const merriweather = Merriweather({
     display: 'swap',
 });
 
+export const dynamic = 'force-dynamic';
+
 export default async function ForTeamPage() {
     // Fetch ALL posts
-    const allPosts = await client.fetch(QUERY, {}, { next: { revalidate: 60 } });
+    const allPosts = await client.fetch(QUERY, {}, { next: { revalidate: 0 } });
 
     // --- HELPER TO FIND POSTS BY TITLE KEYWORD OR SLUG ---
     // This allows us to "Curate" the book order manually

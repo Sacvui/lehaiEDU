@@ -111,9 +111,8 @@ export default function BookReader({ chapters, fontClass }: BookReaderProps) {
                                 <span className="w-8 h-[1px] bg-amber-400"></span>
                                 The Official Handbook
                             </p>
-                            <h1 className="text-5xl md:text-7xl font-bold leading-tight text-white mb-6 drop-shadow-lg">
-                                Re- <br />
-                                <span className="italic font-light text-amber-100/90 font-serif">Research</span>
+                            <h1 className="text-4xl md:text-6xl font-bold leading-tight text-white mb-6 drop-shadow-lg">
+                                Re-Research
                             </h1>
                             <p className="text-xl md:text-2xl text-slate-300 font-light italic leading-relaxed">
                                 "Nghiên cứu khoa học: <br /> Một cuộc dạo chơi nghiêm túc"
