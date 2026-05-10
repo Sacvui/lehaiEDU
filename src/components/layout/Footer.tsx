@@ -43,7 +43,7 @@ export function Footer() {
                             <a href="https://www.linkedin.com/in/hailp/" target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-slate-800 hover:text-white transition-all hover:scale-110">
                                 <Linkedin className="w-5 h-5" />
                             </a>
-                            <a href="mailto:contact@lehai.edu.vn" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-slate-800 hover:text-white transition-all hover:scale-110">
+                            <a href="mailto:hailp@ncskit.org" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-slate-800 hover:text-white transition-all hover:scale-110">
                                 <Mail className="w-5 h-5" />
                             </a>
                             <a href="#" className="w-10 h-10 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center hover:bg-slate-800 hover:text-white transition-all hover:scale-110">

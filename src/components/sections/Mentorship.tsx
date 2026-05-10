@@ -35,7 +35,7 @@ export function Mentorship() {
                             </p>
 
                             <div className="flex flex-col gap-4">
-                                <a href="mailto:contact@lehai.edu.vn?subject=Research%20Collaboration" className="w-full sm:w-auto">
+                                <a href="mailto:hailp@ncskit.org?subject=Research%20Collaboration" className="w-full sm:w-auto">
                                     <Button size="lg" className="w-full sm:w-auto gap-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-200">
                                         <Users className="w-5 h-5" />
                                         Join My Research Team

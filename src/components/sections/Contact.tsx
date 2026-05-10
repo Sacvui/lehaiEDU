@@ -28,17 +28,17 @@ export function Contact() {
                                 </div>
                                 <div>
                                     <h4 className="font-bold text-slate-900 dark:text-white text-lg">Email</h4>
-                                    <p className="text-slate-600 dark:text-slate-400">contact@lehai.edu.vn</p>
+                                    <p className="text-slate-600 dark:text-slate-400">hailp@ncskit.org</p>
                                 </div>
                             </div>
 
                             <div className="flex items-start gap-4">
                                 <div className="p-3 rounded-lg bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400">
-                                    <Phone className="w-6 h-6" />
+                                    <Send className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-slate-900 dark:text-white text-lg">Điện thoại</h4>
-                                    <p className="text-slate-600 dark:text-slate-400">+84 9xx xxx xxx</p>
+                                    <h4 className="font-bold text-slate-900 dark:text-white text-lg">Telegram</h4>
+                                    <p className="text-slate-600 dark:text-slate-400">@ncskit</p>
                                 </div>
                             </div>
 
