@@ -55,7 +55,7 @@ export function Hero() {
                             transition={{ delay: 0.2 }}
                             className="text-base md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
                         >
-                            Over 13 years of leadership in business management, digital transformation, and distribution systems. I bridge the gap between academic rigor and commercial excellence to help enterprises architect sustainable growth.
+                            Hơn 13 năm lãnh đạo trong quản trị kinh doanh, chuyển đổi số và hệ thống phân phối. Tôi kết nối tri thức hàn lâm (Academic Rigor) và thực tiễn thương mại (Commercial Excellence) để giúp doanh nghiệp xây dựng sự tăng trưởng bền vững.
                         </motion.p>
 
                         <motion.blockquote
@@ -73,25 +73,24 @@ export function Hero() {
                             transition={{ delay: 0.4 }}
                             className="flex flex-col sm:flex-row items-stretch sm:items-center lg:items-start gap-4 pt-4 w-full sm:w-auto"
                         >
-                            <a href="/consulting" className="w-full sm:w-auto">
-                                <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-lg rounded-full bg-gradient-to-r from-amber-700 to-orange-600 hover:from-amber-600 hover:to-orange-500 text-white shadow-lg border-0">
-                                    <Building2 className="mr-2 h-5 w-5" />
-                                    Consulting Strategy
-                                    <ArrowRight className="ml-2 w-4 h-4 opacity-50" />
+                            <a href="/cv" className="w-full sm:w-auto">
+                                <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-lg rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 shadow-xl shadow-slate-900/10 dark:shadow-white/10 transition-all active:scale-95">
+                                    <Sparkles className="mr-2 h-5 w-5" />
+                                    Xem Hồ sơ
                                 </Button>
                             </a>
 
                             <a href="https://ncskit.org" target="_blank" className="w-full sm:w-auto">
                                 <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-lg rounded-full border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white backdrop-blur-sm bg-white/50 dark:bg-slate-900/50">
                                     <Microscope className="mr-2 h-5 w-5" />
-                                    Start Researching
+                                    Khám phá NCSKIT
                                 </Button>
                             </a>
 
                             <a href="https://chain.fwdlife.vn/" target="_blank" className="w-full sm:w-auto">
                                 <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-lg rounded-full border-emerald-500/30 dark:border-emerald-500/30 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 text-emerald-700 dark:text-emerald-400 backdrop-blur-sm">
                                     <Zap className="mr-2 h-5 w-5" />
-                                    Verify Origin
+                                    Xác thực Nguồn gốc
                                 </Button>
                             </a>
                         </motion.div>

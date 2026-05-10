@@ -40,17 +40,17 @@ export function About() {
                                 <div className="flex justify-between items-center text-center">
                                     <div>
                                         <div className="text-2xl font-bold text-white">13+</div>
-                                        <div className="text-xs text-slate-400 uppercase tracking-wider">Years</div>
+                                        <div className="text-xs text-slate-400 uppercase tracking-wider">Năm Kinh nghiệm</div>
                                     </div>
                                     <div className="w-px h-8 bg-slate-700"></div>
                                     <div>
                                         <div className="text-2xl font-bold text-white">10+</div>
-                                        <div className="text-xs text-slate-400 uppercase tracking-wider">Lecturing</div>
+                                        <div className="text-xs text-slate-400 uppercase tracking-wider">Năm Giảng dạy</div>
                                     </div>
                                     <div className="w-px h-8 bg-slate-700"></div>
                                     <div>
                                          <div className="text-2xl font-bold text-white">4</div>
-                                         <div className="text-xs text-slate-400 uppercase tracking-wider">Ventures</div>
+                                         <div className="text-xs text-slate-400 uppercase tracking-wider">Dự án Sáng lập</div>
                                      </div>
                                 </div>
                             </div>
@@ -60,16 +60,16 @@ export function About() {
                     {/* Right: Narrative */}
                     <div className="w-full lg:w-1/2 space-y-8">
                         <div>
-                            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-xs font-bold uppercase tracking-widest mb-4">
+                             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-900/30 border border-blue-500/30 text-blue-400 text-xs font-bold uppercase tracking-widest mb-4">
                                 <Award className="w-3 h-3" />
-                                About The Founder
+                                Về Nhà Sáng Lập
                             </div>
                             <h3 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
-                                Bridging the Void Between <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Science & Commerce</span>
+                                Kết nối Khoảng trống giữa <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Hàn lâm & Thương mại</span>
                             </h3>
                             <p className="text-lg text-slate-400 leading-relaxed">
-                                I operate at the intersection of rigorous academia and industrial leadership. My methodology applies scientific precision (via <span className="text-white hover:text-cyan-400 cursor-pointer transition-colors">NCSKIT</span>) to architect high-performance business ecosystems (via <span className="text-white hover:text-blue-400 cursor-pointer transition-colors">AM Medtech</span>).
+                                Tôi hoạt động tại giao lộ giữa nghiên cứu học thuật nghiêm túc và lãnh đạo công nghiệp thực chiến. Phương pháp luận của tôi áp dụng độ chính xác khoa học (thông qua <span className="text-white hover:text-cyan-400 cursor-pointer transition-colors">NCSKIT</span>) để kiến tạo các hệ sinh thái kinh doanh hiệu suất cao (thông qua <span className="text-white hover:text-blue-400 cursor-pointer transition-colors">AM Medtech</span>).
                             </p>
                         </div>
 
@@ -77,7 +77,7 @@ export function About() {
                             <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-blue-500/50 transition-colors">
                                 <div className="flex items-center gap-3 mb-4">
                                     <Briefcase className="w-5 h-5 text-cyan-400" />
-                                    <h4 className="font-bold text-white text-lg">Global Leadership</h4>
+                                    <h4 className="font-bold text-white text-lg">Quản trị Toàn cầu</h4>
                                 </div>
                                 <ul className="space-y-3">
                                     {['fwd LIFEchain', 'Japfa Comfeed', 'Coca-Cola', 'Mondelez Kinh Do', 'Nova Group'].map(item => (
@@ -92,7 +92,7 @@ export function About() {
                             <div className="p-5 rounded-2xl bg-slate-900 border border-slate-800 hover:border-purple-500/50 transition-colors">
                                 <div className="flex items-center gap-3 mb-4">
                                     <GraduationCap className="w-5 h-5 text-purple-400" />
-                                    <h4 className="font-bold text-white text-lg">Academic Impact</h4>
+                                    <h4 className="font-bold text-white text-lg">Tác động Học thuật</h4>
                                 </div>
                                 <ul className="space-y-3">
                                     {['PhD Researcher @ VSB Ostrava', 'Lecturer @ TDTU', 'Founder NCSKIT.ORG', 'Academic Mentorship'].map(item => (
@@ -108,11 +108,11 @@ export function About() {
                         <div className="flex gap-4 pt-4">
                             <a href="/cv">
                                 <Button className="bg-white text-slate-950 hover:bg-slate-200">
-                                    See Full Curriculum Vitae
+                                    Xem Hồ sơ đầy đủ
                                 </Button>
                             </a>
                             <Button variant="outline" className="border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 hover:bg-slate-800">
-                                Visit LinkedIn Profile <ArrowUpRight className="ml-2 w-4 h-4" />
+                                LinkedIn Profile <ArrowUpRight className="ml-2 w-4 h-4" />
                             </Button>
                         </div>
                     </div>

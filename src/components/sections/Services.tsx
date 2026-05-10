@@ -7,28 +7,28 @@ import { Button } from '@/components/ui/button';
 
 const serviceGroups = [
     {
-        title: "Trust & Provenance",
+        title: "Niềm tin & Nguồn gốc",
         brand: "fwd LIFEchain",
-        description: "Farm Worth Driven (fwd) - The Future of Trust in sustainable agriculture through blockchain.",
+        description: "Farm Worth Driven (fwd) - Tương lai của niềm tin trong nông nghiệp bền vững thông qua Blockchain.",
         items: [
-            { icon: Zap, label: "Verify Origin", desc: "Real-time provenance certification using advanced cryptography." },
-            { icon: Network, label: "Network Pulse", desc: "Decentralized ecosystem with 1100+ active nodes for maximum integrity." },
-            { icon: Globe, label: "Global Standards", desc: "Aligning industrial supply chains with rigorous academic verification." },
-            { icon: Layers, label: "Camera Verification", desc: "Instant product quality and origin check via mobile-first interface." }
+            { icon: Zap, label: "Xác thực Nguồn gốc", desc: "Chứng thực nguồn gốc thời gian thực bằng mật mã học tiên tiến." },
+            { icon: Network, label: "Network Pulse", desc: "Hệ sinh thái phi tập trung với 1100+ nodes đảm bảo tính toàn vẹn." },
+            { icon: Globe, label: "Tiêu chuẩn Toàn cầu", desc: "Kết nối chuỗi cung ứng công nghiệp với xác thực học thuật nghiêm ngặt." },
+            { icon: Layers, label: "Camera Verification", desc: "Kiểm tra chất lượng và nguồn gốc tức thì qua giao diện di động." }
         ],
         color: "from-emerald-500 to-teal-500",
         bg: "bg-emerald-950/20",
         border: "border-emerald-500/20"
     },
     {
-        title: "Scientific Research OS",
+        title: "Hệ điều hành Nghiên cứu",
         brand: "NCSKIT.ORG",
-        description: "The Scientific Standard for Researchers - Professional data analysis powered by R-Engine.",
+        description: "Tiêu chuẩn khoa học cho Nhà nghiên cứu - Phân tích dữ liệu chuyên nghiệp trên nền tảng R-Engine.",
         items: [
-            { icon: BrainCircuit, label: "AI Research Assistant", desc: "Streamlining literature review and hypothesis generation with AI." },
-            { icon: Database, label: "R-Engine Analysis", desc: "Absolute accuracy in advanced statistics with zero installation required." },
-            { icon: FlaskConical, label: "Scientific Rigor", desc: "Professional-grade SEM/CFA modeling and data cleaning tools." },
-            { icon: BarChart3, label: "Secure Data Lab", desc: "Maximum security and privacy for high-stakes academic research." }
+            { icon: BrainCircuit, label: "Trợ lý Nghiên cứu AI", desc: "Tối ưu hóa tổng quan tài liệu và xây dựng giả thuyết bằng AI." },
+            { icon: Database, label: "Phân tích R-Engine", desc: "Độ chính xác tuyệt đối trong thống kê nâng cao, không cần cài đặt." },
+            { icon: FlaskConical, label: "Tính Nghiêm túc Khoa học", desc: "Công cụ mô hình hóa SEM/CFA và làm sạch dữ liệu chuẩn quốc tế." },
+            { icon: BarChart3, label: "Phòng Lab Bảo mật", desc: "Bảo mật và quyền riêng tư tối đa cho các nghiên cứu học thuật quan trọng." }
         ],
         color: "from-amber-500 to-orange-500",
         bg: "bg-amber-950/20",
