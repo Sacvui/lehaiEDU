@@ -7,32 +7,32 @@ import { Button } from '@/components/ui/button';
 
 const serviceGroups = [
     {
-        title: "Enterprise Transformation",
-        brand: "AM Medtech",
-        description: "End-to-end digital architecture for Pharma & FMCG.",
+        title: "Trust & Provenance",
+        brand: "fwd LIFEchain",
+        description: "Farm Worth Driven (fwd) - The Future of Trust in sustainable agriculture through blockchain.",
         items: [
-            { icon: Network, label: "Next-Gen DMS", desc: "Distribution Management Systems synchronized with field reality." },
-            { icon: Database, label: "Big Data Strategy", desc: "Predictive modeling and real-time analytics dashboards." },
-            { icon: Zap, label: "Commercial Excellence", desc: "Route-to-Market (RTM) optimization and sales force automation." },
-            { icon: Layers, label: "Omnichannel Ecosystem", desc: "Seamless integration of B2B e-commerce and CRM." }
+            { icon: Zap, label: "Verify Origin", desc: "Real-time provenance certification using advanced cryptography." },
+            { icon: Network, label: "Network Pulse", desc: "Decentralized ecosystem with 1100+ active nodes for maximum integrity." },
+            { icon: Globe, label: "Global Standards", desc: "Aligning industrial supply chains with rigorous academic verification." },
+            { icon: Layers, label: "Camera Verification", desc: "Instant product quality and origin check via mobile-first interface." }
         ],
-        color: "from-blue-500 to-cyan-500",
-        bg: "bg-blue-950/20",
-        border: "border-blue-500/20"
+        color: "from-emerald-500 to-teal-500",
+        bg: "bg-emerald-950/20",
+        border: "border-emerald-500/20"
     },
     {
         title: "Scientific Research OS",
         brand: "NCSKIT.ORG",
-        description: "AI-powered ecosystem for PhD researchers and Academia.",
+        description: "The Scientific Standard for Researchers - Professional data analysis powered by R-Engine.",
         items: [
-            { icon: BrainCircuit, label: "Ideation Lab (RAG)", desc: "AI Assistant for literature review synthesis and hypothesis generation." },
-            { icon: FlaskConical, label: "Design Studio", desc: "Drag-and-drop SEM/CFA modeling and survey design tools." },
-            { icon: BarChart3, label: "Analysis Hub", desc: "Auto-Stats interpretation (T-test, ANOVA, SEM) & Smart Grid cleaning." },
-            { icon: Globe, label: "Publishing Center", desc: "APA/Scopus-ready manuscript generation and citation management." }
+            { icon: BrainCircuit, label: "AI Research Assistant", desc: "Streamlining literature review and hypothesis generation with AI." },
+            { icon: Database, label: "R-Engine Analysis", desc: "Absolute accuracy in advanced statistics with zero installation required." },
+            { icon: FlaskConical, label: "Scientific Rigor", desc: "Professional-grade SEM/CFA modeling and data cleaning tools." },
+            { icon: BarChart3, label: "Secure Data Lab", desc: "Maximum security and privacy for high-stakes academic research." }
         ],
-        color: "from-indigo-500 to-purple-500",
-        bg: "bg-indigo-950/20",
-        border: "border-indigo-500/20"
+        color: "from-amber-500 to-orange-500",
+        bg: "bg-amber-950/20",
+        border: "border-amber-500/20"
     }
 ];
 
@@ -46,7 +46,7 @@ export function Services() {
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="text-center mb-16 space-y-4">
                     <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white">
-                        Focus <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-orange-600 dark:from-amber-400 dark:to-orange-400">Areas</span>
+                        Giải Pháp <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-orange-600 dark:from-amber-400 dark:to-orange-400">Chiến Lược & Nghiên Cứu</span>
                     </h2>
                     <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
                         Connecting enterprise strategy with advanced academic research tools.

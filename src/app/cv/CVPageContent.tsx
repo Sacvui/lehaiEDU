@@ -56,9 +56,11 @@ export default function CVPageContent() {
                                 </div>
 
                                 <div className="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800">
-                                    <Button className="w-full gap-2 rounded-full bg-slate-900 text-white hover:bg-slate-800" disabled>
-                                        <Download className="w-4 h-4" /> Download Resume PDF
-                                    </Button>
+                                    <a href="/CV_LePhucHai_Lecturer.pdf" download>
+                                        <Button className="w-full gap-2 rounded-full bg-slate-900 text-white hover:bg-slate-800">
+                                            <Download className="w-4 h-4" /> Download Resume PDF
+                                        </Button>
+                                    </a>
                                 </div>
                             </motion.div>
 
@@ -77,7 +79,7 @@ export default function CVPageContent() {
                                     <EducationItem
                                         degree="Doctor of Business Administration"
                                         year="2024 - 2027"
-                                        school="Current"
+                                        school="UCSI University"
                                     />
                                     <EducationItem
                                         degree="Master of Business Administration"
@@ -106,8 +108,8 @@ export default function CVPageContent() {
                             <h2 className="text-5xl font-bold text-slate-900 dark:text-white mb-2">National Business</h2>
                             <h2 className="text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-amber-600 to-orange-600 mb-6">Development Director</h2>
                             <p className="text-lg text-slate-600 dark:text-slate-400 leading-relaxed mb-8">
-                                Over 13 years of experience in business management, building distribution systems, and enhancing commercial capabilities, particularly in multinational FMCG corporations.
-                                My background includes a strong focus on Management Information Systems (MIS) and developing innovative technological solutions to support economic growth.
+                                Over 13 years of leadership in business management, optimizing distribution systems and pioneering digital transformation across multinational FMCG corporations. 
+                                I specialize in architecting Management Information Systems (MIS) and innovative technological frameworks that drive sustainable economic growth.
                             </p>
                         </motion.div>
 
@@ -120,13 +122,20 @@ export default function CVPageContent() {
 
                             <div className="space-y-6">
                                 <ExperienceCard
+                                    title="Founder & Lead Researcher"
+                                    company="fwd LIFEchain"
+                                    period="2024 - Present"
+                                    logoFallback="LC"
+                                    logoColor="bg-emerald-100 text-emerald-700"
+                                    current
+                                    description="A research-grade blockchain platform (chain.fwdlife.vn) certifying agricultural provenance through advanced cryptography and academic theory."
+                                />
+                                <ExperienceCard
                                     title="National Business Development Director - OTC & Internal Channel"
                                     company="An Minh Group"
                                     period="Present"
-                                    logo="/logos/anminh.png"
                                     logoFallback="AM"
                                     logoColor="bg-sky-100 text-sky-700"
-                                    current
                                     description="Leading nationwide business development for OTC pharmacy channel and internal sales operations."
                                 />
                                 <ExperienceCard

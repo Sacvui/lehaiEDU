@@ -39,19 +39,19 @@ export function About() {
                             <div className="absolute bottom-8 left-8 right-8 bg-slate-900/80 backdrop-blur-md p-6 rounded-xl border border-slate-700/50">
                                 <div className="flex justify-between items-center text-center">
                                     <div>
-                                        <div className="text-2xl font-bold text-white">15+</div>
+                                        <div className="text-2xl font-bold text-white">13+</div>
                                         <div className="text-xs text-slate-400 uppercase tracking-wider">Years</div>
                                     </div>
                                     <div className="w-px h-8 bg-slate-700"></div>
                                     <div>
-                                        <div className="text-2xl font-bold text-white">3</div>
-                                        <div className="text-xs text-slate-400 uppercase tracking-wider">Startups</div>
+                                        <div className="text-2xl font-bold text-white">10+</div>
+                                        <div className="text-xs text-slate-400 uppercase tracking-wider">Lecturing</div>
                                     </div>
                                     <div className="w-px h-8 bg-slate-700"></div>
                                     <div>
-                                        <div className="text-2xl font-bold text-white">10+</div>
-                                        <div className="text-xs text-slate-400 uppercase tracking-wider">Publications</div>
-                                    </div>
+                                         <div className="text-2xl font-bold text-white">4</div>
+                                         <div className="text-xs text-slate-400 uppercase tracking-wider">Ventures</div>
+                                     </div>
                                 </div>
                             </div>
                         </div>
@@ -69,7 +69,7 @@ export function About() {
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Science & Commerce</span>
                             </h3>
                             <p className="text-lg text-slate-400 leading-relaxed">
-                                I operate at the intersection of rigorous academia and high-stakes enterprise. My methodology applies the precision of scientific research (via <span className="text-white hover:text-cyan-400 cursor-pointer transition-colors">NCSKIT</span>) to solve complex business inefficiencies (via <span className="text-white hover:text-blue-400 cursor-pointer transition-colors">AM Medtech</span>).
+                                I operate at the intersection of rigorous academia and industrial leadership. My methodology applies scientific precision (via <span className="text-white hover:text-cyan-400 cursor-pointer transition-colors">NCSKIT</span>) to architect high-performance business ecosystems (via <span className="text-white hover:text-blue-400 cursor-pointer transition-colors">AM Medtech</span>).
                             </p>
                         </div>
 
@@ -80,12 +80,12 @@ export function About() {
                                     <h4 className="font-bold text-white text-lg">Global Leadership</h4>
                                 </div>
                                 <ul className="space-y-3">
-                                    {['Japfa Comfeed', 'Coca-Cola', 'Mondelez Kinh Do', 'Nova Group'].map(item => (
-                                        <li key={item} className="flex items-center gap-2 text-slate-400 text-sm">
-                                            <span className="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
-                                            {item}
-                                        </li>
-                                    ))}
+                                    {['fwd LIFEchain', 'Japfa Comfeed', 'Coca-Cola', 'Mondelez Kinh Do', 'Nova Group'].map(item => (
+                                         <li key={item} className="flex items-center gap-2 text-slate-400 text-sm">
+                                             <span className="w-1.5 h-1.5 rounded-full bg-cyan-500"></span>
+                                             {item}
+                                         </li>
+                                     ))}
                                 </ul>
                             </div>
 
@@ -95,7 +95,7 @@ export function About() {
                                     <h4 className="font-bold text-white text-lg">Academic Impact</h4>
                                 </div>
                                 <ul className="space-y-3">
-                                    {['PhD Researcher (Czech)', 'Lecturer @ TDTU', 'Founder NCSKIT.ORG', 'Intl. Publications'].map(item => (
+                                    {['PhD Researcher @ UCSI', 'Lecturer @ TDTU', 'Founder NCSKIT.ORG', 'Academic Mentorship'].map(item => (
                                         <li key={item} className="flex items-center gap-2 text-slate-400 text-sm">
                                             <span className="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
                                             {item}

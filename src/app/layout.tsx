@@ -9,17 +9,17 @@ const inter = Inter({ subsets: ["latin"], display: 'swap' });
 export const metadata: Metadata = {
   metadataBase: new URL('https://lehai.edu.vn'),
   title: {
-    default: 'Lê Phúc Hải | Strategic Leadership & Digital Transformation',
-    template: '%s | Lê Phúc Hải'
+    default: 'NCS Lê Phúc Hải | Chuyên Gia Chuyển Đổi Số & Quản Trị Chiến Lược',
+    template: '%s | NCS Lê Phúc Hải'
   },
-  description: 'Official website of Le Phuc Hai - National Business Development Director & PhD Researcher. Insights on RTM, Logistics, Leadership and Academic Research.',
-  keywords: ['Le Phuc Hai', 'RTM', 'Logistics', 'Business Strategy', 'Academic Research', 'PhD Journey', 'Mentorship'],
+  description: 'Website chính thức của NCS Lê Phúc Hải - Founder fwd LIFEchain, Chuyên gia tư vấn Chuyển đổi số, Giám đốc Phát triển Kinh doanh. Chia sẻ kiến thức về RTM, Blockchain Nông nghiệp, và Nghiên cứu khoa học.',
+  keywords: ['Lê Phúc Hải', 'Le Phuc Hai', 'fwd LIFEchain', 'Blockchain Agriculture', 'Transparent Agriculture', 'Chuyển đổi số', 'Digital Transformation', 'RTM', 'Logistics', 'Nghiên cứu sinh', 'PhD Researcher', 'Tư vấn chiến lược', 'AM Medtech', 'NCSKIT'],
   openGraph: {
     title: {
-      default: 'Lê Phúc Hải | Strategic Leadership & Digital Transformation',
-      template: '%s | Lê Phúc Hải'
+      default: 'NCS Lê Phúc Hải | Chuyên Gia Chuyển Đổi Số & Quản Trị Chiến Lược',
+      template: '%s | NCS Lê Phúc Hải'
     },
-    description: 'Insights on RTM, Logistics, Leadership and Academic Research.',
+    description: 'Chia sẻ kiến thức về Chuyển đổi số, Quản trị chiến lược và Nghiên cứu khoa học.',
     url: 'https://lehai.edu.vn',
     siteName: 'Le Phuc Hai Official',
     images: [
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
         url: '/uploads/profile-founder.jpg',
         width: 1200,
         height: 630,
-        alt: 'Le Phuc Hai Profile',
+        alt: 'NCS Lê Phúc Hải - Chuyên Gia Chuyển Đổi Số',
       },
     ],
     locale: 'vi_VN',
@@ -36,15 +36,16 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: {
-      default: 'Lê Phúc Hải | Strategic Leadership & Digital Transformation',
-      template: '%s | Lê Phúc Hải'
+      default: 'NCS Lê Phúc Hải | Scholar-Practitioner',
+      template: '%s | NCS Lê Phúc Hải'
     },
-    description: 'Insights from a Scholar-Practitioner.',
+    description: 'Hành trình kết nối tri thức hàn lâm và thực tiễn quản trị.',
     images: ['/uploads/profile-founder.jpg'],
     creator: '@hailp',
   },
   manifest: '/manifest.json',
 };
+
 
 export const viewport: Viewport = {
   themeColor: '#0f172a',
@@ -76,6 +77,7 @@ export default function RootLayout({
               url: 'https://lehai.edu.vn',
               image: 'https://lehai.edu.vn/uploads/profile-founder.jpg',
               sameAs: [
+                'https://chain.fwdlife.vn',
                 'https://www.linkedin.com/in/lephuchai',
                 'https://www.facebook.com/hailp',
                 'https://ammedtech.com'

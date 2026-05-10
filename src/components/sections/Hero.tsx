@@ -42,10 +42,10 @@ export function Hero() {
                             className="text-3xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
                         >
                             <span className="block text-slate-800 dark:text-slate-200">
-                                Le Phuc Hai
+                                NCS Lê Phúc Hải
                             </span>
                             <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-orange-600 dark:from-amber-500 dark:to-orange-400">
-                                Speaker. Researcher.
+                                Scholar. Leader. Practitioner.
                             </span>
                         </motion.h1>
 
@@ -55,7 +55,7 @@ export function Hero() {
                             transition={{ delay: 0.2 }}
                             className="text-base md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
                         >
-                            With over 10 years of experience in business management, digital transformation, and distribution system development. I specialize in helping enterprises restructure efficiently, enhance operational effectiveness, and optimize commercial performance.
+                            Over 13 years of leadership in business management, digital transformation, and distribution systems. I bridge the gap between academic rigor and commercial excellence to help enterprises architect sustainable growth.
                         </motion.p>
 
                         <motion.blockquote
@@ -81,10 +81,19 @@ export function Hero() {
                                 </Button>
                             </a>
 
-                            <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-lg rounded-full border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white backdrop-blur-sm bg-white/50 dark:bg-slate-900/50">
-                                <Microscope className="mr-2 h-5 w-5" />
-                                NCSKIT Ecosystem
-                            </Button>
+                            <a href="https://ncskit.org" target="_blank" className="w-full sm:w-auto">
+                                <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-lg rounded-full border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white backdrop-blur-sm bg-white/50 dark:bg-slate-900/50">
+                                    <Microscope className="mr-2 h-5 w-5" />
+                                    Start Researching
+                                </Button>
+                            </a>
+
+                            <a href="https://chain.fwdlife.vn/" target="_blank" className="w-full sm:w-auto">
+                                <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-lg rounded-full border-emerald-500/30 dark:border-emerald-500/30 hover:bg-emerald-50 dark:hover:bg-emerald-950/30 text-emerald-700 dark:text-emerald-400 backdrop-blur-sm">
+                                    <Zap className="mr-2 h-5 w-5" />
+                                    Verify Origin
+                                </Button>
+                            </a>
                         </motion.div>
 
                         {/* Social Proof */}
@@ -95,7 +104,10 @@ export function Hero() {
                             className="pt-8 flex flex-col items-center lg:items-start gap-4"
                         >
                             <p className="text-xs uppercase tracking-[0.2em] text-slate-500 dark:text-slate-500 font-semibold">Founding Ecosystem</p>
-                            <div className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6">
+                             <div className="flex flex-wrap justify-center lg:justify-start gap-4 md:gap-6">
+                                <a href="https://chain.fwdlife.vn" target="_blank" className="group flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-emerald-500 dark:hover:border-emerald-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
+                                    <span className="font-bold text-slate-700 dark:text-white tracking-wider group-hover:text-emerald-700 dark:group-hover:text-emerald-400 transition-colors text-sm">FWD LIFECHAIN</span>
+                                </a>
                                 <a href="#" className="group flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-500 dark:hover:border-amber-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
                                     <span className="font-bold text-slate-700 dark:text-white tracking-wider group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors text-sm">ANMINH GROUP</span>
                                 </a>
@@ -125,7 +137,7 @@ export function Hero() {
                             <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl border-4 border-white dark:border-slate-800">
                                 <NextImage
                                     src="/uploads/profile-street.jpg"
-                                    alt="Le Phuc Hai - PhD Researcher and Speaker"
+                                    alt="NCS Lê Phúc Hải - Chuyên gia Chuyển đổi số và Quản trị Chiến lược"
                                     fill
                                     priority
                                     className="object-cover"
