@@ -7,39 +7,45 @@ import { Footer } from '@/components/layout/Footer'
 const inter = Inter({ subsets: ["latin"], display: 'swap' });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://lehai.edu.vn'),
+  metadataBase: new URL('https://www.lephuchai.com'),
   title: {
-    default: 'NCS Lê Phúc Hải | Chuyên Gia Chuyển Đổi Số & Quản Trị Chiến Lược',
-    template: '%s | NCS Lê Phúc Hải'
+    default: 'Le Phuc Hai | PhD Researcher & Digital Transformation Expert',
+    template: '%s | Le Phuc Hai'
   },
-  description: 'Website chính thức của NCS Lê Phúc Hải - Founder fwd LIFEchain, Chuyên gia tư vấn Chuyển đổi số, Giám đốc Phát triển Kinh doanh. Chia sẻ kiến thức về RTM, Blockchain Nông nghiệp, và Nghiên cứu khoa học.',
-  keywords: ['Lê Phúc Hải', 'Le Phuc Hai', 'fwd LIFEchain', 'Blockchain Agriculture', 'Transparent Agriculture', 'Chuyển đổi số', 'Digital Transformation', 'RTM', 'Logistics', 'Nghiên cứu sinh', 'PhD Researcher', 'Tư vấn chiến lược', 'AM Medtech', 'ncsStat'],
+  description: 'Official website of Le Phuc Hai (Lê Phúc Hải) - Founder of fwd LIFEchain, PhD Researcher, and Digital Transformation Expert. Specializing in RTM, Blockchain Agriculture, and Advanced Statistics (ncsStat).',
+  keywords: [
+    'Le Phuc Hai', 'Lê Phúc Hải', 'fwd LIFEchain', 'Blockchain Agriculture', 
+    'Nông nghiệp minh bạch', 'Chuyển đổi số', 'Digital Transformation', 
+    'RTM Distribution', 'Logistics Supply Chain', 'PhD Researcher', 
+    'Nghiên cứu sinh', 'Tư vấn chiến lược', 'AM Medtech', 'ncsStat', 
+    'Advanced Statistics R', 'Data Analytics Vietnam'
+  ],
   openGraph: {
     title: {
-      default: 'NCS Lê Phúc Hải | Chuyên Gia Chuyển Đổi Số & Quản Trị Chiến Lược',
-      template: '%s | NCS Lê Phúc Hải'
+      default: 'Le Phuc Hai | PhD Researcher & Business Strategist',
+      template: '%s | Le Phuc Hai'
     },
-    description: 'Chia sẻ kiến thức về Chuyển đổi số, Quản trị chiến lược và Nghiên cứu khoa học.',
-    url: 'https://lehai.edu.vn',
+    description: 'Bridging academic rigor and business strategy. Expert in Digital Transformation and Blockchain Agriculture.',
+    url: 'https://www.lephuchai.com',
     siteName: 'Le Phuc Hai Official',
     images: [
       {
         url: '/uploads/profile-founder.jpg',
         width: 1200,
         height: 630,
-        alt: 'NCS Lê Phúc Hải - Chuyên Gia Chuyển Đổi Số',
+        alt: 'Le Phuc Hai - PhD Researcher & Founder',
       },
     ],
-    locale: 'vi_VN',
+    locale: 'en_US',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
     title: {
-      default: 'NCS Lê Phúc Hải | Scholar-Practitioner',
-      template: '%s | NCS Lê Phúc Hải'
+      default: 'Le Phuc Hai | Scholar-Practitioner',
+      template: '%s | Le Phuc Hai'
     },
-    description: 'Hành trình kết nối tri thức hàn lâm và thực tiễn quản trị.',
+    description: 'Expertise in Digital Transformation and academic research methodology.',
     images: ['/uploads/profile-founder.jpg'],
     creator: '@hailp',
   },
@@ -74,20 +80,32 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Person',
               name: 'Le Phuc Hai',
-              url: 'https://lehai.edu.vn',
-              image: 'https://lehai.edu.vn/uploads/profile-founder.jpg',
+              alternateName: 'Lê Phúc Hải',
+              url: 'https://www.lephuchai.com',
+              image: 'https://www.lephuchai.com/uploads/profile-founder.jpg',
               sameAs: [
                 'https://chain.fwdlife.vn',
-                'https://www.linkedin.com/in/lephuchai',
-                'https://www.facebook.com/hailp',
+                'https://www.linkedin.com/in/hailp/',
+                'https://ncskit.org',
                 'https://ammedtech.com'
               ],
-              jobTitle: 'National Business Development Director',
-              worksFor: {
-                '@type': 'Organization',
-                name: 'AM Medtech'
-              },
-              description: 'Expert in Strategic Leadership, Digital Transformation, and Research.'
+              jobTitle: 'Founder & PhD Researcher',
+              worksFor: [
+                {
+                  '@type': 'Organization',
+                  name: 'fwd LIFEchain'
+                },
+                {
+                  '@type': 'Organization',
+                  name: 'AM Medtech'
+                }
+              ],
+              description: 'Expert in Strategic Leadership, Digital Transformation, and Advanced Statistical Research. Bridging the gap between academic theory and practical application.',
+              knowsAbout: ['Blockchain', 'Digital Transformation', 'Agricultural Supply Chain', 'Statistics', 'R Language', 'Marketing Strategy'],
+              alumniOf: {
+                '@type': 'CollegeOrUniversity',
+                name: 'Ton Duc Thang University'
+              }
             })
           }}
         />

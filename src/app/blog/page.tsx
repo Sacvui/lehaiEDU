@@ -6,12 +6,12 @@ import BlogClient from "./BlogClient";
 export const dynamic = 'force-dynamic';
 
 export const metadata = {
-    title: 'Blog - Intelligence & Insights | Lê Phúc Hải',
-    description: 'Khám phá các bài viết chuyên sâu về RTM, Digital Transformation, Research và Strategic Leadership',
+    title: 'Intelligence & Insights | Le Phuc Hai',
+    description: 'Explore in-depth articles on RTM, Digital Transformation, Research Methodology, and Strategic Leadership.',
     openGraph: {
-        title: 'Blog - Intelligence & Insights | Lê Phúc Hải',
-        description: 'Kho tri thức thực chiến về Quản trị, Công nghệ và Nghiên cứu khoa học. RTM, Logistics, AI & PhD Mindset.',
-        images: ['/blog/blog_cover_og.png'], // Ensure you have a default OG image or use a specific one
+        title: 'Intelligence & Insights | Le Phuc Hai',
+        description: 'A knowledge hub for Management, Technology, and Scientific Research. RTM, Logistics, AI, and PhD Mindset.',
+        images: ['/blog/blog_cover_og.png'],
         type: 'website',
     },
 };

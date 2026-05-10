@@ -31,7 +31,7 @@ const SERIES_CONFIG = [
         id: 'ncs101',
         tag: 'NCS101',
         title: 'NCS101: PhD Mindset',
-        desc: 'Tư duy làm nghiên cứu từ A-Z. Đừng để đời PhD là "bể khổ".',
+        desc: 'Advanced research methodology from A to Z. Navigating the academic journey with precision.',
         icon: GraduationCap,
         color: 'bg-indigo-600',
         gradient: 'from-indigo-600 to-violet-600'
@@ -40,7 +40,7 @@ const SERIES_CONFIG = [
         id: 'r101',
         tag: 'R101',
         title: 'R101: Data Analysis',
-        desc: 'Phân tích dữ liệu cho dân kinh tế. Code R dễ như ăn kẹo (nếu biết cách).',
+        desc: 'Practical data analysis for social sciences. Mastering R-Engine for accurate insights.',
         icon: Filter,
         color: 'bg-blue-600',
         gradient: 'from-blue-600 to-cyan-500'
@@ -49,7 +49,7 @@ const SERIES_CONFIG = [
         id: 'python101',
         tag: 'Python101',
         title: 'Python101: Quant Research',
-        desc: 'Vũ khí hạng nặng cho Marketer: Big Data, AI & Segmentation.',
+        desc: 'Advanced tools for strategic marketers: Big Data, AI, and Customer Segmentation.',
         icon: Zap,
         color: 'bg-emerald-600',
         gradient: 'from-emerald-600 to-teal-500'
@@ -58,7 +58,7 @@ const SERIES_CONFIG = [
         id: 'book',
         category: 'book-intern-to-ceo',
         title: 'Book: Intern to CEO',
-        desc: '300 bài học xương máu từ thực chiến. Đọc để bớt vấp ngã.',
+        desc: '300 practical lessons from the field. Accelerate your career growth with expert insights.',
         icon: BookOpen,
         color: 'bg-amber-600',
         gradient: 'from-amber-600 to-orange-500'
@@ -177,7 +177,7 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                                 Learning <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Hub</span>
                             </h1>
                             <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                                Kho tri thức thực chiến về Quản trị, Công nghệ và Nghiên cứu khoa học.
+                                A tactical knowledge hub for Management, Technology, and Scientific Research.
                             </p>
                         </div>
 
@@ -186,7 +186,7 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400" />
                             <input
                                 type="text"
-                                placeholder="Tìm kiếm bài viết..."
+                                placeholder="Search articles..."
                                 value={searchQuery}
                                 onChange={(e) => setSearchQuery(e.target.value)}
                                 className="w-full pl-12 pr-12 py-3 rounded-full border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800 focus:ring-2 focus:ring-blue-500 focus:outline-none transition-all"
@@ -237,7 +237,7 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                                     : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700'
                                     }`}
                             >
-                                Tất cả
+                                All
                             </button>
                             {Object.keys(CATEGORY_GROUPS).map((groupKey) => (
                                 <button
@@ -259,7 +259,7 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                                     : 'bg-white text-slate-600 border border-slate-200 hover:bg-slate-50 dark:bg-slate-800 dark:text-slate-300 dark:border-slate-700'
                                     }`}
                             >
-                                Đời Research
+                                Researcher Life
                             </button>
                         </div>
                     </div>
@@ -272,13 +272,13 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                 {/* Active Filter Indicator */}
                 {isFiltering && (
                     <div className="flex items-center gap-2 mb-8 text-sm text-slate-500">
-                        <span>Đang xem:</span>
+                        <span>Viewing:</span>
                         {selectedTag && <span className="font-bold text-slate-900 dark:text-white">Tag: {selectedTag}</span>}
-                        {selectedCategory && <span className="font-bold text-slate-900 dark:text-white">Danh mục: {GROUP_NAMES[selectedCategory] || selectedCategory}</span>}
-                        {searchQuery && <span className="font-bold text-slate-900 dark:text-white">Tìm kiếm: "{searchQuery}"</span>}
+                        {selectedCategory && <span className="font-bold text-slate-900 dark:text-white">Category: {GROUP_NAMES[selectedCategory] || selectedCategory}</span>}
+                        {searchQuery && <span className="font-bold text-slate-900 dark:text-white">Search: "{searchQuery}"</span>}
 
                         <button onClick={clearFilters} className="ml-auto text-red-500 hover:underline flex items-center gap-1">
-                            <X className="w-3 h-3" /> Xóa bộ lọc
+                            <X className="w-3 h-3" /> Clear filters
                         </button>
                     </div>
                 )}
@@ -288,7 +288,7 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                     <section className="mb-16">
                         <h2 className="text-2xl font-bold text-slate-900 dark:text-white mb-6 flex items-center gap-2">
                             <TrendingUp className="w-6 h-6 text-amber-500" />
-                            Tiêu điểm
+                            Featured
                         </h2>
                         <div className="grid md:grid-cols-2 gap-8">
                             {featuredPosts.slice(0, 4).map((post) => (
@@ -316,7 +316,7 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                                                     </span>
                                                 )}
                                                 <span className="text-slate-400 flex items-center gap-1">
-                                                    <Clock className="w-3 h-3" /> {post.readingTime} phút
+                                                    <Clock className="w-3 h-3" /> {post.readingTime} min
                                                 </span>
                                             </div>
                                             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
@@ -326,7 +326,7 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                                                 {post.excerpt}
                                             </p>
                                             <div className="flex items-center text-sm font-medium text-blue-600 dark:text-blue-400">
-                                                Đọc tiếp <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
+                                                Read more <ArrowRight className="w-4 h-4 ml-1 transition-transform group-hover:translate-x-1" />
                                             </div>
                                         </div>
                                     </article>
@@ -339,7 +339,7 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                 {/* Regular Posts Grid */}
                 <section>
                     <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-6">
-                        {isFiltering ? `Danh sách bài viết (${filteredPosts.length})` : 'Mới cập nhật'}
+                        {isFiltering ? `Article List (${filteredPosts.length})` : 'Latest Updates'}
                     </h2>
 
                     {filteredPosts.length > 0 ? (
@@ -363,9 +363,9 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                                         )}
                                         <div className="p-5 flex-1 flex flex-col">
                                             <div className="flex items-center gap-2 text-xs mb-3 text-slate-500">
-                                                <span>{new Date(post.publishedAt).toLocaleDateString('vi-VN')}</span>
+                                                <span>{new Date(post.publishedAt).toLocaleDateString('en-US')}</span>
                                                 <span>•</span>
-                                                <span>{post.readingTime}p đọc</span>
+                                                <span>{post.readingTime}m read</span>
                                             </div>
                                             <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 line-clamp-2">
                                                 {post.title}
@@ -383,15 +383,15 @@ export default function BlogClient({ posts, categories }: BlogClientProps) {
                             <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-100 dark:bg-slate-800 mb-4">
                                 <Search className="w-8 h-8 text-slate-400" />
                             </div>
-                            <h3 className="text-lg font-medium text-slate-900 dark:text-white mb-2">Không tìm thấy bài viết</h3>
+                            <h3 className="text-lg font-medium text-slate-900 dark:text-white mb-2">No articles found</h3>
                             <p className="text-slate-500 max-w-sm mx-auto">
-                                Thử thay đổi từ khóa tìm kiếm hoặc chọn danh mục khác bạn nhé.
+                                Try changing your search terms or selecting a different category.
                             </p>
                             <button
                                 onClick={clearFilters}
                                 className="mt-6 px-4 py-2 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors"
                             >
-                                Xóa bộ lọc
+                                Clear filters
                             </button>
                         </div>
                     )}

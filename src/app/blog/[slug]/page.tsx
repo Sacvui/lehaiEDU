@@ -122,7 +122,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                             className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-amber-700 dark:hover:text-amber-400 transition-colors mb-8"
                         >
                             <ArrowLeft className="w-4 h-4" />
-                            Quay lại Blog
+                            Back to Blog
                         </Link>
                     </div>
 
@@ -166,7 +166,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                             </div>
                              <div className="flex items-center gap-2">
                                 <Clock className="w-4 h-4" />
-                                <span>{post.readingTime} phút đọc</span>
+                                <span>{post.readingTime} min read</span>
                             </div>
                         </div>
 
@@ -199,19 +199,19 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                                 author: {
                                     '@type': 'Person',
                                     name: post.author?.name,
-                                    url: `https://lehai.edu.vn`,
+                                    url: `https://www.lephuchai.com`,
                                 },
                                 publisher: {
                                     '@type': 'Organization',
                                     name: 'Le Phuc Hai',
                                     logo: {
                                         '@type': 'ImageObject',
-                                        url: 'https://lehai.edu.vn/uploads/profile-founder.jpg',
+                                        url: 'https://www.lephuchai.com/uploads/profile-founder.jpg',
                                     },
                                 },
                                 mainEntityOfPage: {
                                     '@type': 'WebPage',
-                                    '@id': `https://lehai.edu.vn/blog/${slug}`,
+                                    '@id': `https://www.lephuchai.com/blog/${slug}`,
                                 },
                             }),
                         }}
@@ -321,7 +321,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <section className="py-16 px-4 bg-slate-100/50 dark:bg-slate-900/50">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8">
-                            Bài viết liên quan
+                            Related Posts
                         </h2>
                         <div className="grid md:grid-cols-3 gap-8">
                             {relatedPosts.map((relatedPost: any) => (
