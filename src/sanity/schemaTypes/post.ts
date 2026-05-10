@@ -144,8 +144,8 @@ export default defineType({
             const subtitle = [
                 author && `by ${author}`,
                 publishedAt && new Date(publishedAt).toLocaleDateString(),
-                featured && '⭐ Featured'
-            ].filter(Boolean).join(' • ')
+                featured && 'Featured'
+            ].filter(Boolean).join(' | ')
 
             return { ...selection, subtitle }
         },

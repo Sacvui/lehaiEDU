@@ -45,10 +45,10 @@ export function Mentorship() {
                                 <a href="https://ncskit.org" target="_blank" rel="noopener noreferrer" className="w-full sm:w-auto">
                                     <Button size="lg" variant="outline" className="w-full sm:w-auto gap-2 border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800">
                                         <ExternalLink className="w-5 h-5" />
-                                        Explore NCSKIT
+                                        Explore ncsStat
                                     </Button>
                                     <p className="mt-2 text-xs text-slate-500 dark:text-slate-500 pl-1">
-                                        * Free AI tools for Literature Review & Stats
+                                        Free AI tools for Literature Review & Stats
                                     </p>
                                 </a>
                             </div>

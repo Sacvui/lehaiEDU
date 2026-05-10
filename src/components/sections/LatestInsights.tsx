@@ -148,7 +148,7 @@ export async function LatestInsights() {
                                                     {post.categories[0]}
                                                 </span>
                                             )}
-                                            <span>•</span>
+                                            <span>|</span>
                                             <span>{new Date(post.publishedAt).toLocaleDateString('vi-VN')}</span>
                                         </div>
 

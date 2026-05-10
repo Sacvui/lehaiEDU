@@ -69,7 +69,7 @@ export function About() {
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Hàn lâm & Thương mại</span>
                             </h3>
                             <p className="text-lg text-slate-400 leading-relaxed">
-                                Tôi hoạt động tại giao lộ giữa nghiên cứu học thuật nghiêm túc và lãnh đạo công nghiệp thực chiến. Phương pháp luận của tôi áp dụng độ chính xác khoa học (thông qua <span className="text-white hover:text-cyan-400 cursor-pointer transition-colors">NCSKIT</span>) để kiến tạo các hệ sinh thái kinh doanh hiệu suất cao (thông qua <span className="text-white hover:text-blue-400 cursor-pointer transition-colors">AM Medtech</span>).
+                                Tôi hoạt động tại giao lộ giữa nghiên cứu học thuật nghiêm túc và lãnh đạo công nghiệp thực chiến. Phương pháp luận của tôi áp dụng độ chính xác khoa học (thông qua <span className="text-white hover:text-cyan-400 cursor-pointer transition-colors">ncsStat</span>) để kiến tạo các hệ sinh thái kinh doanh hiệu suất cao (thông qua <span className="text-white hover:text-blue-400 cursor-pointer transition-colors">AM Medtech</span>).
                             </p>
                         </div>
 
@@ -95,7 +95,7 @@ export function About() {
                                     <h4 className="font-bold text-white text-lg">Tác động Học thuật</h4>
                                 </div>
                                 <ul className="space-y-3">
-                                    {['PhD Researcher @ VSB Ostrava', 'Lecturer @ TDTU', 'Founder NCSKIT.ORG', 'Academic Mentorship'].map(item => (
+                                    {['PhD Researcher @ VSB Ostrava', 'Lecturer @ TDTU', 'Founder ncsStat', 'Academic Mentorship'].map(item => (
                                         <li key={item} className="flex items-center gap-2 text-slate-400 text-sm">
                                             <span className="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
                                             {item}
