@@ -4,7 +4,7 @@
 import React from 'react';
 import NextImage from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Sparkles, Building2, Microscope, ArrowRight, User } from 'lucide-react';
+import { Sparkles, Building2, Microscope, ArrowRight, User, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export function Hero() {

@@ -95,7 +95,7 @@ export function About() {
                                     <h4 className="font-bold text-white text-lg">Academic Impact</h4>
                                 </div>
                                 <ul className="space-y-3">
-                                    {['PhD Researcher @ UCSI', 'Lecturer @ TDTU', 'Founder NCSKIT.ORG', 'Academic Mentorship'].map(item => (
+                                    {['PhD Researcher @ VSB Ostrava', 'Lecturer @ TDTU', 'Founder NCSKIT.ORG', 'Academic Mentorship'].map(item => (
                                         <li key={item} className="flex items-center gap-2 text-slate-400 text-sm">
                                             <span className="w-1.5 h-1.5 rounded-full bg-purple-500"></span>
                                             {item}

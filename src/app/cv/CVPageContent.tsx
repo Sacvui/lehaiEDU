@@ -79,7 +79,7 @@ export default function CVPageContent() {
                                     <EducationItem
                                         degree="Doctor of Business Administration"
                                         year="2024 - 2027"
-                                        school="UCSI University"
+                                        school="VSB Technical University of Ostrava"
                                     />
                                     <EducationItem
                                         degree="Master of Business Administration"
