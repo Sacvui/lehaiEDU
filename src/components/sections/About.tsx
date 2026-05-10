@@ -117,6 +117,37 @@ export function About() {
                         </div>
                     </div>
                 </div>
+                {/* Professional Highlights Gallery */}
+                <div className="mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    {[
+                        { img: '/uploads/award-ceremony.jpg', title: 'Recognition of Excellence', category: 'Award' },
+                        { img: '/uploads/teaching-team.jpg', title: 'Mentoring Next Generation', category: 'Academic' },
+                        { img: '/uploads/selling-skills.jpg', title: 'Strategic Sales Training', category: 'Teaching' },
+                        { img: '/uploads/creator-economy.jpg', title: 'Future of Digital Economy', category: 'Speaking' }
+                    ].map((item, index) => (
+                        <motion.div
+                            key={index}
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ delay: index * 0.1 }}
+                            className="group relative aspect-video rounded-xl overflow-hidden border border-slate-800 bg-slate-900"
+                        >
+                            <img
+                                src={item.img}
+                                alt={item.title}
+                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                            />
+                            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
+                            <div className="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                                <span className="text-[10px] font-bold uppercase tracking-widest text-cyan-400 bg-cyan-950/50 px-2 py-0.5 rounded-full border border-cyan-800/50 mb-2 inline-block">
+                                    {item.category}
+                                </span>
+                                <h4 className="text-sm font-bold text-white group-hover:text-cyan-400 transition-colors line-clamp-1">{item.title}</h4>
+                            </div>
+                        </motion.div>
+                    ))}
+                </div>
             </div>
         </section>
     );

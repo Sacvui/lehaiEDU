@@ -66,12 +66,12 @@ export function Mentorship() {
                                 transition={{ delay: 0.2 }}
                             >
                                 <img
-                                    src="/uploads/teaching-workshop.jpg"
-                                    alt="University Workshop"
+                                    src="/uploads/tdtu-class.jpg"
+                                    alt="TDTU Classroom Session"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                    <span className="text-white font-medium">Career Orientation Workshop</span>
+                                    <span className="text-white font-medium">TDTU Classroom Session</span>
                                 </div>
                             </motion.div>
 
@@ -83,12 +83,12 @@ export function Mentorship() {
                                 transition={{ delay: 0.4 }}
                             >
                                 <img
-                                    src="/uploads/teaching-class.png"
-                                    alt="Classroom Discussion"
+                                    src="/uploads/student-interaction.jpg"
+                                    alt="Student Mentorship & Discussion"
                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                                    <span className="text-white font-medium">Classroom Interactions</span>
+                                    <span className="text-white font-medium">Student Mentorship & Discussion</span>
                                 </div>
                             </motion.div>
                         </div>
