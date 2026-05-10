@@ -110,6 +110,25 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-amber-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
+            {/* Reading Progress Bar */}
+            <div className="fixed top-0 left-0 w-full h-1 z-[60] bg-slate-200 dark:bg-slate-800">
+                <motion.div
+                    className="h-full bg-gradient-to-r from-amber-500 to-orange-500"
+                    style={{ scaleX: 0, transformOrigin: 'left' }}
+                    id="reading-progress"
+                />
+            </div>
+
+            <script dangerouslySetInnerHTML={{
+                __html: `
+                    window.addEventListener('scroll', () => {
+                        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                        const scrolled = (winScroll / height);
+                        document.getElementById('reading-progress').style.transform = 'scaleX(' + scrolled + ')';
+                    });
+                `
+            }} />
             {/* Hero Section */}
             <article className="pt-32 pb-16">
                 <div className="container mx-auto max-w-7xl px-4">
@@ -120,7 +139,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                             className="inline-flex items-center gap-2 text-slate-600 dark:text-slate-400 hover:text-amber-700 dark:hover:text-amber-400 transition-colors mb-8"
                         >
                             <ArrowLeft className="w-4 h-4" />
-                            Back to Blog
+                            Quay lại Blog
                         </Link>
                     </div>
 
@@ -162,9 +181,9 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                                     })}
                                 </time>
                             </div>
-                            <div className="flex items-center gap-2">
+                             <div className="flex items-center gap-2">
                                 <Clock className="w-4 h-4" />
-                                <span>{post.readingTime} min read</span>
+                                <span>{post.readingTime} phút đọc</span>
                             </div>
                         </div>
 
@@ -319,7 +338,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
                 <section className="py-16 px-4 bg-slate-100/50 dark:bg-slate-900/50">
                     <div className="container mx-auto max-w-6xl">
                         <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-8">
-                            Related Articles
+                            Bài viết liên quan
                         </h2>
                         <div className="grid md:grid-cols-3 gap-8">
                             {relatedPosts.map((relatedPost: any) => (
