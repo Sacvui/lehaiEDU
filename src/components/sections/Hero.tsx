@@ -39,7 +39,7 @@ export function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.1 }}
-                            className="text-3xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight"
+                            className="text-3xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-tight break-words hyphens-auto"
                         >
                             <span className="block text-slate-800 dark:text-slate-200">
                                 NCS Lê Phúc Hải
@@ -55,7 +55,7 @@ export function Hero() {
                             transition={{ delay: 0.2 }}
                             className="text-base md:text-xl text-slate-600 dark:text-slate-400 leading-relaxed"
                         >
-                            Hơn 13 năm lãnh đạo trong quản trị kinh doanh, chuyển đổi số và hệ thống phân phối. Tôi kết nối tri thức hàn lâm (Academic Rigor) và thực tiễn thương mại (Commercial Excellence) để giúp doanh nghiệp xây dựng sự tăng trưởng bền vững.
+                            Hơn 15 năm lãnh đạo trong quản trị kinh doanh, chuyển đổi số và hệ thống phân phối. Tôi kết nối tri thức hàn lâm (Academic Rigor) và thực tiễn thương mại (Commercial Excellence) để giúp doanh nghiệp xây dựng sự tăng trưởng bền vững.
                         </motion.p>
 
                         <motion.blockquote

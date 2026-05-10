@@ -39,7 +39,7 @@ export function About() {
                             <div className="absolute bottom-8 left-8 right-8 bg-slate-900/80 backdrop-blur-md p-6 rounded-xl border border-slate-700/50">
                                 <div className="flex justify-between items-center text-center">
                                     <div>
-                                        <div className="text-2xl font-bold text-white">13+</div>
+                                        <div className="text-2xl font-bold text-white">15+</div>
                                         <div className="text-xs text-slate-400 uppercase tracking-wider">Năm Kinh nghiệm</div>
                                     </div>
                                     <div className="w-px h-8 bg-slate-700"></div>
@@ -64,7 +64,7 @@ export function About() {
                                 <Award className="w-3 h-3" />
                                 Về Nhà Sáng Lập
                             </div>
-                            <h3 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+                            <h3 className="text-2xl sm:text-3xl md:text-5xl font-bold leading-tight mb-6">
                                 Kết nối Khoảng trống giữa <br />
                                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Hàn lâm & Thương mại</span>
                             </h3>

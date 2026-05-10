@@ -52,7 +52,7 @@ export async function LatestInsights() {
                             <span className="h-px w-10 bg-cyan-500"></span>
                             <span className="text-cyan-500 font-mono text-sm uppercase tracking-widest">Knowledge Hub</span>
                         </div>
-                        <h2 className="text-3xl md:text-5xl font-bold text-white leading-tight">
+                        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-white leading-tight">
                             Intelligence <span className="text-slate-600">&</span>{' '}
                             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">
                                 Insights

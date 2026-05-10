@@ -45,7 +45,7 @@ export function Services() {
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="text-center mb-16 space-y-4">
-                    <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white">
+                    <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-slate-900 dark:text-white">
                         Giải Pháp <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-orange-600 dark:from-amber-400 dark:to-orange-400">Chiến Lược & Nghiên Cứu</span>
                     </h2>
                     <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
