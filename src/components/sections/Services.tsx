@@ -21,9 +21,9 @@ const serviceGroups = [
         border: "border-emerald-500/20"
     },
     {
-        title: "Hệ điều hành Nghiên cứu",
-        brand: "NCSKIT.ORG",
-        description: "Tiêu chuẩn khoa học cho Nhà nghiên cứu - Phân tích dữ liệu chuyên nghiệp trên nền tảng R-Engine.",
+        title: "Advanced Statistics",
+        brand: "ncsStat",
+        description: "Scientific Standard for Researchers. Professional data analysis platform powered by R-Engine and AI Assistant. Absolute accuracy, maximum security, zero installation.",
         items: [
             { icon: BrainCircuit, label: "Trợ lý Nghiên cứu AI", desc: "Tối ưu hóa tổng quan tài liệu và xây dựng giả thuyết bằng AI." },
             { icon: Database, label: "Phân tích R-Engine", desc: "Độ chính xác tuyệt đối trong thống kê nâng cao, không cần cài đặt." },
@@ -93,6 +93,25 @@ export function Services() {
                         </motion.div>
                     ))}
                 </div>
+
+                {/* Project Detail - ncsStat */}
+                <motion.div 
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    className="mt-16 p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-xl"
+                >
+                    <div className="flex flex-col md:flex-row gap-8 items-center">
+                        <div className="md:w-1/4">
+                            <h4 className="text-xl font-bold text-slate-900 dark:text-white mb-2">About ncsStat Project</h4>
+                            <div className="h-1 w-12 bg-amber-500 rounded-full"></div>
+                        </div>
+                        <div className="md:w-3/4">
+                            <p className="text-slate-600 dark:text-slate-400 leading-relaxed italic">
+                                "ncsStat is a specialized platform supporting data processing for Doctoral candidates. We focus on the accuracy of R algorithms and user interface convenience. The system is currently in Beta and is continuously improved based on feedback from the scientific community. Our goal is to accompany you on the path to conquering international publications."
+                            </p>
+                        </div>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

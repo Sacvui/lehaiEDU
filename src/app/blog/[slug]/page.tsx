@@ -45,6 +45,7 @@ import { SeriesControls } from '@/components/blog/SeriesControls'
 const IGNORED_SERIES_TAGS = ['Góc nhìn HaiLP', 'Featured', 'Hot', 'Tips', 'Knowledge', 'Deep Dive', 'New']
 
 import { TableOfContents } from '@/components/blog/TableOfContents'
+import { ReadingProgressBar } from '@/components/blog/ReadingProgressBar'
 
 // Helper to extract headings from PortableText
 // Duplicate slugify logic to ensure server-side match
@@ -110,25 +111,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
 
     return (
         <div className="min-h-screen bg-gradient-to-br from-slate-50 via-white to-amber-50/30 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950">
-            {/* Reading Progress Bar */}
-            <div className="fixed top-0 left-0 w-full h-1 z-[60] bg-slate-200 dark:bg-slate-800">
-                <motion.div
-                    className="h-full bg-gradient-to-r from-amber-500 to-orange-500"
-                    style={{ scaleX: 0, transformOrigin: 'left' }}
-                    id="reading-progress"
-                />
-            </div>
-
-            <script dangerouslySetInnerHTML={{
-                __html: `
-                    window.addEventListener('scroll', () => {
-                        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-                        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                        const scrolled = (winScroll / height);
-                        document.getElementById('reading-progress').style.transform = 'scaleX(' + scrolled + ')';
-                    });
-                `
-            }} />
+            <ReadingProgressBar />
             {/* Hero Section */}
             <article className="pt-32 pb-16">
                 <div className="container mx-auto max-w-7xl px-4">

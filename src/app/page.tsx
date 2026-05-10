@@ -5,6 +5,7 @@ import { Services } from "@/components/sections/Services";
 import { About } from "@/components/sections/About";
 import { LatestInsights } from "@/components/sections/LatestInsights";
 import { Mentorship } from "@/components/sections/Mentorship";
+import { Contact } from "@/components/sections/Contact";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
       <React.Suspense fallback={<div className="h-96 w-full animate-pulse bg-slate-100 dark:bg-slate-900" />}>
         <LatestInsights />
       </React.Suspense>
+      <Contact />
     </main>
   );
 }

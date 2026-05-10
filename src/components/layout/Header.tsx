@@ -23,7 +23,7 @@ const navItems: NavItem[] = [
     icon: User,
     submenu: [
       { label: 'Hồ sơ chuyên gia', href: '/#about', icon: User, desc: 'Professional Bio & Journey' },
-      { label: 'Nghiên cứu (NCSKIT)', href: 'https://ncskit.org', icon: GraduationCap, desc: 'Academic Research Platform', external: true },
+      { label: 'Nghiên cứu (ncsStat)', href: 'https://ncskit.org', icon: GraduationCap, desc: 'Advanced Statistics Platform', external: true },
       { label: 'AM Medtech', href: 'https://ammedtech.com', icon: Rocket, desc: 'Digital Transformation Agency', external: true },
       { label: 'LinkedIn', href: 'https://www.linkedin.com/in/hailp/', icon: Linkedin, desc: 'Professional Network', external: true },
     ]
@@ -187,9 +187,11 @@ export function Header() {
               )}
             </div>
           ))}
-          <Button className="rounded-full px-6 bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors">
-            Đặt lịch Tư vấn
-          </Button>
+          <Link href="#contact">
+            <Button className="rounded-full px-6 bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors">
+              Đặt lịch Tư vấn
+            </Button>
+          </Link>
         </nav>
 
         {/* Mobile Menu Toggle */}
@@ -280,7 +282,9 @@ export function Header() {
               )}
             </div>
           ))}
-          <Button className="w-full rounded-lg mt-6 py-6 text-lg">Book Consultation</Button>
+          <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
+            <Button className="w-full rounded-lg mt-6 py-6 text-lg">Đặt lịch Tư vấn</Button>
+          </Link>
         </div>
       )}
     </header>

@@ -30,8 +30,8 @@ export function Hero() {
                             animate={{ opacity: 1, y: 0 }}
                             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full border border-amber-700/30 bg-amber-50/80 dark:bg-amber-950/30 dark:border-amber-600/30 text-amber-900 dark:text-amber-400 text-sm font-medium backdrop-blur-sm self-center lg:self-start"
                         >
-                            <Sparkles className="w-4 h-4" />
-                            <span>PhD Research • Speaker • Mentor</span>
+                            <GraduationCap className="w-4 h-4" />
+                            <span>PhD Research | Speaker | Mentor</span>
                         </motion.div>
 
                         {/* Headline */}
@@ -75,7 +75,7 @@ export function Hero() {
                         >
                             <a href="/cv" className="w-full sm:w-auto">
                                 <Button size="lg" className="w-full sm:w-auto h-14 px-8 text-lg rounded-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 shadow-xl shadow-slate-900/10 dark:shadow-white/10 transition-all active:scale-95">
-                                    <Sparkles className="mr-2 h-5 w-5" />
+                                    <User className="mr-2 h-5 w-5" />
                                     Xem Hồ sơ
                                 </Button>
                             </a>
@@ -83,7 +83,7 @@ export function Hero() {
                             <a href="https://ncskit.org" target="_blank" className="w-full sm:w-auto">
                                 <Button size="lg" variant="outline" className="w-full sm:w-auto h-14 px-8 text-lg rounded-full border-slate-300 dark:border-slate-700 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white backdrop-blur-sm bg-white/50 dark:bg-slate-900/50">
                                     <Microscope className="mr-2 h-5 w-5" />
-                                    Khám phá NCSKIT
+                                    Khám phá ncsStat
                                 </Button>
                             </a>
 
@@ -111,7 +111,7 @@ export function Hero() {
                                     <span className="font-bold text-slate-700 dark:text-white tracking-wider group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors text-sm">ANMINH GROUP</span>
                                 </a>
                                 <a href="https://ncskit.org" target="_blank" className="group flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-500 dark:hover:border-amber-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
-                                    <span className="font-bold text-slate-700 dark:text-white tracking-wider group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors text-sm">NCSKIT.ORG</span>
+                                    <span className="font-bold text-slate-700 dark:text-white tracking-wider group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors text-sm">NCSSTAT.ORG</span>
                                 </a>
                                 <a href="https://ammedtech.com" target="_blank" className="group flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 hover:border-amber-500 dark:hover:border-amber-500 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all">
                                     <span className="font-bold text-slate-700 dark:text-white tracking-wider group-hover:text-amber-700 dark:group-hover:text-amber-400 transition-colors text-sm">AMMEDTECH</span>

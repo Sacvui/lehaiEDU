@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     template: '%s | NCS Lê Phúc Hải'
   },
   description: 'Website chính thức của NCS Lê Phúc Hải - Founder fwd LIFEchain, Chuyên gia tư vấn Chuyển đổi số, Giám đốc Phát triển Kinh doanh. Chia sẻ kiến thức về RTM, Blockchain Nông nghiệp, và Nghiên cứu khoa học.',
-  keywords: ['Lê Phúc Hải', 'Le Phuc Hai', 'fwd LIFEchain', 'Blockchain Agriculture', 'Transparent Agriculture', 'Chuyển đổi số', 'Digital Transformation', 'RTM', 'Logistics', 'Nghiên cứu sinh', 'PhD Researcher', 'Tư vấn chiến lược', 'AM Medtech', 'NCSKIT'],
+  keywords: ['Lê Phúc Hải', 'Le Phuc Hai', 'fwd LIFEchain', 'Blockchain Agriculture', 'Transparent Agriculture', 'Chuyển đổi số', 'Digital Transformation', 'RTM', 'Logistics', 'Nghiên cứu sinh', 'PhD Researcher', 'Tư vấn chiến lược', 'AM Medtech', 'ncsStat'],
   openGraph: {
     title: {
       default: 'NCS Lê Phúc Hải | Chuyên Gia Chuyển Đổi Số & Quản Trị Chiến Lược',
