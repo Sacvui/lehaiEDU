@@ -23,7 +23,7 @@ export async function LatestInsights() {
         return (
             <section className="py-20 bg-slate-50 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800">
                 <div className="container mx-auto px-4 text-center">
-                    <p className="text-slate-500">Đang tải dữ liệu bài viết...</p>
+                    <p className="text-slate-500">Loading articles...</p>
                 </div>
             </section>
         )
@@ -63,7 +63,7 @@ export async function LatestInsights() {
                         href="/blog"
                         className="hidden md:flex items-center px-6 py-3 rounded-full border border-slate-700 hover:border-cyan-500 text-slate-300 hover:text-white transition-all group bg-slate-900/50 backdrop-blur"
                     >
-                        Khám phá tất cả <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                        Explore All <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
 
@@ -100,7 +100,7 @@ export async function LatestInsights() {
                                         )}
                                         <span className="flex items-center text-xs text-slate-400">
                                             <Calendar className="w-3 h-3 mr-1" />
-                                            {new Date(featuredPost.publishedAt).toLocaleDateString('vi-VN')}
+                                            {new Date(featuredPost.publishedAt).toLocaleDateString('en-US')}
                                         </span>
                                     </div>
 
@@ -113,7 +113,7 @@ export async function LatestInsights() {
                                     </p>
 
                                     <div className="flex items-center text-cyan-500 font-semibold group-hover:translate-x-2 transition-transform mt-auto">
-                                        Đọc tiếp <ArrowRight className="w-4 h-4 ml-2" />
+                                        Continue Reading <ArrowRight className="w-4 h-4 ml-2" />
                                     </div>
                                 </div>
                             </article>
@@ -149,7 +149,7 @@ export async function LatestInsights() {
                                                 </span>
                                             )}
                                             <span>|</span>
-                                            <span>{new Date(post.publishedAt).toLocaleDateString('vi-VN')}</span>
+                                            <span>{new Date(post.publishedAt).toLocaleDateString('en-US')}</span>
                                         </div>
 
                                         <h4 className="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors line-clamp-2">
@@ -157,7 +157,7 @@ export async function LatestInsights() {
                                         </h4>
 
                                         <div className="mt-auto pt-4 flex items-center text-xs text-slate-400 group-hover:text-cyan-400 transition-colors">
-                                            Xem chi tiết <ArrowRight className="w-3 h-3 ml-1" />
+                                            Read more <ArrowRight className="w-3 h-3 ml-1" />
                                         </div>
                                     </div>
                                 </article>
@@ -172,7 +172,7 @@ export async function LatestInsights() {
                         href="/blog"
                         className="inline-flex items-center px-6 py-3 rounded-full bg-cyan-600 text-white font-semibold hover:bg-cyan-500 transition-colors"
                     >
-                        Xem tất cả bài viết <ArrowRight className="w-4 h-4 ml-2" />
+                        See all articles <ArrowRight className="w-4 h-4 ml-2" />
                     </Link>
                 </div>
             </div>

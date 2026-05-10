@@ -18,79 +18,79 @@ interface NavItem {
 
 const navItems: NavItem[] = [
   {
-    label: 'Giới thiệu',
+    label: 'About',
     href: '/#about',
     icon: User,
     submenu: [
-      { label: 'Hồ sơ chuyên gia', href: '/#about', icon: User, desc: 'Professional Bio & Journey' },
-      { label: 'Nghiên cứu (ncsStat)', href: 'https://ncskit.org', icon: GraduationCap, desc: 'Advanced Statistics Platform', external: true },
+      { label: 'Professional Profile', href: '/#about', icon: User, desc: 'Professional Bio & Journey' },
+      { label: 'Research (ncsStat)', href: 'https://ncskit.org', icon: GraduationCap, desc: 'Advanced Statistics Platform', external: true },
       { label: 'AM Medtech', href: 'https://ammedtech.com', icon: Rocket, desc: 'Digital Transformation Agency', external: true },
       { label: 'LinkedIn', href: 'https://www.linkedin.com/in/hailp/', icon: Linkedin, desc: 'Professional Network', external: true },
     ]
   },
-  { label: 'Giải pháp', href: '#solutions', icon: Rocket },
-  { label: 'Sách & Tác phẩm', href: '/books', icon: BookOpen },
+  { label: 'Solutions', href: '#solutions', icon: Rocket },
+  { label: 'Books', href: '/books', icon: BookOpen },
   {
-    label: 'Blog & Chia sẻ',
+    label: 'Insights',
     href: '/blog',
     icon: BookOpen,
     submenu: [
       {
-        label: 'Góc Nghiên cứu',
+        label: 'Research Hub',
         href: '/blog?group=research',
         icon: GraduationCap,
-        desc: 'Nghiên cứu khoa học & Phương pháp luận (R, Python)',
+        desc: 'Scientific Research & Methodology (R, Python)',
         items: [
-          { label: 'NCS101: Tư duy PhD', href: '/blog?tag=NCS101' },
-          { label: 'R101: Phân tích dữ liệu', href: '/blog?tag=R101' },
-          { label: 'Python101: Định lượng', href: '/blog?tag=Python101' },
+          { label: 'NCS101: PhD Mindset', href: '/blog?tag=NCS101' },
+          { label: 'R101: Data Analytics', href: '/blog?tag=R101' },
+          { label: 'Python101: Quantitative', href: '/blog?tag=Python101' },
           { label: 'Thesis Masterclass', href: '/blog?tag=thesis-script' },
         ]
       },
       {
-        label: 'Góc Quản trị',
+        label: 'Management Corner',
         href: '/blog?group=business',
         icon: TrendingUp,
-        desc: 'Chiến lược thực chiến & Quản trị bài bản',
+        desc: 'Strategic Execution & Structured Management',
         items: [
-          { label: 'Lãnh đạo Chiến lược', href: '/blog?category=strategic-leadership' },
-          { label: 'Phân phối RTM', href: '/blog?category=rtm-distribution' },
-          { label: 'Logistics & Chuỗi cung ứng', href: '/blog?category=logistics-supply-chain' },
+          { label: 'Strategic Leadership', href: '/blog?category=strategic-leadership' },
+          { label: 'RTM Distribution', href: '/blog?category=rtm-distribution' },
+          { label: 'Logistics & Supply Chain', href: '/blog?category=logistics-supply-chain' },
         ]
       },
       {
-        label: 'Xu hướng Công nghệ',
+        label: 'Tech Trends',
         href: '/blog?group=tech',
         icon: Zap,
-        desc: 'AI, Digital & Công nghệ tương lai',
+        desc: 'AI, Digital & Future Technology',
         items: [
-          { label: 'Chuyển đổi số', href: '/blog?category=digital-transformation' },
-          { label: 'AI & Công nghệ', href: '/blog?category=ai-technology' },
+          { label: 'Digital Transformation', href: '/blog?category=digital-transformation' },
+          { label: 'AI & Innovation', href: '/blog?category=ai-technology' },
         ]
       },
       {
-        label: 'Hành trình Luận án (Chương 1-5)',
+        label: 'Thesis Journey',
         href: '/blog?category=academic-corner',
         icon: Microscope,
-        desc: 'Hướng dẫn làm luận án từ A-Z',
+        desc: 'Step-by-step Thesis Guide (A-Z)',
         items: [
           { label: 'Thesis Walkthrough', href: '/blog?category=academic-corner' },
         ]
       },
       {
-        label: 'Phát triển Sự nghiệp',
+        label: 'Career Development',
         href: '/blog?group=career',
         icon: Rocket,
-        desc: 'Định hướng & Mentor 1-1',
+        desc: 'Mentorship & 1-1 Guidance',
         items: [
-          { label: 'Mentorship & Tư vấn', href: '/blog?category=mentorship-career' },
-          { label: 'Sách: Từ Thực tập sinh đến CEO', href: '/blog?category=book-intern-to-ceo' },
-          { label: 'Đời Nghiên cứu', href: '/blog?category=academic-corner' },
+          { label: 'Mentorship & Consulting', href: '/blog?category=mentorship-career' },
+          { label: 'Book: Intern to CEO', href: '/blog?category=book-intern-to-ceo' },
+          { label: 'Researcher Life', href: '/blog?category=academic-corner' },
         ]
       },
     ]
   },
-  { label: 'Liên hệ', href: '#contact', icon: Mail },
+  { label: 'Contact', href: '#contact', icon: Mail },
 ];
 
 export function Header() {
@@ -189,7 +189,7 @@ export function Header() {
           ))}
           <Link href="#contact">
             <Button className="rounded-full px-6 bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors">
-              Đặt lịch Tư vấn
+              Book Consultation
             </Button>
           </Link>
         </nav>
@@ -283,7 +283,7 @@ export function Header() {
             </div>
           ))}
           <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
-            <Button className="w-full rounded-lg mt-6 py-6 text-lg">Đặt lịch Tư vấn</Button>
+            <Button className="w-full rounded-lg mt-6 py-6 text-lg">Book Consultation</Button>
           </Link>
         </div>
       )}

@@ -12,10 +12,10 @@ export function Contact() {
                 <div className="max-w-5xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">
-                            Liên hệ & <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-orange-600 dark:from-amber-400 dark:to-orange-400">Tư vấn</span>
+                            Contact & <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-orange-600 dark:from-amber-400 dark:to-orange-400">Consultation</span>
                         </h2>
                         <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                            Sẵn sàng đồng hành cùng bạn trong các dự án nghiên cứu khoa học và chiến lược chuyển đổi số doanh nghiệp.
+                            Ready to partner with you on scientific research projects and digital transformation strategies.
                         </p>
                     </div>
 
@@ -47,8 +47,8 @@ export function Contact() {
                                     <MapPin className="w-6 h-6" />
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-slate-900 dark:text-white text-lg">Văn phòng</h4>
-                                    <p className="text-slate-600 dark:text-slate-400">TP. Hồ Chí Minh, Việt Nam</p>
+                                    <h4 className="font-bold text-slate-900 dark:text-white text-lg">Office</h4>
+                                    <p className="text-slate-600 dark:text-slate-400">Ho Chi Minh City, Vietnam</p>
                                 </div>
                             </div>
                         </div>
@@ -58,8 +58,8 @@ export function Contact() {
                             <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
                                 <div className="grid sm:grid-cols-2 gap-4">
                                     <div className="space-y-2">
-                                        <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Họ và tên</label>
-                                        <input type="text" className="w-full px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500 outline-none transition-all" placeholder="Nguyễn Văn A" />
+                                        <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Full Name</label>
+                                        <input type="text" className="w-full px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500 outline-none transition-all" placeholder="John Doe" />
                                     </div>
                                     <div className="space-y-2">
                                         <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Email</label>
@@ -67,11 +67,11 @@ export function Contact() {
                                     </div>
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Nội dung tư vấn</label>
-                                    <textarea className="w-full px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500 outline-none transition-all h-32" placeholder="Tôi cần tư vấn về..."></textarea>
+                                    <label className="text-sm font-medium text-slate-700 dark:text-slate-300">Consultation Details</label>
+                                    <textarea className="w-full px-4 py-2 rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-white focus:ring-2 focus:ring-amber-500 outline-none transition-all h-32" placeholder="I need consultation on..."></textarea>
                                 </div>
                                 <Button className="w-full bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-200 py-6">
-                                    <Send className="w-4 h-4 mr-2" /> Gửi yêu cầu
+                                    <Send className="w-4 h-4 mr-2" /> Send Request
                                 </Button>
                             </form>
                         </div>

@@ -7,14 +7,14 @@ import { Button } from '@/components/ui/button';
 
 const serviceGroups = [
     {
-        title: "Niềm tin & Nguồn gốc",
+        title: "Trust & Provenance",
         brand: "fwd LIFEchain",
         description: "Our ambition is to transparently unlock the value of Vietnamese agricultural products by bridging blockchain technology with digital trust.",
         items: [
-            { icon: Zap, label: "Xác thực Nguồn gốc", desc: "Chứng thực nguồn gốc thời gian thực bằng mật mã học tiên tiến." },
-            { icon: Network, label: "Network Pulse", desc: "Hệ sinh thái phi tập trung với 1100+ nodes đảm bảo tính toàn vẹn." },
-            { icon: Globe, label: "Tiêu chuẩn Toàn cầu", desc: "Kết nối chuỗi cung ứng công nghiệp với xác thực học thuật nghiêm ngặt." },
-            { icon: Layers, label: "Camera Verification", desc: "Kiểm tra chất lượng và nguồn gốc tức thì qua giao diện di động." }
+            { icon: Zap, label: "Origin Verification", desc: "Real-time authentication of product origin using advanced cryptography." },
+            { icon: Network, label: "Network Pulse", desc: "Decentralized ecosystem with 1100+ nodes ensuring data integrity." },
+            { icon: Globe, label: "Global Standards", desc: "Connecting industrial supply chains with rigorous academic validation." },
+            { icon: Layers, label: "Mobile Verification", desc: "Instant quality and origin checks via intuitive mobile interfaces." }
         ],
         color: "from-emerald-500 to-teal-500",
         bg: "bg-emerald-950/20",
@@ -25,10 +25,10 @@ const serviceGroups = [
         brand: "ncsStat",
         description: "Scientific Standard for Researchers. Professional data analysis platform powered by R-Engine and AI Assistant. Absolute accuracy, maximum security, zero installation.",
         items: [
-            { icon: BrainCircuit, label: "Trợ lý Nghiên cứu AI", desc: "Tối ưu hóa tổng quan tài liệu và xây dựng giả thuyết bằng AI." },
-            { icon: Database, label: "Phân tích R-Engine", desc: "Độ chính xác tuyệt đối trong thống kê nâng cao, không cần cài đặt." },
-            { icon: FlaskConical, label: "Tính Nghiêm túc Khoa học", desc: "Công cụ mô hình hóa SEM/CFA và làm sạch dữ liệu chuẩn quốc tế." },
-            { icon: BarChart3, label: "Phòng Lab Bảo mật", desc: "Bảo mật và quyền riêng tư tối đa cho các nghiên cứu học thuật quan trọng." }
+            { icon: BrainCircuit, label: "AI Research Assistant", desc: "Optimize literature reviews and hypothesis building using AI." },
+            { icon: Database, label: "R-Engine Analytics", desc: "Absolute precision in advanced statistics, no installation required." },
+            { icon: FlaskConical, label: "Scientific Rigor", desc: "SEM/CFA modeling tools and international standard data cleaning." },
+            { icon: BarChart3, label: "Secure Lab", desc: "Maximum security and privacy for critical academic research data." }
         ],
         color: "from-amber-500 to-orange-500",
         bg: "bg-amber-950/20",
@@ -46,7 +46,7 @@ export function Services() {
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="text-center mb-16 space-y-4">
                     <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-slate-900 dark:text-white">
-                        Giải Pháp <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-orange-600 dark:from-amber-400 dark:to-orange-400">Chiến Lược & Nghiên Cứu</span>
+                        Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-amber-700 to-orange-600 dark:from-amber-400 dark:to-orange-400">Solutions & Research</span>
                     </h2>
                     <p className="text-slate-600 dark:text-slate-400 max-w-2xl mx-auto text-lg">
                         Connecting enterprise strategy with advanced academic research tools.

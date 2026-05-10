@@ -15,8 +15,8 @@ export default function TermsPage() {
                         <Scale className="w-4 h-4" />
                         Legal Framework
                     </div>
-                    <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Điều khoản Sử dụng</h1>
-                    <p className="text-slate-500 dark:text-slate-400">Cập nhật lần cuối: {lastUpdated}</p>
+                    <h1 className="text-4xl md:text-5xl font-bold text-slate-900 dark:text-white mb-4">Terms of Use</h1>
+                    <p className="text-slate-500 dark:text-slate-400">Last updated: {lastUpdated}</p>
                 </div>
 
                 <div className="bg-white dark:bg-slate-900 rounded-3xl p-8 md:p-12 shadow-xl border border-slate-200 dark:border-slate-800 space-y-12 text-slate-700 dark:text-slate-300 leading-relaxed">
@@ -24,50 +24,50 @@ export default function TermsPage() {
                     <section className="space-y-4">
                         <div className="flex items-center gap-3 text-slate-900 dark:text-white">
                             <Info className="w-6 h-6 text-amber-500" />
-                            <h2 className="text-2xl font-bold">1. Chấp thuận điều khoản</h2>
+                            <h2 className="text-2xl font-bold">1. Acceptance of Terms</h2>
                         </div>
                         <p>
-                            Khi truy cập và sử dụng website <strong>lehai.edu.vn</strong>, bạn đồng ý tuân thủ các điều khoản và điều kiện được nêu tại đây. Nếu bạn không đồng ý với bất kỳ phần nào của các điều khoản này, vui lòng ngừng sử dụng dịch vụ ngay lập tức.
+                            By accessing and using the website <strong>lephuchai.com</strong>, you agree to comply with the terms and conditions outlined herein. If you do not agree with any part of these terms, please discontinue use of the services immediately.
                         </p>
                     </section>
 
                     <section className="space-y-4">
                         <div className="flex items-center gap-3 text-slate-900 dark:text-white">
                             <Book className="w-6 h-6 text-blue-500" />
-                            <h2 className="text-2xl font-bold">2. Sở hữu trí tuệ</h2>
+                            <h2 className="text-2xl font-bold">2. Intellectual Property</h2>
                         </div>
                         <p>
-                            Toàn bộ nội dung trên trang web này, bao gồm nhưng không giới hạn ở: các bài viết chuyên sâu (Chuỗi NCS101), cấu trúc phương pháp luận, mã nguồn hệ thống <strong>ncsStat</strong>, và các ấn phẩm được trình bày, đều thuộc quyền sở hữu trí tuệ của <strong>NCS Lê Phúc Hải</strong>.
+                            All content on this website, including but not limited to: specialized articles (NCS101 Series), methodological structures, <strong>ncsStat</strong> system source code, and published works, are the intellectual property of <strong>Dr. Le Phuc Hai</strong>.
                         </p>
                         <p className="italic bg-slate-50 dark:bg-slate-800/50 p-4 rounded-xl border-l-4 border-blue-500">
-                            Việc trích dẫn nội dung phải được thực hiện theo đúng quy chuẩn học thuật quốc tế (APA/Harvard) và phải dẫn nguồn trực tiếp từ website này.
+                            Citations must follow international academic standards (APA/Harvard) and must link directly to this website.
                         </p>
                     </section>
 
                     <section className="space-y-4">
                         <div className="flex items-center gap-3 text-slate-900 dark:text-white">
                             <ShieldCheck className="w-6 h-6 text-emerald-500" />
-                            <h2 className="text-2xl font-bold">3. Trách nhiệm người dùng</h2>
+                            <h2 className="text-2xl font-bold">3. User Responsibility</h2>
                         </div>
                         <ul className="list-disc pl-6 space-y-2">
-                            <li>Không sử dụng website cho các mục đích bất hợp pháp hoặc vi phạm đạo đức nghiên cứu khoa học.</li>
-                            <li>Không cố gắng can thiệp vào hoạt động của hệ thống ncsStat hoặc truy cập trái phép dữ liệu của người dùng khác.</li>
-                            <li>Sử dụng các công cụ AI và hỗ trợ nghiên cứu trên nền tảng này một cách có trách nhiệm.</li>
+                            <li>Do not use the website for illegal purposes or in violation of scientific research ethics.</li>
+                            <li>Do not attempt to interfere with the operation of the ncsStat system or gain unauthorized access to other users' data.</li>
+                            <li>Use AI tools and research support on this platform responsibly.</li>
                         </ul>
                     </section>
 
                     <section className="space-y-4">
                         <div className="flex items-center gap-3 text-slate-900 dark:text-white">
                             <AlertCircle className="w-6 h-6 text-rose-500" />
-                            <h2 className="text-2xl font-bold">4. Miễn trừ trách nhiệm</h2>
+                            <h2 className="text-2xl font-bold">4. Disclaimer of Liability</h2>
                         </div>
                         <p>
-                            Các thông tin và công cụ được cung cấp trên website này phục vụ cho mục đích tham khảo học thuật và tư vấn chiến lược. Mặc dù chúng tôi luôn nỗ lực đảm bảo độ chính xác (đặc biệt là các thuật toán R trên ncsStat), người dùng hoàn toàn chịu trách nhiệm về kết quả cuối cùng khi áp dụng vào thực tế nghiên cứu hoặc kinh doanh của mình.
+                            The information and tools provided on this website are for academic reference and strategic consulting purposes. While we strive for accuracy (particularly with R algorithms on ncsStat), users are solely responsible for the final results when applied to their research or business practice.
                         </p>
                     </section>
 
                     <div className="pt-8 border-t border-slate-200 dark:border-slate-800 text-sm text-slate-500 text-center">
-                        <p>Mọi thắc mắc về điều khoản sử dụng, vui lòng liên hệ Telegram: <strong>@ncskit</strong></p>
+                        <p>For inquiries regarding terms of use, please contact via Telegram: <strong>@ncskit</strong></p>
                     </div>
                 </div>
             </div>
