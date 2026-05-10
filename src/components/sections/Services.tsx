@@ -9,7 +9,7 @@ const serviceGroups = [
     {
         title: "Niềm tin & Nguồn gốc",
         brand: "fwd LIFEchain",
-        description: "Farm Worth Driven (fwd) - Tương lai của niềm tin trong nông nghiệp bền vững thông qua Blockchain.",
+        description: "Our ambition is to transparently unlock the value of Vietnamese agricultural products by bridging blockchain technology with digital trust.",
         items: [
             { icon: Zap, label: "Xác thực Nguồn gốc", desc: "Chứng thực nguồn gốc thời gian thực bằng mật mã học tiên tiến." },
             { icon: Network, label: "Network Pulse", desc: "Hệ sinh thái phi tập trung với 1100+ nodes đảm bảo tính toàn vẹn." },
