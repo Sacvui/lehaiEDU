@@ -50,13 +50,13 @@ export default function NotFound() {
                             </Button>
                         </Link>
                         
-                        <button 
-                            onClick={() => window.history.back()}
+                        <Link 
+                            href="/"
                             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-6 text-lg rounded-full border border-slate-700 text-slate-300 hover:text-white hover:border-slate-500 hover:bg-slate-800/50 transition-all"
                         >
                             <ArrowLeft className="w-5 h-5" aria-hidden="true" />
                             Go Back
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Quick links */}
