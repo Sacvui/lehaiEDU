@@ -1,14 +1,14 @@
 import { MetadataRoute } from 'next'
 
 export default function robots(): MetadataRoute.Robots {
-    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://lehai.edu.vn'
+    const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.lephuchai.com'
 
     return {
         rules: [
             {
                 userAgent: '*',
                 allow: '/',
-                disallow: ['/admin/', '/studio/', '/api/'],
+                disallow: ['/studio/', '/api/'],
             },
         ],
         sitemap: `${baseUrl}/sitemap.xml`,

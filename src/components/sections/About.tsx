@@ -1,8 +1,9 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { CheckCircle2, Award, Briefcase, GraduationCap, ArrowUpRight } from 'lucide-react';
+import { Award, Briefcase, GraduationCap, ArrowUpRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 export function About() {
@@ -23,10 +24,12 @@ export function About() {
                             <div className="absolute bottom-6 right-6 w-8 h-8 border-b-2 border-r-2 border-blue-400"></div>
 
                             {/* Profile Image */}
-                            <img
+                            <Image
                                 src="/uploads/profile-founder.jpg"
-                                alt="Dr. Le Phuc Hai"
-                                className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                                alt="Dr. Le Phuc Hai - PhD Researcher & Digital Transformation Expert"
+                                fill
+                                className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                sizes="(max-width: 768px) 100vw, 50vw"
                             />
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent opacity-60"></div>
 
@@ -120,25 +123,29 @@ export function About() {
                 </div>
                 {/* Professional Highlights Gallery */}
                 <div className="mt-24 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    {[
-                        { img: '/uploads/award-ceremony.jpg', title: 'Recognition of Excellence', category: 'Award' },
-                        { img: '/uploads/teaching-team.jpg', title: 'Mentoring Next Generation', category: 'Academic' },
-                        { img: '/uploads/selling-skills.jpg', title: 'Strategic Sales Training', category: 'Teaching' },
-                        { img: '/uploads/creator-economy.jpg', title: 'Future of Digital Economy', category: 'Speaking' }
-                    ].map((item, index) => (
-                        <motion.div
-                            key={index}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1 }}
-                            className="group relative aspect-video rounded-xl overflow-hidden border border-slate-800 bg-slate-900"
-                        >
-                            <img
-                                src={item.img}
-                                alt={item.title}
-                                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
-                            />
+                        {[
+                            { img: '/uploads/award-ceremony.jpg', title: 'Recognition of Excellence', category: 'Award' },
+                            { img: '/uploads/teaching-team.jpg', title: 'Mentoring Next Generation', category: 'Academic' },
+                            { img: '/uploads/selling-skills.jpg', title: 'Strategic Sales Training', category: 'Teaching' },
+                            { img: '/uploads/creator-economy.jpg', title: 'Future of Digital Economy', category: 'Speaking' }
+                        ].map((item, index) => (
+                            <motion.div
+                                key={index}
+                                initial={{ opacity: 0, y: 20 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.1 }}
+                                className="group relative aspect-video rounded-xl overflow-hidden border border-slate-800 bg-slate-900"
+                            >
+                            {item.img && (
+                                <Image
+                                    src={item.img}
+                                    alt={item.title}
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-110 opacity-70 group-hover:opacity-100"
+                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                                />
+                            )}
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
                             <div className="absolute bottom-4 left-4 right-4 translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
                                 <span className="text-[10px] font-bold uppercase tracking-widest text-cyan-400 bg-cyan-950/50 px-2 py-0.5 rounded-full border border-cyan-800/50 mb-2 inline-block">

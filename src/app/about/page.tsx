@@ -85,7 +85,7 @@ export default function AboutPage() {
                 <div className="container mx-auto px-4 md:px-6">
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
                         <div className="text-center group">
-                            <div className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">12+</div>
+                            <div className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">15+</div>
                             <div className="text-sm text-slate-500 font-mono uppercase tracking-wider">Years Experience</div>
                         </div>
                         <div className="text-center group">

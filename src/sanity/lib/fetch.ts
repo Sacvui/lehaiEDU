@@ -20,7 +20,7 @@ export async function sanityFetch<QueryResponse>({
     try {
         return await client.fetch<QueryResponse>(query, params, {
             next: {
-                revalidate: process.env.NODE_ENV === 'development' ? 30 : 60, // Reduced to 60s for faster updates
+                revalidate: process.env.NODE_ENV === 'development' ? 30 : 300, // 5 min cache in production
                 tags,
             },
         });

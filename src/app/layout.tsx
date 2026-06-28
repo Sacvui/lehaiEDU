@@ -3,8 +3,14 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Header } from '@/components/layout/Header'
 import { Footer } from '@/components/layout/Footer'
+import { Breadcrumb } from '@/components/layout/Breadcrumb'
 
-const inter = Inter({ subsets: ["latin"], display: 'swap' });
+const inter = Inter({ 
+  subsets: ["latin"],
+  display: 'swap',
+  preload: true,
+  variable: '--font-inter',
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.lephuchai.com'),
@@ -69,6 +75,9 @@ export default function RootLayout({
     <html lang="en" className="dark" suppressHydrationWarning>
       <body className={`${inter.className} bg-slate-950 min-h-screen flex flex-col`}>
         <Header />
+        <div className="container mx-auto px-4 md:px-6 pt-24">
+          <Breadcrumb />
+        </div>
         <main className="flex-grow">
           {children}
         </main>

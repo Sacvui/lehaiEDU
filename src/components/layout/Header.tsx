@@ -2,102 +2,22 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Github, Linkedin, Mail, Twitter, User, GraduationCap, Rocket, BookOpen, TrendingUp, Zap, FlaskConical, Menu, X, ChevronDown, Phone, FileText, Microscope } from 'lucide-react';
+import { User, Handshake, BookOpen, Users, FileText, Menu, X, Mail } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 
-interface NavItem {
-  label: string;
-  href: string;
-  icon?: any;
-  desc?: string;
-  external?: boolean;
-  submenu?: NavItem[];
-  items?: NavItem[];
-}
-
-const navItems: NavItem[] = [
-  {
-    label: 'About',
-    href: '/#about',
-    icon: User,
-    submenu: [
-      { label: 'Professional Profile', href: '/#about', icon: User, desc: 'Professional Bio & Journey' },
-      { label: 'Research (ncsStat)', href: 'https://ncskit.org', icon: GraduationCap, desc: 'Advanced Statistics Platform', external: true },
-      { label: 'AM Medtech', href: 'https://ammedtech.com', icon: Rocket, desc: 'Digital Transformation Agency', external: true },
-      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/hailp/', icon: Linkedin, desc: 'Professional Network', external: true },
-    ]
-  },
-  { label: 'Solutions', href: '#solutions', icon: Rocket },
-  { label: 'Books', href: '/books', icon: BookOpen },
-  {
-    label: 'Insights',
-    href: '/blog',
-    icon: BookOpen,
-    submenu: [
-      {
-        label: 'Research Hub',
-        href: '/blog?group=research',
-        icon: GraduationCap,
-        desc: 'Scientific Research & Methodology (R, Python)',
-        items: [
-          { label: 'NCS101: PhD Mindset', href: '/blog?tag=NCS101' },
-          { label: 'R101: Data Analytics', href: '/blog?tag=R101' },
-          { label: 'Python101: Quantitative', href: '/blog?tag=Python101' },
-          { label: 'Thesis Masterclass', href: '/blog?tag=thesis-script' },
-        ]
-      },
-      {
-        label: 'Management Corner',
-        href: '/blog?group=business',
-        icon: TrendingUp,
-        desc: 'Strategic Execution & Structured Management',
-        items: [
-          { label: 'Strategic Leadership', href: '/blog?category=strategic-leadership' },
-          { label: 'RTM Distribution', href: '/blog?category=rtm-distribution' },
-          { label: 'Logistics & Supply Chain', href: '/blog?category=logistics-supply-chain' },
-        ]
-      },
-      {
-        label: 'Tech Trends',
-        href: '/blog?group=tech',
-        icon: Zap,
-        desc: 'AI, Digital & Future Technology',
-        items: [
-          { label: 'Digital Transformation', href: '/blog?category=digital-transformation' },
-          { label: 'AI & Innovation', href: '/blog?category=ai-technology' },
-        ]
-      },
-      {
-        label: 'Thesis Journey',
-        href: '/blog?category=academic-corner',
-        icon: Microscope,
-        desc: 'Step-by-step Thesis Guide (A-Z)',
-        items: [
-          { label: 'Thesis Walkthrough', href: '/blog?category=academic-corner' },
-        ]
-      },
-      {
-        label: 'Career Development',
-        href: '/blog?group=career',
-        icon: Rocket,
-        desc: 'Mentorship & 1-1 Guidance',
-        items: [
-          { label: 'Mentorship & Consulting', href: '/blog?category=mentorship-career' },
-          { label: 'Book: Intern to CEO', href: '/blog?category=book-intern-to-ceo' },
-          { label: 'Researcher Life', href: '/blog?category=academic-corner' },
-        ]
-      },
-    ]
-  },
-  { label: 'Contact', href: '#contact', icon: Mail },
+const navItems = [
+  { label: 'About', href: '/about', icon: User },
+  { label: 'Services', href: '/services', icon: Handshake },
+  { label: 'Blog', href: '/blog', icon: BookOpen },
+  { label: 'Mentorship', href: '/mentorship', icon: Users },
+  { label: 'Books', href: '/books', icon: FileText },
+  { label: 'CV', href: '/cv', icon: FileText },
 ];
 
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-  const [activeSubDropdown, setActiveSubDropdown] = useState<string | null>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -110,86 +30,42 @@ export function Header() {
   return (
     <header
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-300 border-b',
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
         isScrolled
-          ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-slate-200 dark:border-slate-800 py-3'
-          : 'bg-transparent border-transparent py-5'
+          ? 'bg-white/80 dark:bg-slate-950/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 py-3'
+          : 'bg-transparent py-5'
       )}
     >
       <div className="container mx-auto px-4 md:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-center shadow-lg group-hover:shadow-cyan-500/20 transition-all overflow-hidden relative">
-            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-blue-600/20"></div>
-            <img src="/icon.svg" alt="Logo" className="w-7 h-7 relative z-10" />
+          <div className="w-10 h-10 rounded-lg bg-slate-900 border border-slate-700 flex items-center justify-center shadow-lg group-hover:shadow-cyan-500/20 transition-all">
+            <img src="/icon.svg" alt="Logo" className="w-6 h-6" />
           </div>
           <div className="flex flex-col">
-            <span className="font-bold text-lg leading-none text-slate-900 dark:text-white group-hover:text-cyan-400 transition-colors">
+            <span className="font-bold text-lg leading-none text-slate-900 dark:text-white">
               Le Phuc Hai
             </span>
-            <span className="text-xs text-slate-500 dark:text-slate-400 font-medium tracking-wide">
-              PHD RESEARCHER & FOUNDER
+            <span className="text-xs text-slate-500 dark:text-slate-400 tracking-wide">
+              PhD Researcher
             </span>
           </div>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
-            <div key={item.label} className="relative group">
-              <Link
-                href={item.href}
-                target={item.external ? '_blank' : undefined}
-                className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-1.5 py-2"
-              >
-                {item.icon && <item.icon className="w-4 h-4" />}
-                {item.label}
-                {item.submenu && <ChevronDown className="w-3 h-3 transition-transform group-hover:rotate-180" />}
-              </Link>
-
-              {/* Desktop Dropdown Menu */}
-              {item.submenu && (
-                <div className="absolute top-full right-0 md:left-1/2 md:-translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top w-[640px] z-50 px-4 md:px-0">
-                  <div className="bg-white dark:bg-slate-900 rounded-xl shadow-xl border border-slate-200 dark:border-slate-800 p-4 grid grid-cols-2 gap-4">
-                    {item.submenu.map((subItem, idx) => (
-                      <div key={subItem.label} className="flex flex-col gap-2 p-3 rounded-lg hover:bg-slate-50 dark:hover:bg-slate-800 transition-colors group/item">
-                        <Link href={subItem.href} className="flex items-start gap-3">
-                          <div className="mt-1 p-1.5 rounded-md bg-blue-50 dark:bg-slate-800 text-blue-600 dark:text-blue-400 group-hover/item:bg-blue-100 dark:group-hover/item:bg-slate-700 transition-colors">
-                            {subItem.icon && <subItem.icon className="w-4 h-4" />}
-                          </div>
-                          <div>
-                            <div className="text-sm font-semibold text-slate-900 dark:text-white group-hover/item:text-blue-600 dark:group-hover/item:text-blue-400">
-                              {subItem.label}
-                            </div>
-                            <div className="text-xs text-slate-500 dark:text-slate-400 mt-0.5 mb-2">
-                              {subItem.desc}
-                            </div>
-                          </div>
-                        </Link>
-
-                        {/* Nested Items - Desktop */}
-                        {subItem.items && (
-                          <div className="pl-[38px] flex flex-col gap-1 border-l border-slate-200 dark:border-slate-700 ml-4">
-                            {subItem.items.map((nest) => (
-                              <Link
-                                key={nest.label}
-                                href={nest.href}
-                                className="text-xs text-slate-600 dark:text-slate-400 hover:text-blue-600 dark:hover:text-blue-400 py-1 pl-3 transition-colors relative before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1.5 before:h-px before:bg-slate-300 dark:before:bg-slate-600 hover:before:bg-blue-500"
-                              >
-                                {nest.label}
-                              </Link>
-                            ))}
-                          </div>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              )}
-            </div>
+            <Link
+              key={item.label}
+              href={item.href}
+              className="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-amber-600 dark:hover:text-amber-400 transition-colors"
+            >
+              {item.label}
+            </Link>
           ))}
-          <Link href="#contact">
-            <Button className="rounded-full px-6 bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800 dark:hover:bg-slate-100 transition-colors">
-              Book Consultation
+          <Link href="/contact">
+            <Button size="sm" className="ml-2 bg-slate-900 dark:bg-white text-white dark:text-slate-900 hover:bg-slate-800">
+              <Mail className="w-4 h-4 mr-2" />
+              Contact
             </Button>
           </Link>
         </nav>
@@ -205,86 +81,26 @@ export function Header() {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl p-4 flex flex-col gap-2 animate-in slide-in-from-top-2 h-[calc(100dvh-80px)] overflow-y-auto pb-20">
-          {navItems.map((item) => (
-            <div key={item.label}>
-              {item.submenu ? (
-                <div className="border-b border-slate-100 dark:border-slate-800 pb-2">
-                  <button
-                    onClick={() => setActiveDropdown(activeDropdown === item.label ? null : item.label)}
-                    className="w-full flex items-center justify-between text-base font-medium text-slate-700 dark:text-slate-200 py-4 hover:text-blue-600 dark:hover:text-blue-400"
-                  >
-                    <span className="flex items-center gap-3">
-                      {item.icon && <item.icon className="w-5 h-5" />}
-                      {item.label}
-                    </span>
-                    <ChevronDown className={cn("w-5 h-5 transition-transform", activeDropdown === item.label ? "rotate-180" : "")} />
-                  </button>
-
-                  {/* Level 1 Expansion */}
-                  {activeDropdown === item.label && (
-                    <div className="pl-4 flex flex-col gap-4 mt-2">
-                      {item.submenu.map((subItem) => (
-                        <div key={subItem.label} className="flex flex-col gap-1">
-                          <div className="flex items-center justify-between py-2">
-                            <Link
-                              href={subItem.href}
-                              onClick={() => setIsMobileMenuOpen(false)}
-                              className="flex items-center gap-3 text-base font-semibold text-slate-800 dark:text-slate-200"
-                            >
-                              {subItem.icon && <subItem.icon className="w-4 h-4" />}
-                              <span>{subItem.label}</span>
-                            </Link>
-
-                            {/* Level 2 Expander Button */}
-                            {subItem.items && (
-                              <button
-                                onClick={(e) => {
-                                  e.stopPropagation();
-                                  setActiveSubDropdown(activeSubDropdown === subItem.label ? null : subItem.label);
-                                }}
-                                className="p-2 text-slate-400 hover:text-slate-600 dark:hover:text-slate-200"
-                              >
-                                <ChevronDown className={cn("w-4 h-4 transition-transform", activeSubDropdown === subItem.label ? "rotate-180" : "")} />
-                              </button>
-                            )}
-                          </div>
-
-                          {/* Level 2 Expansion - Mobile with Animation logic */}
-                          {subItem.items && activeSubDropdown === subItem.label && (
-                            <div className="pl-8 flex flex-col border-l-2 border-slate-100 dark:border-slate-800 ml-2 animate-in slide-in-from-top-1 fade-in duration-200">
-                              {subItem.items.map(nest => (
-                                <Link
-                                  key={nest.label}
-                                  href={nest.href}
-                                  className="text-sm text-slate-600 dark:text-slate-400 py-3.5 pl-4 hover:text-blue-600 dark:hover:text-blue-400 block active:bg-slate-50 dark:active:bg-slate-800 rounded-md transition-colors"
-                                  onClick={() => setIsMobileMenuOpen(false)}
-                                >
-                                  {nest.label}
-                                </Link>
-                              ))}
-                            </div>
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ) : (
-                <Link
-                  href={item.href}
-                  className="flex items-center gap-3 text-base font-medium text-slate-700 dark:text-slate-200 py-4 hover:text-blue-600 dark:hover:text-blue-400 border-b border-slate-100 dark:border-slate-900 last:border-0"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  {item.icon && <item.icon className="w-5 h-5" />}
-                  {item.label}
-                </Link>
-              )}
-            </div>
-          ))}
-          <Link href="#contact" onClick={() => setIsMobileMenuOpen(false)} className="w-full">
-            <Button className="w-full rounded-lg mt-6 py-6 text-lg">Book Consultation</Button>
-          </Link>
+        <div className="md:hidden absolute top-full left-0 right-0 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shadow-xl">
+          <nav className="flex flex-col p-4">
+            {navItems.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="flex items-center gap-3 text-base font-medium text-slate-700 dark:text-slate-200 py-3 border-b border-slate-100 dark:border-slate-800 last:border-0"
+              >
+                <item.icon className="w-5 h-5" />
+                {item.label}
+              </Link>
+            ))}
+            <Link href="/contact" onClick={() => setIsMobileMenuOpen(false)} className="mt-4">
+              <Button className="w-full">
+                <Mail className="w-4 h-4 mr-2" />
+                Contact
+              </Button>
+            </Link>
+          </nav>
         </div>
       )}
     </header>
