@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowLeft, ArrowRight, ExternalLink, GraduationCap, Users, Microscope, BookOpen, MessageSquare, CheckCircle2, Star, Target, Lightbulb, TrendingUp } from 'lucide-react'
+import { ArrowLeft, ArrowRight, ExternalLink, GraduationCap, Users, Microscope, BookOpen, MessageSquare, CheckCircle2, Star, Target, Lightbulb, TrendingUp, BarChart3 } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
